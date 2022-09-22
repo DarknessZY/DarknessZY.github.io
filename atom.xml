@@ -46,8 +46,8 @@
   
   <entry>
     <title>Hello,欢迎来到耀耀切克闹的博客！</title>
-    <link href="http://example.com/2022/09/21/hello-world/"/>
-    <id>http://example.com/2022/09/21/hello-world/</id>
+    <link href="http://example.com/2022/09/21/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/"/>
+    <id>http://example.com/2022/09/21/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</id>
     <published>2022-09-21T10:12:00.000Z</published>
     <updated>2022-09-22T06:23:59.192Z</updated>
     

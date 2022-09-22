@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello,欢迎来到耀耀切克闹的博客！</title>
+    <url>/2022/09/21/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>为什么要搭建博客</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TS基础</title>
     <url>/2022/09/22/Typescript/</url>
     <content><![CDATA[<h3 id="一、基础类型"><a href="#一、基础类型" class="headerlink" title="一、基础类型"></a>一、基础类型</h3><p>1.布尔类型</p>
@@ -77,18 +89,6 @@
       <tags>
         <tag>TypeScript</tag>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello,欢迎来到耀耀切克闹的博客！</title>
-    <url>/2022/09/21/hello-world/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>为什么要搭建博客</tag>
-        <tag>博客搭建</tag>
       </tags>
   </entry>
 </search>
