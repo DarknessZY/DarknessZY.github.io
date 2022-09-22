@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-22T03:21:04.617Z</updated>
+  <updated>2022-09-22T03:24:09.109Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,25 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>TS基础</title>
-    <link href="http://example.com/2022/09/22/TypeScript/"/>
-    <id>http://example.com/2022/09/22/TypeScript/</id>
-    <published>2022-09-22T10:12:00.000Z</published>
-    <updated>2022-09-22T03:21:04.617Z</updated>
-    
-    
-    
-    
-    <category term="Web前端学习" scheme="http://example.com/categories/Web%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="TypeScript" scheme="http://example.com/tags/TypeScript/"/>
-    
-    <category term="js" scheme="http://example.com/tags/js/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
