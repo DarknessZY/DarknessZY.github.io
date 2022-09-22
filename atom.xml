@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-22T03:17:11.273Z</updated>
+  <updated>2022-09-22T03:21:04.617Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/09/22/TypeScript/"/>
     <id>http://example.com/2022/09/22/TypeScript/</id>
     <published>2022-09-22T10:12:00.000Z</published>
-    <updated>2022-09-22T03:17:11.273Z</updated>
+    <updated>2022-09-22T03:21:04.617Z</updated>
     
     
     
@@ -31,7 +31,7 @@
     
     <category term="TypeScript" scheme="http://example.com/tags/TypeScript/"/>
     
-    <category term="web" scheme="http://example.com/tags/web/"/>
+    <category term="js" scheme="http://example.com/tags/js/"/>
     
   </entry>
   
@@ -40,12 +40,10 @@
     <link href="http://example.com/2022/09/21/hello-world/"/>
     <id>http://example.com/2022/09/21/hello-world/</id>
     <published>2022-09-21T01:59:30.611Z</published>
-    <updated>2022-09-22T03:17:34.951Z</updated>
+    <updated>2022-09-22T03:21:13.950Z</updated>
     
     
     
-    
-    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
   </entry>
