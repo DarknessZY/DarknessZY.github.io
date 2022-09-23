@@ -80,11 +80,15 @@ git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer
 
 **利用Markdown语法的软件写博客，本地试运行：**
 
-这里推荐使用Typora或uTools的Markdown笔记功能，具体怎么使用这两款软件，官方都有说明。
+这里推荐使用Typora或uTools的Markdown笔记功能，具体怎么使用这两款软件， 官方都有说明。其中Typora现在开始收费了，但可以去下载老版本，老版本是免费的，具体操作可以按：
 
-把写好的文章复制到
+[Typora免费版](http://www.itmind.net/16468.html )
 
+根据这个网址上面来操作，下载老版本的Typora，但具体还能用多久就不知道了，有钱的小伙伴可以直接去官网下载正版，本人老穷b了。
 
+![](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/11DDC475.jpg)
+
+把写好的文章复制到根目录下的source=>_posts
 
 ![](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184421310.png)
 
