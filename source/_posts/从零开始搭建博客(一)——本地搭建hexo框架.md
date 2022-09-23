@@ -91,3 +91,4 @@ hexo s
 
 自此一个简单的本地博客诞生了
 
+![本地博客效果](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20201220204625063.png)
