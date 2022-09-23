@@ -34,8 +34,44 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>博客搭建</tag>
         <tag>为什么要搭建博客</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
+    <url>/2022/09/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="一、Hexo-Git-Github博客在多台终端同步管理"><a href="#一、Hexo-Git-Github博客在多台终端同步管理" class="headerlink" title="一、Hexo+Git+Github博客在多台终端同步管理"></a>一、<a href="https://so.csdn.net/so/search?q=Hexo&spm=1001.2101.3001.7020">Hexo</a>+Git+Github博客在多台终端同步管理</h1><p>此方法利用Git管理Hexo产生的文件，实现在不同的电脑上同步（<a href="https://so.csdn.net/so/search?q=Github&spm=1001.2101.3001.7020">Github</a>）所需的文件，也可以正常的在不同的Hexo环境里进行相应操作，只要在做完之后同步到Github的仓库里即可。下面具体来说说：</p>
+<p>网上基本上都是这个思路：</p>
+<h2 id="Github-分支管理Hexo环境目录"><a href="#Github-分支管理Hexo环境目录" class="headerlink" title="Github 分支管理Hexo环境目录"></a>Github 分支管理Hexo环境目录</h2><p>主要是通过维护两条git分支来实现，第一个分支是 Gihub 上默认的 master 分支，用于存放发布的博文的静态页面；另外再新建一个分支，比如命名为 Hexo ，通过此分支存放主题、原始的博客文件等等，这些文件才是不同电脑需要同步的文件；当每次修改主题或者新增博文后，先将修改的主题文件（在themes文件夹下）或者新增博客（在source文件夹下），同步到远程的 Hexo 分支，然后在通过 hexo g -d命令发布博文，也就是将新增的博文的静态页面同步到 master 分支。这样通过不同的分支管理不同的文件，实现了多台电脑同步更新博文的功能。俺是转载的，去看看原文吧！<br>原文链接：<a href="https://blog.csdn.net/steven_zdg988/article/details/111240905">https://blog.csdn.net/steven_zdg988/article/details/111240905</a></p>
+<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><p>在PC b，我是直接在github上创建的，具体就是如下图。分支名输入Hexo</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16639155572122.png" alt="创建分支"></p>
+<h3 id="初始化分支"><a href="#初始化分支" class="headerlink" title="初始化分支"></a>初始化分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone 仓库地址（自己的仓库地址）</span><br></pre></td></tr></table></figure>
+
+<p>将仓库文件拉取到本地，生成的文件名为 username.github.io；进入username.github.io文件夹，除了 <em>.git</em> 文件夹以外，其他文件全部删除；同时添加.gitnore</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line"># 添加git忽略</span><br></pre></td></tr></table></figure>
+
+<p>提交本次修改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “提交说明”</span><br><span class="line">git push origin Hexo</span><br></pre></td></tr></table></figure>
+
+<h3 id="同步代码"><a href="#同步代码" class="headerlink" title="同步代码"></a>同步代码</h3><p>把之前跟着<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a>大佬做的建的文件copy到username.github.io下，db.json，node_modules，public就不要了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16639162406638.png" alt="img"></p>
+<p>暂时不要提交，安装hexo环境去</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>然后再执行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>这时你文件夹下多出了db.json，node_modules，public，还会多一个.deploy_git（hexo插件打包后上传到master主分支的静态博客文件夹）因为我用了yarn，所以会有yarn.lock，这个无关紧要，这时git提交上去就行</p>
+<p><strong>文章内更新点东西，加一句话什么的，再去执行hexo的命令</strong></p>
+<p>过会再去打开https://你的用户名.github.io，更新了就代表没问题了</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>同步管理</tag>
       </tags>
   </entry>
   <entry>
@@ -99,18 +135,6 @@
       </tags>
   </entry>
   <entry>
-    <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
-    <url>/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="一、博客在多台终端同步管理"><a href="#一、博客在多台终端同步管理" class="headerlink" title="一、博客在多台终端同步管理"></a>一、博客在多台终端同步管理</h1>]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>同步管理</tag>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从零开始搭建博客(一)——本地搭建hexo框架</title>
     <url>/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAhexo%E6%A1%86%E6%9E%B6/</url>
     <content><![CDATA[<h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
@@ -145,6 +169,7 @@
 
 <p>点击运行成功后的出来的地址</p>
 <p>自此一个简单的本地博客诞生了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20201220204625063.png" alt="本地博客效果"></p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
