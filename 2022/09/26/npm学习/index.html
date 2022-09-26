@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>标签 |  耀耀切克闹</title>
+      <title>npm随笔 |  耀耀切克闹</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,13 +56,184 @@
       
     <main class="content on">
       <section class="outer">
+  <article
+  id="post-npm学习"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  npm随笔
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/09/26/npm%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2022-09-26T05:12:00.000Z" itemprop="datePublished">2022-09-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a>
+  </div>
   
-    <h1 class="page-type-title">标签</h1>
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo%E6%A1%86%E6%9E%B6/" rel="tag">hexo框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm%EF%BC%8C%E9%9A%8F%E7%AC%94/" rel="tag">npm，随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="tag">为什么要搭建博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF%E5%85%BC%E5%AE%B9/" rel="tag">前端兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/" rel="tag">同步管理</a></li></ul>
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">246</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
   
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
+<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
+<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
+<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
+<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
+</ul>
+<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
+<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
+</li>
+<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
+<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
+</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/09/26/npm%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm%EF%BC%8C%E9%9A%8F%E7%AC%94/" rel="tag">npm，随笔</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2022/09/26/border%E5%85%BC%E5%AE%B9/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            前端兼容性问题
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2022/09/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">从零开始搭建博客(三)——博客在多台终端同步管理</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
 </section>
-
-
       <footer class="footer">
   <div class="outer">
     <ul>
@@ -198,6 +369,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
