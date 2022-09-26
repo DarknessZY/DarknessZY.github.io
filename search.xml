@@ -39,6 +39,24 @@
       </tags>
   </entry>
   <entry>
+    <title>前端兼容性问题</title>
+    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
+    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
+<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端兼容性问题</category>
+      </categories>
+      <tags>
+        <tag>前端兼容</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
     <url>/2022/09/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h1 id="一、Hexo-Git-Github博客在多台终端同步管理"><a href="#一、Hexo-Git-Github博客在多台终端同步管理" class="headerlink" title="一、Hexo+Git+Github博客在多台终端同步管理"></a>一、<a href="https://so.csdn.net/so/search?q=Hexo&spm=1001.2101.3001.7020">Hexo</a>+Git+Github博客在多台终端同步管理</h1><p>此方法利用Git管理Hexo产生的文件，实现在不同的电脑上同步（<a href="https://so.csdn.net/so/search?q=Github&spm=1001.2101.3001.7020">Github</a>）所需的文件，也可以正常的在不同的Hexo环境里进行相应操作，只要在做完之后同步到Github的仓库里即可。下面具体来说说：</p>
