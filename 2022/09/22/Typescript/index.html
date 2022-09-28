@@ -190,6 +190,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const mergeFunc = &lt;T, U&gt;(arg1: T, arr2: U): T &amp; U =&gt; &#123;</span><br><span class="line">  let res = &#123;&#125; as T &amp; U; // 使用类型断言来告诉TS这里是（T和U）的交叉类型</span><br><span class="line">  res = Object.assign(arg1, arr2);</span><br><span class="line">  return res;</span><br><span class="line">&#125;;</span><br><span class="line">mergeFunc(&#123; a: &#x27;a&#x27; &#125;, &#123; b: &#x27;b&#x27; &#125;);</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
     </div>
     
 
