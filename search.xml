@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>npm随笔</title>
-    <url>/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
-<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
-<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
-<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
-<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
-</ul>
-<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
-<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
-</li>
-<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
-<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
-</li>
-</ul>
+    <title>前端兼容性问题</title>
+    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
+    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
+<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>前端随笔</category>
+        <category>前端兼容性问题</category>
       </categories>
       <tags>
-        <tag>npm，随笔</tag>
+        <tag>前端兼容</tag>
       </tags>
   </entry>
   <entry>
@@ -104,21 +98,41 @@
       </tags>
   </entry>
   <entry>
-    <title>前端兼容性问题</title>
-    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
-    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
-<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
-
+    <title>hello，欢迎来到耀耀切克闹的博客！</title>
+    <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
+    <content><![CDATA[<h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
+<li>搭建博客就是为了写博客，整理思路，将学习的知识融会贯通，以教为学。</li>
+<li>在这个过程中，你可以认识更多兴趣相投的人。</li>
+<li>事件驱动学习，每周持续的博客更新，查看自己是否学习到新东西！</li>
+<li>对自己也是一种督促，你拥有一个完全属于自己的博客，会驱动自己分享学习！</li>
+</ol>
+<h1 id="二-搭建博客方式"><a href="#二-搭建博客方式" class="headerlink" title="二.搭建博客方式"></a>二.搭建博客方式</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e3d012b007f43c597d5db60b9594379b.png"></p>
+<h2 id="1-自己开发"><a href="#1-自己开发" class="headerlink" title="1.自己开发"></a>1.自己开发</h2><p>这是最原始的博客建站方式了，自己写代码（前台 + 后台管理+数据库等等）、自己将项目发布上线、自己来维护网站，啥都自己来干。这就意味着全栈的工作，你需要理解和学习的地方有好多好多，在这过程中需要耗费大量时间，但对自己的提升是不可估量的，并且代码掌握在自己手里，很安想加什么功能都不会受到限制，很灵活。这里推荐 Github 上的开源项目，可以在此上进行二次开发：</p>
+<p>Halo博客，一款现代化的开源博客/CMS系统，值得一试。详细部署可以去  <a href="https://docs.halo.run/">https://docs.halo.run</a></p>
+<h2 id="2-站点生成器"><a href="#2-站点生成器" class="headerlink" title="2.站点生成器"></a>2.站点生成器</h2><p>博客是一种很典型的网站，所以有大佬将博客的功能（比如文章管理）抽象出来，做成了 站点生成器 ，可以用极少的命令 + 配置文件的方式，自动生成精美的博客网站。本人还是比较菜的，刚毕业，工作了2个月多，前端菜鸡程序员一枚，于是采用了这种方式，也是我极力推荐的一种方式，省时省力，灵活程度虽然比不上完全由自己开发，但适合大多数人的需求。并且，绝大多数的站点生成器都只能生成静态网站，也就是说网站的内容（比如博客文章、文档等）是固定的，不需要从数据库中获取内容，因此有很多优点：</p>
+<ul>
+<li><p>省钱：把文件扔 GitHub Pages、Gitee Pages 啥的就能免费部署</p>
+</li>
+<li><p>速度快：省去了数据的动态获取过程，配合 CDN 加载速度飞起</p>
+</li>
+<li><p>SEO：静态网站更容易被搜索引擎的蜘蛛抓取，稳定排名</p>
+</li>
+<li><p>易维护：没那么多花里胡哨的功能，比动态网站好维护不少</p>
+<p>这里推荐：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e6561ed83d781d08d5298519b34a4752.png"></p>
+<p><strong>当然，好像另外还有一种方式就是建站程序，主流就是 WordPress（推荐）或 Typech，跟着官方文档操作就行，不过俺了解甚少。感兴趣的朋友可以去看看，据说也很方便。</strong></p>
+</li>
+</ul>
+<h2 id="3-建站平台和购买"><a href="#3-建站平台和购买" class="headerlink" title="3.建站平台和购买"></a>3.建站平台和购买</h2><p> 简单说吧！就是花钱办事，用金钱换时间。</p>
+<p><strong>建站平台：</strong>套个现成的模板、利用界面拖拖拽拽就能搞出来一个网站，平台还会给你提供域名，一键上线。此外，网站的维护也不用咱自己操心了，全交给别人，我们专注于网站的内容就行，百度搜索应该有一大堆。</p>
+<p><strong>购买</strong>: 极致的体验，没有最好，只有更好，你就是大爷，可以尽情享受氪金带来的快乐！（手动狗头)</p>
 ]]></content>
       <categories>
-        <category>前端兼容性问题</category>
+        <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>前端兼容</tag>
+        <tag>为什么要搭建博客</tag>
+        <tag>博客搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -162,46 +176,32 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>hexo框架</tag>
         <tag>博客搭建</tag>
+        <tag>hexo框架</tag>
       </tags>
   </entry>
   <entry>
-    <title>hello，欢迎来到耀耀切克闹的博客！</title>
-    <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
-    <content><![CDATA[<h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
-<li>搭建博客就是为了写博客，整理思路，将学习的知识融会贯通，以教为学。</li>
-<li>在这个过程中，你可以认识更多兴趣相投的人。</li>
-<li>事件驱动学习，每周持续的博客更新，查看自己是否学习到新东西！</li>
-<li>对自己也是一种督促，你拥有一个完全属于自己的博客，会驱动自己分享学习！</li>
-</ol>
-<h1 id="二-搭建博客方式"><a href="#二-搭建博客方式" class="headerlink" title="二.搭建博客方式"></a>二.搭建博客方式</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e3d012b007f43c597d5db60b9594379b.png"></p>
-<h2 id="1-自己开发"><a href="#1-自己开发" class="headerlink" title="1.自己开发"></a>1.自己开发</h2><p>这是最原始的博客建站方式了，自己写代码（前台 + 后台管理+数据库等等）、自己将项目发布上线、自己来维护网站，啥都自己来干。这就意味着全栈的工作，你需要理解和学习的地方有好多好多，在这过程中需要耗费大量时间，但对自己的提升是不可估量的，并且代码掌握在自己手里，很安想加什么功能都不会受到限制，很灵活。这里推荐 Github 上的开源项目，可以在此上进行二次开发：</p>
-<p>Halo博客，一款现代化的开源博客/CMS系统，值得一试。详细部署可以去  <a href="https://docs.halo.run/">https://docs.halo.run</a></p>
-<h2 id="2-站点生成器"><a href="#2-站点生成器" class="headerlink" title="2.站点生成器"></a>2.站点生成器</h2><p>博客是一种很典型的网站，所以有大佬将博客的功能（比如文章管理）抽象出来，做成了 站点生成器 ，可以用极少的命令 + 配置文件的方式，自动生成精美的博客网站。本人还是比较菜的，刚毕业，工作了2个月多，前端菜鸡程序员一枚，于是采用了这种方式，也是我极力推荐的一种方式，省时省力，灵活程度虽然比不上完全由自己开发，但适合大多数人的需求。并且，绝大多数的站点生成器都只能生成静态网站，也就是说网站的内容（比如博客文章、文档等）是固定的，不需要从数据库中获取内容，因此有很多优点：</p>
-<ul>
-<li><p>省钱：把文件扔 GitHub Pages、Gitee Pages 啥的就能免费部署</p>
+    <title>npm随笔</title>
+    <url>/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
+<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
+<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
+<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
+<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
+</ul>
+<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
+<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
 </li>
-<li><p>速度快：省去了数据的动态获取过程，配合 CDN 加载速度飞起</p>
-</li>
-<li><p>SEO：静态网站更容易被搜索引擎的蜘蛛抓取，稳定排名</p>
-</li>
-<li><p>易维护：没那么多花里胡哨的功能，比动态网站好维护不少</p>
-<p>这里推荐：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e6561ed83d781d08d5298519b34a4752.png"></p>
-<p><strong>当然，好像另外还有一种方式就是建站程序，主流就是 WordPress（推荐）或 Typech，跟着官方文档操作就行，不过俺了解甚少。感兴趣的朋友可以去看看，据说也很方便。</strong></p>
+<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
+<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
 </li>
 </ul>
-<h2 id="3-建站平台和购买"><a href="#3-建站平台和购买" class="headerlink" title="3.建站平台和购买"></a>3.建站平台和购买</h2><p> 简单说吧！就是花钱办事，用金钱换时间。</p>
-<p><strong>建站平台：</strong>套个现成的模板、利用界面拖拖拽拽就能搞出来一个网站，平台还会给你提供域名，一键上线。此外，网站的维护也不用咱自己操心了，全交给别人，我们专注于网站的内容就行，百度搜索应该有一大堆。</p>
-<p><strong>购买</strong>: 极致的体验，没有最好，只有更好，你就是大爷，可以尽情享受氪金带来的快乐！（手动狗头)</p>
 ]]></content>
       <categories>
-        <category>博客搭建</category>
+        <category>前端随笔</category>
       </categories>
       <tags>
-        <tag>博客搭建</tag>
-        <tag>为什么要搭建博客</tag>
+        <tag>npm，随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -296,8 +296,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>hexo框架</tag>
         <tag>博客搭建</tag>
+        <tag>hexo框架</tag>
       </tags>
   </entry>
 </search>
