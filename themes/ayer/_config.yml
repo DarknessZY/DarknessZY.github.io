@@ -80,9 +80,9 @@ word_count:
 
 # 打赏
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
-reward_type: 0
+reward_type: 1
 # 打赏wording
-reward_wording: "俺要喝奶茶~"
+reward_wording: "穷比，在线乞讨！"
 # 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg
 alipay: /images/alipay.jpg
 # 微信二维码图片地址
@@ -112,7 +112,7 @@ mouse:
   path: /images/mouse.cur
 
 # 鼠标点击效果：0-关闭，1-爱心，2-爆炸烟花，3-粒子烟花
-click_effect: 3
+click_effect: 2
 
 # 页面宽度自定义（不建议修改，可能造成布局混乱），article_width文章宽度，sidebar_width侧边栏宽度
 layout:
@@ -164,7 +164,7 @@ mermaid:
   theme: forest
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
-since: 2015
+since: ''
 
 # ICP备案信息尾部显示
 icp:
@@ -180,24 +180,20 @@ gongan:
 
 # 友情链接
 friends_link:
+  DarknessZY:
+    url: https://github.com/DarknessZY
+    img: /images/github.png
+  耀耀切克闹灬:
+    url: https://juejin.cn/user/1781681116679854/columns
+    img: /images/juejin.png
+  Hexo官网:
+    url: https://hexo.io
+    img: /images/hexo.png
   Ayer主题: #网站名称
     #网站地址
     url: https://github.com/Shen-Yu/hexo-theme-ayer
     #网站图片(可忽略不写)
     img: /images/ayer.png
-  GitHub:
-    url: https://github.com/Shen-Yu
-    img: /images/github.png
-  码云:
-    url: https://gitee.com/shen-yu
-    img: /images/gitee.png
-  Hexo官网:
-    url: https://hexo.io
-    img: /images/hexo.png
-  Hexo图表插件:
-    url: https://github.com/Shen-Yu/hexo-tag-chart
-    img: /images/hexo-tag-chart.png
-
 # 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo;
 
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)

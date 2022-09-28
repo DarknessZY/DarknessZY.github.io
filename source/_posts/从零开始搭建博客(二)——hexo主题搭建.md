@@ -57,7 +57,7 @@ GitHub 主页：[hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-b
 
 Demo 示例：[岛](https://shen-yu.gitee.io/)
 
-GitHub 主页：[hexo-theme-ayer](https://github.com/blinkfox/hexo-theme-matery)
+GitHub 主页：[hexo-theme-ayer](https://github.com/Shen-Yu/hexo-theme-ayer)
 
 ## 3.更换主题
 
