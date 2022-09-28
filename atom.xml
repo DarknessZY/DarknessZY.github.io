@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-26T10:42:14.767Z</updated>
+  <updated>2022-09-28T10:38:51.710Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从零开始搭建博客(四)——关于我页面搭建</title>
+    <link href="http://example.com/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>http://example.com/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</id>
+    <published>2022-09-28T11:00:00.000Z</published>
+    <updated>2022-09-28T10:38:51.710Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;关于我页面搭建&quot;&gt;&lt;a href=&quot;#关于我页面搭建&quot; class=&quot;headerlink&quot; title=&quot;关于我页面搭建&quot;&gt;&lt;/a&gt;关于我页面搭建&lt;/h1&gt;&lt;h2 id=&quot;相关链接&quot;&gt;&lt;a href=&quot;#相关链接&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="hexo框架" scheme="http://example.com/tags/hexo%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>前端兼容性问题</title>
@@ -87,9 +114,9 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
     <category term="同步管理" scheme="http://example.com/tags/%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
@@ -148,33 +175,6 @@
   </entry>
   
   <entry>
-    <title>hello，欢迎来到耀耀切克闹的博客！</title>
-    <link href="http://example.com/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/"/>
-    <id>http://example.com/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</id>
-    <published>2022-09-22T10:12:00.000Z</published>
-    <updated>2022-09-23T02:31:01.241Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一-为什么要搭建博客？&quot;&gt;&lt;a href=&quot;#一-为什么要搭建博客？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="为什么要搭建博客" scheme="http://example.com/tags/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>TS基础</title>
     <link href="http://example.com/2022/09/22/Typescript/"/>
     <id>http://example.com/2022/09/22/Typescript/</id>
@@ -199,6 +199,33 @@
     <category term="TypeScript" scheme="http://example.com/tags/TypeScript/"/>
     
     <category term="js" scheme="http://example.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello，欢迎来到耀耀切克闹的博客！</title>
+    <link href="http://example.com/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/"/>
+    <id>http://example.com/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</id>
+    <published>2022-09-22T10:12:00.000Z</published>
+    <updated>2022-09-23T02:31:01.241Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一-为什么要搭建博客？&quot;&gt;&lt;a href=&quot;#一-为什么要搭建博客？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="为什么要搭建博客" scheme="http://example.com/tags/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
