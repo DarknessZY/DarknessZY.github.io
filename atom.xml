@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-28T10:38:51.710Z</updated>
+  <updated>2022-09-30T08:53:16.341Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>git基础</title>
+    <link href="http://example.com/2022/09/30/git%E5%9F%BA%E7%A1%80/"/>
+    <id>http://example.com/2022/09/30/git%E5%9F%BA%E7%A1%80/</id>
+    <published>2022-09-30T09:52:00.000Z</published>
+    <updated>2022-09-30T08:53:16.341Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、git基础&quot;&gt;&lt;a href=&quot;#一、git基础&quot; class=&quot;headerlink&quot; title=&quot;一、git基础&quot;&gt;&lt;/a&gt;一、git基础&lt;/h1&gt;&lt;h2 id=&quot;重新下载git后&quot;&gt;&lt;a href=&quot;#重新下载git后&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="http://example.com/categories/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始搭建博客(四)——关于我页面搭建</title>
     <link href="http://example.com/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/"/>
     <id>http://example.com/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</id>
     <published>2022-09-28T11:00:00.000Z</published>
-    <updated>2022-09-28T10:38:51.710Z</updated>
+    <updated>2022-09-28T11:02:05.668Z</updated>
     
     
       
@@ -37,9 +62,9 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
     <category term="hexo框架" scheme="http://example.com/tags/hexo%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
@@ -69,31 +94,6 @@
   </entry>
   
   <entry>
-    <title>npm随笔</title>
-    <link href="http://example.com/2022/09/26/npm%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://example.com/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</id>
-    <published>2022-09-26T05:12:00.000Z</published>
-    <updated>2022-09-26T10:47:17.987Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别&quot;&gt;&lt;a href=&quot;#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别&quot; class=&quot;headerlink&quot; title=&quot;一、npm 安装中的</summary>
-        
-      
-    
-    
-    
-    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="npm，随笔" scheme="http://example.com/tags/npm%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
     <link href="http://example.com/2022/09/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/"/>
     <id>http://example.com/2022/09/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</id>
@@ -114,9 +114,9 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="同步管理" scheme="http://example.com/tags/%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/"/>
-    
     <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="同步管理" scheme="http://example.com/tags/%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
@@ -141,9 +141,9 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
     <category term="hexo框架" scheme="http://example.com/tags/hexo%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
@@ -168,9 +168,9 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
     <category term="hexo框架" scheme="http://example.com/tags/hexo%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
