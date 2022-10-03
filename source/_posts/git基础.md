@@ -229,7 +229,7 @@ reset --soft 相当于后悔药，给你重新改过的机会。对于上面的�
 
 下载git
 
-生成对应的gitlab和github的公 秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”
+生成对应的gitlab和github的公秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”
 
 这样你会在.ssh文件夹(.ssh在哪具体百度去)，找到四个文件
 
