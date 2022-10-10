@@ -320,6 +320,62 @@
       </tags>
   </entry>
   <entry>
+    <title>前端路由随笔</title>
+    <url>/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h1 id="一、什么是路由？"><a href="#一、什么是路由？" class="headerlink" title="一、什么是路由？"></a>一、什么是路由？</h1><p>路由的概念起源于服务端，在以前前后端不分离的时候，由后端来控制路由，当接收到客户端发来的   <code>HTTP</code> 请求，就会根据所请求的相应 <code>URL</code>，来找到相应的映射函数，然后执行该函数，并将函数的返回值发送给客户端。对于最简单的静态资源服务器，可以认为，所有 <code>URL</code> 的映射函数就是一个文件读取操作。对于动态资源，映射函数可能是一个数据库读取操作，也可能是进行一些数据的处理等等。然后根据这些读取的数据，在服务器端就使用相应的模板来对页面进行渲染后，再返回渲染完毕的页面。它的好处与缺点非常明显：</p>
+<ul>
+<li><p>好处：安全性好，<code>SEO</code> 好；</p>
+</li>
+<li><p>缺点：加大服务器的压力，不利于用户体验，代码冗合不好维护；</p>
+</li>
+</ul>
+<p>也正是由于后端路由还存在着自己的不足，前端路由才有了自己的发展空间。对于前端路由来说，路由的映射函数通常是进行一些 <code>DOM</code> 的显示和隐藏操作。这样，当访问不同的路径的时候，会显示不同的页面组件。前端路由主要有以下两种实现方案：</p>
+<ul>
+<li><code>Hash</code></li>
+<li><code>History</code></li>
+</ul>
+<p>​    原文链接：</p>
+<h1 id="二、前端路由Hash模式"><a href="#二、前端路由Hash模式" class="headerlink" title="二、前端路由Hash模式"></a>二、前端路由Hash模式</h1><p>一个URL是由很多部分组成，包括协议、域名、路径、query、hash等，早期的前端路由的实现就是基于location.hash来实现的。其实现原理也很简单，location.hash的值就是URL中#后面的内容。例如：<a href="https://www.wdnmd.com/#666,%E5%AE%83%E7%9A%84location.hash=&#39;#666&#39;">https://www.WDNMD.com#666,它的location.hash=&#39;#666&#39;</a></p>
+<h2 id="Hash模式的特性："><a href="#Hash模式的特性：" class="headerlink" title="Hash模式的特性："></a>Hash模式的特性：</h2><ol>
+<li><p>URL中hash值只是客户端的一种状态，也就是说当向服务器端发出请求时，hash部分不会被发送。</p>
+</li>
+<li><p>hash值的改变，都会在浏览器的访问历史中增加一个记录。因此我们能通过浏览器的回退、前进按钮控制hash的切换。</p>
+</li>
+<li><p>我们可以使用hashchange事件来监听hash的变化。(a标签和对loaction.hash进行赋值等等)</p>
+<p>通过上面的了解，我们大概知道这些</p>
+<ul>
+<li><p>hash模式所有的工作都是在前端完成的，不需要后端服务的配合</p>
+</li>
+<li><p>hash模式的实现方式就是通过监听URL中hash部分的变化，从而做出对应的渲染逻辑</p>
+</li>
+<li><p>hash模式下，URL中会带有#，看起来不太美观</p>
+<p>因此Hash模式还是有些小小的不足，History API也就出现了</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="三、前端路由History-API模式"><a href="#三、前端路由History-API模式" class="headerlink" title="三、前端路由History API模式"></a>三、前端路由History API模式</h1><p>history路由模式的实现，是要归功于HTML5提供的一个history全局对象，可以将它理解为其中包含了关于我们访问网页（历史会话）的一些信息。window.history 属性指向 History 对象，它表示当前窗口的浏览历史。当发生改变时，只会改变页面的路径，不会刷新页面。 History 对象保存了当前窗口访问过的所有页面网址。通过 history.length 可以得出当前窗口一共访问过几个网址。 由于安全原因，浏览器不允许脚本读取这些地址，但是允许在地址之间导航。 浏览器工具栏的“前进”和“后退”按钮，其实就是对 History 对象进行操作。</p>
+<p>同时它还暴露了一些有用的方法，比如：</p>
+<ul>
+<li>window.history.go 可以跳转到浏览器会话历史中的指定的某一个记录页</li>
+<li>window.history.forward 指向浏览器会话历史中的下一页，跟浏览器的前进按钮相同</li>
+<li>window.history.back 返回浏览器会话历史中的上一页，跟浏览器的回退按钮功能相同</li>
+<li>window.history.pushState 可以将给定的数据压入到浏览器会话历史栈中</li>
+<li>window.history.replaceState 将当前的会话页面的url替换成指定的数据</li>
+</ul>
+<p>而history路由的实现，主要就是依靠于pushState与replaceState实现的</p>
+<p><font color='#478fd2'>参考文章：</font></p>
+<p><a href="https://juejin.cn/post/6844903906024095751">什么是路由？</a></p>
+<p><a href="https://icode.best/i/13730847328933">vue路由模式及 history 模式下服务端配置</a></p>
+]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>路由，随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从零开始搭建博客(四)——关于我页面搭建</title>
     <url>/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
@@ -331,7 +387,7 @@
 <p>然后执行hexo命令，页面上就显示出来了：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16643609353351.png" alt="img"></p>
 <h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div style=&quot;margin-top: 25%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt; </span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div style=&quot;margin-top: 5%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt;要是觉得不错，请我喝饮料吧！&lt;/p&gt; </span><br><span class="line">        &lt;div style=&quot;display: flex;justify-content: space-between;align-items: center;&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.alipay) %&gt;&quot;  width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.weixin) %&gt;&quot; width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line">    </span><br><span class="line">&lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt; </span><br><span class="line">        &lt;hr/&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;hr/&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;hr/&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;hr/&gt;</span><br><span class="line">    &lt;/div&gt;  </span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;reword-out&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;reward-btn&quot;&gt;</span><br><span class="line">      &lt;%= __(&#x27;post.reward&#x27;) %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 
 <p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928183612541.png" alt="image-20220928183612541"></p>
 ]]></content>
