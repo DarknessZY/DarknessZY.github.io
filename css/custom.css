@@ -37,3 +37,6 @@
     transform: translateX(0);
   }
 }
+.vcopy.txt-right {
+  display: none;
+}
