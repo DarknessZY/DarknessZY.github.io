@@ -1,261 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>TS基础</title>
-    <url>/2022/09/22/Typescript/</url>
-    <content><![CDATA[<h3 id="一、基础类型"><a href="#一、基础类型" class="headerlink" title="一、基础类型"></a>一、基础类型</h3><p>1.布尔类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let bool: boolean;</span><br><span class="line">bool = false;</span><br><span class="line">bool = 123; // Error：不能将类型“number”分配给类型“boolean”。</span><br></pre></td></tr></table></figure>
-
-<p>2.数值类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let num：number = 123</span><br></pre></td></tr></table></figure>
-
-<p>3.字符串类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let str: string;</span><br><span class="line">str = &#x27;bac&#x27;;</span><br><span class="line">str = `数值是$&#123;num&#125;`;</span><br></pre></td></tr></table></figure>
-
-<p>4.数组类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let arr1: number[];</span><br><span class="line">arr1 = [1, 2, 3];</span><br><span class="line"></span><br><span class="line">let arr2: Array&lt;number&gt;;</span><br><span class="line">arr2 = [1, 2, 3];</span><br><span class="line"></span><br><span class="line">let arr3: (string | number)[];</span><br><span class="line">arr3 = [1, &#x27;2&#x27;, 3];</span><br></pre></td></tr></table></figure>
-
-<p>5.元组类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let tuple: [string, number, boolean];</span><br><span class="line">tuple = [&#x27;a&#x27;, 1, false]; // 必须按照上面的顺序和类型</span><br><span class="line">tuple = [&#x27;a&#x27;, false, false]; // Error：不能将类型“boolean”分配给类型“number”。</span><br><span class="line">tuple = [&#x27;a&#x27;, 1, false, 12]; // Error：不能将类型“[string, number, false, number]”分配给类型“[string, number, boolean]”。</span><br></pre></td></tr></table></figure>
-
-<p>6.枚举类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enum Roles &#123;</span><br><span class="line">  SUPER_ADMIN, // 0</span><br><span class="line">  ADMIN, // 1</span><br><span class="line">  USER // 2</span><br><span class="line">&#125;</span><br><span class="line">console.log(Roles.SUPER_ADMIN); // 0</span><br><span class="line">console.log(Roles[Roles.SUPER_ADMIN]); // SUPER_ADMIN</span><br></pre></td></tr></table></figure>
-
-<p>7.any类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let value: any;</span><br><span class="line">value = &#x27;abc&#x27;</span><br><span class="line">value =2</span><br><span class="line">value = [1,2,3]</span><br><span class="line">let arr: any[] = [1,&#x27;a&#x27;]</span><br></pre></td></tr></table></figure>
-
-<p>8.void类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const consoleText = (text: string): void =&gt; &#123; // 不返回内容</span><br><span class="line">  console.log(text);</span><br><span class="line">&#125;;</span><br><span class="line">let v: void;</span><br><span class="line">v = undefined;</span><br><span class="line">v = null; // tsconfig的strict需要关掉</span><br></pre></td></tr></table></figure>
-
-<p>9.null和undefined</p>
-<p>null 和 undefined 是其他类型的子类型</p>
-<p>10.never类型</p>
-<p>表示永远不存在的类型，抛错or死循环，返回值就是 never 类型。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const errorFunc = (message: string): never =&gt; &#123;</span><br><span class="line">  throw new Error(message);</span><br><span class="line">&#125;;</span><br><span class="line">const infiniteFunc = (): never =&gt; &#123;</span><br><span class="line">  while(true) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">// let neverVariable: never</span><br><span class="line">let neverVariable = (() =&gt; &#123;</span><br><span class="line">  while(true) &#123;&#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<p>11.对象类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function getObject(obj: object): void &#123;</span><br><span class="line">  console.log(obj);</span><br><span class="line">&#125;</span><br><span class="line">getObject(&#123; name: &#x27;dylan&#x27; &#125;);</span><br><span class="line">getObject(123); // Error：类型“number”的参数不能赋给类型“object”的参数。</span><br></pre></td></tr></table></figure>
-
-<p>12.类型断言</p>
-<p>值 as 类型</p>
-<p>或 &lt;类型&gt;值</p>
-<h3 id="二、Symbol"><a href="#二、Symbol" class="headerlink" title="二、Symbol"></a>二、Symbol</h3><p>Symbol值是独一无二的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const s1 = Symbol(); // Symbol()</span><br><span class="line">const s2 = Symbol(); // Symbol()</span><br><span class="line">s1 === s2; // false</span><br></pre></td></tr></table></figure>
-
-<p>目前来说工作上遇到的少</p>
-<h3 id="三、接口"><a href="#三、接口" class="headerlink" title="三、接口"></a>三、接口</h3><p>我们可以使用接口来进行限制，使数据更加清晰直观</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface NameInfo &#123;</span><br><span class="line">  firstName?: string;//?代表可选参数，没?不传这个值会报错</span><br><span class="line">  readonly lastName: string; //只读属性，不能更改NameInfo.lastName的值</span><br><span class="line">&#125;</span><br><span class="line">const getFullName = (&#123; firstName, lastName &#125;: NameInfo): string =&gt; &#123;</span><br><span class="line">  return `$&#123;firstName&#125; $&#123;lastName&#125;`;</span><br><span class="line">&#125;;</span><br><span class="line">getFullName(&#123;</span><br><span class="line">  firstName: &#x27;haha&#x27;,</span><br><span class="line">  lastName: &#x27;Lv&#x27;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>多传入参数时使用类型断言或者索引签名</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Vegetable &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  type: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const getVegetables = (&#123; color, type &#125;: Vegetable) =&gt; &#123;</span><br><span class="line">  return `A $&#123;color ? (color + &#x27; &#x27;) : &#x27;&#x27;&#125;$&#123;type&#125;`;</span><br><span class="line">&#125;;</span><br><span class="line">getVegetables(&#123; type: &#x27;tomato&#x27;, size: 2 &#125;); // Error：类型“&#123; type: string; size: number; &#125;”的参数不能赋给类型“Vegetable”的参数。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//类型断言</span><br><span class="line">getVegetables(&#123; type: &#x27;tomato&#x27;, size: 2 &#125; as Vegetable);</span><br><span class="line"></span><br><span class="line">//索引签名</span><br><span class="line">interface Vegetable &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  type: string;</span><br><span class="line">  [prop: string]: any; // 索引签名</span><br><span class="line">&#125;</span><br><span class="line">getVegetables(&#123; type: &#x27;tomato&#x27;, size: 2 &#125;);</span><br></pre></td></tr></table></figure>
-
-<p>定义函数结构</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 等同于类型别名：type AddFunc = (num1: number, num2: number) =&gt; number;</span><br><span class="line">interface AddFunc &#123;</span><br><span class="line">  (num1: number, num2: number): number</span><br><span class="line">&#125;</span><br><span class="line">const add: AddFunc = (n1, n2) =&gt; n1 + n2;</span><br></pre></td></tr></table></figure>
-
-<p>索引类型</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface RoleDic &#123;</span><br><span class="line">  [id: number]: string;//id这个索引只能为数值类型</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p>接口的继承</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Vegetables &#123;</span><br><span class="line">  color: string;</span><br><span class="line">&#125;</span><br><span class="line">interface Tomato extends Vegetables &#123;</span><br><span class="line">  radius: number;</span><br><span class="line">&#125;</span><br><span class="line">const tomato: Tomato = &#123;</span><br><span class="line">  radius: 1,</span><br><span class="line">  color: &#x27;red&#x27;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="四、泛型-T"><a href="#四、泛型-T" class="headerlink" title="四、泛型 T"></a>四、泛型 T</h3><p>为什么要用泛型？ 可以在函数调用时自由化传入的值和返回的值</p>
-<p>使用范型约束函数类型：与之前不同的地方在于多了 T 这个泛型参数，可以理解为这个函数：传入了 T（某个类型）作为 value 的类型，返回由 T组成的数组</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//&lt;T&gt; 表示声明一个表示类型的变量，Value: T 表示声明参数是 T 类型的，后面的 : T 表示返回值也是 T 类型的</span><br><span class="line">const getArray = &lt;T&gt;(value: T, times: number = 5): T[] =&gt; &#123;</span><br><span class="line">  return new Array(times).fill(value)</span><br><span class="line">&#125; //如果使用any[]参数也可以任意传，但是也丢失了类型检测的功能</span><br><span class="line"></span><br><span class="line">//第一个T为string，那么value: T也该为string</span><br><span class="line">getArray&lt;string&gt;(&#x27;abc&#x27;).map(item =&gt; item.length); // [3, 3, 3, 3, 3]</span><br></pre></td></tr></table></figure>
-
-<p>使用两个范型变量</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 参数1是T类型，参数2是U类型，返回类型是元组类型 T,U组成的数组</span><br><span class="line">const getArray = &lt;T, U&gt;(param1: T, param2: U, times: number): [T, U][] =&gt; &#123;</span><br><span class="line">  return new Array(times).fill([param1, param2]);</span><br><span class="line">&#125;;</span><br><span class="line">// 也可以明确泛型调用，不明确的话，TS会自动推导泛型类型：getArray&lt;number, string&gt;(1, &#x27;a&#x27;, 3);</span><br><span class="line">getArray(1, &#x27;a&#x27;, 3); // [[1, &#x27;a&#x27;], [1, &#x27;a&#x27;], [1, &#x27;a&#x27;]]</span><br></pre></td></tr></table></figure>
-
-<br/>
-
-<h3 id="五、交叉类型"><a href="#五、交叉类型" class="headerlink" title="五、交叉类型"></a>五、交叉类型</h3><p>交叉类型就是取多个类型的并集，使用 &amp; 符号定义。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const mergeFunc = &lt;T, U&gt;(arg1: T, arr2: U): T &amp; U =&gt; &#123;</span><br><span class="line">  let res = &#123;&#125; as T &amp; U; // 使用类型断言来告诉TS这里是（T和U）的交叉类型</span><br><span class="line">  res = Object.assign(arg1, arr2);</span><br><span class="line">  return res;</span><br><span class="line">&#125;;</span><br><span class="line">mergeFunc(&#123; a: &#x27;a&#x27; &#125;, &#123; b: &#x27;b&#x27; &#125;);</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Web前端学习</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git基础</title>
-    <url>/2022/09/30/git%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="一、git基础"><a href="#一、git基础" class="headerlink" title="一、git基础"></a>一、git基础</h1><h2 id="重新下载git后"><a href="#重新下载git后" class="headerlink" title="重新下载git后"></a>重新下载git后</h2><p><strong>1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）</strong></p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:your_email@youremail.com">your_email@youremail.com</a>“ //注意啊孩子，双引号里面是你的邮箱(如果在公司你应该有自己的企业邮箱)。填你常用的就行。还有enter代表执行。</p>
-<p>添加公钥到 Github(gitee等) 中</p>
-<p>登录 github 账号，选中并打开 setting，选择 SSH and GPG keys，选择 New SSH key，在 Title 中填入题目，在 Key 中填入id_rsa.pub 文件中的公钥。</p>
-<p>可用如下命令验证上述配置是否成功：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T [git@github.com](mailto:git@github.com) </span><br></pre></td></tr></table></figure>
-
-<p><strong>2.配置user.name   user.email</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 配置用户名 </span><br><span class="line">git config --global user.name &quot;xxx&quot;                       </span><br><span class="line"># 配置邮件</span><br><span class="line">git config --global user.email &quot;[xxx@xxx.com](mailto:xxx@xxx.com)&quot;              </span><br></pre></td></tr></table></figure>
-
-<p><strong>3.建本地仓库</strong></p>
-<p>新建一个文件夹，用vscode打开该文件夹，git init，该命令执行完后会在当前目录生成一个 .git 目录</p>
-<p><strong>4.添加远程地址（将本地仓库与远程仓库关联起来）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin [git@github.com](mailto:git@github.com)/你的github用户名/仓库名.git</span><br></pre></td></tr></table></figure>
-
-<p><strong>5.新建一个txt文本，里面写点东西。我的命名为read</strong></p>
-<p><strong>6.add和commit</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add read.txt $ git commit -m &quot;这是你commit的原因，写了方便你我他&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>7.push推送到你的github</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p><strong>另外注意事项：</strong></p>
-<p> 生成秘钥</p>
-<p>  在windows下查看[c盘-&gt;用户-&gt;用户名-&gt;.ssh]下是否有id_rsa、id_rsa.pub文件</p>
-<p>，如果没有需要手动生成</p>
-<p>  打开git bash，在控制台中输入以下命令： $ ssh-keygen -t rsa -C “自己邮箱”。</p>
-<hr>
-<h2 id="创建分支流程"><a href="#创建分支流程" class="headerlink" title="创建分支流程"></a>创建分支流程</h2><p><strong>1.先切换到主分支，然后创建本地新分支</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch  &lt;BranchName&gt;（master）</span><br></pre></td></tr></table></figure>
-
-<p><strong>2.显示所有本地分支（创建完看看本地有没有该分支）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.切换分支(既然都创建了，肯定要用这个分支，切换到该分支)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>4.建立远程分支</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push --set-upstream origin + 刚刚创建的分支名 </span><br></pre></td></tr></table></figure>
-
-<h2 id="删除分支流程"><a href="#删除分支流程" class="headerlink" title="删除分支流程"></a>删除分支流程</h2><p><strong>1.切换分支(先切换到其他分支上)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout  &lt;BranchName2&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>2.删除本地分支( 需要切换到别的分支上去删除)  命令行：</strong> </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch -d  &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.删除远程分支（没建立远程分支就不要没必要） 命令行</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin --delete  &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Git-把master的内容更新到自己分支上"><a href="#Git-把master的内容更新到自己分支上" class="headerlink" title="Git 把master的内容更新到自己分支上"></a>Git 把master的内容更新到自己分支上</h2><p><strong>1.如果分支(将此分支暂命名为feature)有修改，则先提交修改的内容，如果没有，直接跳到下一步</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m “这是你commit的原因，写了方便你我他”</span><br></pre></td></tr></table></figure>
-
-<p><strong>2.切换到master分支下</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.将远程的master代码pull拉取到本地</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p><strong>4.切换到自己分支下</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout  &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>5.合并master到自己分支</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git merge master</span><br></pre></td></tr></table></figure>
-
-<p>如果在合并的过程中，例如提示Test.java文件出现冲突了，手动修改一下这个文件，修改成自己想要内容；如果没有出现冲突，vs code上下载git history插件 ，可以对比冲突，保留自己想要的代码，没有就直接跳到7步</p>
-<p><strong>6.添加修改的文件，将新添加的文件提交上去</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add Test.java</span><br><span class="line"></span><br><span class="line">git commit -m “这是你commit的原因，写了方便你我他”</span><br></pre></td></tr></table></figure>
-
-<p><strong>7.将本地分支的代码push到远程仓库对应的分支上</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin  </span><br></pre></td></tr></table></figure>
-
-<h1 id="测试通过后可以上线了将自己分支代码合并到master"><a href="#测试通过后可以上线了将自己分支代码合并到master" class="headerlink" title="测试通过后可以上线了将自己分支代码合并到master"></a>测试通过后可以上线了将自己分支代码合并到master</h1><p>1.需要先在，Git 把master的内容更新到自己分支上（在上面）</p>
-<p>2.切换到master主分支 git checkout master</p>
-<p>3.git pull一下</p>
-<p>4.合并到master </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git merge （自己分支名字）</span><br></pre></td></tr></table></figure>
-
-<p>5.在vscode 源代码管理工具或者sourecetree上对比一下自己提交的代码</p>
-<p>5.git push 上传推送代码</p>
-<h2 id="git-stash的使用"><a href="#git-stash的使用" class="headerlink" title="git stash的使用"></a>git stash的使用</h2><p>应用场景：某一天你正在 feature 分支开发新需求，突然产品经理跑过来说线上有bug，必须马上修复。而此时你的功能开发到一半，于是你急忙想切到 master 分支，然后你就会看到以下报错：</p>
-<p>因为当前有文件更改了，需要提交commit保持工作区干净才能切分支</p>
-<p>使用git stash代码就被存起来了</p>
-<p>当你修复完线上问题，切回 feature 分支，想恢复代码也只需要：git stash apply</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">相关的命令</span><br><span class="line"># 保存当前未commit的代码</span><br><span class="line">git stash</span><br><span class="line"></span><br><span class="line"># 保存当前未commit的代码并添加备注</span><br><span class="line">git stash save &quot;备注的内容&quot;</span><br><span class="line"></span><br><span class="line"># 列出stash的所有记录</span><br><span class="line">git stash list</span><br><span class="line"></span><br><span class="line"># 删除stash的所有记录</span><br><span class="line">git stash clear</span><br><span class="line"></span><br><span class="line"># 应用最近一次的stash</span><br><span class="line">git stash apply</span><br><span class="line"></span><br><span class="line"># 应用最近一次的stash，随后删除该记录</span><br><span class="line">git stash pop</span><br><span class="line"></span><br><span class="line"># 删除最近的一次stash</span><br><span class="line">git stash drop</span><br></pre></td></tr></table></figure>
-
-<h2 id="git-reset-–soft的使用"><a href="#git-reset-–soft的使用" class="headerlink" title="git reset –soft的使用"></a>git reset –soft的使用</h2><p>应用场景1：有时候手滑不小心把不该提交的内容 commit 了，这时想改回来，只能再 commit 一次，又多一条“黑历史”。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 恢复最近一次 commit</span><br><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
-
-<p>reset –soft 相当于后悔药，给你重新改过的机会。对于上面的场景，就可以再次修改重新提交，保持干净的 commit 记录</p>
-<h1 id="二、电脑同时配置github与公司内部使用的gitlab"><a href="#二、电脑同时配置github与公司内部使用的gitlab" class="headerlink" title="二、电脑同时配置github与公司内部使用的gitlab"></a>二、电脑同时配置github与公司内部使用的gitlab</h1><p>下载git</p>
-<p>生成对应的gitlab和github的公秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”</p>
-<p>这样你会在.ssh文件夹(.ssh在哪具体百度去)，找到四个文件</p>
-<p>这四个文件分别对应gitlab和github的公私钥，分别将gitlab和github的公钥配置到github和你公司的gitlab的ssh上</p>
-<p>在.ssh目录下创建一个config文件，写入以下内容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">User zhangyao</span><br><span class="line">IdentityFile ~/.ssh/github_rsa </span><br><span class="line"></span><br><span class="line">Host hcgit.hengchang6.com</span><br><span class="line">HostName gitlab.com</span><br><span class="line">User zhangyao</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>测试连接是否成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab</span><br><span class="line">ssh -T git@github.com</span><br><span class="line"># Hi XXX! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line"># 出现上边这句，表示链接成功</span><br></pre></td></tr></table></figure>
-
-<p><font color='#478fd2'>参考文章：</font><a href="https://blog.csdn.net/jueji1998/article/details/103815585">电脑同时配置github与公司内部使用的gitlab</a></p>
-<h1 id="本地已有项目如何上传到github上"><a href="#本地已有项目如何上传到github上" class="headerlink" title="本地已有项目如何上传到github上"></a>本地已有项目如何上传到github上</h1><p>不和你多bb了,自己看：<a href="https://blog.csdn.net/weixin_44370837/article/details/121565864">本地已有项目如何上传到github上_前端学狗的博客-CSDN博客</a></p>
-<h1 id="git-冲突相关"><a href="#git-冲突相关" class="headerlink" title="git 冲突相关"></a>git 冲突相关</h1><p><strong>#预防发生冲突的方法：在每次push前git pull一下，保证本地代码都是最新的。</strong></p>
-<p><strong>#冲突解决方法：</strong></p>
-<p>第一种冲突：在Git push的时候提示冲突了。</p>
-<p>这种解决方法可以使用    git stash</p>
-<p>保存本地代码，然后拉取最新的远程分支代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch --all   //只是下载远程内容，不做任何合并  </span><br><span class="line">git reset --hard origin/master    //把HEAD指向刚下载的最新版本</span><br><span class="line">再使用git stash apply应用最近存储，重新push即可。</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>前端随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm随笔</title>
-    <url>/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
-<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
-<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
-<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
-<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
-</ul>
-<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
-<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
-</li>
-<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
-<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
-</li>
-</ul>
-<h1 id="二、全局安装和本地安装"><a href="#二、全局安装和本地安装" class="headerlink" title="二、全局安装和本地安装"></a>二、全局安装和本地安装</h1><h2 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; -g//（这里-g是-global的简写）</span><br></pre></td></tr></table></figure>
-
-<p>通过上面的命令行（带-g修饰符）安装某个包，就叫全局安装。通常全局包安装在node目录下的node_modules文件夹。可以通过执行下面几条命令查看node、npm的安装目录和全局包的安装目录。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">which node   // 查看node的安装目录</span><br><span class="line">which npm   // 查看npm的安装目录</span><br><span class="line">npm root -g // 查看全局包的安装目录</span><br><span class="line">npm list -g --depth 0 //查看全局安装过的</span><br></pre></td></tr></table></figure>
-
-<h3 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装:"></a>本地安装:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; (后面可以加几种修饰符，主要有两种--save-dev和--save)</span><br></pre></td></tr></table></figure>
-
-<p>通过上面的命令行安装某个包，就叫本地安装。包安装在你当前项目文件夹下的node_modules文件夹中。</p>
-<h3 id="全局安装的作用"><a href="#全局安装的作用" class="headerlink" title="全局安装的作用:"></a>全局安装的作用:</h3><p>全局安装的包可提供直接执行的命令(例：gulp -h可以查看gulp定义了什么命令)。 比如gulp全局安装后，可以在命令行上直接执行gulp -v、gulp -h等（原理：全局安装的gulp会将其package.json中的bin命令注入到了全局环境，使得你可以全局执行：gulp xxx命令，这另一个话题了，不深入）。倘若只在本地安装了gulp，未在全局安装gulp，直接执行这些命令会报错。你想要执行相应的命令则可能需要例如：node ./node_modules/gulp/bin/gulp.js -v(查看版本) 这样用一大串命令来执行。因此全局安装就发挥到他的好处了，一个gulp -v就搞定</p>
-<p>当然，不是每个包都必须要全局安装的，一般在项目中需要用到该包定义的命令才需要全局安装。比如gulp <taskName>执行gulp任务…等，所以是否需要全局安装取决于我们如何使用这个包。全局安装的就像全局变量有点粗糙，但在某些情况下也是必要的，全局包很重要，但如果不需要，最好避免使用。</p>
-<h2 id="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"><a href="#可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？" class="headerlink" title="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"></a>可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？</h2><ol>
-<li>如果只是全局安装了而没本地安装，就得require(‘<pagePath>‘) 例：引入一个全局的包可能就是requirt(‘/usr/local/….’)通过全局包的路径引入，这样显然十分的不灵活。如果安装了本地包，那么就<strong>可以直接require(‘<pageName>‘)引入使用。</strong></li>
-<li>一个包通常会在不同的项目上会重复用到，如果只全局安装，那么当某个项目需要该包更新版本时，更新后可能就会影响到其他同样引用该包的项目，因此本地安装可以更灵活地在不同的项目使用不同版本的包，并避免全局包污染的问题。</li>
-</ol>
-<p>一个经验法则：要用到该包的命令执行任务的就需要全局安装，要通过require引入使用的就需要本地安装（ 但实际开发过程中，我们也不怎么需要考虑某个包是全局安装还是本地安装，因为这一点在该包的官网上一般会明确指出，以上是为了理解全局安装和本地安装）。</p>
-<p>参考：<a href="https://segmentfault.com/a/1190000017787636?utm_source=tag-newest">node.js - npm(你怕吗) 全局安装与本地安装、开发依赖和生产依赖_个人文章 - SegmentFault 思否</a></p>
-]]></content>
-      <categories>
-        <category>前端随笔</category>
-      </categories>
-      <tags>
-        <tag>npm，随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端兼容性问题</title>
-    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
-    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
-<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端兼容性问题</category>
-      </categories>
-      <tags>
-        <tag>前端兼容</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hello，欢迎来到耀耀切克闹的博客！</title>
     <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
     <content><![CDATA[<h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
@@ -289,173 +34,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
+        <tag>博客搭建</tag>
         <tag>为什么要搭建博客</tag>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
-    <url>/2022/09/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="一、Hexo-Git-Github博客在多台终端同步管理"><a href="#一、Hexo-Git-Github博客在多台终端同步管理" class="headerlink" title="一、Hexo+Git+Github博客在多台终端同步管理"></a>一、<a href="https://so.csdn.net/so/search?q=Hexo&spm=1001.2101.3001.7020">Hexo</a>+Git+Github博客在多台终端同步管理</h1><p>此方法利用Git管理Hexo产生的文件，实现在不同的电脑上同步（<a href="https://so.csdn.net/so/search?q=Github&spm=1001.2101.3001.7020">Github</a>）所需的文件，也可以正常的在不同的Hexo环境里进行相应操作，只要在做完之后同步到Github的仓库里即可。下面具体来说说：</p>
-<p>网上基本上都是这个思路：</p>
-<h2 id="Github-分支管理Hexo环境目录"><a href="#Github-分支管理Hexo环境目录" class="headerlink" title="Github 分支管理Hexo环境目录"></a>Github 分支管理Hexo环境目录</h2><p>主要是通过维护两条git分支来实现，第一个分支是 Gihub 上默认的 master 分支，用于存放发布的博文的静态页面；另外再新建一个分支，比如命名为 Hexo ，通过此分支存放主题、原始的博客文件等等，这些文件才是不同电脑需要同步的文件；当每次修改主题或者新增博文后，先将修改的主题文件（在themes文件夹下）或者新增博客（在source文件夹下），同步到远程的 Hexo 分支，然后在通过 hexo g -d命令发布博文，也就是将新增的博文的静态页面同步到 master 分支。这样通过不同的分支管理不同的文件，实现了多台电脑同步更新博文的功能。俺是转载的，去看看原文吧！<br>原文链接：<a href="https://blog.csdn.net/steven_zdg988/article/details/111240905">https://blog.csdn.net/steven_zdg988/article/details/111240905</a></p>
-<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><p>在PC b，我是直接在github上创建的，具体就是如下图。分支名输入Hexo</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16639155572122.png" alt="创建分支"></p>
-<h3 id="初始化分支"><a href="#初始化分支" class="headerlink" title="初始化分支"></a>初始化分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone 仓库地址（自己的仓库地址）</span><br></pre></td></tr></table></figure>
-
-<p>将仓库文件拉取到本地，生成的文件名为 username.github.io；进入username.github.io文件夹，除了 <em>.git</em> 文件夹以外，其他文件全部删除；同时添加.gitnore</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line"># 添加git忽略</span><br></pre></td></tr></table></figure>
-
-<p>提交本次修改</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “提交说明”</span><br><span class="line">git push origin Hexo</span><br></pre></td></tr></table></figure>
-
-<h3 id="同步代码"><a href="#同步代码" class="headerlink" title="同步代码"></a>同步代码</h3><p>把之前跟着<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a>大佬做的建的文件copy到username.github.io下，db.json，node_modules，public就不要了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16639162406638.png" alt="img"></p>
-<p>暂时不要提交，安装hexo环境去</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>然后再执行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>这时你文件夹下多出了db.json，node_modules，public，还会多一个.deploy_git（hexo插件打包后上传到master主分支的静态博客文件夹）因为我用了yarn，所以会有yarn.lock，这个无关紧要，这时git提交上去就行</p>
-<p><strong>文章内更新点东西，加一句话什么的，再去执行hexo的命令</strong></p>
-<p>过会再去打开https://你的用户名.github.io，更新了就代表没问题了</p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>同步管理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(一)——本地搭建hexo框架</title>
-    <url>/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAhexo%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
-<ul>
-<li><a href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
-<li><a href="http://git-scm.com/">Git</a></li>
-</ul>
-<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <a href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">安装 Hexo</a> 步骤。</p>
-<p>如果您的电脑中尚未安装所需要的程序，请自行百度按指示完成安装。</p>
-<h2 id="3-安装-Hexo"><a href="#3-安装-Hexo" class="headerlink" title="3.安装 Hexo"></a>3.安装 Hexo</h2><h3 id="（1）本地安装-hexo"><a href="#（1）本地安装-hexo" class="headerlink" title="（1）本地安装 hexo"></a>（1）本地安装 hexo</h3><p>首先在本地新建一个空文件夹，用来存放 Hexo 的文件和以后要写的博客文件，注意不要有中文路径，避免可能出现的问题。取名 MyBlog。</p>
-<p>使用VS code 打开该文件夹，右键打开终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 初始化文件夹</span><br><span class="line">hexo init</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>命令很好理解，第一行安装 hexo 模块，<code>-g</code>表示安装全局模块；第二行是 hexo 初始化，会用 <code>git clone</code>命令去 GitHub 下载一个 hexo 默认模板代码库；第三行是安装依赖包，类似安装 pip 的 requirement 文件，会根据刚下载的代码库中的配置文件，下载并安装所需依赖包。</p>
-<h3 id="（2）可能遇到的问题"><a href="#（2）可能遇到的问题" class="headerlink" title="（2）可能遇到的问题"></a>（2）可能遇到的问题</h3><ul>
-<li><strong><code>npm install -g hexo-cli</code>命令执行卡住，或者报错连接不上</strong></li>
-</ul>
-<p>可能是 npm 源速度太慢，可以尝试修改淘宝源解决，再重新执行安装命令。npm 源的概念就和 Python 中的 pip 源一样，默认源是<code>https://registry.npmjs.org/</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看 npm 源</span><br><span class="line">npm config get registry</span><br><span class="line"># 临时修改 npm 源安装 hexo (仅本条命令有效)</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br><span class="line"># 或者永久修改 npm 源</span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>如果是公司内网使用代理访问外网 (比如<code>ping registry.npmjs.org</code> <code>ping registry.npm.taobao.org</code>都不通)，可以尝试给 npm 配置代理解决，再重新执行安装命令。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置代理</span><br><span class="line">npm config set proxy http://serverip:port</span><br><span class="line">npm confit set https-proxy http:/serverip:port</span><br><span class="line"># 设置带用户名密码的代理</span><br><span class="line">npm config set proxy http://username:password@serverip:port</span><br><span class="line">npm confit set https-proxy http://username:password@serverip:port</span><br><span class="line"># 取消代理</span><br><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong><code>hexo init</code>命令执行卡住，或者报错连接不上</strong></li>
-</ul>
-<p>同上设置代理</p>
-<h2 id="4-运行本地博客"><a href="#4-运行本地博客" class="headerlink" title="4.运行本地博客"></a>4.运行本地博客</h2><p>前面三条命令执行成功，Hexo 框架在本地就已经搭建好了，下面看看效果。</p>
-<p>在vs code 的终端中运行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 生成静态网站</span><br><span class="line">hexo g</span><br><span class="line"># 启动服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>点击运行成功后的出来的地址</p>
-<p>自此一个简单的本地博客诞生了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20201220204625063.png" alt="本地博客效果"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(四)——关于我页面搭建</title>
-    <url>/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
-<p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928181752870.png"></p>
-<p>链接相关配置也是在themes=&gt;ayer=&gt;_config.yml下配置，找到friends_link，图片地址和github链接填自己的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  DarknessZY:</span><br><span class="line">    url: https://github.com/DarknessZY</span><br><span class="line">    img: /images/github.png</span><br><span class="line">  耀耀切克闹灬:</span><br><span class="line">    url: https://juejin.cn/user/1781681116679854/columns</span><br><span class="line">    img: /images/juejin.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: /images/hexo.png</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br></pre></td></tr></table></figure>
-
-<p>然后执行hexo命令，页面上就显示出来了：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16643609353351.png" alt="img"></p>
-<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div style=&quot;margin-top: 25%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt; </span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div style=&quot;margin-top: 5%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt;要是觉得不错，请我喝饮料吧！&lt;/p&gt; </span><br><span class="line">        &lt;div style=&quot;display: flex;justify-content: space-between;align-items: center;&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.alipay) %&gt;&quot;  width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.weixin) %&gt;&quot; width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928183612541.png" alt="image-20220928183612541"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(二)——hexo主题搭建</title>
-    <url>/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
-<p>下面是我寻找主题的三个方法。</p>
-<ul>
-<li><p><strong>官方网站</strong></p>
-<p>Hexo 官网收录了几百个第三方主题，其中有许多中文开发者开发的主题。</p>
-<p>在 Hexo 官网点击“主题”，或者直接进入 Hexo 主题页：<a href="https://hexo.io/themes/">themes</a></p>
-<p>通过上方的搜索框可以根据标签搜索。</p>
-</li>
-</ul>
-<h2 id="2-github开源Hexo-博客主题"><a href="#2-github开源Hexo-博客主题" class="headerlink" title="2.github开源Hexo 博客主题"></a>2.github开源Hexo 博客主题</h2><p>大多数流行的主题都在 GitHub 托管开源了，我们可以直接去 GitHub 下载。</p>
-<p>在 Github 官网搜索<code>hexo-theme</code>，选择<code>All GitHub</code>，或者直接进入搜索页：<a href="https://github.com/search?q=hexo-theme">search?q=hexo-theme</a></p>
-<p>市面上使用比较多的主题：</p>
-<ul>
-<li><strong>Next</strong></li>
-</ul>
-<p>Demo 示例：<a href="https://theme-next.js.org/">NexT</a> | <a href="https://dandyxu.me/">Dandy</a> | <a href="https://raincal.com/">Raincal</a></p>
-<p>GitHub 主页：<a href="https://github.com/iissnan/hexo-theme-next">hexo-theme-next</a></p>
-<p>这个是 Hexo 最流行的主题，GitHub 上 15.5k stars，在 Hexo 主题中排行第一。</p>
-<ul>
-<li><strong>matery</strong></li>
-</ul>
-<p>Demo 示例：<a href="http://blinkfox.com/">闪烁之狐</a></p>
-<p>GitHub 主页：<a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a></p>
-<ul>
-<li><strong>butterfly</strong></li>
-</ul>
-<p>Demo 示例： <a href="https://butterfly.js.org/">Butterfly</a> | <a href="https://jerryc.me/">JerryC</a></p>
-<p>GitHub 主页：<a href="https://github.com/jerryc127/hexo-theme-butterfly">hexo-theme-butterfly</a></p>
-<p>本菜鸟使用的主题就是以简约为主：</p>
-<ul>
-<li><strong>ayer</strong></li>
-</ul>
-<p>Demo 示例：<a href="https://shen-yu.gitee.io/">岛</a></p>
-<p>GitHub 主页：<a href="https://github.com/Shen-Yu/hexo-theme-ayer">hexo-theme-ayer</a></p>
-<h2 id="3-更换主题"><a href="#3-更换主题" class="headerlink" title="3.更换主题"></a>3.更换主题</h2><p>以 <strong>ayer</strong> 主题为例。</p>
-<p>在 vs code中 Mylog根目录下，右键，执行下面命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-ayer -S</span><br><span class="line">#如果hexo &lt; 5.0</span><br><span class="line"># 国内用户如果速度较慢，可以把github地址替换为：https://gitee.com/mirrors/ayer.git</span><br><span class="line">git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
-
-<p>我在使用 <strong>ayer</strong> 找到了这样一位大佬，后面的操作就是跟着这位大佬的搭建博客进行的了：<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a></p>
-<p>该博主的文章对我后面的搭建有巨大帮助，各位过去看看吧！后面估计很多内容可能会照着大佬来，如有雷同，纯属抄袭（手动狗头）</p>
-<h1 id="二-本地写博客"><a href="#二-本地写博客" class="headerlink" title="二.本地写博客"></a>二.本地写博客</h1><p><strong>利用Markdown语法的软件写博客，本地试运行：</strong></p>
-<p>这里推荐使用Typora或uTools的Markdown笔记功能，具体怎么使用这两款软件， 官方都有说明。其中Typora现在开始收费了，但可以去下载老版本，老版本是免费的，具体操作可以按：</p>
-<p><a href="http://www.itmind.net/16468.html">Typora免费版</a></p>
-<p>根据这个网址上面来操作，下载老版本的Typora，但具体还能用多久就不知道了，有钱的小伙伴可以直接去官网下载正版，本人老穷b了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/11DDC475.jpg"></p>
-<p>把写好的文章复制到根目录下的source=&gt;_posts</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184421310.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184517354.png"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
       </tags>
   </entry>
   <entry>
@@ -619,6 +199,426 @@
         <tag>vite</tag>
         <tag>vue3</tag>
         <tag>pinia</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git基础</title>
+    <url>/2022/09/30/git%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="一、git基础"><a href="#一、git基础" class="headerlink" title="一、git基础"></a>一、git基础</h1><h2 id="重新下载git后"><a href="#重新下载git后" class="headerlink" title="重新下载git后"></a>重新下载git后</h2><p><strong>1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）</strong></p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:your_email@youremail.com">your_email@youremail.com</a>“ //注意啊孩子，双引号里面是你的邮箱(如果在公司你应该有自己的企业邮箱)。填你常用的就行。还有enter代表执行。</p>
+<p>添加公钥到 Github(gitee等) 中</p>
+<p>登录 github 账号，选中并打开 setting，选择 SSH and GPG keys，选择 New SSH key，在 Title 中填入题目，在 Key 中填入id_rsa.pub 文件中的公钥。</p>
+<p>可用如下命令验证上述配置是否成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T [git@github.com](mailto:git@github.com) </span><br></pre></td></tr></table></figure>
+
+<p><strong>2.配置user.name   user.email</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 配置用户名 </span><br><span class="line">git config --global user.name &quot;xxx&quot;                       </span><br><span class="line"># 配置邮件</span><br><span class="line">git config --global user.email &quot;[xxx@xxx.com](mailto:xxx@xxx.com)&quot;              </span><br></pre></td></tr></table></figure>
+
+<p><strong>3.建本地仓库</strong></p>
+<p>新建一个文件夹，用vscode打开该文件夹，git init，该命令执行完后会在当前目录生成一个 .git 目录</p>
+<p><strong>4.添加远程地址（将本地仓库与远程仓库关联起来）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin [git@github.com](mailto:git@github.com)/你的github用户名/仓库名.git</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.新建一个txt文本，里面写点东西。我的命名为read</strong></p>
+<p><strong>6.add和commit</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add read.txt $ git commit -m &quot;这是你commit的原因，写了方便你我他&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>7.push推送到你的github</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p><strong>另外注意事项：</strong></p>
+<p> 生成秘钥</p>
+<p>  在windows下查看[c盘-&gt;用户-&gt;用户名-&gt;.ssh]下是否有id_rsa、id_rsa.pub文件</p>
+<p>，如果没有需要手动生成</p>
+<p>  打开git bash，在控制台中输入以下命令： $ ssh-keygen -t rsa -C “自己邮箱”。</p>
+<hr>
+<h2 id="创建分支流程"><a href="#创建分支流程" class="headerlink" title="创建分支流程"></a>创建分支流程</h2><p><strong>1.先切换到主分支，然后创建本地新分支</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch  &lt;BranchName&gt;（master）</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.显示所有本地分支（创建完看看本地有没有该分支）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.切换分支(既然都创建了，肯定要用这个分支，切换到该分支)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.建立远程分支</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push --set-upstream origin + 刚刚创建的分支名 </span><br></pre></td></tr></table></figure>
+
+<h2 id="删除分支流程"><a href="#删除分支流程" class="headerlink" title="删除分支流程"></a>删除分支流程</h2><p><strong>1.切换分支(先切换到其他分支上)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout  &lt;BranchName2&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.删除本地分支( 需要切换到别的分支上去删除)  命令行：</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch -d  &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.删除远程分支（没建立远程分支就不要没必要） 命令行</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin --delete  &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Git-把master的内容更新到自己分支上"><a href="#Git-把master的内容更新到自己分支上" class="headerlink" title="Git 把master的内容更新到自己分支上"></a>Git 把master的内容更新到自己分支上</h2><p><strong>1.如果分支(将此分支暂命名为feature)有修改，则先提交修改的内容，如果没有，直接跳到下一步</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m “这是你commit的原因，写了方便你我他”</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.切换到master分支下</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.将远程的master代码pull拉取到本地</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.切换到自己分支下</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout  &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.合并master到自己分支</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git merge master</span><br></pre></td></tr></table></figure>
+
+<p>如果在合并的过程中，例如提示Test.java文件出现冲突了，手动修改一下这个文件，修改成自己想要内容；如果没有出现冲突，vs code上下载git history插件 ，可以对比冲突，保留自己想要的代码，没有就直接跳到7步</p>
+<p><strong>6.添加修改的文件，将新添加的文件提交上去</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add Test.java</span><br><span class="line"></span><br><span class="line">git commit -m “这是你commit的原因，写了方便你我他”</span><br></pre></td></tr></table></figure>
+
+<p><strong>7.将本地分支的代码push到远程仓库对应的分支上</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin  </span><br></pre></td></tr></table></figure>
+
+<h1 id="测试通过后可以上线了将自己分支代码合并到master"><a href="#测试通过后可以上线了将自己分支代码合并到master" class="headerlink" title="测试通过后可以上线了将自己分支代码合并到master"></a>测试通过后可以上线了将自己分支代码合并到master</h1><p>1.需要先在，Git 把master的内容更新到自己分支上（在上面）</p>
+<p>2.切换到master主分支 git checkout master</p>
+<p>3.git pull一下</p>
+<p>4.合并到master </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git merge （自己分支名字）</span><br></pre></td></tr></table></figure>
+
+<p>5.在vscode 源代码管理工具或者sourecetree上对比一下自己提交的代码</p>
+<p>5.git push 上传推送代码</p>
+<h2 id="git-stash的使用"><a href="#git-stash的使用" class="headerlink" title="git stash的使用"></a>git stash的使用</h2><p>应用场景：某一天你正在 feature 分支开发新需求，突然产品经理跑过来说线上有bug，必须马上修复。而此时你的功能开发到一半，于是你急忙想切到 master 分支，然后你就会看到以下报错：</p>
+<p>因为当前有文件更改了，需要提交commit保持工作区干净才能切分支</p>
+<p>使用git stash代码就被存起来了</p>
+<p>当你修复完线上问题，切回 feature 分支，想恢复代码也只需要：git stash apply</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">相关的命令</span><br><span class="line"># 保存当前未commit的代码</span><br><span class="line">git stash</span><br><span class="line"></span><br><span class="line"># 保存当前未commit的代码并添加备注</span><br><span class="line">git stash save &quot;备注的内容&quot;</span><br><span class="line"></span><br><span class="line"># 列出stash的所有记录</span><br><span class="line">git stash list</span><br><span class="line"></span><br><span class="line"># 删除stash的所有记录</span><br><span class="line">git stash clear</span><br><span class="line"></span><br><span class="line"># 应用最近一次的stash</span><br><span class="line">git stash apply</span><br><span class="line"></span><br><span class="line"># 应用最近一次的stash，随后删除该记录</span><br><span class="line">git stash pop</span><br><span class="line"></span><br><span class="line"># 删除最近的一次stash</span><br><span class="line">git stash drop</span><br></pre></td></tr></table></figure>
+
+<h2 id="git-reset-–soft的使用"><a href="#git-reset-–soft的使用" class="headerlink" title="git reset –soft的使用"></a>git reset –soft的使用</h2><p>应用场景1：有时候手滑不小心把不该提交的内容 commit 了，这时想改回来，只能再 commit 一次，又多一条“黑历史”。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 恢复最近一次 commit</span><br><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
+
+<p>reset –soft 相当于后悔药，给你重新改过的机会。对于上面的场景，就可以再次修改重新提交，保持干净的 commit 记录</p>
+<h1 id="二、电脑同时配置github与公司内部使用的gitlab"><a href="#二、电脑同时配置github与公司内部使用的gitlab" class="headerlink" title="二、电脑同时配置github与公司内部使用的gitlab"></a>二、电脑同时配置github与公司内部使用的gitlab</h1><p>下载git</p>
+<p>生成对应的gitlab和github的公秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”</p>
+<p>这样你会在.ssh文件夹(.ssh在哪具体百度去)，找到四个文件</p>
+<p>这四个文件分别对应gitlab和github的公私钥，分别将gitlab和github的公钥配置到github和你公司的gitlab的ssh上</p>
+<p>在.ssh目录下创建一个config文件，写入以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">User zhangyao</span><br><span class="line">IdentityFile ~/.ssh/github_rsa </span><br><span class="line"></span><br><span class="line">Host hcgit.hengchang6.com</span><br><span class="line">HostName gitlab.com</span><br><span class="line">User zhangyao</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+
+<p>测试连接是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab</span><br><span class="line">ssh -T git@github.com</span><br><span class="line"># Hi XXX! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line"># 出现上边这句，表示链接成功</span><br></pre></td></tr></table></figure>
+
+<p><font color='#478fd2'>参考文章：</font><a href="https://blog.csdn.net/jueji1998/article/details/103815585">电脑同时配置github与公司内部使用的gitlab</a></p>
+<h1 id="本地已有项目如何上传到github上"><a href="#本地已有项目如何上传到github上" class="headerlink" title="本地已有项目如何上传到github上"></a>本地已有项目如何上传到github上</h1><p>不和你多bb了,自己看：<a href="https://blog.csdn.net/weixin_44370837/article/details/121565864">本地已有项目如何上传到github上_前端学狗的博客-CSDN博客</a></p>
+<h1 id="git-冲突相关"><a href="#git-冲突相关" class="headerlink" title="git 冲突相关"></a>git 冲突相关</h1><p><strong>#预防发生冲突的方法：在每次push前git pull一下，保证本地代码都是最新的。</strong></p>
+<p><strong>#冲突解决方法：</strong></p>
+<p>第一种冲突：在Git push的时候提示冲突了。</p>
+<p>这种解决方法可以使用    git stash</p>
+<p>保存本地代码，然后拉取最新的远程分支代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch --all   //只是下载远程内容，不做任何合并  </span><br><span class="line">git reset --hard origin/master    //把HEAD指向刚下载的最新版本</span><br><span class="line">再使用git stash apply应用最近存储，重新push即可。</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>前端随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(四)——关于我页面搭建</title>
+    <url>/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
+<p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928181752870.png"></p>
+<p>链接相关配置也是在themes=&gt;ayer=&gt;_config.yml下配置，找到friends_link，图片地址和github链接填自己的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  DarknessZY:</span><br><span class="line">    url: https://github.com/DarknessZY</span><br><span class="line">    img: /images/github.png</span><br><span class="line">  耀耀切克闹灬:</span><br><span class="line">    url: https://juejin.cn/user/1781681116679854/columns</span><br><span class="line">    img: /images/juejin.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: /images/hexo.png</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br></pre></td></tr></table></figure>
+
+<p>然后执行hexo命令，页面上就显示出来了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16643609353351.png" alt="img"></p>
+<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div style=&quot;margin-top: 25%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt; </span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div style=&quot;margin-top: 5%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt;要是觉得不错，请我喝饮料吧！&lt;/p&gt; </span><br><span class="line">        &lt;div style=&quot;display: flex;justify-content: space-between;align-items: center;&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.alipay) %&gt;&quot;  width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.weixin) %&gt;&quot; width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928183612541.png" alt="image-20220928183612541"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo框架</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端兼容性问题</title>
+    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
+    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
+<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端兼容性问题</category>
+      </categories>
+      <tags>
+        <tag>前端兼容</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm随笔</title>
+    <url>/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
+<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
+<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
+<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
+<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
+</ul>
+<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
+<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
+</li>
+<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
+<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
+</li>
+</ul>
+<h1 id="二、全局安装和本地安装"><a href="#二、全局安装和本地安装" class="headerlink" title="二、全局安装和本地安装"></a>二、全局安装和本地安装</h1><h2 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; -g//（这里-g是-global的简写）</span><br></pre></td></tr></table></figure>
+
+<p>通过上面的命令行（带-g修饰符）安装某个包，就叫全局安装。通常全局包安装在node目录下的node_modules文件夹。可以通过执行下面几条命令查看node、npm的安装目录和全局包的安装目录。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">which node   // 查看node的安装目录</span><br><span class="line">which npm   // 查看npm的安装目录</span><br><span class="line">npm root -g // 查看全局包的安装目录</span><br><span class="line">npm list -g --depth 0 //查看全局安装过的</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装:"></a>本地安装:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; (后面可以加几种修饰符，主要有两种--save-dev和--save)</span><br></pre></td></tr></table></figure>
+
+<p>通过上面的命令行安装某个包，就叫本地安装。包安装在你当前项目文件夹下的node_modules文件夹中。</p>
+<h3 id="全局安装的作用"><a href="#全局安装的作用" class="headerlink" title="全局安装的作用:"></a>全局安装的作用:</h3><p>全局安装的包可提供直接执行的命令(例：gulp -h可以查看gulp定义了什么命令)。 比如gulp全局安装后，可以在命令行上直接执行gulp -v、gulp -h等（原理：全局安装的gulp会将其package.json中的bin命令注入到了全局环境，使得你可以全局执行：gulp xxx命令，这另一个话题了，不深入）。倘若只在本地安装了gulp，未在全局安装gulp，直接执行这些命令会报错。你想要执行相应的命令则可能需要例如：node ./node_modules/gulp/bin/gulp.js -v(查看版本) 这样用一大串命令来执行。因此全局安装就发挥到他的好处了，一个gulp -v就搞定</p>
+<p>当然，不是每个包都必须要全局安装的，一般在项目中需要用到该包定义的命令才需要全局安装。比如gulp <taskName>执行gulp任务…等，所以是否需要全局安装取决于我们如何使用这个包。全局安装的就像全局变量有点粗糙，但在某些情况下也是必要的，全局包很重要，但如果不需要，最好避免使用。</p>
+<h2 id="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"><a href="#可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？" class="headerlink" title="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"></a>可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？</h2><ol>
+<li>如果只是全局安装了而没本地安装，就得require(‘<pagePath>‘) 例：引入一个全局的包可能就是requirt(‘/usr/local/….’)通过全局包的路径引入，这样显然十分的不灵活。如果安装了本地包，那么就<strong>可以直接require(‘<pageName>‘)引入使用。</strong></li>
+<li>一个包通常会在不同的项目上会重复用到，如果只全局安装，那么当某个项目需要该包更新版本时，更新后可能就会影响到其他同样引用该包的项目，因此本地安装可以更灵活地在不同的项目使用不同版本的包，并避免全局包污染的问题。</li>
+</ol>
+<p>一个经验法则：要用到该包的命令执行任务的就需要全局安装，要通过require引入使用的就需要本地安装（ 但实际开发过程中，我们也不怎么需要考虑某个包是全局安装还是本地安装，因为这一点在该包的官网上一般会明确指出，以上是为了理解全局安装和本地安装）。</p>
+<p>参考：<a href="https://segmentfault.com/a/1190000017787636?utm_source=tag-newest">node.js - npm(你怕吗) 全局安装与本地安装、开发依赖和生产依赖_个人文章 - SegmentFault 思否</a></p>
+]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>npm，随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
+    <url>/2022/09/23/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="一、Hexo-Git-Github博客在多台终端同步管理"><a href="#一、Hexo-Git-Github博客在多台终端同步管理" class="headerlink" title="一、Hexo+Git+Github博客在多台终端同步管理"></a>一、<a href="https://so.csdn.net/so/search?q=Hexo&spm=1001.2101.3001.7020">Hexo</a>+Git+Github博客在多台终端同步管理</h1><p>此方法利用Git管理Hexo产生的文件，实现在不同的电脑上同步（<a href="https://so.csdn.net/so/search?q=Github&spm=1001.2101.3001.7020">Github</a>）所需的文件，也可以正常的在不同的Hexo环境里进行相应操作，只要在做完之后同步到Github的仓库里即可。下面具体来说说：</p>
+<p>网上基本上都是这个思路：</p>
+<h2 id="Github-分支管理Hexo环境目录"><a href="#Github-分支管理Hexo环境目录" class="headerlink" title="Github 分支管理Hexo环境目录"></a>Github 分支管理Hexo环境目录</h2><p>主要是通过维护两条git分支来实现，第一个分支是 Gihub 上默认的 master 分支，用于存放发布的博文的静态页面；另外再新建一个分支，比如命名为 Hexo ，通过此分支存放主题、原始的博客文件等等，这些文件才是不同电脑需要同步的文件；当每次修改主题或者新增博文后，先将修改的主题文件（在themes文件夹下）或者新增博客（在source文件夹下），同步到远程的 Hexo 分支，然后在通过 hexo g -d命令发布博文，也就是将新增的博文的静态页面同步到 master 分支。这样通过不同的分支管理不同的文件，实现了多台电脑同步更新博文的功能。俺是转载的，去看看原文吧！<br>原文链接：<a href="https://blog.csdn.net/steven_zdg988/article/details/111240905">https://blog.csdn.net/steven_zdg988/article/details/111240905</a></p>
+<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><p>在PC b，我是直接在github上创建的，具体就是如下图。分支名输入Hexo</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16639155572122.png" alt="创建分支"></p>
+<h3 id="初始化分支"><a href="#初始化分支" class="headerlink" title="初始化分支"></a>初始化分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone 仓库地址（自己的仓库地址）</span><br></pre></td></tr></table></figure>
+
+<p>将仓库文件拉取到本地，生成的文件名为 username.github.io；进入username.github.io文件夹，除了 <em>.git</em> 文件夹以外，其他文件全部删除；同时添加.gitnore</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line"># 添加git忽略</span><br></pre></td></tr></table></figure>
+
+<p>提交本次修改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “提交说明”</span><br><span class="line">git push origin Hexo</span><br></pre></td></tr></table></figure>
+
+<h3 id="同步代码"><a href="#同步代码" class="headerlink" title="同步代码"></a>同步代码</h3><p>把之前跟着<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a>大佬做的建的文件copy到username.github.io下，db.json，node_modules，public就不要了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16639162406638.png" alt="img"></p>
+<p>暂时不要提交，安装hexo环境去</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>然后再执行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>这时你文件夹下多出了db.json，node_modules，public，还会多一个.deploy_git（hexo插件打包后上传到master主分支的静态博客文件夹）因为我用了yarn，所以会有yarn.lock，这个无关紧要，这时git提交上去就行</p>
+<p><strong>文章内更新点东西，加一句话什么的，再去执行hexo的命令</strong></p>
+<p>过会再去打开https://你的用户名.github.io，更新了就代表没问题了</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>同步管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(二)——hexo主题搭建</title>
+    <url>/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
+<p>下面是我寻找主题的三个方法。</p>
+<ul>
+<li><p><strong>官方网站</strong></p>
+<p>Hexo 官网收录了几百个第三方主题，其中有许多中文开发者开发的主题。</p>
+<p>在 Hexo 官网点击“主题”，或者直接进入 Hexo 主题页：<a href="https://hexo.io/themes/">themes</a></p>
+<p>通过上方的搜索框可以根据标签搜索。</p>
+</li>
+</ul>
+<h2 id="2-github开源Hexo-博客主题"><a href="#2-github开源Hexo-博客主题" class="headerlink" title="2.github开源Hexo 博客主题"></a>2.github开源Hexo 博客主题</h2><p>大多数流行的主题都在 GitHub 托管开源了，我们可以直接去 GitHub 下载。</p>
+<p>在 Github 官网搜索<code>hexo-theme</code>，选择<code>All GitHub</code>，或者直接进入搜索页：<a href="https://github.com/search?q=hexo-theme">search?q=hexo-theme</a></p>
+<p>市面上使用比较多的主题：</p>
+<ul>
+<li><strong>Next</strong></li>
+</ul>
+<p>Demo 示例：<a href="https://theme-next.js.org/">NexT</a> | <a href="https://dandyxu.me/">Dandy</a> | <a href="https://raincal.com/">Raincal</a></p>
+<p>GitHub 主页：<a href="https://github.com/iissnan/hexo-theme-next">hexo-theme-next</a></p>
+<p>这个是 Hexo 最流行的主题，GitHub 上 15.5k stars，在 Hexo 主题中排行第一。</p>
+<ul>
+<li><strong>matery</strong></li>
+</ul>
+<p>Demo 示例：<a href="http://blinkfox.com/">闪烁之狐</a></p>
+<p>GitHub 主页：<a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a></p>
+<ul>
+<li><strong>butterfly</strong></li>
+</ul>
+<p>Demo 示例： <a href="https://butterfly.js.org/">Butterfly</a> | <a href="https://jerryc.me/">JerryC</a></p>
+<p>GitHub 主页：<a href="https://github.com/jerryc127/hexo-theme-butterfly">hexo-theme-butterfly</a></p>
+<p>本菜鸟使用的主题就是以简约为主：</p>
+<ul>
+<li><strong>ayer</strong></li>
+</ul>
+<p>Demo 示例：<a href="https://shen-yu.gitee.io/">岛</a></p>
+<p>GitHub 主页：<a href="https://github.com/Shen-Yu/hexo-theme-ayer">hexo-theme-ayer</a></p>
+<h2 id="3-更换主题"><a href="#3-更换主题" class="headerlink" title="3.更换主题"></a>3.更换主题</h2><p>以 <strong>ayer</strong> 主题为例。</p>
+<p>在 vs code中 Mylog根目录下，右键，执行下面命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-ayer -S</span><br><span class="line">#如果hexo &lt; 5.0</span><br><span class="line"># 国内用户如果速度较慢，可以把github地址替换为：https://gitee.com/mirrors/ayer.git</span><br><span class="line">git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
+
+<p>我在使用 <strong>ayer</strong> 找到了这样一位大佬，后面的操作就是跟着这位大佬的搭建博客进行的了：<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a></p>
+<p>该博主的文章对我后面的搭建有巨大帮助，各位过去看看吧！后面估计很多内容可能会照着大佬来，如有雷同，纯属抄袭（手动狗头）</p>
+<h1 id="二-本地写博客"><a href="#二-本地写博客" class="headerlink" title="二.本地写博客"></a>二.本地写博客</h1><p><strong>利用Markdown语法的软件写博客，本地试运行：</strong></p>
+<p>这里推荐使用Typora或uTools的Markdown笔记功能，具体怎么使用这两款软件， 官方都有说明。其中Typora现在开始收费了，但可以去下载老版本，老版本是免费的，具体操作可以按：</p>
+<p><a href="http://www.itmind.net/16468.html">Typora免费版</a></p>
+<p>根据这个网址上面来操作，下载老版本的Typora，但具体还能用多久就不知道了，有钱的小伙伴可以直接去官网下载正版，本人老穷b了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/11DDC475.jpg"></p>
+<p>把写好的文章复制到根目录下的source=&gt;_posts</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184421310.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184517354.png"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo框架</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(一)——本地搭建hexo框架</title>
+    <url>/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAhexo%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<ul>
+<li><a href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
+<li><a href="http://git-scm.com/">Git</a></li>
+</ul>
+<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <a href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">安装 Hexo</a> 步骤。</p>
+<p>如果您的电脑中尚未安装所需要的程序，请自行百度按指示完成安装。</p>
+<h2 id="3-安装-Hexo"><a href="#3-安装-Hexo" class="headerlink" title="3.安装 Hexo"></a>3.安装 Hexo</h2><h3 id="（1）本地安装-hexo"><a href="#（1）本地安装-hexo" class="headerlink" title="（1）本地安装 hexo"></a>（1）本地安装 hexo</h3><p>首先在本地新建一个空文件夹，用来存放 Hexo 的文件和以后要写的博客文件，注意不要有中文路径，避免可能出现的问题。取名 MyBlog。</p>
+<p>使用VS code 打开该文件夹，右键打开终端</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 初始化文件夹</span><br><span class="line">hexo init</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>命令很好理解，第一行安装 hexo 模块，<code>-g</code>表示安装全局模块；第二行是 hexo 初始化，会用 <code>git clone</code>命令去 GitHub 下载一个 hexo 默认模板代码库；第三行是安装依赖包，类似安装 pip 的 requirement 文件，会根据刚下载的代码库中的配置文件，下载并安装所需依赖包。</p>
+<h3 id="（2）可能遇到的问题"><a href="#（2）可能遇到的问题" class="headerlink" title="（2）可能遇到的问题"></a>（2）可能遇到的问题</h3><ul>
+<li><strong><code>npm install -g hexo-cli</code>命令执行卡住，或者报错连接不上</strong></li>
+</ul>
+<p>可能是 npm 源速度太慢，可以尝试修改淘宝源解决，再重新执行安装命令。npm 源的概念就和 Python 中的 pip 源一样，默认源是<code>https://registry.npmjs.org/</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看 npm 源</span><br><span class="line">npm config get registry</span><br><span class="line"># 临时修改 npm 源安装 hexo (仅本条命令有效)</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br><span class="line"># 或者永久修改 npm 源</span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>如果是公司内网使用代理访问外网 (比如<code>ping registry.npmjs.org</code> <code>ping registry.npm.taobao.org</code>都不通)，可以尝试给 npm 配置代理解决，再重新执行安装命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置代理</span><br><span class="line">npm config set proxy http://serverip:port</span><br><span class="line">npm confit set https-proxy http:/serverip:port</span><br><span class="line"># 设置带用户名密码的代理</span><br><span class="line">npm config set proxy http://username:password@serverip:port</span><br><span class="line">npm confit set https-proxy http://username:password@serverip:port</span><br><span class="line"># 取消代理</span><br><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>hexo init</code>命令执行卡住，或者报错连接不上</strong></li>
+</ul>
+<p>同上设置代理</p>
+<h2 id="4-运行本地博客"><a href="#4-运行本地博客" class="headerlink" title="4.运行本地博客"></a>4.运行本地博客</h2><p>前面三条命令执行成功，Hexo 框架在本地就已经搭建好了，下面看看效果。</p>
+<p>在vs code 的终端中运行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 生成静态网站</span><br><span class="line">hexo g</span><br><span class="line"># 启动服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>点击运行成功后的出来的地址</p>
+<p>自此一个简单的本地博客诞生了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20201220204625063.png" alt="本地博客效果"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo框架</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TS基础</title>
+    <url>/2022/09/22/Typescript/</url>
+    <content><![CDATA[<h3 id="一、基础类型"><a href="#一、基础类型" class="headerlink" title="一、基础类型"></a>一、基础类型</h3><p>1.布尔类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let bool: boolean;</span><br><span class="line">bool = false;</span><br><span class="line">bool = 123; // Error：不能将类型“number”分配给类型“boolean”。</span><br></pre></td></tr></table></figure>
+
+<p>2.数值类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let num：number = 123</span><br></pre></td></tr></table></figure>
+
+<p>3.字符串类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let str: string;</span><br><span class="line">str = &#x27;bac&#x27;;</span><br><span class="line">str = `数值是$&#123;num&#125;`;</span><br></pre></td></tr></table></figure>
+
+<p>4.数组类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let arr1: number[];</span><br><span class="line">arr1 = [1, 2, 3];</span><br><span class="line"></span><br><span class="line">let arr2: Array&lt;number&gt;;</span><br><span class="line">arr2 = [1, 2, 3];</span><br><span class="line"></span><br><span class="line">let arr3: (string | number)[];</span><br><span class="line">arr3 = [1, &#x27;2&#x27;, 3];</span><br></pre></td></tr></table></figure>
+
+<p>5.元组类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let tuple: [string, number, boolean];</span><br><span class="line">tuple = [&#x27;a&#x27;, 1, false]; // 必须按照上面的顺序和类型</span><br><span class="line">tuple = [&#x27;a&#x27;, false, false]; // Error：不能将类型“boolean”分配给类型“number”。</span><br><span class="line">tuple = [&#x27;a&#x27;, 1, false, 12]; // Error：不能将类型“[string, number, false, number]”分配给类型“[string, number, boolean]”。</span><br></pre></td></tr></table></figure>
+
+<p>6.枚举类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enum Roles &#123;</span><br><span class="line">  SUPER_ADMIN, // 0</span><br><span class="line">  ADMIN, // 1</span><br><span class="line">  USER // 2</span><br><span class="line">&#125;</span><br><span class="line">console.log(Roles.SUPER_ADMIN); // 0</span><br><span class="line">console.log(Roles[Roles.SUPER_ADMIN]); // SUPER_ADMIN</span><br></pre></td></tr></table></figure>
+
+<p>7.any类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let value: any;</span><br><span class="line">value = &#x27;abc&#x27;</span><br><span class="line">value =2</span><br><span class="line">value = [1,2,3]</span><br><span class="line">let arr: any[] = [1,&#x27;a&#x27;]</span><br></pre></td></tr></table></figure>
+
+<p>8.void类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const consoleText = (text: string): void =&gt; &#123; // 不返回内容</span><br><span class="line">  console.log(text);</span><br><span class="line">&#125;;</span><br><span class="line">let v: void;</span><br><span class="line">v = undefined;</span><br><span class="line">v = null; // tsconfig的strict需要关掉</span><br></pre></td></tr></table></figure>
+
+<p>9.null和undefined</p>
+<p>null 和 undefined 是其他类型的子类型</p>
+<p>10.never类型</p>
+<p>表示永远不存在的类型，抛错or死循环，返回值就是 never 类型。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const errorFunc = (message: string): never =&gt; &#123;</span><br><span class="line">  throw new Error(message);</span><br><span class="line">&#125;;</span><br><span class="line">const infiniteFunc = (): never =&gt; &#123;</span><br><span class="line">  while(true) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">// let neverVariable: never</span><br><span class="line">let neverVariable = (() =&gt; &#123;</span><br><span class="line">  while(true) &#123;&#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>11.对象类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function getObject(obj: object): void &#123;</span><br><span class="line">  console.log(obj);</span><br><span class="line">&#125;</span><br><span class="line">getObject(&#123; name: &#x27;dylan&#x27; &#125;);</span><br><span class="line">getObject(123); // Error：类型“number”的参数不能赋给类型“object”的参数。</span><br></pre></td></tr></table></figure>
+
+<p>12.类型断言</p>
+<p>值 as 类型</p>
+<p>或 &lt;类型&gt;值</p>
+<h3 id="二、Symbol"><a href="#二、Symbol" class="headerlink" title="二、Symbol"></a>二、Symbol</h3><p>Symbol值是独一无二的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const s1 = Symbol(); // Symbol()</span><br><span class="line">const s2 = Symbol(); // Symbol()</span><br><span class="line">s1 === s2; // false</span><br></pre></td></tr></table></figure>
+
+<p>目前来说工作上遇到的少</p>
+<h3 id="三、接口"><a href="#三、接口" class="headerlink" title="三、接口"></a>三、接口</h3><p>我们可以使用接口来进行限制，使数据更加清晰直观</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface NameInfo &#123;</span><br><span class="line">  firstName?: string;//?代表可选参数，没?不传这个值会报错</span><br><span class="line">  readonly lastName: string; //只读属性，不能更改NameInfo.lastName的值</span><br><span class="line">&#125;</span><br><span class="line">const getFullName = (&#123; firstName, lastName &#125;: NameInfo): string =&gt; &#123;</span><br><span class="line">  return `$&#123;firstName&#125; $&#123;lastName&#125;`;</span><br><span class="line">&#125;;</span><br><span class="line">getFullName(&#123;</span><br><span class="line">  firstName: &#x27;haha&#x27;,</span><br><span class="line">  lastName: &#x27;Lv&#x27;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>多传入参数时使用类型断言或者索引签名</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Vegetable &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  type: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const getVegetables = (&#123; color, type &#125;: Vegetable) =&gt; &#123;</span><br><span class="line">  return `A $&#123;color ? (color + &#x27; &#x27;) : &#x27;&#x27;&#125;$&#123;type&#125;`;</span><br><span class="line">&#125;;</span><br><span class="line">getVegetables(&#123; type: &#x27;tomato&#x27;, size: 2 &#125;); // Error：类型“&#123; type: string; size: number; &#125;”的参数不能赋给类型“Vegetable”的参数。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//类型断言</span><br><span class="line">getVegetables(&#123; type: &#x27;tomato&#x27;, size: 2 &#125; as Vegetable);</span><br><span class="line"></span><br><span class="line">//索引签名</span><br><span class="line">interface Vegetable &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  type: string;</span><br><span class="line">  [prop: string]: any; // 索引签名</span><br><span class="line">&#125;</span><br><span class="line">getVegetables(&#123; type: &#x27;tomato&#x27;, size: 2 &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>定义函数结构</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 等同于类型别名：type AddFunc = (num1: number, num2: number) =&gt; number;</span><br><span class="line">interface AddFunc &#123;</span><br><span class="line">  (num1: number, num2: number): number</span><br><span class="line">&#125;</span><br><span class="line">const add: AddFunc = (n1, n2) =&gt; n1 + n2;</span><br></pre></td></tr></table></figure>
+
+<p>索引类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface RoleDic &#123;</span><br><span class="line">  [id: number]: string;//id这个索引只能为数值类型</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p>接口的继承</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Vegetables &#123;</span><br><span class="line">  color: string;</span><br><span class="line">&#125;</span><br><span class="line">interface Tomato extends Vegetables &#123;</span><br><span class="line">  radius: number;</span><br><span class="line">&#125;</span><br><span class="line">const tomato: Tomato = &#123;</span><br><span class="line">  radius: 1,</span><br><span class="line">  color: &#x27;red&#x27;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、泛型-T"><a href="#四、泛型-T" class="headerlink" title="四、泛型 T"></a>四、泛型 T</h3><p>为什么要用泛型？ 可以在函数调用时自由化传入的值和返回的值</p>
+<p>使用范型约束函数类型：与之前不同的地方在于多了 T 这个泛型参数，可以理解为这个函数：传入了 T（某个类型）作为 value 的类型，返回由 T组成的数组</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//&lt;T&gt; 表示声明一个表示类型的变量，Value: T 表示声明参数是 T 类型的，后面的 : T 表示返回值也是 T 类型的</span><br><span class="line">const getArray = &lt;T&gt;(value: T, times: number = 5): T[] =&gt; &#123;</span><br><span class="line">  return new Array(times).fill(value)</span><br><span class="line">&#125; //如果使用any[]参数也可以任意传，但是也丢失了类型检测的功能</span><br><span class="line"></span><br><span class="line">//第一个T为string，那么value: T也该为string</span><br><span class="line">getArray&lt;string&gt;(&#x27;abc&#x27;).map(item =&gt; item.length); // [3, 3, 3, 3, 3]</span><br></pre></td></tr></table></figure>
+
+<p>使用两个范型变量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 参数1是T类型，参数2是U类型，返回类型是元组类型 T,U组成的数组</span><br><span class="line">const getArray = &lt;T, U&gt;(param1: T, param2: U, times: number): [T, U][] =&gt; &#123;</span><br><span class="line">  return new Array(times).fill([param1, param2]);</span><br><span class="line">&#125;;</span><br><span class="line">// 也可以明确泛型调用，不明确的话，TS会自动推导泛型类型：getArray&lt;number, string&gt;(1, &#x27;a&#x27;, 3);</span><br><span class="line">getArray(1, &#x27;a&#x27;, 3); // [[1, &#x27;a&#x27;], [1, &#x27;a&#x27;], [1, &#x27;a&#x27;]]</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="五、交叉类型"><a href="#五、交叉类型" class="headerlink" title="五、交叉类型"></a>五、交叉类型</h3><p>交叉类型就是取多个类型的并集，使用 &amp; 符号定义。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const mergeFunc = &lt;T, U&gt;(arg1: T, arr2: U): T &amp; U =&gt; &#123;</span><br><span class="line">  let res = &#123;&#125; as T &amp; U; // 使用类型断言来告诉TS这里是（T和U）的交叉类型</span><br><span class="line">  res = Object.assign(arg1, arr2);</span><br><span class="line">  return res;</span><br><span class="line">&#125;;</span><br><span class="line">mergeFunc(&#123; a: &#x27;a&#x27; &#125;, &#123; b: &#x27;b&#x27; &#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Web前端学习</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+        <tag>js</tag>
       </tags>
   </entry>
 </search>
