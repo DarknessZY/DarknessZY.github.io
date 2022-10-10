@@ -210,7 +210,7 @@
 
 <p>reset –soft 相当于后悔药，给你重新改过的机会。对于上面的场景，就可以再次修改重新提交，保持干净的 commit 记录</p>
 <h1 id="二、电脑同时配置github与公司内部使用的gitlab"><a href="#二、电脑同时配置github与公司内部使用的gitlab" class="headerlink" title="二、电脑同时配置github与公司内部使用的gitlab"></a>二、电脑同时配置github与公司内部使用的gitlab</h1><p>下载git</p>
-<p>生成对应的gitlab和github的公 秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”</p>
+<p>生成对应的gitlab和github的公秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”</p>
 <p>这样你会在.ssh文件夹(.ssh在哪具体百度去)，找到四个文件</p>
 <p>这四个文件分别对应gitlab和github的公私钥，分别将gitlab和github的公钥配置到github和你公司的gitlab的ssh上</p>
 <p>在.ssh目录下创建一个config文件，写入以下内容</p>

@@ -172,7 +172,7 @@
 
 <p>reset –soft 相当于后悔药，给你重新改过的机会。对于上面的场景，就可以再次修改重新提交，保持干净的 commit 记录</p>
 <h1 id="二、电脑同时配置github与公司内部使用的gitlab"><a href="#二、电脑同时配置github与公司内部使用的gitlab" class="headerlink" title="二、电脑同时配置github与公司内部使用的gitlab"></a>二、电脑同时配置github与公司内部使用的gitlab</h1><p>下载git</p>
-<p>生成对应的gitlab和github的公 秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”</p>
+<p>生成对应的gitlab和github的公秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”</p>
 <p>这样你会在.ssh文件夹(.ssh在哪具体百度去)，找到四个文件</p>
 <p>这四个文件分别对应gitlab和github的公私钥，分别将gitlab和github的公钥配置到github和你公司的gitlab的ssh上</p>
 <p>在.ssh目录下创建一个config文件，写入以下内容</p>
@@ -195,86 +195,6 @@
       <tags>
         <tag>git</tag>
         <tag>前端随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hello，欢迎来到耀耀切克闹的博客！</title>
-    <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
-    <content><![CDATA[<h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
-<li>搭建博客就是为了写博客，整理思路，将学习的知识融会贯通，以教为学。</li>
-<li>在这个过程中，你可以认识更多兴趣相投的人。</li>
-<li>事件驱动学习，每周持续的博客更新，查看自己是否学习到新东西！</li>
-<li>对自己也是一种督促，你拥有一个完全属于自己的博客，会驱动自己分享学习！</li>
-</ol>
-<h1 id="二-搭建博客方式"><a href="#二-搭建博客方式" class="headerlink" title="二.搭建博客方式"></a>二.搭建博客方式</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e3d012b007f43c597d5db60b9594379b.png"></p>
-<h2 id="1-自己开发"><a href="#1-自己开发" class="headerlink" title="1.自己开发"></a>1.自己开发</h2><p>这是最原始的博客建站方式了，自己写代码（前台 + 后台管理+数据库等等）、自己将项目发布上线、自己来维护网站，啥都自己来干。这就意味着全栈的工作，你需要理解和学习的地方有好多好多，在这过程中需要耗费大量时间，但对自己的提升是不可估量的，并且代码掌握在自己手里，很安想加什么功能都不会受到限制，很灵活。这里推荐 Github 上的开源项目，可以在此上进行二次开发：</p>
-<p>Halo博客，一款现代化的开源博客/CMS系统，值得一试。详细部署可以去  <a href="https://docs.halo.run/">https://docs.halo.run</a></p>
-<h2 id="2-站点生成器"><a href="#2-站点生成器" class="headerlink" title="2.站点生成器"></a>2.站点生成器</h2><p>博客是一种很典型的网站，所以有大佬将博客的功能（比如文章管理）抽象出来，做成了 站点生成器 ，可以用极少的命令 + 配置文件的方式，自动生成精美的博客网站。本人还是比较菜的，刚毕业，工作了2个月多，前端菜鸡程序员一枚，于是采用了这种方式，也是我极力推荐的一种方式，省时省力，灵活程度虽然比不上完全由自己开发，但适合大多数人的需求。并且，绝大多数的站点生成器都只能生成静态网站，也就是说网站的内容（比如博客文章、文档等）是固定的，不需要从数据库中获取内容，因此有很多优点：</p>
-<ul>
-<li><p>省钱：把文件扔 GitHub Pages、Gitee Pages 啥的就能免费部署</p>
-</li>
-<li><p>速度快：省去了数据的动态获取过程，配合 CDN 加载速度飞起</p>
-</li>
-<li><p>SEO：静态网站更容易被搜索引擎的蜘蛛抓取，稳定排名</p>
-</li>
-<li><p>易维护：没那么多花里胡哨的功能，比动态网站好维护不少</p>
-<p>这里推荐：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e6561ed83d781d08d5298519b34a4752.png"></p>
-<p><strong>当然，好像另外还有一种方式就是建站程序，主流就是 WordPress（推荐）或 Typech，跟着官方文档操作就行，不过俺了解甚少。感兴趣的朋友可以去看看，据说也很方便。</strong></p>
-</li>
-</ul>
-<h2 id="3-建站平台和购买"><a href="#3-建站平台和购买" class="headerlink" title="3.建站平台和购买"></a>3.建站平台和购买</h2><p> 简单说吧！就是花钱办事，用金钱换时间。</p>
-<p><strong>建站平台：</strong>套个现成的模板、利用界面拖拖拽拽就能搞出来一个网站，平台还会给你提供域名，一键上线。此外，网站的维护也不用咱自己操心了，全交给别人，我们专注于网站的内容就行，百度搜索应该有一大堆。</p>
-<p><strong>购买</strong>: 极致的体验，没有最好，只有更好，你就是大爷，可以尽情享受氪金带来的快乐！（手动狗头)</p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>为什么要搭建博客</tag>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端兼容性问题</title>
-    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
-    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
-<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端兼容性问题</category>
-      </categories>
-      <tags>
-        <tag>前端兼容</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(四)——关于我页面搭建</title>
-    <url>/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
-<p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928181752870.png"></p>
-<p>链接相关配置也是在themes=&gt;ayer=&gt;_config.yml下配置，找到friends_link，图片地址和github链接填自己的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  DarknessZY:</span><br><span class="line">    url: https://github.com/DarknessZY</span><br><span class="line">    img: /images/github.png</span><br><span class="line">  耀耀切克闹灬:</span><br><span class="line">    url: https://juejin.cn/user/1781681116679854/columns</span><br><span class="line">    img: /images/juejin.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: /images/hexo.png</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br></pre></td></tr></table></figure>
-
-<p>然后执行hexo命令，页面上就显示出来了：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16643609353351.png" alt="img"></p>
-<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div style=&quot;margin-top: 25%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt; </span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div style=&quot;margin-top: 5%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt;要是觉得不错，请我喝饮料吧！&lt;/p&gt; </span><br><span class="line">        &lt;div style=&quot;display: flex;justify-content: space-between;align-items: center;&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.alipay) %&gt;&quot;  width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.weixin) %&gt;&quot; width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928183612541.png" alt="image-20220928183612541"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
       </tags>
   </entry>
   <entry>
@@ -318,63 +238,59 @@
       </tags>
   </entry>
   <entry>
-    <title>从零开始搭建博客(二)——hexo主题搭建</title>
-    <url>/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
-<p>下面是我寻找主题的三个方法。</p>
+    <title>前端兼容性问题</title>
+    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
+    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
+<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端兼容性问题</category>
+      </categories>
+      <tags>
+        <tag>前端兼容</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hello，欢迎来到耀耀切克闹的博客！</title>
+    <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
+    <content><![CDATA[<h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
+<li>搭建博客就是为了写博客，整理思路，将学习的知识融会贯通，以教为学。</li>
+<li>在这个过程中，你可以认识更多兴趣相投的人。</li>
+<li>事件驱动学习，每周持续的博客更新，查看自己是否学习到新东西！</li>
+<li>对自己也是一种督促，你拥有一个完全属于自己的博客，会驱动自己分享学习！</li>
+</ol>
+<h1 id="二-搭建博客方式"><a href="#二-搭建博客方式" class="headerlink" title="二.搭建博客方式"></a>二.搭建博客方式</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e3d012b007f43c597d5db60b9594379b.png"></p>
+<h2 id="1-自己开发"><a href="#1-自己开发" class="headerlink" title="1.自己开发"></a>1.自己开发</h2><p>这是最原始的博客建站方式了，自己写代码（前台 + 后台管理+数据库等等）、自己将项目发布上线、自己来维护网站，啥都自己来干。这就意味着全栈的工作，你需要理解和学习的地方有好多好多，在这过程中需要耗费大量时间，但对自己的提升是不可估量的，并且代码掌握在自己手里，很安想加什么功能都不会受到限制，很灵活。这里推荐 Github 上的开源项目，可以在此上进行二次开发：</p>
+<p>Halo博客，一款现代化的开源博客/CMS系统，值得一试。详细部署可以去  <a href="https://docs.halo.run/">https://docs.halo.run</a></p>
+<h2 id="2-站点生成器"><a href="#2-站点生成器" class="headerlink" title="2.站点生成器"></a>2.站点生成器</h2><p>博客是一种很典型的网站，所以有大佬将博客的功能（比如文章管理）抽象出来，做成了 站点生成器 ，可以用极少的命令 + 配置文件的方式，自动生成精美的博客网站。本人还是比较菜的，刚毕业，工作了2个月多，前端菜鸡程序员一枚，于是采用了这种方式，也是我极力推荐的一种方式，省时省力，灵活程度虽然比不上完全由自己开发，但适合大多数人的需求。并且，绝大多数的站点生成器都只能生成静态网站，也就是说网站的内容（比如博客文章、文档等）是固定的，不需要从数据库中获取内容，因此有很多优点：</p>
 <ul>
-<li><p><strong>官方网站</strong></p>
-<p>Hexo 官网收录了几百个第三方主题，其中有许多中文开发者开发的主题。</p>
-<p>在 Hexo 官网点击“主题”，或者直接进入 Hexo 主题页：<a href="https://hexo.io/themes/">themes</a></p>
-<p>通过上方的搜索框可以根据标签搜索。</p>
+<li><p>省钱：把文件扔 GitHub Pages、Gitee Pages 啥的就能免费部署</p>
+</li>
+<li><p>速度快：省去了数据的动态获取过程，配合 CDN 加载速度飞起</p>
+</li>
+<li><p>SEO：静态网站更容易被搜索引擎的蜘蛛抓取，稳定排名</p>
+</li>
+<li><p>易维护：没那么多花里胡哨的功能，比动态网站好维护不少</p>
+<p>这里推荐：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e6561ed83d781d08d5298519b34a4752.png"></p>
+<p><strong>当然，好像另外还有一种方式就是建站程序，主流就是 WordPress（推荐）或 Typech，跟着官方文档操作就行，不过俺了解甚少。感兴趣的朋友可以去看看，据说也很方便。</strong></p>
 </li>
 </ul>
-<h2 id="2-github开源Hexo-博客主题"><a href="#2-github开源Hexo-博客主题" class="headerlink" title="2.github开源Hexo 博客主题"></a>2.github开源Hexo 博客主题</h2><p>大多数流行的主题都在 GitHub 托管开源了，我们可以直接去 GitHub 下载。</p>
-<p>在 Github 官网搜索<code>hexo-theme</code>，选择<code>All GitHub</code>，或者直接进入搜索页：<a href="https://github.com/search?q=hexo-theme">search?q=hexo-theme</a></p>
-<p>市面上使用比较多的主题：</p>
-<ul>
-<li><strong>Next</strong></li>
-</ul>
-<p>Demo 示例：<a href="https://theme-next.js.org/">NexT</a> | <a href="https://dandyxu.me/">Dandy</a> | <a href="https://raincal.com/">Raincal</a></p>
-<p>GitHub 主页：<a href="https://github.com/iissnan/hexo-theme-next">hexo-theme-next</a></p>
-<p>这个是 Hexo 最流行的主题，GitHub 上 15.5k stars，在 Hexo 主题中排行第一。</p>
-<ul>
-<li><strong>matery</strong></li>
-</ul>
-<p>Demo 示例：<a href="http://blinkfox.com/">闪烁之狐</a></p>
-<p>GitHub 主页：<a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a></p>
-<ul>
-<li><strong>butterfly</strong></li>
-</ul>
-<p>Demo 示例： <a href="https://butterfly.js.org/">Butterfly</a> | <a href="https://jerryc.me/">JerryC</a></p>
-<p>GitHub 主页：<a href="https://github.com/jerryc127/hexo-theme-butterfly">hexo-theme-butterfly</a></p>
-<p>本菜鸟使用的主题就是以简约为主：</p>
-<ul>
-<li><strong>ayer</strong></li>
-</ul>
-<p>Demo 示例：<a href="https://shen-yu.gitee.io/">岛</a></p>
-<p>GitHub 主页：<a href="https://github.com/Shen-Yu/hexo-theme-ayer">hexo-theme-ayer</a></p>
-<h2 id="3-更换主题"><a href="#3-更换主题" class="headerlink" title="3.更换主题"></a>3.更换主题</h2><p>以 <strong>ayer</strong> 主题为例。</p>
-<p>在 vs code中 Mylog根目录下，右键，执行下面命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-ayer -S</span><br><span class="line">#如果hexo &lt; 5.0</span><br><span class="line"># 国内用户如果速度较慢，可以把github地址替换为：https://gitee.com/mirrors/ayer.git</span><br><span class="line">git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
-
-<p>我在使用 <strong>ayer</strong> 找到了这样一位大佬，后面的操作就是跟着这位大佬的搭建博客进行的了：<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a></p>
-<p>该博主的文章对我后面的搭建有巨大帮助，各位过去看看吧！后面估计很多内容可能会照着大佬来，如有雷同，纯属抄袭（手动狗头）</p>
-<h1 id="二-本地写博客"><a href="#二-本地写博客" class="headerlink" title="二.本地写博客"></a>二.本地写博客</h1><p><strong>利用Markdown语法的软件写博客，本地试运行：</strong></p>
-<p>这里推荐使用Typora或uTools的Markdown笔记功能，具体怎么使用这两款软件， 官方都有说明。其中Typora现在开始收费了，但可以去下载老版本，老版本是免费的，具体操作可以按：</p>
-<p><a href="http://www.itmind.net/16468.html">Typora免费版</a></p>
-<p>根据这个网址上面来操作，下载老版本的Typora，但具体还能用多久就不知道了，有钱的小伙伴可以直接去官网下载正版，本人老穷b了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/11DDC475.jpg"></p>
-<p>把写好的文章复制到根目录下的source=&gt;_posts</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184421310.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184517354.png"></p>
+<h2 id="3-建站平台和购买"><a href="#3-建站平台和购买" class="headerlink" title="3.建站平台和购买"></a>3.建站平台和购买</h2><p> 简单说吧！就是花钱办事，用金钱换时间。</p>
+<p><strong>建站平台：</strong>套个现成的模板、利用界面拖拖拽拽就能搞出来一个网站，平台还会给你提供域名，一键上线。此外，网站的维护也不用咱自己操心了，全交给别人，我们专注于网站的内容就行，百度搜索应该有一大堆。</p>
+<p><strong>购买</strong>: 极致的体验，没有最好，只有更好，你就是大爷，可以尽情享受氪金带来的快乐！（手动狗头)</p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
       </categories>
       <tags>
+        <tag>为什么要搭建博客</tag>
         <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
       </tags>
   </entry>
   <entry>
@@ -449,6 +365,90 @@
 <p>点击运行成功后的出来的地址</p>
 <p>自此一个简单的本地博客诞生了</p>
 <p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20201220204625063.png" alt="本地博客效果"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>hexo框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(四)——关于我页面搭建</title>
+    <url>/2022/09/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
+<p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928181752870.png"></p>
+<p>链接相关配置也是在themes=&gt;ayer=&gt;_config.yml下配置，找到friends_link，图片地址和github链接填自己的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  DarknessZY:</span><br><span class="line">    url: https://github.com/DarknessZY</span><br><span class="line">    img: /images/github.png</span><br><span class="line">  耀耀切克闹灬:</span><br><span class="line">    url: https://juejin.cn/user/1781681116679854/columns</span><br><span class="line">    img: /images/juejin.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: /images/hexo.png</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br></pre></td></tr></table></figure>
+
+<p>然后执行hexo命令，页面上就显示出来了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16643609353351.png" alt="img"></p>
+<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div style=&quot;margin-top: 25%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt; </span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div style=&quot;margin-top: 5%;&quot;&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;&quot;&gt;要是觉得不错，请我喝饮料吧！&lt;/p&gt; </span><br><span class="line">        &lt;div style=&quot;display: flex;justify-content: space-between;align-items: center;&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.alipay) %&gt;&quot;  width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">            &lt;img class=&quot;reward-img&quot; src=&quot;&lt;%- url_for(theme.weixin) %&gt;&quot; width=&quot;45%&quot; height=&quot;450px&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928183612541.png" alt="image-20220928183612541"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>hexo框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(二)——hexo主题搭建</title>
+    <url>/2022/09/22/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
+<p>下面是我寻找主题的三个方法。</p>
+<ul>
+<li><p><strong>官方网站</strong></p>
+<p>Hexo 官网收录了几百个第三方主题，其中有许多中文开发者开发的主题。</p>
+<p>在 Hexo 官网点击“主题”，或者直接进入 Hexo 主题页：<a href="https://hexo.io/themes/">themes</a></p>
+<p>通过上方的搜索框可以根据标签搜索。</p>
+</li>
+</ul>
+<h2 id="2-github开源Hexo-博客主题"><a href="#2-github开源Hexo-博客主题" class="headerlink" title="2.github开源Hexo 博客主题"></a>2.github开源Hexo 博客主题</h2><p>大多数流行的主题都在 GitHub 托管开源了，我们可以直接去 GitHub 下载。</p>
+<p>在 Github 官网搜索<code>hexo-theme</code>，选择<code>All GitHub</code>，或者直接进入搜索页：<a href="https://github.com/search?q=hexo-theme">search?q=hexo-theme</a></p>
+<p>市面上使用比较多的主题：</p>
+<ul>
+<li><strong>Next</strong></li>
+</ul>
+<p>Demo 示例：<a href="https://theme-next.js.org/">NexT</a> | <a href="https://dandyxu.me/">Dandy</a> | <a href="https://raincal.com/">Raincal</a></p>
+<p>GitHub 主页：<a href="https://github.com/iissnan/hexo-theme-next">hexo-theme-next</a></p>
+<p>这个是 Hexo 最流行的主题，GitHub 上 15.5k stars，在 Hexo 主题中排行第一。</p>
+<ul>
+<li><strong>matery</strong></li>
+</ul>
+<p>Demo 示例：<a href="http://blinkfox.com/">闪烁之狐</a></p>
+<p>GitHub 主页：<a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a></p>
+<ul>
+<li><strong>butterfly</strong></li>
+</ul>
+<p>Demo 示例： <a href="https://butterfly.js.org/">Butterfly</a> | <a href="https://jerryc.me/">JerryC</a></p>
+<p>GitHub 主页：<a href="https://github.com/jerryc127/hexo-theme-butterfly">hexo-theme-butterfly</a></p>
+<p>本菜鸟使用的主题就是以简约为主：</p>
+<ul>
+<li><strong>ayer</strong></li>
+</ul>
+<p>Demo 示例：<a href="https://shen-yu.gitee.io/">岛</a></p>
+<p>GitHub 主页：<a href="https://github.com/Shen-Yu/hexo-theme-ayer">hexo-theme-ayer</a></p>
+<h2 id="3-更换主题"><a href="#3-更换主题" class="headerlink" title="3.更换主题"></a>3.更换主题</h2><p>以 <strong>ayer</strong> 主题为例。</p>
+<p>在 vs code中 Mylog根目录下，右键，执行下面命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-ayer -S</span><br><span class="line">#如果hexo &lt; 5.0</span><br><span class="line"># 国内用户如果速度较慢，可以把github地址替换为：https://gitee.com/mirrors/ayer.git</span><br><span class="line">git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
+
+<p>我在使用 <strong>ayer</strong> 找到了这样一位大佬，后面的操作就是跟着这位大佬的搭建博客进行的了：<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a></p>
+<p>该博主的文章对我后面的搭建有巨大帮助，各位过去看看吧！后面估计很多内容可能会照着大佬来，如有雷同，纯属抄袭（手动狗头）</p>
+<h1 id="二-本地写博客"><a href="#二-本地写博客" class="headerlink" title="二.本地写博客"></a>二.本地写博客</h1><p><strong>利用Markdown语法的软件写博客，本地试运行：</strong></p>
+<p>这里推荐使用Typora或uTools的Markdown笔记功能，具体怎么使用这两款软件， 官方都有说明。其中Typora现在开始收费了，但可以去下载老版本，老版本是免费的，具体操作可以按：</p>
+<p><a href="http://www.itmind.net/16468.html">Typora免费版</a></p>
+<p>根据这个网址上面来操作，下载老版本的Typora，但具体还能用多久就不知道了，有钱的小伙伴可以直接去官网下载正版，本人老穷b了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/11DDC475.jpg"></p>
+<p>把写好的文章复制到根目录下的source=&gt;_posts</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184421310.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184517354.png"></p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
