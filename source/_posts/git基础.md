@@ -7,6 +7,7 @@ tag: [git,前端随笔]
 
 # 一、git基础
 
+![img](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/68747470733a2f2f7374617469632e7675652d6a732e636f6d2f33323733633961302d663739632d313165622d626336662d3366303665313439313636342e706e67)
 ## 重新下载git后
 
 **1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）**
