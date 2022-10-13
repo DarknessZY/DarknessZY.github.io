@@ -140,7 +140,9 @@ busuanzi:
 ## https://github.com/EYHN/hexo-helper-live2d
 live2d:
   enable: true
-
+  mobile:
+    show: true    # 手机端是否可见，建议不可见否则可能影响阅读
+    scale: 0.5
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
   enable: true
