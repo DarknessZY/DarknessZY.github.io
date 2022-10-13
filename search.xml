@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>前端兼容性问题</title>
+    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
+    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
+<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端兼容性问题</category>
+      </categories>
+      <tags>
+        <tag>前端兼容</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TS基础</title>
     <url>/2022/09/22/Typescript/</url>
     <content><![CDATA[<h3 id="一、基础类型"><a href="#一、基础类型" class="headerlink" title="一、基础类型"></a>一、基础类型</h3><p>1.布尔类型</p>
@@ -80,162 +98,9 @@
       </tags>
   </entry>
   <entry>
-    <title>前端兼容性问题</title>
-    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
-    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
-<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端兼容性问题</category>
-      </categories>
-      <tags>
-        <tag>前端兼容</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hello，欢迎来到耀耀切克闹的博客！</title>
-    <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
-    <content><![CDATA[<h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
-<li>搭建博客就是为了写博客，整理思路，将学习的知识融会贯通，以教为学。</li>
-<li>在这个过程中，你可以认识更多兴趣相投的人。</li>
-<li>事件驱动学习，每周持续的博客更新，查看自己是否学习到新东西！</li>
-<li>对自己也是一种督促，你拥有一个完全属于自己的博客，会驱动自己分享学习！</li>
-</ol>
-<h1 id="二-搭建博客方式"><a href="#二-搭建博客方式" class="headerlink" title="二.搭建博客方式"></a>二.搭建博客方式</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e3d012b007f43c597d5db60b9594379b.png"></p>
-<h2 id="1-自己开发"><a href="#1-自己开发" class="headerlink" title="1.自己开发"></a>1.自己开发</h2><p>这是最原始的博客建站方式了，自己写代码（前台 + 后台管理+数据库等等）、自己将项目发布上线、自己来维护网站，啥都自己来干。这就意味着全栈的工作，你需要理解和学习的地方有好多好多，在这过程中需要耗费大量时间，但对自己的提升是不可估量的，并且代码掌握在自己手里，很安想加什么功能都不会受到限制，很灵活。这里推荐 Github 上的开源项目，可以在此上进行二次开发：</p>
-<p>Halo博客，一款现代化的开源博客/CMS系统，值得一试。详细部署可以去  <a href="https://docs.halo.run/">https://docs.halo.run</a></p>
-<h2 id="2-站点生成器"><a href="#2-站点生成器" class="headerlink" title="2.站点生成器"></a>2.站点生成器</h2><p>博客是一种很典型的网站，所以有大佬将博客的功能（比如文章管理）抽象出来，做成了 站点生成器 ，可以用极少的命令 + 配置文件的方式，自动生成精美的博客网站。本人还是比较菜的，刚毕业，工作了2个月多，前端菜鸡程序员一枚，于是采用了这种方式，也是我极力推荐的一种方式，省时省力，灵活程度虽然比不上完全由自己开发，但适合大多数人的需求。并且，绝大多数的站点生成器都只能生成静态网站，也就是说网站的内容（比如博客文章、文档等）是固定的，不需要从数据库中获取内容，因此有很多优点：</p>
-<ul>
-<li><p>省钱：把文件扔 GitHub Pages、Gitee Pages 啥的就能免费部署</p>
-</li>
-<li><p>速度快：省去了数据的动态获取过程，配合 CDN 加载速度飞起</p>
-</li>
-<li><p>SEO：静态网站更容易被搜索引擎的蜘蛛抓取，稳定排名</p>
-</li>
-<li><p>易维护：没那么多花里胡哨的功能，比动态网站好维护不少</p>
-<p>这里推荐：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e6561ed83d781d08d5298519b34a4752.png"></p>
-<p><strong>当然，好像另外还有一种方式就是建站程序，主流就是 WordPress（推荐）或 Typech，跟着官方文档操作就行，不过俺了解甚少。感兴趣的朋友可以去看看，据说也很方便。</strong></p>
-</li>
-</ul>
-<h2 id="3-建站平台和购买"><a href="#3-建站平台和购买" class="headerlink" title="3.建站平台和购买"></a>3.建站平台和购买</h2><p> 简单说吧！就是花钱办事，用金钱换时间。</p>
-<p><strong>建站平台：</strong>套个现成的模板、利用界面拖拖拽拽就能搞出来一个网站，平台还会给你提供域名，一键上线。此外，网站的维护也不用咱自己操心了，全交给别人，我们专注于网站的内容就行，百度搜索应该有一大堆。</p>
-<p><strong>购买</strong>: 极致的体验，没有最好，只有更好，你就是大爷，可以尽情享受氪金带来的快乐！（手动狗头)</p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>为什么要搭建博客</tag>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm随笔</title>
-    <url>/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
-<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
-<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
-<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
-<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
-</ul>
-<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
-<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
-</li>
-<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
-<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
-</li>
-</ul>
-<h1 id="二、全局安装和本地安装"><a href="#二、全局安装和本地安装" class="headerlink" title="二、全局安装和本地安装"></a>二、全局安装和本地安装</h1><h2 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; -g//（这里-g是-global的简写）</span><br></pre></td></tr></table></figure>
-
-<p>通过上面的命令行（带-g修饰符）安装某个包，就叫全局安装。通常全局包安装在node目录下的node_modules文件夹。可以通过执行下面几条命令查看node、npm的安装目录和全局包的安装目录。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">which node   // 查看node的安装目录</span><br><span class="line">which npm   // 查看npm的安装目录</span><br><span class="line">npm root -g // 查看全局包的安装目录</span><br><span class="line">npm list -g --depth 0 //查看全局安装过的</span><br></pre></td></tr></table></figure>
-
-<h3 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装:"></a>本地安装:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; (后面可以加几种修饰符，主要有两种--save-dev和--save)</span><br></pre></td></tr></table></figure>
-
-<p>通过上面的命令行安装某个包，就叫本地安装。包安装在你当前项目文件夹下的node_modules文件夹中。</p>
-<h3 id="全局安装的作用"><a href="#全局安装的作用" class="headerlink" title="全局安装的作用:"></a>全局安装的作用:</h3><p>全局安装的包可提供直接执行的命令(例：gulp -h可以查看gulp定义了什么命令)。 比如gulp全局安装后，可以在命令行上直接执行gulp -v、gulp -h等（原理：全局安装的gulp会将其package.json中的bin命令注入到了全局环境，使得你可以全局执行：gulp xxx命令，这另一个话题了，不深入）。倘若只在本地安装了gulp，未在全局安装gulp，直接执行这些命令会报错。你想要执行相应的命令则可能需要例如：node ./node_modules/gulp/bin/gulp.js -v(查看版本) 这样用一大串命令来执行。因此全局安装就发挥到他的好处了，一个gulp -v就搞定</p>
-<p>当然，不是每个包都必须要全局安装的，一般在项目中需要用到该包定义的命令才需要全局安装。比如gulp <taskName>执行gulp任务…等，所以是否需要全局安装取决于我们如何使用这个包。全局安装的就像全局变量有点粗糙，但在某些情况下也是必要的，全局包很重要，但如果不需要，最好避免使用。</p>
-<h2 id="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"><a href="#可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？" class="headerlink" title="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"></a>可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？</h2><ol>
-<li>如果只是全局安装了而没本地安装，就得require(‘<pagePath>‘) 例：引入一个全局的包可能就是requirt(‘/usr/local/….’)通过全局包的路径引入，这样显然十分的不灵活。如果安装了本地包，那么就<strong>可以直接require(‘<pageName>‘)引入使用。</strong></li>
-<li>一个包通常会在不同的项目上会重复用到，如果只全局安装，那么当某个项目需要该包更新版本时，更新后可能就会影响到其他同样引用该包的项目，因此本地安装可以更灵活地在不同的项目使用不同版本的包，并避免全局包污染的问题。</li>
-</ol>
-<p>一个经验法则：要用到该包的命令执行任务的就需要全局安装，要通过require引入使用的就需要本地安装（ 但实际开发过程中，我们也不怎么需要考虑某个包是全局安装还是本地安装，因为这一点在该包的官网上一般会明确指出，以上是为了理解全局安装和本地安装）。</p>
-<p>参考：<a href="https://segmentfault.com/a/1190000017787636?utm_source=tag-newest">node.js - npm(你怕吗) 全局安装与本地安装、开发依赖和生产依赖_个人文章 - SegmentFault 思否</a></p>
-]]></content>
-      <categories>
-        <category>前端随笔</category>
-      </categories>
-      <tags>
-        <tag>npm，随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端路由随笔</title>
-    <url>/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h1 id="一、什么是路由？"><a href="#一、什么是路由？" class="headerlink" title="一、什么是路由？"></a>一、什么是路由？</h1><p>路由的概念起源于服务端，在以前前后端不分离的时候，由后端来控制路由，当接收到客户端发来的   <code>HTTP</code> 请求，就会根据所请求的相应 <code>URL</code>，来找到相应的映射函数，然后执行该函数，并将函数的返回值发送给客户端。对于最简单的静态资源服务器，可以认为，所有 <code>URL</code> 的映射函数就是一个文件读取操作。对于动态资源，映射函数可能是一个数据库读取操作，也可能是进行一些数据的处理等等。然后根据这些读取的数据，在服务器端就使用相应的模板来对页面进行渲染后，再返回渲染完毕的页面。它的好处与缺点非常明显：</p>
-<ul>
-<li><p>好处：安全性好，<code>SEO</code> 好；</p>
-</li>
-<li><p>缺点：加大服务器的压力，不利于用户体验，代码冗合不好维护；</p>
-</li>
-</ul>
-<p>也正是由于后端路由还存在着自己的不足，前端路由才有了自己的发展空间。对于前端路由来说，路由的映射函数通常是进行一些 <code>DOM</code> 的显示和隐藏操作。这样，当访问不同的路径的时候，会显示不同的页面组件。前端路由主要有以下两种实现方案：</p>
-<ul>
-<li><code>Hash</code></li>
-<li><code>History</code></li>
-</ul>
-<p>​    原文链接：</p>
-<h1 id="二、前端路由Hash模式"><a href="#二、前端路由Hash模式" class="headerlink" title="二、前端路由Hash模式"></a>二、前端路由Hash模式</h1><p>一个URL是由很多部分组成，包括协议、域名、路径、query、hash等，早期的前端路由的实现就是基于location.hash来实现的。其实现原理也很简单，location.hash的值就是URL中#后面的内容。例如：<a href="https://www.wdnmd.com/#666,%E5%AE%83%E7%9A%84location.hash=&#39;#666&#39;">https://www.WDNMD.com#666,它的location.hash=&#39;#666&#39;</a></p>
-<h2 id="Hash模式的特性："><a href="#Hash模式的特性：" class="headerlink" title="Hash模式的特性："></a>Hash模式的特性：</h2><ol>
-<li><p>URL中hash值只是客户端的一种状态，也就是说当向服务器端发出请求时，hash部分不会被发送。</p>
-</li>
-<li><p>hash值的改变，都会在浏览器的访问历史中增加一个记录。因此我们能通过浏览器的回退、前进按钮控制hash的切换。</p>
-</li>
-<li><p>我们可以使用hashchange事件来监听hash的变化。(a标签和对loaction.hash进行赋值等等)</p>
-<p>通过上面的了解，我们大概知道这些</p>
-<ul>
-<li><p>hash模式所有的工作都是在前端完成的，不需要后端服务的配合</p>
-</li>
-<li><p>hash模式的实现方式就是通过监听URL中hash部分的变化，从而做出对应的渲染逻辑</p>
-</li>
-<li><p>hash模式下，URL中会带有#，看起来不太美观</p>
-<p>因此Hash模式还是有些小小的不足，History API也就出现了</p>
-</li>
-</ul>
-</li>
-</ol>
-<h1 id="三、前端路由History-API模式"><a href="#三、前端路由History-API模式" class="headerlink" title="三、前端路由History API模式"></a>三、前端路由History API模式</h1><p>history路由模式的实现，是要归功于HTML5提供的一个history全局对象，可以将它理解为其中包含了关于我们访问网页（历史会话）的一些信息。window.history 属性指向 History 对象，它表示当前窗口的浏览历史。当发生改变时，只会改变页面的路径，不会刷新页面。 History 对象保存了当前窗口访问过的所有页面网址。通过 history.length 可以得出当前窗口一共访问过几个网址。 由于安全原因，浏览器不允许脚本读取这些地址，但是允许在地址之间导航。 浏览器工具栏的“前进”和“后退”按钮，其实就是对 History 对象进行操作。</p>
-<p>同时它还暴露了一些有用的方法，比如：</p>
-<ul>
-<li>window.history.go 可以跳转到浏览器会话历史中的指定的某一个记录页</li>
-<li>window.history.forward 指向浏览器会话历史中的下一页，跟浏览器的前进按钮相同</li>
-<li>window.history.back 返回浏览器会话历史中的上一页，跟浏览器的回退按钮功能相同</li>
-<li>window.history.pushState 可以将给定的数据压入到浏览器会话历史栈中</li>
-<li>window.history.replaceState 将当前的会话页面的url替换成指定的数据</li>
-</ul>
-<p>而history路由的实现，主要就是依靠于pushState与replaceState实现的</p>
-<p><font color='#478fd2'>参考文章：</font></p>
-<p><a href="https://juejin.cn/post/6844903906024095751">什么是路由？</a></p>
-<p><a href="https://icode.best/i/13730847328933">vue路由模式及 history 模式下服务端配置</a></p>
-]]></content>
-      <categories>
-        <category>前端随笔</category>
-      </categories>
-      <tags>
-        <tag>路由，随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git基础</title>
     <url>/2022/09/30/git%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="一、git基础"><a href="#一、git基础" class="headerlink" title="一、git基础"></a>一、git基础</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/68747470733a2f2f7374617469632e7675652d6a732e636f6d2f33323733633961302d663739632d313165622d626336662d3366303665313439313636342e706e67" alt="img"></p>
-<h2 id="重新下载git后"><a href="#重新下载git后" class="headerlink" title="重新下载git后"></a>重新下载git后</h2><p><strong>1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）</strong></p>
+    <content><![CDATA[<h1 id="一、git基础"><a href="#一、git基础" class="headerlink" title="一、git基础"></a>一、git基础</h1><h2 id="重新下载git后"><a href="#重新下载git后" class="headerlink" title="重新下载git后"></a>重新下载git后</h2><p><strong>1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）</strong></p>
 <p>$ ssh-keygen -t rsa -C “<a href="mailto:your_email@youremail.com">your_email@youremail.com</a>“ //注意啊孩子，双引号里面是你的邮箱(如果在公司你应该有自己的企业邮箱)。填你常用的就行。还有enter代表执行。</p>
 <p>添加公钥到 Github(gitee等) 中</p>
 <p>登录 github 账号，选中并打开 setting，选择 SSH and GPG keys，选择 New SSH key，在 Title 中填入题目，在 Key 中填入id_rsa.pub 文件中的公钥。</p>
@@ -351,6 +216,140 @@
       </tags>
   </entry>
   <entry>
+    <title>前端路由随笔</title>
+    <url>/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h1 id="一、什么是路由？"><a href="#一、什么是路由？" class="headerlink" title="一、什么是路由？"></a>一、什么是路由？</h1><p>路由的概念起源于服务端，在以前前后端不分离的时候，由后端来控制路由，当接收到客户端发来的   <code>HTTP</code> 请求，就会根据所请求的相应 <code>URL</code>，来找到相应的映射函数，然后执行该函数，并将函数的返回值发送给客户端。对于最简单的静态资源服务器，可以认为，所有 <code>URL</code> 的映射函数就是一个文件读取操作。对于动态资源，映射函数可能是一个数据库读取操作，也可能是进行一些数据的处理等等。然后根据这些读取的数据，在服务器端就使用相应的模板来对页面进行渲染后，再返回渲染完毕的页面。它的好处与缺点非常明显：</p>
+<ul>
+<li><p>好处：安全性好，<code>SEO</code> 好；</p>
+</li>
+<li><p>缺点：加大服务器的压力，不利于用户体验，代码冗合不好维护；</p>
+</li>
+</ul>
+<p>也正是由于后端路由还存在着自己的不足，前端路由才有了自己的发展空间。对于前端路由来说，路由的映射函数通常是进行一些 <code>DOM</code> 的显示和隐藏操作。这样，当访问不同的路径的时候，会显示不同的页面组件。前端路由主要有以下两种实现方案：</p>
+<ul>
+<li><code>Hash</code></li>
+<li><code>History</code></li>
+</ul>
+<p>​    原文链接：</p>
+<h1 id="二、前端路由Hash模式"><a href="#二、前端路由Hash模式" class="headerlink" title="二、前端路由Hash模式"></a>二、前端路由Hash模式</h1><p>一个URL是由很多部分组成，包括协议、域名、路径、query、hash等，早期的前端路由的实现就是基于location.hash来实现的。其实现原理也很简单，location.hash的值就是URL中#后面的内容。例如：<a href="https://www.wdnmd.com/#666,%E5%AE%83%E7%9A%84location.hash=&#39;#666&#39;">https://www.WDNMD.com#666,它的location.hash=&#39;#666&#39;</a></p>
+<h2 id="Hash模式的特性："><a href="#Hash模式的特性：" class="headerlink" title="Hash模式的特性："></a>Hash模式的特性：</h2><ol>
+<li><p>URL中hash值只是客户端的一种状态，也就是说当向服务器端发出请求时，hash部分不会被发送。</p>
+</li>
+<li><p>hash值的改变，都会在浏览器的访问历史中增加一个记录。因此我们能通过浏览器的回退、前进按钮控制hash的切换。</p>
+</li>
+<li><p>我们可以使用hashchange事件来监听hash的变化。(a标签和对loaction.hash进行赋值等等)</p>
+<p>通过上面的了解，我们大概知道这些</p>
+<ul>
+<li><p>hash模式所有的工作都是在前端完成的，不需要后端服务的配合</p>
+</li>
+<li><p>hash模式的实现方式就是通过监听URL中hash部分的变化，从而做出对应的渲染逻辑</p>
+</li>
+<li><p>hash模式下，URL中会带有#，看起来不太美观</p>
+<p>因此Hash模式还是有些小小的不足，History API也就出现了</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="三、前端路由History-API模式"><a href="#三、前端路由History-API模式" class="headerlink" title="三、前端路由History API模式"></a>三、前端路由History API模式</h1><p>history路由模式的实现，是要归功于HTML5提供的一个history全局对象，可以将它理解为其中包含了关于我们访问网页（历史会话）的一些信息。window.history 属性指向 History 对象，它表示当前窗口的浏览历史。当发生改变时，只会改变页面的路径，不会刷新页面。 History 对象保存了当前窗口访问过的所有页面网址。通过 history.length 可以得出当前窗口一共访问过几个网址。 由于安全原因，浏览器不允许脚本读取这些地址，但是允许在地址之间导航。 浏览器工具栏的“前进”和“后退”按钮，其实就是对 History 对象进行操作。</p>
+<p>同时它还暴露了一些有用的方法，比如：</p>
+<ul>
+<li>window.history.go 可以跳转到浏览器会话历史中的指定的某一个记录页</li>
+<li>window.history.forward 指向浏览器会话历史中的下一页，跟浏览器的前进按钮相同</li>
+<li>window.history.back 返回浏览器会话历史中的上一页，跟浏览器的回退按钮功能相同</li>
+<li>window.history.pushState 可以将给定的数据压入到浏览器会话历史栈中</li>
+<li>window.history.replaceState 将当前的会话页面的url替换成指定的数据</li>
+</ul>
+<p>而history路由的实现，主要就是依靠于pushState与replaceState实现的</p>
+<p><font color='#478fd2'>参考文章：</font></p>
+<p><a href="https://juejin.cn/post/6844903906024095751">什么是路由？</a></p>
+<p><a href="https://icode.best/i/13730847328933">vue路由模式及 history 模式下服务端配置</a></p>
+]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>路由，随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm随笔</title>
+    <url>/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
+<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
+<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
+<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
+<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
+</ul>
+<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
+<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
+</li>
+<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
+<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
+</li>
+</ul>
+<h1 id="二、全局安装和本地安装"><a href="#二、全局安装和本地安装" class="headerlink" title="二、全局安装和本地安装"></a>二、全局安装和本地安装</h1><h2 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; -g//（这里-g是-global的简写）</span><br></pre></td></tr></table></figure>
+
+<p>通过上面的命令行（带-g修饰符）安装某个包，就叫全局安装。通常全局包安装在node目录下的node_modules文件夹。可以通过执行下面几条命令查看node、npm的安装目录和全局包的安装目录。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">which node   // 查看node的安装目录</span><br><span class="line">which npm   // 查看npm的安装目录</span><br><span class="line">npm root -g // 查看全局包的安装目录</span><br><span class="line">npm list -g --depth 0 //查看全局安装过的</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装:"></a>本地安装:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; (后面可以加几种修饰符，主要有两种--save-dev和--save)</span><br></pre></td></tr></table></figure>
+
+<p>通过上面的命令行安装某个包，就叫本地安装。包安装在你当前项目文件夹下的node_modules文件夹中。</p>
+<h3 id="全局安装的作用"><a href="#全局安装的作用" class="headerlink" title="全局安装的作用:"></a>全局安装的作用:</h3><p>全局安装的包可提供直接执行的命令(例：gulp -h可以查看gulp定义了什么命令)。 比如gulp全局安装后，可以在命令行上直接执行gulp -v、gulp -h等（原理：全局安装的gulp会将其package.json中的bin命令注入到了全局环境，使得你可以全局执行：gulp xxx命令，这另一个话题了，不深入）。倘若只在本地安装了gulp，未在全局安装gulp，直接执行这些命令会报错。你想要执行相应的命令则可能需要例如：node ./node_modules/gulp/bin/gulp.js -v(查看版本) 这样用一大串命令来执行。因此全局安装就发挥到他的好处了，一个gulp -v就搞定</p>
+<p>当然，不是每个包都必须要全局安装的，一般在项目中需要用到该包定义的命令才需要全局安装。比如gulp <taskName>执行gulp任务…等，所以是否需要全局安装取决于我们如何使用这个包。全局安装的就像全局变量有点粗糙，但在某些情况下也是必要的，全局包很重要，但如果不需要，最好避免使用。</p>
+<h2 id="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"><a href="#可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？" class="headerlink" title="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"></a>可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？</h2><ol>
+<li>如果只是全局安装了而没本地安装，就得require(‘<pagePath>‘) 例：引入一个全局的包可能就是requirt(‘/usr/local/….’)通过全局包的路径引入，这样显然十分的不灵活。如果安装了本地包，那么就<strong>可以直接require(‘<pageName>‘)引入使用。</strong></li>
+<li>一个包通常会在不同的项目上会重复用到，如果只全局安装，那么当某个项目需要该包更新版本时，更新后可能就会影响到其他同样引用该包的项目，因此本地安装可以更灵活地在不同的项目使用不同版本的包，并避免全局包污染的问题。</li>
+</ol>
+<p>一个经验法则：要用到该包的命令执行任务的就需要全局安装，要通过require引入使用的就需要本地安装（ 但实际开发过程中，我们也不怎么需要考虑某个包是全局安装还是本地安装，因为这一点在该包的官网上一般会明确指出，以上是为了理解全局安装和本地安装）。</p>
+<p>参考：<a href="https://segmentfault.com/a/1190000017787636?utm_source=tag-newest">node.js - npm(你怕吗) 全局安装与本地安装、开发依赖和生产依赖_个人文章 - SegmentFault 思否</a></p>
+]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>npm，随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hello，欢迎来到耀耀切克闹的博客！</title>
+    <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
+    <content><![CDATA[<h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
+<li>搭建博客就是为了写博客，整理思路，将学习的知识融会贯通，以教为学。</li>
+<li>在这个过程中，你可以认识更多兴趣相投的人。</li>
+<li>事件驱动学习，每周持续的博客更新，查看自己是否学习到新东西！</li>
+<li>对自己也是一种督促，你拥有一个完全属于自己的博客，会驱动自己分享学习！</li>
+</ol>
+<h1 id="二-搭建博客方式"><a href="#二-搭建博客方式" class="headerlink" title="二.搭建博客方式"></a>二.搭建博客方式</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e3d012b007f43c597d5db60b9594379b.png"></p>
+<h2 id="1-自己开发"><a href="#1-自己开发" class="headerlink" title="1.自己开发"></a>1.自己开发</h2><p>这是最原始的博客建站方式了，自己写代码（前台 + 后台管理+数据库等等）、自己将项目发布上线、自己来维护网站，啥都自己来干。这就意味着全栈的工作，你需要理解和学习的地方有好多好多，在这过程中需要耗费大量时间，但对自己的提升是不可估量的，并且代码掌握在自己手里，很安想加什么功能都不会受到限制，很灵活。这里推荐 Github 上的开源项目，可以在此上进行二次开发：</p>
+<p>Halo博客，一款现代化的开源博客/CMS系统，值得一试。详细部署可以去  <a href="https://docs.halo.run/">https://docs.halo.run</a></p>
+<h2 id="2-站点生成器"><a href="#2-站点生成器" class="headerlink" title="2.站点生成器"></a>2.站点生成器</h2><p>博客是一种很典型的网站，所以有大佬将博客的功能（比如文章管理）抽象出来，做成了 站点生成器 ，可以用极少的命令 + 配置文件的方式，自动生成精美的博客网站。本人还是比较菜的，刚毕业，工作了2个月多，前端菜鸡程序员一枚，于是采用了这种方式，也是我极力推荐的一种方式，省时省力，灵活程度虽然比不上完全由自己开发，但适合大多数人的需求。并且，绝大多数的站点生成器都只能生成静态网站，也就是说网站的内容（比如博客文章、文档等）是固定的，不需要从数据库中获取内容，因此有很多优点：</p>
+<ul>
+<li><p>省钱：把文件扔 GitHub Pages、Gitee Pages 啥的就能免费部署</p>
+</li>
+<li><p>速度快：省去了数据的动态获取过程，配合 CDN 加载速度飞起</p>
+</li>
+<li><p>SEO：静态网站更容易被搜索引擎的蜘蛛抓取，稳定排名</p>
+</li>
+<li><p>易维护：没那么多花里胡哨的功能，比动态网站好维护不少</p>
+<p>这里推荐：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e6561ed83d781d08d5298519b34a4752.png"></p>
+<p><strong>当然，好像另外还有一种方式就是建站程序，主流就是 WordPress（推荐）或 Typech，跟着官方文档操作就行，不过俺了解甚少。感兴趣的朋友可以去看看，据说也很方便。</strong></p>
+</li>
+</ul>
+<h2 id="3-建站平台和购买"><a href="#3-建站平台和购买" class="headerlink" title="3.建站平台和购买"></a>3.建站平台和购买</h2><p> 简单说吧！就是花钱办事，用金钱换时间。</p>
+<p><strong>建站平台：</strong>套个现成的模板、利用界面拖拖拽拽就能搞出来一个网站，平台还会给你提供域名，一键上线。此外，网站的维护也不用咱自己操心了，全交给别人，我们专注于网站的内容就行，百度搜索应该有一大堆。</p>
+<p><strong>购买</strong>: 极致的体验，没有最好，只有更好，你就是大爷，可以尽情享受氪金带来的快乐！（手动狗头)</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>为什么要搭建博客</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
     <url>/2022/09/23/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h1 id="一、Hexo-Git-Github博客在多台终端同步管理"><a href="#一、Hexo-Git-Github博客在多台终端同步管理" class="headerlink" title="一、Hexo+Git+Github博客在多台终端同步管理"></a>一、<a href="https://so.csdn.net/so/search?q=Hexo&spm=1001.2101.3001.7020">Hexo</a>+Git+Github博客在多台终端同步管理</h1><p>此方法利用Git管理Hexo产生的文件，实现在不同的电脑上同步（<a href="https://so.csdn.net/so/search?q=Github&spm=1001.2101.3001.7020">Github</a>）所需的文件，也可以正常的在不同的Hexo环境里进行相应操作，只要在做完之后同步到Github的仓库里即可。下面具体来说说：</p>
@@ -387,111 +386,6 @@
       </tags>
   </entry>
   <entry>
-    <title>从零开始搭建博客(一)——本地搭建hexo框架</title>
-    <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAhexo%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
-<ul>
-<li><a href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
-<li><a href="http://git-scm.com/">Git</a></li>
-</ul>
-<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <a href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">安装 Hexo</a> 步骤。</p>
-<p>如果您的电脑中尚未安装所需要的程序，请自行百度按指示完成安装。</p>
-<h2 id="3-安装-Hexo"><a href="#3-安装-Hexo" class="headerlink" title="3.安装 Hexo"></a>3.安装 Hexo</h2><h3 id="（1）本地安装-hexo"><a href="#（1）本地安装-hexo" class="headerlink" title="（1）本地安装 hexo"></a>（1）本地安装 hexo</h3><p>首先在本地新建一个空文件夹，用来存放 Hexo 的文件和以后要写的博客文件，注意不要有中文路径，避免可能出现的问题。取名 MyBlog。</p>
-<p>使用VS code 打开该文件夹，右键打开终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 初始化文件夹</span><br><span class="line">hexo init</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>命令很好理解，第一行安装 hexo 模块，<code>-g</code>表示安装全局模块；第二行是 hexo 初始化，会用 <code>git clone</code>命令去 GitHub 下载一个 hexo 默认模板代码库；第三行是安装依赖包，类似安装 pip 的 requirement 文件，会根据刚下载的代码库中的配置文件，下载并安装所需依赖包。</p>
-<h3 id="（2）可能遇到的问题"><a href="#（2）可能遇到的问题" class="headerlink" title="（2）可能遇到的问题"></a>（2）可能遇到的问题</h3><ul>
-<li><strong><code>npm install -g hexo-cli</code>命令执行卡住，或者报错连接不上</strong></li>
-</ul>
-<p>可能是 npm 源速度太慢，可以尝试修改淘宝源解决，再重新执行安装命令。npm 源的概念就和 Python 中的 pip 源一样，默认源是<code>https://registry.npmjs.org/</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看 npm 源</span><br><span class="line">npm config get registry</span><br><span class="line"># 临时修改 npm 源安装 hexo (仅本条命令有效)</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br><span class="line"># 或者永久修改 npm 源</span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>如果是公司内网使用代理访问外网 (比如<code>ping registry.npmjs.org</code> <code>ping registry.npm.taobao.org</code>都不通)，可以尝试给 npm 配置代理解决，再重新执行安装命令。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置代理</span><br><span class="line">npm config set proxy http://serverip:port</span><br><span class="line">npm confit set https-proxy http:/serverip:port</span><br><span class="line"># 设置带用户名密码的代理</span><br><span class="line">npm config set proxy http://username:password@serverip:port</span><br><span class="line">npm confit set https-proxy http://username:password@serverip:port</span><br><span class="line"># 取消代理</span><br><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong><code>hexo init</code>命令执行卡住，或者报错连接不上</strong></li>
-</ul>
-<p>同上设置代理</p>
-<h2 id="4-运行本地博客"><a href="#4-运行本地博客" class="headerlink" title="4.运行本地博客"></a>4.运行本地博客</h2><p>前面三条命令执行成功，Hexo 框架在本地就已经搭建好了，下面看看效果。</p>
-<p>在vs code 的终端中运行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 生成静态网站</span><br><span class="line">hexo g</span><br><span class="line"># 启动服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>点击运行成功后的出来的地址</p>
-<p>自此一个简单的本地博客诞生了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20201220204625063.png" alt="本地博客效果"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(二)——hexo主题搭建</title>
-    <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
-<p>下面是我寻找主题的三个方法。</p>
-<ul>
-<li><p><strong>官方网站</strong></p>
-<p>Hexo 官网收录了几百个第三方主题，其中有许多中文开发者开发的主题。</p>
-<p>在 Hexo 官网点击“主题”，或者直接进入 Hexo 主题页：<a href="https://hexo.io/themes/">themes</a></p>
-<p>通过上方的搜索框可以根据标签搜索。</p>
-</li>
-</ul>
-<h2 id="2-github开源Hexo-博客主题"><a href="#2-github开源Hexo-博客主题" class="headerlink" title="2.github开源Hexo 博客主题"></a>2.github开源Hexo 博客主题</h2><p>大多数流行的主题都在 GitHub 托管开源了，我们可以直接去 GitHub 下载。</p>
-<p>在 Github 官网搜索<code>hexo-theme</code>，选择<code>All GitHub</code>，或者直接进入搜索页：<a href="https://github.com/search?q=hexo-theme">search?q=hexo-theme</a></p>
-<p>市面上使用比较多的主题：</p>
-<ul>
-<li><strong>Next</strong></li>
-</ul>
-<p>Demo 示例：<a href="https://theme-next.js.org/">NexT</a> | <a href="https://dandyxu.me/">Dandy</a> | <a href="https://raincal.com/">Raincal</a></p>
-<p>GitHub 主页：<a href="https://github.com/iissnan/hexo-theme-next">hexo-theme-next</a></p>
-<p>这个是 Hexo 最流行的主题，GitHub 上 15.5k stars，在 Hexo 主题中排行第一。</p>
-<ul>
-<li><strong>matery</strong></li>
-</ul>
-<p>Demo 示例：<a href="http://blinkfox.com/">闪烁之狐</a></p>
-<p>GitHub 主页：<a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a></p>
-<ul>
-<li><strong>butterfly</strong></li>
-</ul>
-<p>Demo 示例： <a href="https://butterfly.js.org/">Butterfly</a> | <a href="https://jerryc.me/">JerryC</a></p>
-<p>GitHub 主页：<a href="https://github.com/jerryc127/hexo-theme-butterfly">hexo-theme-butterfly</a></p>
-<p>本菜鸟使用的主题就是以简约为主：</p>
-<ul>
-<li><strong>ayer</strong></li>
-</ul>
-<p>Demo 示例：<a href="https://shen-yu.gitee.io/">岛</a></p>
-<p>GitHub 主页：<a href="https://github.com/Shen-Yu/hexo-theme-ayer">hexo-theme-ayer</a></p>
-<h2 id="3-更换主题"><a href="#3-更换主题" class="headerlink" title="3.更换主题"></a>3.更换主题</h2><p>以 <strong>ayer</strong> 主题为例。</p>
-<p>在 vs code中 Mylog根目录下，右键，执行下面命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-ayer -S</span><br><span class="line">#如果hexo &lt; 5.0</span><br><span class="line"># 国内用户如果速度较慢，可以把github地址替换为：https://gitee.com/mirrors/ayer.git</span><br><span class="line">git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
-
-<p>我在使用 <strong>ayer</strong> 找到了这样一位大佬，后面的操作就是跟着这位大佬的搭建博客进行的了：<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a></p>
-<p>该博主的文章对我后面的搭建有巨大帮助，各位过去看看吧！后面估计很多内容可能会照着大佬来，如有雷同，纯属抄袭（手动狗头）</p>
-<h1 id="二-本地写博客"><a href="#二-本地写博客" class="headerlink" title="二.本地写博客"></a>二.本地写博客</h1><p><strong>利用Markdown语法的软件写博客，本地试运行：</strong></p>
-<p>这里推荐使用Typora或uTools的Markdown笔记功能，具体怎么使用这两款软件， 官方都有说明。其中Typora现在开始收费了，但可以去下载老版本，老版本是免费的，具体操作可以按：</p>
-<p><a href="http://www.itmind.net/16468.html">Typora免费版</a></p>
-<p>根据这个网址上面来操作，下载老版本的Typora，但具体还能用多久就不知道了，有钱的小伙伴可以直接去官网下载正版，本人老穷b了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/11DDC475.jpg"></p>
-<p>把写好的文章复制到根目录下的source=&gt;_posts</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184421310.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184517354.png"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从零开始搭建博客(五)——使用valine评论系统</title>
     <url>/2022/10/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%94)%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h1 id="一、hexo框架的主题使用valine"><a href="#一、hexo框架的主题使用valine" class="headerlink" title="一、hexo框架的主题使用valine"></a>一、hexo框架的主题使用valine</h1><h2 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a><strong>1. 注册 Leancloud 账号</strong></h2><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。</p>
@@ -512,30 +406,6 @@
       <tags>
         <tag>博客搭建</tag>
         <tag>valine</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(四)——关于我页面搭建</title>
-    <url>/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
-<p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928181752870.png"></p>
-<p>链接相关配置也是在themes=&gt;ayer=&gt;_config.yml下配置，找到friends_link，图片地址和github链接填自己的</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  DarknessZY:</span><br><span class="line">    url: https://github.com/DarknessZY</span><br><span class="line">    img: /images/github.png</span><br><span class="line">  耀耀切克闹灬:</span><br><span class="line">    url: https://juejin.cn/user/1781681116679854/columns</span><br><span class="line">    img: /images/juejin.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: /images/hexo.png</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br></pre></td></tr></table></figure>
-
-<p>然后执行hexo命令，页面上就显示出来了：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16643609353351.png" alt="img"></p>
-<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">     &lt;!-- 打赏 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt;秋梨膏!请我杯喝茶怎么样!&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;reword-out&quot;&gt;</span><br><span class="line">        &lt;div id=&quot;reward-btn&quot;&gt;</span><br><span class="line">          &lt;%= __(&#x27;post.reward&#x27;) %&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!-- 介绍 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt; </span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">        &lt;/div&gt;  </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!-- 链接 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt; 点击进去看看吧!&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928183612541.png" alt="image-20220928183612541"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
       </tags>
   </entry>
   <entry>
@@ -699,6 +569,135 @@
         <tag>vite</tag>
         <tag>vue3</tag>
         <tag>pinia</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(一)——本地搭建hexo框架</title>
+    <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAhexo%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<ul>
+<li><a href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
+<li><a href="http://git-scm.com/">Git</a></li>
+</ul>
+<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <a href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">安装 Hexo</a> 步骤。</p>
+<p>如果您的电脑中尚未安装所需要的程序，请自行百度按指示完成安装。</p>
+<h2 id="3-安装-Hexo"><a href="#3-安装-Hexo" class="headerlink" title="3.安装 Hexo"></a>3.安装 Hexo</h2><h3 id="（1）本地安装-hexo"><a href="#（1）本地安装-hexo" class="headerlink" title="（1）本地安装 hexo"></a>（1）本地安装 hexo</h3><p>首先在本地新建一个空文件夹，用来存放 Hexo 的文件和以后要写的博客文件，注意不要有中文路径，避免可能出现的问题。取名 MyBlog。</p>
+<p>使用VS code 打开该文件夹，右键打开终端</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 初始化文件夹</span><br><span class="line">hexo init</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>命令很好理解，第一行安装 hexo 模块，<code>-g</code>表示安装全局模块；第二行是 hexo 初始化，会用 <code>git clone</code>命令去 GitHub 下载一个 hexo 默认模板代码库；第三行是安装依赖包，类似安装 pip 的 requirement 文件，会根据刚下载的代码库中的配置文件，下载并安装所需依赖包。</p>
+<h3 id="（2）可能遇到的问题"><a href="#（2）可能遇到的问题" class="headerlink" title="（2）可能遇到的问题"></a>（2）可能遇到的问题</h3><ul>
+<li><strong><code>npm install -g hexo-cli</code>命令执行卡住，或者报错连接不上</strong></li>
+</ul>
+<p>可能是 npm 源速度太慢，可以尝试修改淘宝源解决，再重新执行安装命令。npm 源的概念就和 Python 中的 pip 源一样，默认源是<code>https://registry.npmjs.org/</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看 npm 源</span><br><span class="line">npm config get registry</span><br><span class="line"># 临时修改 npm 源安装 hexo (仅本条命令有效)</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br><span class="line"># 或者永久修改 npm 源</span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>如果是公司内网使用代理访问外网 (比如<code>ping registry.npmjs.org</code> <code>ping registry.npm.taobao.org</code>都不通)，可以尝试给 npm 配置代理解决，再重新执行安装命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置代理</span><br><span class="line">npm config set proxy http://serverip:port</span><br><span class="line">npm confit set https-proxy http:/serverip:port</span><br><span class="line"># 设置带用户名密码的代理</span><br><span class="line">npm config set proxy http://username:password@serverip:port</span><br><span class="line">npm confit set https-proxy http://username:password@serverip:port</span><br><span class="line"># 取消代理</span><br><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>hexo init</code>命令执行卡住，或者报错连接不上</strong></li>
+</ul>
+<p>同上设置代理</p>
+<h2 id="4-运行本地博客"><a href="#4-运行本地博客" class="headerlink" title="4.运行本地博客"></a>4.运行本地博客</h2><p>前面三条命令执行成功，Hexo 框架在本地就已经搭建好了，下面看看效果。</p>
+<p>在vs code 的终端中运行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 生成静态网站</span><br><span class="line">hexo g</span><br><span class="line"># 启动服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>点击运行成功后的出来的地址</p>
+<p>自此一个简单的本地博客诞生了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20201220204625063.png" alt="本地博客效果"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>hexo框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(二)——hexo主题搭建</title>
+    <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
+<p>下面是我寻找主题的三个方法。</p>
+<ul>
+<li><p><strong>官方网站</strong></p>
+<p>Hexo 官网收录了几百个第三方主题，其中有许多中文开发者开发的主题。</p>
+<p>在 Hexo 官网点击“主题”，或者直接进入 Hexo 主题页：<a href="https://hexo.io/themes/">themes</a></p>
+<p>通过上方的搜索框可以根据标签搜索。</p>
+</li>
+</ul>
+<h2 id="2-github开源Hexo-博客主题"><a href="#2-github开源Hexo-博客主题" class="headerlink" title="2.github开源Hexo 博客主题"></a>2.github开源Hexo 博客主题</h2><p>大多数流行的主题都在 GitHub 托管开源了，我们可以直接去 GitHub 下载。</p>
+<p>在 Github 官网搜索<code>hexo-theme</code>，选择<code>All GitHub</code>，或者直接进入搜索页：<a href="https://github.com/search?q=hexo-theme">search?q=hexo-theme</a></p>
+<p>市面上使用比较多的主题：</p>
+<ul>
+<li><strong>Next</strong></li>
+</ul>
+<p>Demo 示例：<a href="https://theme-next.js.org/">NexT</a> | <a href="https://dandyxu.me/">Dandy</a> | <a href="https://raincal.com/">Raincal</a></p>
+<p>GitHub 主页：<a href="https://github.com/iissnan/hexo-theme-next">hexo-theme-next</a></p>
+<p>这个是 Hexo 最流行的主题，GitHub 上 15.5k stars，在 Hexo 主题中排行第一。</p>
+<ul>
+<li><strong>matery</strong></li>
+</ul>
+<p>Demo 示例：<a href="http://blinkfox.com/">闪烁之狐</a></p>
+<p>GitHub 主页：<a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a></p>
+<ul>
+<li><strong>butterfly</strong></li>
+</ul>
+<p>Demo 示例： <a href="https://butterfly.js.org/">Butterfly</a> | <a href="https://jerryc.me/">JerryC</a></p>
+<p>GitHub 主页：<a href="https://github.com/jerryc127/hexo-theme-butterfly">hexo-theme-butterfly</a></p>
+<p>本菜鸟使用的主题就是以简约为主：</p>
+<ul>
+<li><strong>ayer</strong></li>
+</ul>
+<p>Demo 示例：<a href="https://shen-yu.gitee.io/">岛</a></p>
+<p>GitHub 主页：<a href="https://github.com/Shen-Yu/hexo-theme-ayer">hexo-theme-ayer</a></p>
+<h2 id="3-更换主题"><a href="#3-更换主题" class="headerlink" title="3.更换主题"></a>3.更换主题</h2><p>以 <strong>ayer</strong> 主题为例。</p>
+<p>在 vs code中 Mylog根目录下，右键，执行下面命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-ayer -S</span><br><span class="line">#如果hexo &lt; 5.0</span><br><span class="line"># 国内用户如果速度较慢，可以把github地址替换为：https://gitee.com/mirrors/ayer.git</span><br><span class="line">git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
+
+<p>我在使用 <strong>ayer</strong> 找到了这样一位大佬，后面的操作就是跟着这位大佬的搭建博客进行的了：<a href="https://blog.csdn.net/yushuaigee?type=blog">杰克小麻雀</a></p>
+<p>该博主的文章对我后面的搭建有巨大帮助，各位过去看看吧！后面估计很多内容可能会照着大佬来，如有雷同，纯属抄袭（手动狗头）</p>
+<h1 id="二-本地写博客"><a href="#二-本地写博客" class="headerlink" title="二.本地写博客"></a>二.本地写博客</h1><p><strong>利用Markdown语法的软件写博客，本地试运行：</strong></p>
+<p>这里推荐使用Typora或uTools的Markdown笔记功能，具体怎么使用这两款软件， 官方都有说明。其中Typora现在开始收费了，但可以去下载老版本，老版本是免费的，具体操作可以按：</p>
+<p><a href="http://www.itmind.net/16468.html">Typora免费版</a></p>
+<p>根据这个网址上面来操作，下载老版本的Typora，但具体还能用多久就不知道了，有钱的小伙伴可以直接去官网下载正版，本人老穷b了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/11DDC475.jpg"></p>
+<p>把写好的文章复制到根目录下的source=&gt;_posts</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184421310.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220922184517354.png"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>hexo框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(四)——关于我页面搭建</title>
+    <url>/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
+<p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928181752870.png"></p>
+<p>链接相关配置也是在themes=&gt;ayer=&gt;_config.yml下配置，找到friends_link，图片地址和github链接填自己的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  DarknessZY:</span><br><span class="line">    url: https://github.com/DarknessZY</span><br><span class="line">    img: /images/github.png</span><br><span class="line">  耀耀切克闹灬:</span><br><span class="line">    url: https://juejin.cn/user/1781681116679854/columns</span><br><span class="line">    img: /images/juejin.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: /images/hexo.png</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br></pre></td></tr></table></figure>
+
+<p>然后执行hexo命令，页面上就显示出来了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16643609353351.png" alt="img"></p>
+<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">     &lt;!-- 打赏 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt;秋梨膏!请我杯喝茶怎么样!&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;reword-out&quot;&gt;</span><br><span class="line">        &lt;div id=&quot;reward-btn&quot;&gt;</span><br><span class="line">          &lt;%= __(&#x27;post.reward&#x27;) %&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!-- 介绍 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt; </span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">        &lt;/div&gt;  </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!-- 链接 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt; 点击进去看看吧!&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928183612541.png" alt="image-20220928183612541"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>hexo框架</tag>
       </tags>
   </entry>
 </search>
