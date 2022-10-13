@@ -136,6 +136,11 @@ music:
 busuanzi:
   enable: true
 
+# Live2D
+## https://github.com/EYHN/hexo-helper-live2d
+live2d:
+  enable: true
+
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
   enable: true
