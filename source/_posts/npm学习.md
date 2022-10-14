@@ -1,7 +1,7 @@
 ---
 title: npm随笔
 date: 2022-09-26 13:12
-tags: [npm，随笔]
+tags: [npm,随笔]
 categories: 前端随笔
 
 ---
