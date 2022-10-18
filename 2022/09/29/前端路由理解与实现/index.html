@@ -130,10 +130,9 @@
 <p>也正是由于后端路由还存在着自己的不足，前端路由才有了自己的发展空间。对于前端路由来说，路由的映射函数通常是进行一些 <code>DOM</code> 的显示和隐藏操作。这样，当访问不同的路径的时候，会显示不同的页面组件。前端路由主要有以下两种实现方案：</p>
 <ul>
 <li><code>Hash</code></li>
-<li><code>History</code></li>
+<li><code>History</code><h1 id="二、前端路由Hash模式"><a href="#二、前端路由Hash模式" class="headerlink" title="二、前端路由Hash模式"></a>二、前端路由Hash模式</h1></li>
 </ul>
-<p>​    原文链接：</p>
-<h1 id="二、前端路由Hash模式"><a href="#二、前端路由Hash模式" class="headerlink" title="二、前端路由Hash模式"></a>二、前端路由Hash模式</h1><p>一个URL是由很多部分组成，包括协议、域名、路径、query、hash等，早期的前端路由的实现就是基于location.hash来实现的。其实现原理也很简单，location.hash的值就是URL中#后面的内容。例如：<a target="_blank" rel="noopener" href="https://www.wdnmd.com/#666,%E5%AE%83%E7%9A%84location.hash=&#39;#666&#39;">https://www.WDNMD.com#666,它的location.hash=&#39;#666&#39;</a></p>
+<p>一个URL是由很多部分组成，包括协议、域名、路径、query、hash等，早期的前端路由的实现就是基于location.hash来实现的。其实现原理也很简单，location.hash的值就是URL中#后面的内容。例如：<a target="_blank" rel="noopener" href="https://www.wdnmd.com/#666,%E5%AE%83%E7%9A%84location.hash=&#39;#666&#39;">https://www.WDNMD.com#666,它的location.hash=&#39;#666&#39;</a></p>
 <h2 id="Hash模式的特性："><a href="#Hash模式的特性：" class="headerlink" title="Hash模式的特性："></a>Hash模式的特性：</h2><ol>
 <li><p>URL中hash值只是客户端的一种状态，也就是说当向服务器端发出请求时，hash部分不会被发送。</p>
 </li>

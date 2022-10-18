@@ -96,7 +96,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.7k</span>
+            <span class="post-count">1.8k</span>
         </span>
     </span>
 
@@ -184,7 +184,7 @@
 <p><strong>5.合并master到自己分支</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge master</span><br></pre></td></tr></table></figure>
 
-<p>如果在合并的过程中，例如提示Test.java文件出现冲突了，手动修改一下这个文件，修改成自己想要内容；如果没有出现冲突，vs code上下载git history插件 ，可以对比冲突，保留自己想要的代码，没有就直接跳到7步</p>
+<p>如果在合并的过程中，例如提示Test.java文件出现冲突了，手动修改一下这个文件，修改成自己想要内容；如果没有出现冲突，vs code上下载git history插件 ，可以对比冲突，保留自己想要的代码，没有就直接跳到7步<br><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20221018105811855.png" alt="冲突解决"><br>上方的Accept Current Change等四种选择按钮，根据情况选择保留Current Change或者Incoming Change;颜色提示很明显，&lt;&lt;&lt;&lt;&lt;&lt; HEAD以下绿色部分是current change,同理蓝色部分是incoming.<br>both是全部保留</p>
 <p><strong>6.添加修改的文件，将新添加的文件提交上去</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add Test.java</span><br><span class="line"></span><br><span class="line">git commit -m “这是你commit的原因，写了方便你我他”</span><br></pre></td></tr></table></figure>
 
