@@ -146,6 +146,9 @@ git merge master
 ```
 
 如果在合并的过程中，例如提示Test.java文件出现冲突了，手动修改一下这个文件，修改成自己想要内容；如果没有出现冲突，vs code上下载git history插件 ，可以对比冲突，保留自己想要的代码，没有就直接跳到7步
+![冲突解决](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20221018105811855.png)
+上方的Accept Current Change等四种选择按钮，根据情况选择保留Current Change或者Incoming Change;颜色提示很明显，<<<<<< HEAD以下绿色部分是current change,同理蓝色部分是incoming.
+both是全部保留
 
 **6.添加修改的文件，将新添加的文件提交上去**
 
