@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-14T01:38:50.702Z</updated>
+  <updated>2022-10-25T11:07:36.261Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vite 搭建vue3项目（二）</title>
+    <link href="http://example.com/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://example.com/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <published>2022-10-25T10:52:00.000Z</published>
+    <updated>2022-10-25T11:07:36.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-login页面和功能就不多哔哔了&quot;&gt;&lt;a href=&quot;#1-login页面和功能就不多哔哔了&quot; class=&quot;headerlink&quot; title=&quot;1.login页面和功能就不多哔哔了&quot;&gt;&lt;/a&gt;1.login页面和功能就不多哔哔了&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="项目搭建" scheme="http://example.com/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="vite" scheme="http://example.com/tags/vite/"/>
+    
+    <category term="vue3" scheme="http://example.com/tags/vue3/"/>
+    
+    <category term="pinia" scheme="http://example.com/tags/pinia/"/>
+    
+  </entry>
   
   <entry>
     <title>日期小组件的封装</title>
@@ -312,6 +341,33 @@
   </entry>
   
   <entry>
+    <title>hello，欢迎来到耀耀切克闹的博客！</title>
+    <link href="http://example.com/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/"/>
+    <id>http://example.com/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</id>
+    <published>2022-09-22T10:12:00.000Z</published>
+    <updated>2022-09-23T02:31:01.241Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一-为什么要搭建博客？&quot;&gt;&lt;a href=&quot;#一-为什么要搭建博客？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="为什么要搭建博客" scheme="http://example.com/tags/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TS基础</title>
     <link href="http://example.com/2022/09/22/Typescript/"/>
     <id>http://example.com/2022/09/22/Typescript/</id>
@@ -336,33 +392,6 @@
     <category term="TypeScript" scheme="http://example.com/tags/TypeScript/"/>
     
     <category term="js" scheme="http://example.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello，欢迎来到耀耀切克闹的博客！</title>
-    <link href="http://example.com/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/"/>
-    <id>http://example.com/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</id>
-    <published>2022-09-22T10:12:00.000Z</published>
-    <updated>2022-09-23T02:31:01.241Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一-为什么要搭建博客？&quot;&gt;&lt;a href=&quot;#一-为什么要搭建博客？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="为什么要搭建博客" scheme="http://example.com/tags/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
