@@ -7,7 +7,7 @@ tag: [vite,vue3,pinia]
 
 # 1.login页面和功能就不多哔哔了
 
-## 2.主体布局
+# 2.主体布局
 
 ![dd7860edba87d1d65d1c03b81f01f4c6.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e77c74aeb743b5a9e159607d1eb0e6~tplv-k3u1fbpfcp-watermark.image?)
 layout->index.vue
@@ -51,7 +51,7 @@ import Menu from "./Menu/index.vue";
 </style>
 ```
 
-## 3.vite中的批量自动化导入：import.meta.globEager
+# 3.vite中的批量自动化导入：import.meta.globEager
 
 如果想在vite中批量导入某些文件，实现项目的模块化，vite提供的import.meta.globEager函数就很好用
 
@@ -63,7 +63,7 @@ import Menu from "./Menu/index.vue";
 
 3、实现：
 
-![87e7997f3c15921b398a37d928ac3a32.png](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/c9d6edc09e5e4e8fbb012d6155e3a5d1~tplv-k3u1fbpfcp-watermark.image)
+![87e7997f3c15921b398a37d928ac3a32.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9d6edc09e5e4e8fbb012d6155e3a5d1~tplv-k3u1fbpfcp-watermark.image?)
 
 在router文件内批量引入modules内模块化的文件并处理：
 
@@ -116,7 +116,7 @@ export default router;
 
 **@deprecated Use `import.meta.glob('*', { eager: true })` instead**
 
-## 4.侧边栏的开发和header里的侧边栏折叠(底部栏就不多bb)
+# 4.侧边栏的开发和header里的侧边栏折叠(底部栏就不多bb)
 
 ## **侧边栏的开发**
 主要是分为两部分，一部分是logo，一部分是路由菜单
@@ -238,7 +238,7 @@ const listeningWindow = () => {
 };
 ```
 
-### 5.vue-router 利用 $route 的 matched 属性实现面包屑效果
+# 5.vue-router 利用 $route 的 matched 属性实现面包屑效果
 
 **matched 顾名思义 就是 匹配，假如我们目前的路由是/a/aa-01，那么此时 this.$route.matched匹配到的会是一个数组，包含 '/'，'/a'，'/a/aa-01'，这三个path的路由信息。然后我们可以直接利用路由信息渲染我们的面包屑导航。**
 
@@ -269,7 +269,7 @@ const matched = computed(() => route.matched.filter(item =>item.meta && item.met
 
 TransitionGroup# 是一个内置组件，用于对 v-for 列表中的元素或组件的插入、移除和顺序改变添加动画效果。这样每次选择侧边栏的路由时，面包屑导航这边就感觉比较平滑的展示
 
-### 6.后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现 （标签栏管理）
+# 6.后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现 （标签栏管理）
 
 1.默认有首页，不能关闭
 
@@ -446,7 +446,7 @@ export const TabsStore = defineStore({
 ```
 # 最终效果图：
 
-![46972a97567f3ff7c445d12b442ef7b1.png](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/db741d21a0a24e188a55a28b00466f4d~tplv-k3u1fbpfcp-watermark.image)
+![46972a97567f3ff7c445d12b442ef7b1.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db741d21a0a24e188a55a28b00466f4d~tplv-k3u1fbpfcp-watermark.image?)
 
 # gitHub地址：
 [vue3学习完成的后管模板](https://github.com/DarknessZY/zhangyao-management/tree/master)
