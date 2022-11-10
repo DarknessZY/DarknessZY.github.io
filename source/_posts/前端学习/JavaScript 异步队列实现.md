@@ -59,7 +59,45 @@ console.log('代码执行结束');
 
 ![宏任务、微任务是怎么执行](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71de5ee24ed84d108e0d1127c03f6474~tplv-k3u1fbpfcp-watermark.image?)
 
+```
+setTimeout(()=>{
+  new Promise(resolve =>{
+  	resolve();
+  }).then(()=>{
+  	console.log('test');
+  });
 
+  console.log(4);
+});
+
+new Promise(resolve => {
+  resolve();
+  console.log(1)
+}).then( () => {
+  console.log(3);
+  Promise.resolve().then(() => {
+    console.log('before timeout');
+  }).then(() => {
+    Promise.resolve().then(() => {
+      console.log('also before timeout')
+    })
+  })
+})
+console.log(2);
+```
+
+1.遇到setTimeout，异步宏任务，将() => {console.log(4)}放入宏任务队列中；
+
+2.遇到new Promise，new Promise在实例化的过程中所执行的代码都是同步进行的，所以输出1；
+
+3.而Promise.then中注册的回调才是异步执行的，将其放入微任务队列中
+4.遇到同步任务console.log(2)，输出2；主线程中同步任务执行完
+5.从微任务队列中取出任务到主线程中，输出3，此微任务中又有微任务，Promise.resolve().then(微任务a).then(微任务b)，将其依次放入微任务队列中；
+6.从微任务队列中取出任务a到主线程中，输出 before timeout；
+7.从微任务队列中取出任务b到主线程中，任务b又注册了一个微任务c，放入微任务队列中；
+8.从微任务队列中取出任务c到主线程中，输出 also before timeout；微任务队列为空
+9.从宏任务队列中取出任务到主线程，此任务中注册了一个微任务d，将其放入微任务队列中，接下来遇到输出4，宏任务队列为空
+10.从微任务队列中取出任务d到主线程 ，输出test，微任务队列为空
 
 # 三、关系总结
 
