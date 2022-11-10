@@ -96,7 +96,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">748</span>
+            <span class="post-count">1.2k</span>
         </span>
     </span>
 
@@ -105,7 +105,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2 分钟</span>
+            <span class="post-count">4 分钟</span>
         </span>
     </span>
 </div>
@@ -175,6 +175,11 @@
 </tbody></table>
 <h2 id="1-宏任务、微任务是怎么执行的？"><a href="#1-宏任务、微任务是怎么执行的？" class="headerlink" title="1.宏任务、微任务是怎么执行的？"></a>1.宏任务、微任务是怎么执行的？</h2><p>​    执行顺序：先执行同步代码，遇到异步宏任务则将异步宏任务放入宏任务队列中，遇到异步微任务则将异步微任务放入微任务队列中，当所有同步代码执行完毕后，再将异步微任务从队列中调入主线程执行，微任务执行完毕后再将异步宏任务从队列中调入主线程执行，一直循环直至所有任务执行完毕。</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71de5ee24ed84d108e0d1127c03f6474~tplv-k3u1fbpfcp-watermark.image" alt="宏任务、微任务是怎么执行"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(()=&gt;&#123;</span><br><span class="line">  new Promise(resolve =&gt;&#123;</span><br><span class="line">  	resolve();</span><br><span class="line">  &#125;).then(()=&gt;&#123;</span><br><span class="line">  	console.log(&#x27;test&#x27;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  console.log(4);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">new Promise(resolve =&gt; &#123;</span><br><span class="line">  resolve();</span><br><span class="line">  console.log(1)</span><br><span class="line">&#125;).then( () =&gt; &#123;</span><br><span class="line">  console.log(3);</span><br><span class="line">  Promise.resolve().then(() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;before timeout&#x27;);</span><br><span class="line">  &#125;).then(() =&gt; &#123;</span><br><span class="line">    Promise.resolve().then(() =&gt; &#123;</span><br><span class="line">      console.log(&#x27;also before timeout&#x27;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">console.log(2);</span><br></pre></td></tr></table></figure>
+
+<p>1.遇到setTimeout，异步宏任务，将() =&gt; {console.log(4)}放入宏任务队列中；</p>
+<p>2.遇到new Promise，new Promise在实例化的过程中所执行的代码都是同步进行的，所以输出1；</p>
+<p>3.而Promise.then中注册的回调才是异步执行的，将其放入微任务队列中<br>4.遇到同步任务console.log(2)，输出2；主线程中同步任务执行完<br>5.从微任务队列中取出任务到主线程中，输出3，此微任务中又有微任务，Promise.resolve().then(微任务a).then(微任务b)，将其依次放入微任务队列中；<br>6.从微任务队列中取出任务a到主线程中，输出 before timeout；<br>7.从微任务队列中取出任务b到主线程中，任务b又注册了一个微任务c，放入微任务队列中；<br>8.从微任务队列中取出任务c到主线程中，输出 also before timeout；微任务队列为空<br>9.从宏任务队列中取出任务到主线程，此任务中注册了一个微任务d，将其放入微任务队列中，接下来遇到输出4，宏任务队列为空<br>10.从微任务队列中取出任务d到主线程 ，输出test，微任务队列为空</p>
 <h1 id="三、关系总结"><a href="#三、关系总结" class="headerlink" title="三、关系总结"></a>三、关系总结</h1><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/945651e8e2404a5093810c7d73272897~tplv-k3u1fbpfcp-watermark.image" alt="总结"></p>
 <p>上图也是盗的，自己对这些做个笔记，加深影响，到时候回顾起来也比较方便！</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p>​    <a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903512845860872">这一次，彻底弄懂 JavaScript 执行机制 - 掘金 (juejin.cn)</a></p>
