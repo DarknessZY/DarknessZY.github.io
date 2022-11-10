@@ -11,7 +11,7 @@ categories: 前端随笔
 
 # 一、异步任务和同步任务
 
-![异步任务和同步任务](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/20210701111915690.png)
+![同步任务与异步任务](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b354be478dd4d369799be4d4f0087e2~tplv-k3u1fbpfcp-watermark.image?)
 
 ​		js 是一种单线程语言，简单的说就是：只有一条通道，那么在任务多的情况下，就会出现拥挤的情况，这种情况下就产生了 ‘多线程’ ，但是这种“多线程”是通过单线程模仿的，一切javascript多线程都是纸老虎！那么就产生了同步任务和异步任务。
 
@@ -57,13 +57,13 @@ console.log('代码执行结束');
 
 ​	执行顺序：先执行同步代码，遇到异步宏任务则将异步宏任务放入宏任务队列中，遇到异步微任务则将异步微任务放入微任务队列中，当所有同步代码执行完毕后，再将异步微任务从队列中调入主线程执行，微任务执行完毕后再将异步宏任务从队列中调入主线程执行，一直循环直至所有任务执行完毕。
 
-![](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/2021070213542153.png)
+![宏任务、微任务是怎么执行](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71de5ee24ed84d108e0d1127c03f6474~tplv-k3u1fbpfcp-watermark.image?)
 
 
 
 # 三、关系总结
 
-![](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/20210514161316972.png)
+![总结](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/945651e8e2404a5093810c7d73272897~tplv-k3u1fbpfcp-watermark.image?)
 
 上图也是盗的，自己对这些做个笔记，加深影响，到时候回顾起来也比较方便！
 
