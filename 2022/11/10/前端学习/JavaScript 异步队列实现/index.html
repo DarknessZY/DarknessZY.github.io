@@ -121,7 +121,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​    了解JavaScript 异步队列实现，我们需要先了解什么是同步任务，什么是异步任务，异步代码中才区分宏任务微任务，什么是宏任务、微任务？宏任务、微任务有哪些？又是怎么执行的？</p>
-<h1 id="一、异步任务和同步任务"><a href="#一、异步任务和同步任务" class="headerlink" title="一、异步任务和同步任务"></a>一、异步任务和同步任务</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/20210701111915690.png" alt="异步任务和同步任务"></p>
+<h1 id="一、异步任务和同步任务"><a href="#一、异步任务和同步任务" class="headerlink" title="一、异步任务和同步任务"></a>一、异步任务和同步任务</h1><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b354be478dd4d369799be4d4f0087e2~tplv-k3u1fbpfcp-watermark.image" alt="同步任务与异步任务"></p>
 <p>​        js 是一种单线程语言，简单的说就是：只有一条通道，那么在任务多的情况下，就会出现拥挤的情况，这种情况下就产生了 ‘多线程’ ，但是这种“多线程”是通过单线程模仿的，一切javascript多线程都是纸老虎！那么就产生了同步任务和异步任务。</p>
 <ul>
 <li><p>同步和异步任务分别进入不同的执行”场所”，同步的进入主线程，异步的进入Event Table并注册函数。</p>
@@ -174,8 +174,8 @@
 </tr>
 </tbody></table>
 <h2 id="1-宏任务、微任务是怎么执行的？"><a href="#1-宏任务、微任务是怎么执行的？" class="headerlink" title="1.宏任务、微任务是怎么执行的？"></a>1.宏任务、微任务是怎么执行的？</h2><p>​    执行顺序：先执行同步代码，遇到异步宏任务则将异步宏任务放入宏任务队列中，遇到异步微任务则将异步微任务放入微任务队列中，当所有同步代码执行完毕后，再将异步微任务从队列中调入主线程执行，微任务执行完毕后再将异步宏任务从队列中调入主线程执行，一直循环直至所有任务执行完毕。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/2021070213542153.png"></p>
-<h1 id="三、关系总结"><a href="#三、关系总结" class="headerlink" title="三、关系总结"></a>三、关系总结</h1><p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/20210514161316972.png"></p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71de5ee24ed84d108e0d1127c03f6474~tplv-k3u1fbpfcp-watermark.image" alt="宏任务、微任务是怎么执行"></p>
+<h1 id="三、关系总结"><a href="#三、关系总结" class="headerlink" title="三、关系总结"></a>三、关系总结</h1><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/945651e8e2404a5093810c7d73272897~tplv-k3u1fbpfcp-watermark.image" alt="总结"></p>
 <p>上图也是盗的，自己对这些做个笔记，加深影响，到时候回顾起来也比较方便！</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p>​    <a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903512845860872">这一次，彻底弄懂 JavaScript 执行机制 - 掘金 (juejin.cn)</a></p>
 <p>​    <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45888701/article/details/116781078"> 微任务/宏任务和同步/异步之间的关系_</a></p>
