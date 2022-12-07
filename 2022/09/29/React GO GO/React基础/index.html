@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>从零开始搭建博客(四)——关于我页面搭建 |  耀耀切克闹</title>
+      <title>React基础 |  耀耀切克闹</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -65,7 +65,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-博客搭建/从零开始搭建博客(四)——关于我页面搭建"
+  id="post-React GO GO/React基础"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -76,7 +76,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  从零开始搭建博客(四)——关于我页面搭建
+  React基础
 </h1>
  
 
@@ -84,11 +84,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/" class="article-date">
-  <time datetime="2022-09-28T11:00:00.000Z" itemprop="datePublished">2022-09-28</time>
+      <a href="/2022/09/29/React%20GO%20GO/React%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2022-09-29T05:30:00.000Z" itemprop="datePublished">2022-09-29</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+    <a class="article-category-link" href="/categories/recat/">recat</a>
   </div>
   
 <div class="word_count">
@@ -96,7 +96,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">921</span>
+            <span class="post-count">557</span>
         </span>
     </span>
 
@@ -105,7 +105,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -120,19 +120,36 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
-<p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928181752870.png"></p>
-<p>链接相关配置也是在themes=&gt;ayer=&gt;_config.yml下配置，找到friends_link，图片地址和github链接填自己的</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  DarknessZY:</span><br><span class="line">    url: https://github.com/DarknessZY</span><br><span class="line">    img: /images/github.png</span><br><span class="line">  耀耀切克闹灬:</span><br><span class="line">    url: https://juejin.cn/user/1781681116679854/columns</span><br><span class="line">    img: /images/juejin.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: /images/hexo.png</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br></pre></td></tr></table></figure>
+  <h1 id="React-JSX"><a href="#React-JSX" class="headerlink" title="React JSX"></a>React JSX</h1><p>全称：javascript XML</p>
+<p>作用：用来创建react虚拟dom对象</p>
+<p>优点：</p>
+<ul>
+<li>  JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。</li>
+<li>  它是类型安全的，在编译过程中就能发现错误。</li>
+<li>  使用 JSX 编写模板更加简单快速。</li>
+</ul>
+<p>基本语法规则：</p>
+<ul>
+<li>遇到以&lt;开头的代码 以标签语法来解析 html的同名标签就转化成html的标签</li>
+<li>遇到以{开头的代码 以js语法来解析 标签中的js语法一定要用{}包裹起来</li>
+</ul>
+<p>基本使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&quot;foo&quot;</span>&gt;</span>Hello, world<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>(element,<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>));</span><br></pre></td></tr></table></figure>
 
-<p>然后执行hexo命令，页面上就显示出来了：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_16643609353351.png" alt="img"></p>
-<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;section class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;</span><br><span class="line">    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;</span><br><span class="line">     &lt;!-- 打赏 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt;秋梨膏!请我杯喝茶怎么样!&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;reword-out&quot;&gt;</span><br><span class="line">        &lt;div id=&quot;reward-btn&quot;&gt;</span><br><span class="line">          &lt;%= __(&#x27;post.reward&#x27;) %&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!-- 介绍 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; </span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt; </span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#x27;博客&#x27;+&#x27;你的姓名&#x27;，我就会通过！</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;hr/&gt;</span><br><span class="line">        &lt;/div&gt;  </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!-- 链接 --&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt; 点击进去看看吧!&lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;ul id=&quot;friends_link&quot;&gt;</span><br><span class="line">        &lt;% for (var i in theme.friends_link)&#123; %&gt;</span><br><span class="line">        &lt;li class=&quot;friends_li&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;</span><br><span class="line">                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;</span><br><span class="line">                &lt;% if (theme.friends_link[i].img)&#123; %&gt;</span><br><span class="line">                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;</span><br><span class="line">                &lt;% &#125; else &#123; %&gt;</span><br><span class="line">                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">                &lt;%= i %&gt;</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928183612541.png" alt="image-20220928183612541"></p>
- 
+<h2 id="1-使用JSX"><a href="#1-使用JSX" class="headerlink" title="1.使用JSX"></a>1.使用JSX</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>(</span><br><span class="line">      	<span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>zy<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">data-myattribute</span> = <span class="string">&quot;somevalue&quot;</span>&gt;</span>React学习<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      	,</span><br><span class="line">      	<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>)</span><br><span class="line">      );</span><br></pre></td></tr></table></figure>
+<h3 id="1-1-JSX中使用js语法"><a href="#1-1-JSX中使用js语法" class="headerlink" title="1.1 JSX中使用js语法"></a>1.1 JSX中使用js语法</h3><ul>
+<li>JSX 中使用 JavaScript 表达式。表达式需写在花括号  <strong>{}</strong>  中</li>
+<li>在 JSX 中不能使用 <strong>if else</strong> 语句，但可以使用 <strong>conditional (三元运算)</strong>  表达式来替代。以下实例中如果变量 <strong>i</strong> 等于 <strong>1</strong> 浏览器将输出 <strong>true</strong>, 如果修改 i 的值，则会输出 <strong>false</strong>.</li>
+</ul>
+<p>实例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>( </span><br><span class="line">     <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span> </span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;1+1&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;i == 1 ? &#x27;True!&#x27; : &#x27;False&#x27;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span> </span></span><br><span class="line"><span class="language-xml">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span> </span><br><span class="line">     , <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-JSX中使用样式"><a href="#1-2-JSX中使用样式" class="headerlink" title="1.2 JSX中使用样式"></a>1.2 JSX中使用样式</h3><p>React 推荐使用内联样式。我们可以使用 <strong>camelCase</strong> 语法来设置内联样式. React 会在指定元素数字后自动添加 <strong>px</strong> 。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myStyle = &#123; <span class="attr">fontSize</span>: <span class="number">100</span>, <span class="attr">color</span>: <span class="string">&#x27;#FF0000&#x27;</span> &#125;; </span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>( </span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span> = <span class="string">&#123;myStyle&#125;</span>&gt;</span>zy<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>, </span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-JSX中使用注释"><a href="#1-3-JSX中使用注释" class="headerlink" title="1.3 JSX中使用注释"></a>1.3 JSX中使用注释</h3><p>注释需要写在花括号中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>( </span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>zy<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>, </span></span><br><span class="line"><span class="language-xml">        &#123;/*注释 我无敌，你随意*/&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-JSX中使用数组"><a href="#1-3-JSX中使用数组" class="headerlink" title="1.3 JSX中使用数组"></a>1.3 JSX中使用数组</h3><p>JSX 允许在模板中插入数组，数组会自动展开所有成员：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [ </span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>666<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>, </span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>777<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span>, </span><br><span class="line">]; </span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>( </span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;arr&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>, </span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;React&#x27;</span>,<span class="string">&#x27;html&#x27;</span>,<span class="string">&#x27;css&#x27;</span>]; </span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>( </span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span>&#123;arr.map((item,index) =&gt;&#123;</span></span><br><span class="line"><span class="language-xml">        return <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;index&#125;</span>&gt;</span>&#123;item&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    )&#125;<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span>, </span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>) </span><br><span class="line">);</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -196,12 +213,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/09/29/React%20GO%20GO/React%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo%E6%A1%86%E6%9E%B6/" rel="tag">hexo框架</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/recat/" rel="tag">recat</a></li></ul>
 
     </footer>
   </div>
@@ -209,19 +226,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/09/29/React%20GO%20GO/React%E5%9F%BA%E7%A1%80/" class="article-nav-link">
+      <a href="/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            React基础
+            前端路由随笔
           
         </div>
       </a>
     
     
-      <a href="/2022/09/26/border%E5%85%BC%E5%AE%B9/" class="article-nav-link">
+      <a href="/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">前端兼容性问题</div>
+        <div class="article-nav-title">从零开始搭建博客(四)——关于我页面搭建</div>
       </a>
     
   </nav>
