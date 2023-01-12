@@ -18,7 +18,7 @@ top: true
 
 # 二.搭建博客方式
 
-![](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e3d012b007f43c597d5db60b9594379b.png)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c43a9e29f11943a0bfdda5c3ab74f953~tplv-k3u1fbpfcp-watermark.image?)
 
 ## 1.自己开发
 
@@ -40,7 +40,7 @@ Halo博客，一款现代化的开源博客/CMS系统，值得一试。详细部
 
   这里推荐：
 
-  ![](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/e6561ed83d781d08d5298519b34a4752.png)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9da46d8689f54c17b43c325b00bfa08a~tplv-k3u1fbpfcp-watermark.image?)
 
    
   

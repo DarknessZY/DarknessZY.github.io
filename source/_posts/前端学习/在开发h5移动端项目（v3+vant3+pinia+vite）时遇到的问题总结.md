@@ -112,30 +112,35 @@ app.config.globalProperties.$px2rem = px2rem // 放到全局
 
 
 ```js
+const timer: any = ref(null);
   const Result = async (No:any) => {
-    let timer:any = null;
     try {
-      const res: any = await getRechargeResult({ No: rNo })
+      const res: any = await getResult({No: tNo })
       // 0 处理中 1 成功 2失败
       if ([0].includes(res.data.State)) {
-        State.value = 0
-        timer = setTimeout(() => {
+        timer.value = setTimeout(() => {
           Result(No);
         }, 2 * 1000);
-      } else if (res.data.State === 1) {
-        State.value = 1
-        clearTimeout(timer);
-      } else if (res.data.rState === 2) {
-        State.value = 2
-        clearTimeout(timer);
+      } else if (res.data.State === 1 || res.data.State === 2) {
+        clearTimeout(timer.value);
       }
+      State.value = res.data.State
+      //该赋值的赋值
+      //......
     } catch (error) {
-      State.value = 2
-      clearTimeout(timer);
+      clearTimeout(timer.value);
     }
   };
 ```
-# 四.第一次进入页面有在app.vue的onmouted里写了获取token方法调接口并存在localstorage里，页面刷新后token没了
+离开页面时，一定要清除定时，避免一直调用接口
+```js
+  onBeforeUnmount(() => {
+    clearTimeout(timer.value);
+  })
+```
+# 四.第一次进入页面有在app.vue的onmouted里写了获取token方法调接口，页面刷新后token没了
+> 使用pinia+数据持久化,存放token 或者直接把接口获取到的存在localstorage
+
 # 五.app端嵌套h5页面时，返回APP端时，不能使用router.go（-1），需要使用app端提供的关闭的桥的方法
 isIos.js
 
@@ -256,20 +261,20 @@ img-use.ts:
 
 ```js
 // 获取assets静态资源
-export default  const getAssetsFile = (url: string) => {
+export const getAssetsFile = (url: string) => {
    return new URL(`../assets/images/${url}`, import.meta.url).href
 }
 ```
 使用:
 ```js
-import useImg from '@/util/img-use'
+import getAssetsFile from '@/util/img-use'
 //setup语法糖写法,没用语法糖的记得return出去
-const Myimg = useImg()
-const getAssetsHomeFile = Myimg.getAssetsHomeFile 
 ```
 ```js
-//写图标名就行了，不需要路径
-<img :src="getAssetsHomeFile('/home/home_icon.png')" />
+//如果是直接建在assets/images下，写图标名就行了
+<img :src="getAssetsFile('home_icon.png')" />
+//可以在../assets/images建目录如home文件夹，那么就是
+<img :src="getAssetsFile('/home/home_icon.png')" />
 ```
 > 另外：如果是背景图片引入的方式（一定要使用相对路径）
 
@@ -294,7 +299,7 @@ img-use.ts:
 
 ```js
 // 获取assets静态资源
-export default const getAssetsHomeFile = (url: string) => {
+export const getAssetsHomeFile = (url: string) => {
     const path = `../assets/images/home/${url}`;
     const modules = import.meta.globEager("../assets/images/home/*");
     //const modules = import.meta.globEager("../assets/images/home/*", { eager: true,import:'default' });
@@ -305,13 +310,10 @@ export default const getAssetsHomeFile = (url: string) => {
 使用:
 ```js
 import useImg from '@/util/img-use'
-//setup语法糖写法,没用语法糖的记得return出去
-const Myimg = useImg()
-const getAssetsHomeFile = Myimg.getAssetsHomeFile 
 ```
 ```js
-//写图标名就行了，不能带路径
-<img :src="getAssetsHomeFile('home_icon.png')" />
+//写图标名就行了，不能带路径,并且你只能传图片名，不能传路径。
+<img :src="useImg('home_icon.png')" />
 ```
 # 七.h5移动端，安卓看着没问题，ios的手机文字嘎嘎换行 
 > （*原因*：给对应的dom元素设置了宽度，导致了换行，移动端布局时非必要不要设置宽度）
@@ -362,4 +364,9 @@ app.config.globalProperties.$sourcePage = sourcePage // 放到全局
 > ios自己写的样式不是vant组件的（vant组件自己做了适配）文字需要高度和行高，没高度就挤在一起了
 
 总结一手：vant组件使用样式穿透时，就不要给宽度，高度行高了，vant组件组件整好适配了，自己写的样式特别时文字需要给高度和行高，按蓝湖上来就行了
+# 十三.微信小程序配置业务域名，调用web-view组件打开需要嵌套的h5页面
 
+应为有其他的微信 去到微信公众平台，开发管理下的开发设置的下配置义务域名
+![1672708788778.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e26722f3dda64e84b36a36ef5f54ef7c~tplv-k3u1fbpfcp-watermark.image?)
+
+下载的校验文件，放在public下，并且不要重命名，是什么名字就是什么，不然检测不到

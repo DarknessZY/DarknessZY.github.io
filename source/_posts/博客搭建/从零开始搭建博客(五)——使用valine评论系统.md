@@ -11,17 +11,12 @@ tag: [valine,博客搭建]
 
 在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。
 
-![image-20221010145137300](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20221010145137300.png)
-
-
-
 # 2.创建应用获取appid和appkey
 
 注册完成后进入控制台->创建应用->创建开发版应用。创建完开发版应用如下：点击最右边小齿轮也就是设置，找到`应用凭证`，获取appid和appkey
 
-![image-20221010145306850](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20221010145306850.png)
 
-![img](https://i.loli.net/2019/06/21/5d0c997a60baa24436.jpg)
+![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88cbb84d544c466fa8b242d80c6e0670~tplv-k3u1fbpfcp-zoom-1.image)
 
 ## 3.配置valine
 
@@ -50,4 +45,4 @@ valine:
 
 去LeanCloud的控制台找到数据存储=>结构化数据=>Comment,在这里你可以对评论的数据进行管理
 
-![image-20221011155013366](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20221011155013366.png)
+![1673512632892.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f28620488c6540d6b80756e2ac125719~tplv-k3u1fbpfcp-watermark.image?)

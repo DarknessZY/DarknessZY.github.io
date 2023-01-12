@@ -91,4 +91,4 @@ hexo s
 
 自此一个简单的本地博客诞生了
 
-![本地博客效果](https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20201220204625063.png)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19b093769be04ecf8581612935219aa3~tplv-k3u1fbpfcp-watermark.image?)
