@@ -1,58 +1,59 @@
 <section class="outer">
-    <% if(theme.friends_link && theme.friends_link.length != 0){ %>
-    <h1 class="page-type-title">关于俺！</h1>
-     <!-- 打赏 -->
-    <div>
-        <p style="font-size: 25px;font-weight: bolder;color: #dee1e6;">秋梨膏!请我杯喝茶怎么样!</p> 
-    </div>
-    <div id="reword-out">
-        <div id="reward-btn">
-          <%= __('post.reward') %>
-        </div>
-    </div>
-    <!-- 介绍 -->
+    <img src="/images/bg.png">
+     <!-- 介绍 -->
+     <h1 class="page-type-title">关于我！</h1>
     <div>
         <div>
             <p style="font-size: 25px;font-weight: bolder;color: #dee1e6;"> 一位正在北漂的菜鸡程序员</p> 
         </div>
-        <div>
-            <div>
-                <span style="color: red;"> 姓名：张耀 &nbsp;&nbsp;&nbsp;</span>
-            </div> 
-            <hr/>
-            <div>
-                <span style="color: blue;"> QQ：2498652509&nbsp;&nbsp;&nbsp;</span>有志同道合的小伙伴们可以加我qq，验证消息填'博客'+'你的姓名'，我就会通过！
+        <div style="display: flex;justify-content: space-around;align-items: center;">
+            <div style="flex:1;">
+                <div>
+                    <span style="color: red;"> 姓名：张耀 &nbsp;&nbsp;&nbsp;</span>
+                </div> 
+                <hr/>
+                <div>
+                    <span style="color: blue;"> QQ：2498652509&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <hr/>
+                <div>
+                    <span style="color:greenyellow;">现居地：北京朝阳&nbsp;&nbsp;&nbsp;</span>  
+                </div>
+                <hr/>
+                <div>
+                    <span style="color:orange;">家乡：湖北汉川&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <hr/>
             </div>
-            <hr/>
-            <div>
-                <span style="color:greenyellow;">现居地：北京朝阳&nbsp;&nbsp;&nbsp;</span>  
+            <div id="reword-out" style="flex:1;display: flex;flex-direction: column;align-items: flex-end;">
+                    <img src="/images/lingguang.jpg" width="150" height="150" style="border-radius: 50%;box-shadow:10px 10px 10px rgb(0, 0, 0, .5); ">
+                    <div id="reward-btn" style="display: flex;justify-content: center;align-items: center;margin: 10px -25px 0px 0px;width: 100px;">
+                    <%= __('post.reward') %>
+                    </div>
             </div>
-            <hr/>
-            <div>
-                <span style="color:orange;">家乡：湖北汉川&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>小县城一个，装满了故事，我有故事，你有酒吗？
-            </div>
-            <hr/>
-        </div>  
-    </div>
-    <!-- 链接 -->
-    <div>
+        </div>
+    </div >
+       <!-- 链接 -->
         <p style="font-size: 25px;font-weight: bolder;color: #dee1e6;"> 点击进去看看吧!</p> 
-    </div>
-    <ul id="friends_link">
-        <% for (var i in theme.friends_link){ %>
-        <li class="friends_li">
-            <a href="<%- url_for(theme.friends_link[i].url) %>" target="_blank" class="search-title"
-                <% if (theme.friends_link[i].description){ %>title="<%= theme.friends_link[i].description %>" <% } %>>
-                <% if (theme.friends_link[i].img){ %>
-                <img src="<%- url_for(theme.friends_link[i].img) %>">
-                <% } else { %>
-                <i class="ri-user-fill"></i>
+    <div>
+    <% if(theme.friends_link && theme.friends_link.length != 0){ %>
+            <ul id="friends_link">
+                <% for (var i in theme.friends_link){ %>
+                <li class="friends_li">
+                    <a href="<%- url_for(theme.friends_link[i].url) %>" target="_blank" class="search-title"
+                        <% if (theme.friends_link[i].description){ %>title="<%= theme.friends_link[i].description %>" <% } %>>
+                        <% if (theme.friends_link[i].img){ %>
+                        <img src="<%- url_for(theme.friends_link[i].img) %>">
+                        <% } else { %>
+                        <i class="ri-user-fill"></i>
+                        <% } %>
+                        <%= i %>
+                    </a>
+                    <br>
+                </li>
                 <% } %>
-                <%= i %>
-            </a>
-        </li>
-        <% } %>
-    </ul>
-    <%}%>
+            </ul> 
+     <%}%>
+    </div>
 </section>
    
