@@ -1,7 +1,6 @@
 <section class="outer">
-     <!-- 介绍 -->
-     <h1 class="page-type-title">关于我！</h1>
-
+    <!-- 介绍 -->
+    <h1 class="page-type-title">关于我！</h1>
     <div style="background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);border-radius: 23px;">
         <div style="display: flex;justify-content: space-around;align-items: center;padding: 30px;">
             <div style="flex:1;">
@@ -10,34 +9,100 @@
                 </div>
             </div>
             <div id="reword-out" style="flex:1;display: flex;flex-direction: column;align-items: flex-end;">
-                    <img src="/images/lingguang.jpg" width="150" height="150" style="border-radius: 50%;box-shadow:10px 10px 10px rgb(0, 0, 0, .5); ">
-                    <div id="reward-btn" style="display: flex;justify-content: center;align-items: center;margin: 10px -25px 0px 0px;width: 100px;">
+                <img src="/images/lingguang.jpg" width="150" height="150"
+                    style="border-radius: 50%;box-shadow:10px 10px 10px rgb(0, 0, 0, .5); ">
+                <div id="reward-btn"
+                    style="display: flex;justify-content: center;align-items: center;margin: 10px -25px 0px 0px;width: 100px;">
                     <%= __('post.reward') %>
-                    </div>
+                </div>
             </div>
         </div>
-    </div >
-       <!-- 链接 -->
-       <h1 class="page-type-title">点击进去看看吧！</h1>
+    </div>
+    <h1 class="page-type-title">相关说明！</h1>
+    <div style="background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);border-radius: 23px;padding: 30px;">
+        <ul style="margin: 0 0 2em 0;
+        list-style-type: none;
+        padding: 0;">
+            <li style=" cursor: pointer;
+            position: relative;
+            left: 0;
+            margin: .5em;
+            padding: .3em 0;
+            border-radius: 4px;">
+                <span class="badge" style="
+                 display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.4em 0.7em 0 0.7em;
+    background-color: #405061;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;">1</span><span style=" position: relative;
+    top: -4px;">网站大部分文章符合开源协议,可在非盈利用途下自由转载,复制,但对文章本身内容请勿在转载过程中断章取义,改写文章原本的表达含义,转载请注明引用来源,尊重原作者的创作成果;对于标记为”禁止转载”等文章,属于个人文章,不属于技术类,不具备广泛的传播性,文章本身具有针对性内容,这类文章不可转载.请悉知. </span> 
+            </li>
+            <li style=" cursor: pointer;
+            position: relative;
+            left: 0;
+            margin: .5em;
+            padding: .3em 0;
+            border-radius: 4px;">
+                <span class="badge" style="
+                 display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.4em 0.7em 0 0.7em;
+    background-color: #405061;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;">2</span> <span style=" position: relative;
+    top: -4px;">关于您的用户隐私数据声明:本网站无登录注册功能,且该网站属于无后端开发,所有界面均是静态html,网站本身不会以任何理由收集存储您的用户数据 </span> 
+            </li>
+            <li style=" cursor: pointer;
+            position: relative;
+            left: 0;
+            margin: .5em;
+            padding: .3em 0;
+            border-radius: 4px;">
+                <span class="badge" style="
+                 display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.4em 0.7em 0 0.7em;
+    background-color: #405061;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;">3</span> <span style=" position: relative;
+    top: -4px;">评论功能的使用情况说明:评论功能依托于valine提供的相关服务,评论功能对所有访问者全面开放状态,请勿发布广告灌水等信息,规范发言. </span> 
+            </li>
+        </ul>
+    </div>
+    <!-- 链接 -->
+    <h1 class="page-type-title">点击进去看看吧！</h1>
     <div>
-    <% if(theme.friends_link && theme.friends_link.length != 0){ %>
+        <% if(theme.friends_link && theme.friends_link.length !=0){ %>
             <ul id="friends_link">
                 <% for (var i in theme.friends_link){ %>
-                <li class="friends_li">
-                    <a href="<%- url_for(theme.friends_link[i].url) %>" target="_blank" class="search-title"
-                        <% if (theme.friends_link[i].description){ %>title="<%= theme.friends_link[i].description %>" <% } %>>
-                        <% if (theme.friends_link[i].img){ %>
-                        <img src="<%- url_for(theme.friends_link[i].img) %>">
-                        <% } else { %>
-                        <i class="ri-user-fill"></i>
-                        <% } %>
-                        <%= i %>
-                    </a>
-                    <br>
-                </li>
-                <% } %>
-            </ul> 
-     <%}%>
+                    <li class="friends_li">
+                        <a href="<%- url_for(theme.friends_link[i].url) %>" target="_blank" class="search-title" <% if
+                            (theme.friends_link[i].description){ %>title="<%= theme.friends_link[i].description %>" <% }
+                                    %>>
+                                    <% if (theme.friends_link[i].img){ %>
+                                        <img src="<%- url_for(theme.friends_link[i].img) %>">
+                                        <% } else { %>
+                                            <i class="ri-user-fill"></i>
+                                            <% } %>
+                                                <%= i %>
+                        </a>
+                        <br>
+                    </li>
+                    <% } %>
+            </ul>
+            <%}%>
     </div>
 </section>
-   
