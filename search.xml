@@ -80,6 +80,24 @@
       </tags>
   </entry>
   <entry>
+    <title>前端兼容性问题</title>
+    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
+    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
+<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端兼容性问题</category>
+      </categories>
+      <tags>
+        <tag>前端兼容</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git基础</title>
     <url>/2022/09/30/git%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="一、git基础"><a href="#一、git基础" class="headerlink" title="一、git基础"></a>一、git基础</h1><h2 id="重新下载git后"><a href="#重新下载git后" class="headerlink" title="重新下载git后"></a>重新下载git后</h2><p><strong>1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）</strong></p>
@@ -198,24 +216,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端兼容性问题</title>
-    <url>/2022/09/26/border%E5%85%BC%E5%AE%B9/</url>
-    <content><![CDATA[<h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
-<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">border: 0.5px solid #000;</span><br><span class="line">border-radius: 0.5px;</span><br><span class="line"></span><br><span class="line">// 解决ios边框显示一半的问题</span><br><span class="line">transform: rotateZ(360deg);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9</span><br><span class="line">border-bottom: 0.5px dashed #C4C4C9;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端兼容性问题</category>
-      </categories>
-      <tags>
-        <tag>前端兼容</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hello，欢迎来到耀耀切克闹的博客！</title>
     <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
     <content><![CDATA[<h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
@@ -251,6 +251,47 @@
       <tags>
         <tag>为什么要搭建博客</tag>
         <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm随笔</title>
+    <url>/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
+<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
+<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
+<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
+<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
+</ul>
+<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
+<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
+</li>
+<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
+<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
+</li>
+</ul>
+<h1 id="二、全局安装和本地安装"><a href="#二、全局安装和本地安装" class="headerlink" title="二、全局安装和本地安装"></a>二、全局安装和本地安装</h1><h2 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; -g//（这里-g是-global的简写）</span><br></pre></td></tr></table></figure>
+
+<p>通过上面的命令行（带-g修饰符）安装某个包，就叫全局安装。通常全局包安装在node目录下的node_modules文件夹。可以通过执行下面几条命令查看node、npm的安装目录和全局包的安装目录。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">which node   // 查看node的安装目录</span><br><span class="line">which npm   // 查看npm的安装目录</span><br><span class="line">npm root -g // 查看全局包的安装目录</span><br><span class="line">npm list -g --depth 0 //查看全局安装过的</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装:"></a>本地安装:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; (后面可以加几种修饰符，主要有两种--save-dev和--save)</span><br></pre></td></tr></table></figure>
+
+<p>通过上面的命令行安装某个包，就叫本地安装。包安装在你当前项目文件夹下的node_modules文件夹中。</p>
+<h3 id="全局安装的作用"><a href="#全局安装的作用" class="headerlink" title="全局安装的作用:"></a>全局安装的作用:</h3><p>全局安装的包可提供直接执行的命令(例：gulp -h可以查看gulp定义了什么命令)。 比如gulp全局安装后，可以在命令行上直接执行gulp -v、gulp -h等（原理：全局安装的gulp会将其package.json中的bin命令注入到了全局环境，使得你可以全局执行：gulp xxx命令，这另一个话题了，不深入）。倘若只在本地安装了gulp，未在全局安装gulp，直接执行这些命令会报错。你想要执行相应的命令则可能需要例如：node ./node_modules/gulp/bin/gulp.js -v(查看版本) 这样用一大串命令来执行。因此全局安装就发挥到他的好处了，一个gulp -v就搞定</p>
+<p>当然，不是每个包都必须要全局安装的，一般在项目中需要用到该包定义的命令才需要全局安装。比如gulp <taskName>执行gulp任务…等，所以是否需要全局安装取决于我们如何使用这个包。全局安装的就像全局变量有点粗糙，但在某些情况下也是必要的，全局包很重要，但如果不需要，最好避免使用。</p>
+<h2 id="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"><a href="#可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？" class="headerlink" title="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"></a>可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？</h2><ol>
+<li>如果只是全局安装了而没本地安装，就得require(‘<pagePath>‘) 例：引入一个全局的包可能就是requirt(‘/usr/local/….’)通过全局包的路径引入，这样显然十分的不灵活。如果安装了本地包，那么就<strong>可以直接require(‘<pageName>‘)引入使用。</strong></li>
+<li>一个包通常会在不同的项目上会重复用到，如果只全局安装，那么当某个项目需要该包更新版本时，更新后可能就会影响到其他同样引用该包的项目，因此本地安装可以更灵活地在不同的项目使用不同版本的包，并避免全局包污染的问题。</li>
+</ol>
+<p>一个经验法则：要用到该包的命令执行任务的就需要全局安装，要通过require引入使用的就需要本地安装（ 但实际开发过程中，我们也不怎么需要考虑某个包是全局安装还是本地安装，因为这一点在该包的官网上一般会明确指出，以上是为了理解全局安装和本地安装）。</p>
+<p>参考：<a href="https://segmentfault.com/a/1190000017787636?utm_source=tag-newest">node.js - npm(你怕吗) 全局安装与本地安装、开发依赖和生产依赖_个人文章 - SegmentFault 思否</a></p>
+]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -305,49 +346,8 @@
         <category>前端随笔</category>
       </categories>
       <tags>
+        <tag>随笔</tag>
         <tag>路由</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm随笔</title>
-    <url>/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别"><a href="#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别" class="headerlink" title="一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别"></a>一、npm 安装中的 i、-g、–save、–save-dev、-D、-S的区别</h1><h2 id="基本说明："><a href="#基本说明：" class="headerlink" title="基本说明："></a>基本说明：</h2><ul>
-<li><strong><code>i</code></strong> 是 <strong><code>install</code></strong> 的简写</li>
-<li><strong><code>-g</code></strong> 是全局安装，不带 <strong><code>-g</code></strong> 会安装在个人文件夹</li>
-<li><strong><code>-S</code></strong> 是 <strong><code>--save</code></strong> 的简写，安装包信息会写入 <strong><code>dependencies</code></strong> 中</li>
-<li><strong><code>-D</code></strong> 是 <strong><code>--save-dev</code></strong> 的简写，安装包写入 <strong><code>devDependencies</code></strong> 中</li>
-</ul>
-<h2 id="dependencies-与-devDependencies："><a href="#dependencies-与-devDependencies：" class="headerlink" title="dependencies 与 devDependencies："></a>dependencies 与 devDependencies：</h2><ul>
-<li><p><strong><code>dependencies</code></strong> 生产阶段的依赖,也就是项目运行时的依赖</p>
-</li>
-<li><p><strong><code>devDependencies</code></strong> 开发阶段的依赖，就是我们在开发过程中需要的依赖，只在开发阶段起作用的</p>
-<p>例如：你写 ES6 代码，需要 babel 转换成 es5 ，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署到生产环境，不需要 bebal 了，生产环境不需要。这就可以安装到 devDependencies ，再比如说代码提示工具，也可以安装到 devDependencies，如果你用了 <code>Element-UI</code>，由于发布到生产后还是依赖 <code>Element-UI</code>，这就可以安装到 <strong><code>dependencies</code></strong></p>
-</li>
-</ul>
-<h1 id="二、全局安装和本地安装"><a href="#二、全局安装和本地安装" class="headerlink" title="二、全局安装和本地安装"></a>二、全局安装和本地安装</h1><h2 id="全局安装："><a href="#全局安装：" class="headerlink" title="全局安装："></a>全局安装：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; -g//（这里-g是-global的简写）</span><br></pre></td></tr></table></figure>
-
-<p>通过上面的命令行（带-g修饰符）安装某个包，就叫全局安装。通常全局包安装在node目录下的node_modules文件夹。可以通过执行下面几条命令查看node、npm的安装目录和全局包的安装目录。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">which node   // 查看node的安装目录</span><br><span class="line">which npm   // 查看npm的安装目录</span><br><span class="line">npm root -g // 查看全局包的安装目录</span><br><span class="line">npm list -g --depth 0 //查看全局安装过的</span><br></pre></td></tr></table></figure>
-
-<h3 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装:"></a>本地安装:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install &lt;pageName&gt; (后面可以加几种修饰符，主要有两种--save-dev和--save)</span><br></pre></td></tr></table></figure>
-
-<p>通过上面的命令行安装某个包，就叫本地安装。包安装在你当前项目文件夹下的node_modules文件夹中。</p>
-<h3 id="全局安装的作用"><a href="#全局安装的作用" class="headerlink" title="全局安装的作用:"></a>全局安装的作用:</h3><p>全局安装的包可提供直接执行的命令(例：gulp -h可以查看gulp定义了什么命令)。 比如gulp全局安装后，可以在命令行上直接执行gulp -v、gulp -h等（原理：全局安装的gulp会将其package.json中的bin命令注入到了全局环境，使得你可以全局执行：gulp xxx命令，这另一个话题了，不深入）。倘若只在本地安装了gulp，未在全局安装gulp，直接执行这些命令会报错。你想要执行相应的命令则可能需要例如：node ./node_modules/gulp/bin/gulp.js -v(查看版本) 这样用一大串命令来执行。因此全局安装就发挥到他的好处了，一个gulp -v就搞定</p>
-<p>当然，不是每个包都必须要全局安装的，一般在项目中需要用到该包定义的命令才需要全局安装。比如gulp <taskName>执行gulp任务…等，所以是否需要全局安装取决于我们如何使用这个包。全局安装的就像全局变量有点粗糙，但在某些情况下也是必要的，全局包很重要，但如果不需要，最好避免使用。</p>
-<h2 id="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"><a href="#可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？" class="headerlink" title="可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？"></a>可以全局安装，那么直接全局安装到处使用就行了，干嘛还需要本地安装？</h2><ol>
-<li>如果只是全局安装了而没本地安装，就得require(‘<pagePath>‘) 例：引入一个全局的包可能就是requirt(‘/usr/local/….’)通过全局包的路径引入，这样显然十分的不灵活。如果安装了本地包，那么就<strong>可以直接require(‘<pageName>‘)引入使用。</strong></li>
-<li>一个包通常会在不同的项目上会重复用到，如果只全局安装，那么当某个项目需要该包更新版本时，更新后可能就会影响到其他同样引用该包的项目，因此本地安装可以更灵活地在不同的项目使用不同版本的包，并避免全局包污染的问题。</li>
-</ol>
-<p>一个经验法则：要用到该包的命令执行任务的就需要全局安装，要通过require引入使用的就需要本地安装（ 但实际开发过程中，我们也不怎么需要考虑某个包是全局安装还是本地安装，因为这一点在该包的官网上一般会明确指出，以上是为了理解全局安装和本地安装）。</p>
-<p>参考：<a href="https://segmentfault.com/a/1190000017787636?utm_source=tag-newest">node.js - npm(你怕吗) 全局安装与本地安装、开发依赖和生产依赖_个人文章 - SegmentFault 思否</a></p>
-]]></content>
-      <categories>
-        <category>前端随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -464,61 +464,6 @@
       <tags>
         <tag>微任务</tag>
         <tag>宏任务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>cookie、localStorage、sessionStorage</title>
-    <url>/2022/12/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/cookie%E3%80%81localStorage%E3%80%81sessionStorage%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<h1 id="一、三者的异同"><a href="#一、三者的异同" class="headerlink" title="一、三者的异同"></a>一、三者的异同</h1><table>
-<thead>
-<tr>
-<th>特性</th>
-<th>Cookie</th>
-<th>localStorage</th>
-<th>sessionStorage</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>数据的生命期</td>
-<td>一般由服务器生成，可设置失效时间。如果在浏览器端生成Cookie，默认是关闭浏览器后失效</td>
-<td>除非被清除，否则永久保存</td>
-<td>仅在当前会话下有效，关闭页面或浏览器后被清除</td>
-</tr>
-<tr>
-<td>存放数据大小</td>
-<td>4K左右</td>
-<td>一般为5MB</td>
-<td>一般为5MB</td>
-</tr>
-<tr>
-<td>与服务器端通信</td>
-<td>每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题</td>
-<td>仅在客户端（即浏览器）中保存，不参与和服务器的通信</td>
-<td>仅在客户端（即浏览器）中保存，不参与和服务器的通信</td>
-</tr>
-<tr>
-<td>易用性</td>
-<td>需要程序员自己封装，源生的Cookie接口不友好</td>
-<td>源生接口可以接受，亦可再次封装来对Object和Array有更好的支持</td>
-<td>源生接口可以接受，亦可再次封装来对Object和Array有更好的支持</td>
-</tr>
-</tbody></table>
-<h1 id="二、localStorage和sessionStorage操作"><a href="#二、localStorage和sessionStorage操作" class="headerlink" title="二、localStorage和sessionStorage操作"></a>二、localStorage和sessionStorage操作</h1><h4 id="setItem存储value"><a href="#setItem存储value" class="headerlink" title="setItem存储value"></a>setItem存储value</h4><p>用途：将value存储到key字段</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sessionStorage.setItem(&quot;key&quot;, &quot;value&quot;);     localStorage.setItem(&quot;site&quot;, &quot;js8.in&quot;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="getItem获取value"><a href="#getItem获取value" class="headerlink" title="getItem获取value"></a>getItem获取value</h4><p>用途：获取指定key本地存储的值</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var value = sessionStorage.getItem(&quot;key&quot;);     var site = localStorage.getItem(&quot;site&quot;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="removeItem删除key"><a href="#removeItem删除key" class="headerlink" title="removeItem删除key"></a>removeItem删除key</h4><p>用途：删除指定key本地存储的值</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sessionStorage.removeItem(&quot;key&quot;);     localStorage.removeItem(&quot;site&quot;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="clear清除所有的key-value"><a href="#clear清除所有的key-value" class="headerlink" title="clear清除所有的key/value"></a>clear清除所有的key/value</h4><p>用途：清除所有的key/value</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sessionStorage.clear();     localStorage.clear();</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>前端随笔</category>
-      </categories>
-      <tags>
-        <tag>面试题，随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -645,6 +590,158 @@
       </categories>
       <tags>
         <tag>H5项目，随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cookie、localStorage、sessionStorage</title>
+    <url>/2022/12/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/cookie%E3%80%81localStorage%E3%80%81sessionStorage%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<h1 id="一、三者的异同"><a href="#一、三者的异同" class="headerlink" title="一、三者的异同"></a>一、三者的异同</h1><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Cookie</th>
+<th>localStorage</th>
+<th>sessionStorage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据的生命期</td>
+<td>一般由服务器生成，可设置失效时间。如果在浏览器端生成Cookie，默认是关闭浏览器后失效</td>
+<td>除非被清除，否则永久保存</td>
+<td>仅在当前会话下有效，关闭页面或浏览器后被清除</td>
+</tr>
+<tr>
+<td>存放数据大小</td>
+<td>4K左右</td>
+<td>一般为5MB</td>
+<td>一般为5MB</td>
+</tr>
+<tr>
+<td>与服务器端通信</td>
+<td>每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题</td>
+<td>仅在客户端（即浏览器）中保存，不参与和服务器的通信</td>
+<td>仅在客户端（即浏览器）中保存，不参与和服务器的通信</td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>需要程序员自己封装，源生的Cookie接口不友好</td>
+<td>源生接口可以接受，亦可再次封装来对Object和Array有更好的支持</td>
+<td>源生接口可以接受，亦可再次封装来对Object和Array有更好的支持</td>
+</tr>
+</tbody></table>
+<h1 id="二、localStorage和sessionStorage操作"><a href="#二、localStorage和sessionStorage操作" class="headerlink" title="二、localStorage和sessionStorage操作"></a>二、localStorage和sessionStorage操作</h1><h4 id="setItem存储value"><a href="#setItem存储value" class="headerlink" title="setItem存储value"></a>setItem存储value</h4><p>用途：将value存储到key字段</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sessionStorage.setItem(&quot;key&quot;, &quot;value&quot;);     localStorage.setItem(&quot;site&quot;, &quot;js8.in&quot;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="getItem获取value"><a href="#getItem获取value" class="headerlink" title="getItem获取value"></a>getItem获取value</h4><p>用途：获取指定key本地存储的值</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var value = sessionStorage.getItem(&quot;key&quot;);     var site = localStorage.getItem(&quot;site&quot;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="removeItem删除key"><a href="#removeItem删除key" class="headerlink" title="removeItem删除key"></a>removeItem删除key</h4><p>用途：删除指定key本地存储的值</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sessionStorage.removeItem(&quot;key&quot;);     localStorage.removeItem(&quot;site&quot;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="clear清除所有的key-value"><a href="#clear清除所有的key-value" class="headerlink" title="clear清除所有的key/value"></a>clear清除所有的key/value</h4><p>用途：清除所有的key/value</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sessionStorage.clear();     localStorage.clear();</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>面试题，随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(一)——本地搭建hexo框架</title>
+    <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAhexo%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<ul>
+<li><a href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
+<li><a href="http://git-scm.com/">Git</a></li>
+</ul>
+<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <a href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">安装 Hexo</a> 步骤。</p>
+<p>如果您的电脑中尚未安装所需要的程序，请自行百度按指示完成安装。</p>
+<h2 id="3-安装-Hexo"><a href="#3-安装-Hexo" class="headerlink" title="3.安装 Hexo"></a>3.安装 Hexo</h2><h3 id="（1）本地安装-hexo"><a href="#（1）本地安装-hexo" class="headerlink" title="（1）本地安装 hexo"></a>（1）本地安装 hexo</h3><p>首先在本地新建一个空文件夹，用来存放 Hexo 的文件和以后要写的博客文件，注意不要有中文路径，避免可能出现的问题。取名 MyBlog。</p>
+<p>使用VS code 打开该文件夹，右键打开终端</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 初始化文件夹</span><br><span class="line">hexo init</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>命令很好理解，第一行安装 hexo 模块，<code>-g</code>表示安装全局模块；第二行是 hexo 初始化，会用 <code>git clone</code>命令去 GitHub 下载一个 hexo 默认模板代码库；第三行是安装依赖包，类似安装 pip 的 requirement 文件，会根据刚下载的代码库中的配置文件，下载并安装所需依赖包。</p>
+<h3 id="（2）可能遇到的问题"><a href="#（2）可能遇到的问题" class="headerlink" title="（2）可能遇到的问题"></a>（2）可能遇到的问题</h3><ul>
+<li><strong><code>npm install -g hexo-cli</code>命令执行卡住，或者报错连接不上</strong></li>
+</ul>
+<p>可能是 npm 源速度太慢，可以尝试修改淘宝源解决，再重新执行安装命令。npm 源的概念就和 Python 中的 pip 源一样，默认源是<code>https://registry.npmjs.org/</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看 npm 源</span><br><span class="line">npm config get registry</span><br><span class="line"># 临时修改 npm 源安装 hexo (仅本条命令有效)</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br><span class="line"># 或者永久修改 npm 源</span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>如果是公司内网使用代理访问外网 (比如<code>ping registry.npmjs.org</code> <code>ping registry.npm.taobao.org</code>都不通)，可以尝试给 npm 配置代理解决，再重新执行安装命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置代理</span><br><span class="line">npm config set proxy http://serverip:port</span><br><span class="line">npm confit set https-proxy http:/serverip:port</span><br><span class="line"># 设置带用户名密码的代理</span><br><span class="line">npm config set proxy http://username:password@serverip:port</span><br><span class="line">npm confit set https-proxy http://username:password@serverip:port</span><br><span class="line"># 取消代理</span><br><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>hexo init</code>命令执行卡住，或者报错连接不上</strong></li>
+</ul>
+<p>同上设置代理</p>
+<h2 id="4-运行本地博客"><a href="#4-运行本地博客" class="headerlink" title="4.运行本地博客"></a>4.运行本地博客</h2><p>前面三条命令执行成功，Hexo 框架在本地就已经搭建好了，下面看看效果。</p>
+<p>在vs code 的终端中运行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 生成静态网站</span><br><span class="line">hexo g</span><br><span class="line"># 启动服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>点击运行成功后的出来的地址</p>
+<p>自此一个简单的本地博客诞生了</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19b093769be04ecf8581612935219aa3~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>hexo框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
+    <url>/2022/09/23/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>我们利用 Hexo 框架在本地搭建了一个精美的博客，可是只能本地访问，要想发布到互联网上，还需要将它部署在网站上。博客的功能只要能阅读文章就够了，因此可以考虑将其部署在提供静态网页托管服务的网站上，许多平台都提供了静态网页托管服务，其中最方便的当然是 GitHub Pages，只需要注册一个账号就可以使用。GitHub Pages的服务器毕竟在国外，如果觉得访问太慢，也可以选择国内功能相似的 Gitee Pages。本篇文章介绍怎样利用 GitHub 提供的免费静态网页托管服务 GitHub Pages 建站。后面我应该还是会选择部署在服务</p>
+</blockquote>
+<h2 id="一、GitHub-Pages"><a href="#一、GitHub-Pages" class="headerlink" title="一、GitHub Pages"></a>一、GitHub Pages</h2><p>GitHub 是世界上最流行的软件源代码托管服务平台，为什么要提供网页托管服务呢？</p>
+<p>这是因为一个项目的主页如果只有源码，对新接触的人很不友好，不知从何处下手。虽然已经有了 readme.md 文件，但毕竟不如一个直观的网页来的直接。于是 GitHub 就设计了 Pages 功能，允许用户设计一个图文并茂的网页作为项目首页。</p>
+<p>虽然 GitHub Pages 的初衷是提供自定义的项目首页，但是它的玩法不止这一个。因此许多博主都用这个功能来搭建自己的博客，因为它实在是太太方便了。</p>
+<p>去GitHub Pages 官网 <a href="https://pages.github.com/">pages.github</a> ，拉到最后，可以看到官方也推荐使用 GitHub Pages 搭建博客，并且提供了示例教程。</p>
+<h2 id="二、GitHub-Pages-准备"><a href="#二、GitHub-Pages-准备" class="headerlink" title="二、GitHub Pages 准备"></a>二、GitHub Pages 准备</h2><p>前提是你拥有一个gitHub账号</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/55c5bbc9dd884b1d93177eb4027589dd~tplv-k3u1fbpfcp-watermark.image" alt="1673508844010.png"><br>由于每个 GitHub 账户只能建立一个 GitHub Pages 页面，所以 Repository name 必须填<code>&lt;你的用户名&gt;.github.io</code>，否则就会建立一个普通仓库，GitHub Pages 功能不会生效。比如用户名是<code>jacksparrow</code>，Repository name 这里就填<code>jacksparrow.github.io</code>，不知道用户名是哪个，可以点击页面右上角头像，看到第一行“Signed in as <code>xxx</code>”字样， <code>xxx</code>即为这里的用户名。</p>
+<p>Description 填写仓库描述，比如 <code>jacksparrow&#39;s blog</code>等，可不填。</p>
+<p>注意勾选 <code>Public</code> ，否则 GitHub Pages 功能不会生效。建议勾选 <code>Add a README file</code>，会自动生成一个 <code>readme.md</code>文件。</p>
+<p>最后点击<code>Create repository</code>创建仓库。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eac6665e8b8940889f29256f59320b31~tplv-k3u1fbpfcp-watermark.image" alt="1673509175671.png"><br>我们可以通过输入网址<code>https://&lt;你的用户名&gt;.github.io</code>，来访问到这个仓库里面的内容。</p>
+<h2 id="三、GitHub-Pages-发布"><a href="#三、GitHub-Pages-发布" class="headerlink" title="三、GitHub Pages 发布"></a>三、GitHub Pages 发布</h2><p>我们把自己的博客生成静态 html 网页，提交到这个仓库目录下，就可以在我们的网址看到博客页面了，这就是 Hexo 框架部署博客的原理。当然，对于 Hexo 来说，提交部署只需要几条命令。</p>
+<h2 id="四、Hexo-Git-Github博客在多台终端同步管理"><a href="#四、Hexo-Git-Github博客在多台终端同步管理" class="headerlink" title="四、Hexo+Git+Github博客在多台终端同步管理"></a>四、<a href="https://so.csdn.net/so/search?q=Hexo&spm=1001.2101.3001.7020">Hexo</a>+Git+Github博客在多台终端同步管理</h2><p>此方法利用Git管理Hexo产生的文件，实现在不同的电脑上同步（<a href="https://so.csdn.net/so/search?q=Github&spm=1001.2101.3001.7020">Github</a>）所需的文件，也可以正常的在不同的Hexo环境里进行相应操作，只要在做完之后同步到Github的仓库里即可。下面具体来说说：</p>
+<p>网上基本上都是这个思路：</p>
+<h3 id="Github-分支管理Hexo环境目录"><a href="#Github-分支管理Hexo环境目录" class="headerlink" title="Github 分支管理Hexo环境目录"></a>Github 分支管理Hexo环境目录</h3><p>主要是通过维护两条git分支来实现，第一个分支是 Gihub 上默认的 master 分支，用于存放发布的博文的静态页面；另外再新建一个分支，比如命名为 Hexo ，通过此分支存放主题、原始的博客文件等等，这些文件才是不同电脑需要同步的文件；当每次修改主题或者新增博文后，先将修改的主题文件（在themes文件夹下）或者新增博客（在source文件夹下），同步到远程的 Hexo 分支，然后在通过 hexo g -d命令发布博文，也就是将新增的博文的静态页面同步到 master 分支。这样通过不同的分支管理不同的文件，实现了多台电脑同步更新博文的功能。！</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">├── .<span class="property">gitignore</span></span><br><span class="line">├── .<span class="property">deploy_git</span></span><br><span class="line">|   ├── ...</span><br><span class="line">|   ├── ...</span><br><span class="line">|   └── ...</span><br><span class="line">├── node_modules</span><br><span class="line">├── public</span><br><span class="line">├── package-lock.<span class="property">json</span></span><br><span class="line">├── db.<span class="property">json</span></span><br><span class="line">├── _config.<span class="property">yml</span></span><br><span class="line">├── package.<span class="property">json</span></span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>其中 .deploy_git、public 两个文件夹下存放的是博客文章的静态页面，通过对比 Github 上博客仓库的master分支可以看到master分支下面的文件结构和 .deploy_git 文件夹下的文件是一致的，这个应该可以判断通过 hexo g -d 发布到 Github 的内容就是 .deploy_git 文件夹下面的文件。其余的文件夹和文件即是Hexo的主题文件、原始的博客文件等，刚在上文提到的Hexo分支，存的即时这些文件</p>
+<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><p>在PC b，</p>
+<h4 id="初始化分支"><a href="#初始化分支" class="headerlink" title="初始化分支"></a>初始化分支</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone 仓库地址（自己的仓库地址）</span><br></pre></td></tr></table></figure>
+
+<p>将仓库文件拉取到本地，生成的文件名为 username.github.io；进入username.github.io文件夹，除了 <em>.git</em> 文件夹以外，其他文件全部删除；同时添加.gitnore</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line"># 添加git忽略</span><br></pre></td></tr></table></figure>
+
+<p>提交本次修改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “提交说明”</span><br><span class="line">git push origin Hexo</span><br></pre></td></tr></table></figure>
+
+<h4 id="同步分支（PC2上面操作）"><a href="#同步分支（PC2上面操作）" class="headerlink" title="同步分支（PC2上面操作）"></a>同步分支（PC2上面操作）</h4><p>git pull拉取远程hexo分支的代码</p>
+<p>但是暂时不要提交，先安装hexo环境去</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>然后再执行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>这时你文件夹下多出了db.json，node_modules，public，还会多一个.deploy_git（hexo打包后上传到master主分支的静态博客文件夹）因为我用了yarn，所以会有yarn.lock，这个无关紧要，这时git提交上去就行，最后的文件目录如这样</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2747fbb084084f968bb07799807a7058~tplv-k3u1fbpfcp-watermark.image" alt="1673511752083.png"></p>
+<p><strong>文章内更新点东西，加一句话什么的，再去执行hexo的命令</strong></p>
+<p>过会再去打开https://你的用户名.github.io，更新了就代表没问题了</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="https://blog.csdn.net/steven_zdg988/article/details/111240905">Hexo+Git+Github博客在多台终端同步管理_HackerEric的博客-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>同步管理</tag>
       </tags>
   </entry>
   <entry>
@@ -780,103 +877,6 @@
       </tags>
   </entry>
   <entry>
-    <title>从零开始搭建博客(一)——本地搭建hexo框架</title>
-    <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAhexo%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
-<ul>
-<li><a href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
-<li><a href="http://git-scm.com/">Git</a></li>
-</ul>
-<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <a href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">安装 Hexo</a> 步骤。</p>
-<p>如果您的电脑中尚未安装所需要的程序，请自行百度按指示完成安装。</p>
-<h2 id="3-安装-Hexo"><a href="#3-安装-Hexo" class="headerlink" title="3.安装 Hexo"></a>3.安装 Hexo</h2><h3 id="（1）本地安装-hexo"><a href="#（1）本地安装-hexo" class="headerlink" title="（1）本地安装 hexo"></a>（1）本地安装 hexo</h3><p>首先在本地新建一个空文件夹，用来存放 Hexo 的文件和以后要写的博客文件，注意不要有中文路径，避免可能出现的问题。取名 MyBlog。</p>
-<p>使用VS code 打开该文件夹，右键打开终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 初始化文件夹</span><br><span class="line">hexo init</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>命令很好理解，第一行安装 hexo 模块，<code>-g</code>表示安装全局模块；第二行是 hexo 初始化，会用 <code>git clone</code>命令去 GitHub 下载一个 hexo 默认模板代码库；第三行是安装依赖包，类似安装 pip 的 requirement 文件，会根据刚下载的代码库中的配置文件，下载并安装所需依赖包。</p>
-<h3 id="（2）可能遇到的问题"><a href="#（2）可能遇到的问题" class="headerlink" title="（2）可能遇到的问题"></a>（2）可能遇到的问题</h3><ul>
-<li><strong><code>npm install -g hexo-cli</code>命令执行卡住，或者报错连接不上</strong></li>
-</ul>
-<p>可能是 npm 源速度太慢，可以尝试修改淘宝源解决，再重新执行安装命令。npm 源的概念就和 Python 中的 pip 源一样，默认源是<code>https://registry.npmjs.org/</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看 npm 源</span><br><span class="line">npm config get registry</span><br><span class="line"># 临时修改 npm 源安装 hexo (仅本条命令有效)</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br><span class="line"># 或者永久修改 npm 源</span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>如果是公司内网使用代理访问外网 (比如<code>ping registry.npmjs.org</code> <code>ping registry.npm.taobao.org</code>都不通)，可以尝试给 npm 配置代理解决，再重新执行安装命令。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置代理</span><br><span class="line">npm config set proxy http://serverip:port</span><br><span class="line">npm confit set https-proxy http:/serverip:port</span><br><span class="line"># 设置带用户名密码的代理</span><br><span class="line">npm config set proxy http://username:password@serverip:port</span><br><span class="line">npm confit set https-proxy http://username:password@serverip:port</span><br><span class="line"># 取消代理</span><br><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong><code>hexo init</code>命令执行卡住，或者报错连接不上</strong></li>
-</ul>
-<p>同上设置代理</p>
-<h2 id="4-运行本地博客"><a href="#4-运行本地博客" class="headerlink" title="4.运行本地博客"></a>4.运行本地博客</h2><p>前面三条命令执行成功，Hexo 框架在本地就已经搭建好了，下面看看效果。</p>
-<p>在vs code 的终端中运行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 生成静态网站</span><br><span class="line">hexo g</span><br><span class="line"># 启动服务器</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>点击运行成功后的出来的地址</p>
-<p>自此一个简单的本地博客诞生了</p>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19b093769be04ecf8581612935219aa3~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>hexo框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
-    <url>/2022/09/23/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>我们利用 Hexo 框架在本地搭建了一个精美的博客，可是只能本地访问，要想发布到互联网上，还需要将它部署在网站上。博客的功能只要能阅读文章就够了，因此可以考虑将其部署在提供静态网页托管服务的网站上，许多平台都提供了静态网页托管服务，其中最方便的当然是 GitHub Pages，只需要注册一个账号就可以使用。GitHub Pages的服务器毕竟在国外，如果觉得访问太慢，也可以选择国内功能相似的 Gitee Pages。本篇文章介绍怎样利用 GitHub 提供的免费静态网页托管服务 GitHub Pages 建站。后面我应该还是会选择部署在服务</p>
-</blockquote>
-<h2 id="一、GitHub-Pages"><a href="#一、GitHub-Pages" class="headerlink" title="一、GitHub Pages"></a>一、GitHub Pages</h2><p>GitHub 是世界上最流行的软件源代码托管服务平台，为什么要提供网页托管服务呢？</p>
-<p>这是因为一个项目的主页如果只有源码，对新接触的人很不友好，不知从何处下手。虽然已经有了 readme.md 文件，但毕竟不如一个直观的网页来的直接。于是 GitHub 就设计了 Pages 功能，允许用户设计一个图文并茂的网页作为项目首页。</p>
-<p>虽然 GitHub Pages 的初衷是提供自定义的项目首页，但是它的玩法不止这一个。因此许多博主都用这个功能来搭建自己的博客，因为它实在是太太方便了。</p>
-<p>去GitHub Pages 官网 <a href="https://pages.github.com/">pages.github</a> ，拉到最后，可以看到官方也推荐使用 GitHub Pages 搭建博客，并且提供了示例教程。</p>
-<h2 id="二、GitHub-Pages-准备"><a href="#二、GitHub-Pages-准备" class="headerlink" title="二、GitHub Pages 准备"></a>二、GitHub Pages 准备</h2><p>前提是你拥有一个gitHub账号</p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/55c5bbc9dd884b1d93177eb4027589dd~tplv-k3u1fbpfcp-watermark.image" alt="1673508844010.png"><br>由于每个 GitHub 账户只能建立一个 GitHub Pages 页面，所以 Repository name 必须填<code>&lt;你的用户名&gt;.github.io</code>，否则就会建立一个普通仓库，GitHub Pages 功能不会生效。比如用户名是<code>jacksparrow</code>，Repository name 这里就填<code>jacksparrow.github.io</code>，不知道用户名是哪个，可以点击页面右上角头像，看到第一行“Signed in as <code>xxx</code>”字样， <code>xxx</code>即为这里的用户名。</p>
-<p>Description 填写仓库描述，比如 <code>jacksparrow&#39;s blog</code>等，可不填。</p>
-<p>注意勾选 <code>Public</code> ，否则 GitHub Pages 功能不会生效。建议勾选 <code>Add a README file</code>，会自动生成一个 <code>readme.md</code>文件。</p>
-<p>最后点击<code>Create repository</code>创建仓库。</p>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eac6665e8b8940889f29256f59320b31~tplv-k3u1fbpfcp-watermark.image" alt="1673509175671.png"><br>我们可以通过输入网址<code>https://&lt;你的用户名&gt;.github.io</code>，来访问到这个仓库里面的内容。</p>
-<h2 id="三、GitHub-Pages-发布"><a href="#三、GitHub-Pages-发布" class="headerlink" title="三、GitHub Pages 发布"></a>三、GitHub Pages 发布</h2><p>我们把自己的博客生成静态 html 网页，提交到这个仓库目录下，就可以在我们的网址看到博客页面了，这就是 Hexo 框架部署博客的原理。当然，对于 Hexo 来说，提交部署只需要几条命令。</p>
-<h2 id="四、Hexo-Git-Github博客在多台终端同步管理"><a href="#四、Hexo-Git-Github博客在多台终端同步管理" class="headerlink" title="四、Hexo+Git+Github博客在多台终端同步管理"></a>四、<a href="https://so.csdn.net/so/search?q=Hexo&spm=1001.2101.3001.7020">Hexo</a>+Git+Github博客在多台终端同步管理</h2><p>此方法利用Git管理Hexo产生的文件，实现在不同的电脑上同步（<a href="https://so.csdn.net/so/search?q=Github&spm=1001.2101.3001.7020">Github</a>）所需的文件，也可以正常的在不同的Hexo环境里进行相应操作，只要在做完之后同步到Github的仓库里即可。下面具体来说说：</p>
-<p>网上基本上都是这个思路：</p>
-<h3 id="Github-分支管理Hexo环境目录"><a href="#Github-分支管理Hexo环境目录" class="headerlink" title="Github 分支管理Hexo环境目录"></a>Github 分支管理Hexo环境目录</h3><p>主要是通过维护两条git分支来实现，第一个分支是 Gihub 上默认的 master 分支，用于存放发布的博文的静态页面；另外再新建一个分支，比如命名为 Hexo ，通过此分支存放主题、原始的博客文件等等，这些文件才是不同电脑需要同步的文件；当每次修改主题或者新增博文后，先将修改的主题文件（在themes文件夹下）或者新增博客（在source文件夹下），同步到远程的 Hexo 分支，然后在通过 hexo g -d命令发布博文，也就是将新增的博文的静态页面同步到 master 分支。这样通过不同的分支管理不同的文件，实现了多台电脑同步更新博文的功能。！</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">├── .<span class="property">gitignore</span></span><br><span class="line">├── .<span class="property">deploy_git</span></span><br><span class="line">|   ├── ...</span><br><span class="line">|   ├── ...</span><br><span class="line">|   └── ...</span><br><span class="line">├── node_modules</span><br><span class="line">├── public</span><br><span class="line">├── package-lock.<span class="property">json</span></span><br><span class="line">├── db.<span class="property">json</span></span><br><span class="line">├── _config.<span class="property">yml</span></span><br><span class="line">├── package.<span class="property">json</span></span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>其中 .deploy_git、public 两个文件夹下存放的是博客文章的静态页面，通过对比 Github 上博客仓库的master分支可以看到master分支下面的文件结构和 .deploy_git 文件夹下的文件是一致的，这个应该可以判断通过 hexo g -d 发布到 Github 的内容就是 .deploy_git 文件夹下面的文件。其余的文件夹和文件即是Hexo的主题文件、原始的博客文件等，刚在上文提到的Hexo分支，存的即时这些文件</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><p>在PC b，</p>
-<h4 id="初始化分支"><a href="#初始化分支" class="headerlink" title="初始化分支"></a>初始化分支</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone 仓库地址（自己的仓库地址）</span><br></pre></td></tr></table></figure>
-
-<p>将仓库文件拉取到本地，生成的文件名为 username.github.io；进入username.github.io文件夹，除了 <em>.git</em> 文件夹以外，其他文件全部删除；同时添加.gitnore</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line"># 添加git忽略</span><br></pre></td></tr></table></figure>
-
-<p>提交本次修改</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “提交说明”</span><br><span class="line">git push origin Hexo</span><br></pre></td></tr></table></figure>
-
-<h4 id="同步分支（PC2上面操作）"><a href="#同步分支（PC2上面操作）" class="headerlink" title="同步分支（PC2上面操作）"></a>同步分支（PC2上面操作）</h4><p>git pull拉取远程hexo分支的代码</p>
-<p>但是暂时不要提交，先安装hexo环境去</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装 hexo 框架</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"># 安装 hexo 依赖包</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>然后再执行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>这时你文件夹下多出了db.json，node_modules，public，还会多一个.deploy_git（hexo打包后上传到master主分支的静态博客文件夹）因为我用了yarn，所以会有yarn.lock，这个无关紧要，这时git提交上去就行，最后的文件目录如这样</p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2747fbb084084f968bb07799807a7058~tplv-k3u1fbpfcp-watermark.image" alt="1673511752083.png"></p>
-<p><strong>文章内更新点东西，加一句话什么的，再去执行hexo的命令</strong></p>
-<p>过会再去打开https://你的用户名.github.io，更新了就代表没问题了</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="https://blog.csdn.net/steven_zdg988/article/details/111240905">Hexo+Git+Github博客在多台终端同步管理_HackerEric的博客-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>同步管理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从零开始搭建博客(二)——hexo主题搭建</title>
     <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
@@ -943,6 +943,27 @@
       </tags>
   </entry>
   <entry>
+    <title>从零开始搭建博客(五)——使用valine评论系统</title>
+    <url>/2022/10/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%94)%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h1 id="一、hexo框架的主题使用valine"><a href="#一、hexo框架的主题使用valine" class="headerlink" title="一、hexo框架的主题使用valine"></a>一、hexo框架的主题使用valine</h1><h2 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a><strong>1. 注册 Leancloud 账号</strong></h2><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。</p>
+<h1 id="2-创建应用获取appid和appkey"><a href="#2-创建应用获取appid和appkey" class="headerlink" title="2.创建应用获取appid和appkey"></a>2.创建应用获取appid和appkey</h1><p>注册完成后进入控制台-&gt;创建应用-&gt;创建开发版应用。创建完开发版应用如下：点击最右边小齿轮也就是设置，找到<code>应用凭证</code>，获取appid和appkey</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88cbb84d544c466fa8b242d80c6e0670~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p>
+<h2 id="3-配置valine"><a href="#3-配置valine" class="headerlink" title="3.配置valine"></a>3.配置valine</h2><p>最后去自己主题下的_config.yml文件下(注意不是根目录下的，是你克隆的主题的_config.yml)，配置一下valine，目前hexo官网给的许多主题都是可以用valine的，直接配置就行</p>
+<p>以ayer主题为例，具体配置含义如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可</span><br><span class="line">leancloud:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id:# 将应用key的App ID设置在这里</span><br><span class="line">  appkey: # 将应用key的App Key设置在这里</span><br><span class="line">valine:</span><br><span class="line">  enable: true #是否启用valine</span><br><span class="line">  notify: false# 邮箱通知 , https://github.com/xCss/Valine/wiki，默认为false</span><br><span class="line">  verify: false# 验证码 默认为false</span><br><span class="line">  placeholder: Just go go ^_^ # 初始化评论显示，根据自己修改，这里默认，</span><br><span class="line">  avatar: monsterid # 头像风格，默认为mm，可进入网址：https://valine.js.org/visitor.html查看头像设置，这里有许多头像风格，进行设置</span><br><span class="line">  guest_info: nick,mail,link # 自定义评论标题</span><br><span class="line">  pageSize: 10 # 分页大小，10页就自动分页</span><br><span class="line">  visitor: true # 是否允许游客评论 ，进入官网查看设置：https://valine.js.org/visitor.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、valine评论数据管理"><a href="#二、valine评论数据管理" class="headerlink" title="二、valine评论数据管理"></a>二、valine评论数据管理</h1><p>去LeanCloud的控制台找到数据存储=&gt;结构化数据=&gt;Comment,在这里你可以对评论的数据进行管理</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f28620488c6540d6b80756e2ac125719~tplv-k3u1fbpfcp-watermark.image" alt="1673512632892.png"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>valine</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从零开始搭建博客(四)——关于我页面搭建</title>
     <url>/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
@@ -966,27 +987,6 @@
       <tags>
         <tag>博客搭建</tag>
         <tag>hexo框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始搭建博客(五)——使用valine评论系统</title>
-    <url>/2022/10/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%94)%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h1 id="一、hexo框架的主题使用valine"><a href="#一、hexo框架的主题使用valine" class="headerlink" title="一、hexo框架的主题使用valine"></a>一、hexo框架的主题使用valine</h1><h2 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a><strong>1. 注册 Leancloud 账号</strong></h2><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。</p>
-<h1 id="2-创建应用获取appid和appkey"><a href="#2-创建应用获取appid和appkey" class="headerlink" title="2.创建应用获取appid和appkey"></a>2.创建应用获取appid和appkey</h1><p>注册完成后进入控制台-&gt;创建应用-&gt;创建开发版应用。创建完开发版应用如下：点击最右边小齿轮也就是设置，找到<code>应用凭证</code>，获取appid和appkey</p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88cbb84d544c466fa8b242d80c6e0670~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p>
-<h2 id="3-配置valine"><a href="#3-配置valine" class="headerlink" title="3.配置valine"></a>3.配置valine</h2><p>最后去自己主题下的_config.yml文件下(注意不是根目录下的，是你克隆的主题的_config.yml)，配置一下valine，目前hexo官网给的许多主题都是可以用valine的，直接配置就行</p>
-<p>以ayer主题为例，具体配置含义如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可</span><br><span class="line">leancloud:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id:# 将应用key的App ID设置在这里</span><br><span class="line">  appkey: # 将应用key的App Key设置在这里</span><br><span class="line">valine:</span><br><span class="line">  enable: true #是否启用valine</span><br><span class="line">  notify: false# 邮箱通知 , https://github.com/xCss/Valine/wiki，默认为false</span><br><span class="line">  verify: false# 验证码 默认为false</span><br><span class="line">  placeholder: Just go go ^_^ # 初始化评论显示，根据自己修改，这里默认，</span><br><span class="line">  avatar: monsterid # 头像风格，默认为mm，可进入网址：https://valine.js.org/visitor.html查看头像设置，这里有许多头像风格，进行设置</span><br><span class="line">  guest_info: nick,mail,link # 自定义评论标题</span><br><span class="line">  pageSize: 10 # 分页大小，10页就自动分页</span><br><span class="line">  visitor: true # 是否允许游客评论 ，进入官网查看设置：https://valine.js.org/visitor.html</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、valine评论数据管理"><a href="#二、valine评论数据管理" class="headerlink" title="二、valine评论数据管理"></a>二、valine评论数据管理</h1><p>去LeanCloud的控制台找到数据存储=&gt;结构化数据=&gt;Comment,在这里你可以对评论的数据进行管理</p>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f28620488c6540d6b80756e2ac125719~tplv-k3u1fbpfcp-watermark.image" alt="1673512632892.png"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>valine</tag>
       </tags>
   </entry>
   <entry>
@@ -1162,80 +1162,6 @@
       </tags>
   </entry>
   <entry>
-    <title>vite 搭建vue3项目（二）</title>
-    <url>/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="1-login页面和功能就不多哔哔了"><a href="#1-login页面和功能就不多哔哔了" class="headerlink" title="1.login页面和功能就不多哔哔了"></a>1.login页面和功能就不多哔哔了</h1><h1 id="2-主体布局"><a href="#2-主体布局" class="headerlink" title="2.主体布局"></a>2.主体布局</h1><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e77c74aeb743b5a9e159607d1eb0e6~tplv-k3u1fbpfcp-watermark.image" alt="dd7860edba87d1d65d1c03b81f01f4c6.png"><br>layout-&gt;index.vue</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">   &lt;el-container&gt;</span><br><span class="line">        &lt;el-aside&gt;</span><br><span class="line">            &lt;Menu /&gt;</span><br><span class="line">        &lt;/el-aside&gt;</span><br><span class="line">        &lt;el-container&gt;</span><br><span class="line">            &lt;el-header&gt;</span><br><span class="line">            &lt;/el-header&gt;</span><br><span class="line">            &lt;el-main&gt;</span><br><span class="line">            //mian开发中</span><br><span class="line">                &lt;!-- &lt;router-view v-slot=&quot;&#123; Component, route &#125;&quot;&gt;</span><br><span class="line">                    &lt;transition appear name=&quot;fade-transform&quot; mode=&quot;out-in&quot;&gt;</span><br><span class="line">                        &lt;keep-alive :include=&quot;cacheRouter&quot;&gt;</span><br><span class="line">                            &lt;component :is=&quot;Component&quot; :key=&quot;route.path&quot;&gt;&lt;/component&gt;</span><br><span class="line">                        &lt;/keep-alive&gt;</span><br><span class="line">                    &lt;/transition&gt;</span><br><span class="line">                &lt;/router-view&gt; --&gt;</span><br><span class="line">            &lt;/el-main&gt;</span><br><span class="line">            &lt;el-footer&gt;</span><br><span class="line">                &lt;Footer /&gt;</span><br><span class="line">            &lt;/el-footer&gt;</span><br><span class="line">        &lt;/el-container&gt;</span><br><span class="line">    &lt;/el-container&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import Footer from &quot;./footer/index.vue&quot;;</span><br><span class="line">import Menu from &quot;./Menu/index.vue&quot;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">    @import &quot;./index.scss&quot;;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<h1 id="3-vite中的批量自动化导入：import-meta-globEager"><a href="#3-vite中的批量自动化导入：import-meta-globEager" class="headerlink" title="3.vite中的批量自动化导入：import.meta.globEager"></a>3.vite中的批量自动化导入：import.meta.globEager</h1><p>如果想在vite中批量导入某些文件，实现项目的模块化，vite提供的import.meta.globEager函数就很好用</p>
-<p>比如用在路由模块化：</p>
-<p>1、需求：不想把路由文件全部放在一个文件里面，找的时候要拖动很麻烦，就想着把每一个模块的路由按功能分成单个的文件</p>
-<p>2、思路：在routers文件夹内新增一个modules文件夹：里面放不同功能的routers文件，然后在vue引入的路由入口处批量导入模块化的routers</p>
-<p>3、实现：</p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9d6edc09e5e4e8fbb012d6155e3a5d1~tplv-k3u1fbpfcp-watermark.image" alt="87e7997f3c15921b398a37d928ac3a32.png"></p>
-<p>在router文件内批量引入modules内模块化的文件并处理：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; createRouter, createWebHashHistory, RouteRecordRaw &#125; from &quot;vue-router&quot;;</span><br><span class="line"></span><br><span class="line">// * 导入所有router</span><br><span class="line">//const metaRouters = import.meta.globEager(&quot;./modules/*.ts&quot;);</span><br><span class="line">//最新vite应该是弃用了上面的，用下面的</span><br><span class="line">const metaRouters:any = import.meta.glob(&#x27;./modules/*.ts&#x27;, &#123; eager: true &#125;)</span><br><span class="line">// * 处理路由表</span><br><span class="line">export const routerArray: RouteRecordRaw[] = [];</span><br><span class="line">Object.keys(metaRouters).forEach(item =&gt; &#123;</span><br><span class="line">    Object.keys(metaRouters[item]).forEach((key: any) =&gt; &#123;</span><br><span class="line">    //	routerArray.push(...metaRouters[item][key]);</span><br><span class="line">    routerArray.push(metaRouters[item][key]);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @description 路由配置简介</span><br><span class="line"> * @param path ==&gt; 路由路径</span><br><span class="line"> * @param name ==&gt; 路由名称</span><br><span class="line"> * @param redirect ==&gt; 路由重定向</span><br><span class="line"> * @param component ==&gt; 路由组件</span><br><span class="line"> * @param meta ==&gt; 路由元信息</span><br><span class="line"> * @param meta.requireAuth ==&gt; 是否需要权限验证</span><br><span class="line"> * @param meta.keepAlive ==&gt; 是否需要缓存该路由</span><br><span class="line"> * @param meta.title ==&gt; 路由标题</span><br><span class="line"> * @param meta.key	==&gt; 路由key,用来匹配按钮权限</span><br><span class="line"> * */</span><br><span class="line">const routes: RouteRecordRaw[] = [</span><br><span class="line">  ...routerArray,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">const router = createRouter(&#123;</span><br><span class="line">    history: createWebHashHistory(),</span><br><span class="line">    routes,</span><br><span class="line">    strict: false,</span><br><span class="line">    // 切换页面，滚动到最顶部</span><br><span class="line">    scrollBehavior: () =&gt; (&#123; left: 0, top: 0 &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">export default router;</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意 再使用时出现import.meta.globEager(“./modules/*.ts”);报错说什么弃用了，</strong></p>
-<p><strong>去源码看标注：已弃用，使用这个什么代替</strong></p>
-<p><strong>@deprecated Use <code>import.meta.glob(&#39;*&#39;, &#123; eager: true &#125;)</code> instead</strong></p>
-<h1 id="4-侧边栏的开发和header里的侧边栏折叠-底部栏就不多bb"><a href="#4-侧边栏的开发和header里的侧边栏折叠-底部栏就不多bb" class="headerlink" title="4.侧边栏的开发和header里的侧边栏折叠(底部栏就不多bb)"></a>4.侧边栏的开发和header里的侧边栏折叠(底部栏就不多bb)</h1><h2 id="侧边栏的开发"><a href="#侧边栏的开发" class="headerlink" title="侧边栏的开发"></a><strong>侧边栏的开发</strong></h2><p>主要是分为两部分，一部分是logo，一部分是路由菜单</p>
-<p>logo是图片加文字，文字根据侧边栏折叠是否展示</p>
-<p><strong>路由菜单</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-scrollbar&gt;</span><br><span class="line">        &lt;el-menu</span><br><span class="line">            :default-active=&quot;activeMenu&quot;</span><br><span class="line">            :router=&quot;true&quot;</span><br><span class="line">            :collapse=&quot;isCollapse&quot;</span><br><span class="line">            :collapse-transition=&quot;false&quot;</span><br><span class="line">            :unique-opened=&quot;true&quot;</span><br><span class="line">            background-color=&quot;#191a20&quot;</span><br><span class="line">            text-color=&quot;#bdbdc0&quot;</span><br><span class="line">            active-text-color=&quot;#fff&quot;</span><br><span class="line">        &gt;</span><br><span class="line">          //菜单项</span><br><span class="line">            &lt;SubItem :menuList=&quot;menuList&quot; /&gt;</span><br><span class="line">        &lt;/el-menu&gt;</span><br><span class="line">    &lt;/el-scrollbar&gt;</span><br></pre></td></tr></table></figure>
-
-<p>首先需要获取菜单列表，一般是调用接口根据登录的这个用户的权限获取列表接口，暂时用得请求的json模拟后台接口数据，把菜单数据存到pinia中</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">onMounted(async () =&gt; &#123;</span><br><span class="line">    // 获取菜单列表</span><br><span class="line">    loading.value = true;</span><br><span class="line">    try &#123;</span><br><span class="line">        const res = await getMenuList();</span><br><span class="line">        if (!res.data) return;</span><br><span class="line">        // 把路由菜单处理成一维数组（存储到 pinia 中）</span><br><span class="line">        const dynamicRouter = handleRouter(res.data);</span><br><span class="line">        authStore.setAuthRouter(dynamicRouter);</span><br><span class="line">        menuStore.setMenuList(res.data);</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        loading.value = false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>然后需要有默认激活菜单的index和菜单是否折叠 获取pinia里存着的菜单数据</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//默认激活菜单的 index，当前路由对象的路径</span><br><span class="line">const activeMenu = computed((): string =&gt; route.path);</span><br><span class="line">//菜单是否折叠</span><br><span class="line">const isCollapse = computed((): boolean =&gt; menuStore.isCollapse);</span><br><span class="line">//菜单数据</span><br><span class="line">const menuList = computed((): Menu.MenuOptions[] =&gt; menuStore.menuList);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 监听窗口大小变化，折叠侧边栏</span><br><span class="line">const screenWidth = ref&lt;number&gt;(0);</span><br><span class="line">const listeningWindow = () =&gt; &#123;</span><br><span class="line">    window.onresize = () =&gt; &#123;</span><br><span class="line">        return (() =&gt; &#123;</span><br><span class="line">            screenWidth.value = document.body.clientWidth;</span><br><span class="line">            if (isCollapse.value === false &amp;&amp; screenWidth.value &lt; 1200) menuStore.setCollapse();</span><br><span class="line">            if (isCollapse.value === true &amp;&amp; screenWidth.value &gt; 1200) menuStore.setCollapse();</span><br><span class="line">        &#125;)();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">listeningWindow();</span><br></pre></td></tr></table></figure>
-
-<p>菜单项就是遍历菜单数据展示路由菜单信息（子组件需要defineProps&lt;{ menuList: Menu.MenuOptions[] }&gt;();）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template v-for=&quot;subItem in menuList&quot; :key=&quot;subItem.path&quot;&gt;</span><br><span class="line">        &lt;el-sub-menu v-if=&quot;subItem.children &amp;&amp; subItem.children.length &gt; 0&quot; :index=&quot;subItem.path&quot;&gt;</span><br><span class="line">            &lt;template #title&gt;</span><br><span class="line">                &lt;el-icon&gt;</span><br><span class="line">                    &lt;component :is=&quot;subItem.icon&quot;&gt;&lt;/component&gt;</span><br><span class="line">                &lt;/el-icon&gt;</span><br><span class="line">                &lt;span&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/span&gt;</span><br><span class="line">            &lt;/template&gt;</span><br><span class="line">            &lt;SubItem :menuList=&quot;subItem.children&quot; /&gt;</span><br><span class="line">        &lt;/el-sub-menu&gt;</span><br><span class="line">        &lt;el-menu-item v-else :index=&quot;subItem.path&quot;&gt;</span><br><span class="line">            &lt;el-icon&gt;</span><br><span class="line">                &lt;component :is=&quot;subItem.icon&quot;&gt;&lt;/component&gt;</span><br><span class="line">            &lt;/el-icon&gt;</span><br><span class="line">            &lt;template v-if=&quot;!subItem.isLink&quot; #title&gt;</span><br><span class="line">                &lt;span&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/span&gt;</span><br><span class="line">            &lt;/template&gt;</span><br><span class="line">            &lt;template v-else #title&gt;</span><br><span class="line">                &lt;a class=&quot;menu-href&quot; :href=&quot;subItem.isLink&quot; target=&quot;_blank&quot;&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/a&gt;</span><br><span class="line">            &lt;/template&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">defineProps&lt;&#123; menuList: Menu.MenuOptions[] &#125;&gt;();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="header里的侧边栏折叠开发"><a href="#header里的侧边栏折叠开发" class="headerlink" title="header里的侧边栏折叠开发"></a>header里的侧边栏折叠开发</h2><p>监控屏幕宽度或点击叠判断是否折叠</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//菜单是否折叠</span><br><span class="line">const isCollapse = computed((): boolean =&gt; menuStore.isCollapse);</span><br><span class="line">//菜单数据</span><br><span class="line">const menuList = computed((): Menu.MenuOptions[] =&gt; menuStore.menuList);</span><br><span class="line">// 监听窗口大小变化，合并 aside</span><br><span class="line">const screenWidth = ref&lt;number&gt;(0);</span><br><span class="line">const listeningWindow = () =&gt; &#123;</span><br><span class="line">    window.onresize = () =&gt; &#123;</span><br><span class="line">        return (() =&gt; &#123;</span><br><span class="line">            screenWidth.value = document.body.clientWidth;</span><br><span class="line">            if (isCollapse.value === false &amp;&amp; screenWidth.value &lt; 1200) menuStore.setCollapse();</span><br><span class="line">            if (isCollapse.value === true &amp;&amp; screenWidth.value &gt; 1200) menuStore.setCollapse();</span><br><span class="line">        &#125;)();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h1 id="5-vue-router-利用-route-的-matched-属性实现面包屑效果"><a href="#5-vue-router-利用-route-的-matched-属性实现面包屑效果" class="headerlink" title="5.vue-router 利用 $route 的 matched 属性实现面包屑效果"></a>5.vue-router 利用 $route 的 matched 属性实现面包屑效果</h1><p><strong>matched 顾名思义 就是 匹配，假如我们目前的路由是/a/aa-01，那么此时 this.$route.matched匹配到的会是一个数组，包含 ‘/‘，’/a’，’/a/aa-01’，这三个path的路由信息。然后我们可以直接利用路由信息渲染我们的面包屑导航。</strong></p>
-<p>布局需要使用到el-breadcrumb ，和transition-group</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;el-breadcrumb :separator-icon=&quot;ArrowRight&quot;&gt;</span><br><span class="line">        &lt;transition-group name=&quot;breadcrumb&quot; mode=&quot;out-in&quot;&gt;</span><br><span class="line">            &lt;el-breadcrumb-item :to=&quot;&#123; path: HOME_URL &#125;&quot; key=&quot;/home&quot;&gt;首页&lt;/el-breadcrumb-item&gt;</span><br><span class="line">            &lt;el-breadcrumb-item v-for=&quot;item in matched&quot; :key=&quot;item.path&quot; :to=&quot;&#123; path: item.path &#125;&quot;&gt;</span><br><span class="line">                &#123;&#123; item.meta.title &#125;&#125;</span><br><span class="line">            &lt;/el-breadcrumb-item&gt;</span><br><span class="line">        &lt;/transition-group&gt;</span><br><span class="line">    &lt;/el-breadcrumb&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; computed &#125; from &quot;vue&quot;;</span><br><span class="line">import &#123; useRoute &#125; from &quot;vue-router&quot;;</span><br><span class="line">import &#123; ArrowRight &#125; from &quot;@element-plus/icons-vue&quot;;</span><br><span class="line">import &#123; HOME_URL &#125; from &quot;@/config/config&quot;;</span><br><span class="line">const route = useRoute();</span><br><span class="line"></span><br><span class="line">const matched = computed(() =&gt; route.matched.filter(item =&gt;item.meta &amp;&amp; item.meta.title &amp;&amp; item.meta.title !== &quot;首页&quot;));</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>TransitionGroup# 是一个内置组件，用于对 v-for 列表中的元素或组件的插入、移除和顺序改变添加动画效果。这样每次选择侧边栏的路由时，面包屑导航这边就感觉比较平滑的展示</p>
-<h1 id="6-后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现-（标签栏管理）"><a href="#6-后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现-（标签栏管理）" class="headerlink" title="6.后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现 （标签栏管理）"></a>6.后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现 （标签栏管理）</h1><p>1.默认有首页，不能关闭</p>
-<p>主要就是在tabs.ts的state的tabsMenuList写死,剩下的路由历史就是往这里面tabsMenuList添加数据，剩下的就在actions里面处理了，完成增加，移除，选择，路由历史的操作具体在下面</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">state: (): TabsState =&gt; (&#123;</span><br><span class="line">    tabsMenuValue: HOME_URL,</span><br><span class="line">    tabsMenuList: [&#123; title: &quot;首页&quot;, path: HOME_URL, icon: &quot;home-filled&quot;, close: false &#125;]</span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
-
-<p>2.点击侧边栏上路由菜单，判断有无存在，没有就添加同时定位到上面(也就是设置tabsMenuValue)，有就定位到上面</p>
-<p>在actions里写</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Add Tabs</span><br><span class="line">        async addTabs(tabItem: TabsOptions) &#123;</span><br><span class="line">            // not add tabs black list</span><br><span class="line">            if (TABS_BLACK_LIST.includes(tabItem.path)) return;</span><br><span class="line">            const tabInfo: TabsOptions = &#123;</span><br><span class="line">                title: tabItem.title,</span><br><span class="line">                path: tabItem.path,</span><br><span class="line">                close: tabItem.close</span><br><span class="line">            &#125;;</span><br><span class="line">            if (this.tabsMenuList.every(item =&gt; item.path !== tabItem.path)) &#123;</span><br><span class="line">                this.tabsMenuList.push(tabInfo);</span><br><span class="line">            &#125;</span><br><span class="line">            this.setTabsMenuValue(tabItem.path);</span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
-
-<p>3.关闭当前页，自动跳到上一个tag页面</p>
-<p>在actions里写</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Remove Tabs</span><br><span class="line">    async removeTabs(tabPath: string) &#123;</span><br><span class="line">        let tabsMenuValue = this.tabsMenuValue;</span><br><span class="line">        const tabsMenuList = this.tabsMenuList;</span><br><span class="line">        if (tabsMenuValue === tabPath) &#123;</span><br><span class="line">            tabsMenuList.forEach((item, index) =&gt; &#123;</span><br><span class="line">                if (item.path !== tabPath) return;</span><br><span class="line">                const nextTab = tabsMenuList[index + 1] || tabsMenuList[index - 1];</span><br><span class="line">                if (!nextTab) return;</span><br><span class="line">                tabsMenuValue = nextTab.path;</span><br><span class="line">                router.push(nextTab.path);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        this.tabsMenuValue = tabsMenuValue;</span><br><span class="line">        this.tabsMenuList = tabsMenuList.filter(item =&gt; item.path !== tabPath);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-
-<p>4.选中标签 跳转到标签对应的路由</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Change Tabs</span><br><span class="line">    async changeTabs(tabItem: TabPaneProps) &#123;</span><br><span class="line">        this.tabsMenuList.forEach(item =&gt; &#123;</span><br><span class="line">            if (item.title === tabItem.label) router.push(item.path);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;tabs-box&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;tabs-menu&quot;&gt;</span><br><span class="line">        &lt;el-tabs v-model=&quot;tabsMenuValue&quot; type=&quot;card&quot; @tab-click=&quot;tabClick&quot; @tab-remove=&quot;removeTab&quot;&gt;</span><br><span class="line">            &lt;el-tab-pane</span><br><span class="line">                v-for=&quot;item in tabsMenuList&quot;</span><br><span class="line">                :key=&quot;item.path&quot;</span><br><span class="line">                :path=&quot;item.path&quot;</span><br><span class="line">                :label=&quot;item.title&quot;</span><br><span class="line">                :name=&quot;item.path&quot;</span><br><span class="line">                :closable=&quot;item.close&quot;</span><br><span class="line">            &gt;</span><br><span class="line">                &lt;template #label&gt;</span><br><span class="line">                    &lt;el-icon class=&quot;tabs-icon&quot; v-if=&quot;item.icon&quot;&gt;</span><br><span class="line">                        &lt;component :is=&quot;item.icon&quot;&gt;&lt;/component&gt;</span><br><span class="line">                    &lt;/el-icon&gt;</span><br><span class="line">                    &#123;&#123; item.title &#125;&#125;</span><br><span class="line">                &lt;/template&gt;</span><br><span class="line">            &lt;/el-tab-pane&gt;</span><br><span class="line">        &lt;/el-tabs&gt;</span><br><span class="line">        //&lt;MoreButton /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>页面上具体使用的el-tabs实现</p>
-<p>总结：</p>
-<p>在store-&gt;modules-&gt;tabs.ts</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; defineStore &#125; from &quot;pinia&quot;;</span><br><span class="line">import &#123; TabPaneProps &#125; from &quot;element-plus&quot;;</span><br><span class="line">import &#123; TabsState &#125; from &quot;../interface&quot;;</span><br><span class="line">import &#123; HOME_URL, TABS_BLACK_LIST &#125; from &quot;@/config/config&quot;;</span><br><span class="line">import piniaPersistConfig from &quot;@/config/piniaPersist&quot;;</span><br><span class="line">import router from &quot;@/router/index&quot;;</span><br><span class="line"></span><br><span class="line">// TabsStore</span><br><span class="line">export const TabsStore = defineStore(&#123;</span><br><span class="line">    id: &quot;TabsState&quot;,</span><br><span class="line">    state: (): TabsState =&gt; (&#123;</span><br><span class="line">        tabsMenuValue: HOME_URL,</span><br><span class="line">        tabsMenuList: [&#123; title: &quot;首页&quot;, path: HOME_URL, icon: &quot;home-filled&quot;, close: false &#125;]</span><br><span class="line">    &#125;),</span><br><span class="line">    getters: &#123;&#125;,</span><br><span class="line">    actions: &#123;</span><br><span class="line">        // Add Tabs</span><br><span class="line">        async addTabs(tabItem: TabsOptions) &#123;</span><br><span class="line">            // not add tabs black list</span><br><span class="line">            if (TABS_BLACK_LIST.includes(tabItem.path)) return;</span><br><span class="line">            const tabInfo: TabsOptions = &#123;</span><br><span class="line">                title: tabItem.title,</span><br><span class="line">                path: tabItem.path,</span><br><span class="line">                close: tabItem.close</span><br><span class="line">            &#125;;</span><br><span class="line">            if (this.tabsMenuList.every(item =&gt; item.path !== tabItem.path)) &#123;</span><br><span class="line">                this.tabsMenuList.push(tabInfo);</span><br><span class="line">            &#125;</span><br><span class="line">            this.setTabsMenuValue(tabItem.path);</span><br><span class="line">        &#125;,</span><br><span class="line">        // Remove Tabs</span><br><span class="line">        async removeTabs(tabPath: string) &#123;</span><br><span class="line">            let tabsMenuValue = this.tabsMenuValue;</span><br><span class="line">            const tabsMenuList = this.tabsMenuList;</span><br><span class="line">            if (tabsMenuValue === tabPath) &#123;</span><br><span class="line">                tabsMenuList.forEach((item, index) =&gt; &#123;</span><br><span class="line">                    if (item.path !== tabPath) return;</span><br><span class="line">                    const nextTab = tabsMenuList[index + 1] || tabsMenuList[index - 1];</span><br><span class="line">                    if (!nextTab) return;</span><br><span class="line">                    tabsMenuValue = nextTab.path;</span><br><span class="line">                    router.push(nextTab.path);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">            this.tabsMenuValue = tabsMenuValue;</span><br><span class="line">            this.tabsMenuList = tabsMenuList.filter(item =&gt; item.path !== tabPath);</span><br><span class="line">        &#125;,</span><br><span class="line">        // Change Tabs</span><br><span class="line">        async changeTabs(tabItem: TabPaneProps) &#123;</span><br><span class="line">            this.tabsMenuList.forEach(item =&gt; &#123;</span><br><span class="line">                if (item.title === tabItem.label) router.push(item.path);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">        // Set TabsMenuValue</span><br><span class="line">        async setTabsMenuValue(tabsMenuValue: string) &#123;</span><br><span class="line">            this.tabsMenuValue = tabsMenuValue;</span><br><span class="line">        &#125;,</span><br><span class="line">        // Set TabsMenuList</span><br><span class="line">        async setTabsMenuList(tabsMenuList: TabsOptions[]) &#123;</span><br><span class="line">            this.tabsMenuList = tabsMenuList;</span><br><span class="line">        &#125;,</span><br><span class="line">        // Close MultipleTab</span><br><span class="line">        async closeMultipleTab(tabsMenuValue?: string) &#123;</span><br><span class="line">            this.tabsMenuList = this.tabsMenuList.filter(item =&gt; &#123;</span><br><span class="line">                return item.path === tabsMenuValue || item.path === HOME_URL;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">        // Go Home</span><br><span class="line">        async goHome() &#123;</span><br><span class="line">            router.push(HOME_URL);</span><br><span class="line">            this.tabsMenuValue = HOME_URL;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    persist: piniaPersistConfig(&quot;TabsState&quot;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="最终效果图："><a href="#最终效果图：" class="headerlink" title="最终效果图："></a>最终效果图：</h1><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db741d21a0a24e188a55a28b00466f4d~tplv-k3u1fbpfcp-watermark.image" alt="46972a97567f3ff7c445d12b442ef7b1.png"></p>
-<h1 id="gitHub地址："><a href="#gitHub地址：" class="headerlink" title="gitHub地址："></a>gitHub地址：</h1><p><a href="https://github.com/DarknessZY/zhangyao-management/tree/master">vue3学习完成的后管模板</a></p>
-]]></content>
-      <categories>
-        <category>项目搭建</category>
-      </categories>
-      <tags>
-        <tag>vite</tag>
-        <tag>vue3</tag>
-        <tag>pinia</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vite 搭建vue3项目（一）</title>
     <url>/2022/10/08/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<h1 id="一、创建项目"><a href="#一、创建项目" class="headerlink" title="一、创建项目"></a>一、创建项目</h1><h2 id="1-直接创建项目"><a href="#1-直接创建项目" class="headerlink" title="1.直接创建项目"></a>1.直接创建项目</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用 NPM:</span><br><span class="line">$ npm create vite@latest</span><br><span class="line">使用 Yarn:</span><br><span class="line">$ yarn create vite</span><br><span class="line">使用 PNPM:</span><br><span class="line">$ pnpm create vite</span><br><span class="line">然后按照提示操作即可！(选择vue，vue-ts)</span><br></pre></td></tr></table></figure>
@@ -1388,6 +1314,80 @@
 <p><a href="https://juejin.cn/post/7036745610954801166#heading-21">Vite2 + Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架</a></p>
 <p><a href="https://juejin.cn/user/3456520289517608/posts">Vue3 + Ts + ElementPlus + Vite2 从零搭建后台管理系统</a></p>
 <p><a href="https://github.com/someGenki/vue-lite-admin">禾几元老哥的github源码</a></p>
+]]></content>
+      <categories>
+        <category>项目搭建</category>
+      </categories>
+      <tags>
+        <tag>vite</tag>
+        <tag>vue3</tag>
+        <tag>pinia</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vite 搭建vue3项目（二）</title>
+    <url>/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="1-login页面和功能就不多哔哔了"><a href="#1-login页面和功能就不多哔哔了" class="headerlink" title="1.login页面和功能就不多哔哔了"></a>1.login页面和功能就不多哔哔了</h1><h1 id="2-主体布局"><a href="#2-主体布局" class="headerlink" title="2.主体布局"></a>2.主体布局</h1><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e77c74aeb743b5a9e159607d1eb0e6~tplv-k3u1fbpfcp-watermark.image" alt="dd7860edba87d1d65d1c03b81f01f4c6.png"><br>layout-&gt;index.vue</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">   &lt;el-container&gt;</span><br><span class="line">        &lt;el-aside&gt;</span><br><span class="line">            &lt;Menu /&gt;</span><br><span class="line">        &lt;/el-aside&gt;</span><br><span class="line">        &lt;el-container&gt;</span><br><span class="line">            &lt;el-header&gt;</span><br><span class="line">            &lt;/el-header&gt;</span><br><span class="line">            &lt;el-main&gt;</span><br><span class="line">            //mian开发中</span><br><span class="line">                &lt;!-- &lt;router-view v-slot=&quot;&#123; Component, route &#125;&quot;&gt;</span><br><span class="line">                    &lt;transition appear name=&quot;fade-transform&quot; mode=&quot;out-in&quot;&gt;</span><br><span class="line">                        &lt;keep-alive :include=&quot;cacheRouter&quot;&gt;</span><br><span class="line">                            &lt;component :is=&quot;Component&quot; :key=&quot;route.path&quot;&gt;&lt;/component&gt;</span><br><span class="line">                        &lt;/keep-alive&gt;</span><br><span class="line">                    &lt;/transition&gt;</span><br><span class="line">                &lt;/router-view&gt; --&gt;</span><br><span class="line">            &lt;/el-main&gt;</span><br><span class="line">            &lt;el-footer&gt;</span><br><span class="line">                &lt;Footer /&gt;</span><br><span class="line">            &lt;/el-footer&gt;</span><br><span class="line">        &lt;/el-container&gt;</span><br><span class="line">    &lt;/el-container&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import Footer from &quot;./footer/index.vue&quot;;</span><br><span class="line">import Menu from &quot;./Menu/index.vue&quot;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">    @import &quot;./index.scss&quot;;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-vite中的批量自动化导入：import-meta-globEager"><a href="#3-vite中的批量自动化导入：import-meta-globEager" class="headerlink" title="3.vite中的批量自动化导入：import.meta.globEager"></a>3.vite中的批量自动化导入：import.meta.globEager</h1><p>如果想在vite中批量导入某些文件，实现项目的模块化，vite提供的import.meta.globEager函数就很好用</p>
+<p>比如用在路由模块化：</p>
+<p>1、需求：不想把路由文件全部放在一个文件里面，找的时候要拖动很麻烦，就想着把每一个模块的路由按功能分成单个的文件</p>
+<p>2、思路：在routers文件夹内新增一个modules文件夹：里面放不同功能的routers文件，然后在vue引入的路由入口处批量导入模块化的routers</p>
+<p>3、实现：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9d6edc09e5e4e8fbb012d6155e3a5d1~tplv-k3u1fbpfcp-watermark.image" alt="87e7997f3c15921b398a37d928ac3a32.png"></p>
+<p>在router文件内批量引入modules内模块化的文件并处理：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; createRouter, createWebHashHistory, RouteRecordRaw &#125; from &quot;vue-router&quot;;</span><br><span class="line"></span><br><span class="line">// * 导入所有router</span><br><span class="line">//const metaRouters = import.meta.globEager(&quot;./modules/*.ts&quot;);</span><br><span class="line">//最新vite应该是弃用了上面的，用下面的</span><br><span class="line">const metaRouters:any = import.meta.glob(&#x27;./modules/*.ts&#x27;, &#123; eager: true &#125;)</span><br><span class="line">// * 处理路由表</span><br><span class="line">export const routerArray: RouteRecordRaw[] = [];</span><br><span class="line">Object.keys(metaRouters).forEach(item =&gt; &#123;</span><br><span class="line">    Object.keys(metaRouters[item]).forEach((key: any) =&gt; &#123;</span><br><span class="line">    //	routerArray.push(...metaRouters[item][key]);</span><br><span class="line">    routerArray.push(metaRouters[item][key]);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @description 路由配置简介</span><br><span class="line"> * @param path ==&gt; 路由路径</span><br><span class="line"> * @param name ==&gt; 路由名称</span><br><span class="line"> * @param redirect ==&gt; 路由重定向</span><br><span class="line"> * @param component ==&gt; 路由组件</span><br><span class="line"> * @param meta ==&gt; 路由元信息</span><br><span class="line"> * @param meta.requireAuth ==&gt; 是否需要权限验证</span><br><span class="line"> * @param meta.keepAlive ==&gt; 是否需要缓存该路由</span><br><span class="line"> * @param meta.title ==&gt; 路由标题</span><br><span class="line"> * @param meta.key	==&gt; 路由key,用来匹配按钮权限</span><br><span class="line"> * */</span><br><span class="line">const routes: RouteRecordRaw[] = [</span><br><span class="line">  ...routerArray,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">const router = createRouter(&#123;</span><br><span class="line">    history: createWebHashHistory(),</span><br><span class="line">    routes,</span><br><span class="line">    strict: false,</span><br><span class="line">    // 切换页面，滚动到最顶部</span><br><span class="line">    scrollBehavior: () =&gt; (&#123; left: 0, top: 0 &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">export default router;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意 再使用时出现import.meta.globEager(“./modules/*.ts”);报错说什么弃用了，</strong></p>
+<p><strong>去源码看标注：已弃用，使用这个什么代替</strong></p>
+<p><strong>@deprecated Use <code>import.meta.glob(&#39;*&#39;, &#123; eager: true &#125;)</code> instead</strong></p>
+<h1 id="4-侧边栏的开发和header里的侧边栏折叠-底部栏就不多bb"><a href="#4-侧边栏的开发和header里的侧边栏折叠-底部栏就不多bb" class="headerlink" title="4.侧边栏的开发和header里的侧边栏折叠(底部栏就不多bb)"></a>4.侧边栏的开发和header里的侧边栏折叠(底部栏就不多bb)</h1><h2 id="侧边栏的开发"><a href="#侧边栏的开发" class="headerlink" title="侧边栏的开发"></a><strong>侧边栏的开发</strong></h2><p>主要是分为两部分，一部分是logo，一部分是路由菜单</p>
+<p>logo是图片加文字，文字根据侧边栏折叠是否展示</p>
+<p><strong>路由菜单</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-scrollbar&gt;</span><br><span class="line">        &lt;el-menu</span><br><span class="line">            :default-active=&quot;activeMenu&quot;</span><br><span class="line">            :router=&quot;true&quot;</span><br><span class="line">            :collapse=&quot;isCollapse&quot;</span><br><span class="line">            :collapse-transition=&quot;false&quot;</span><br><span class="line">            :unique-opened=&quot;true&quot;</span><br><span class="line">            background-color=&quot;#191a20&quot;</span><br><span class="line">            text-color=&quot;#bdbdc0&quot;</span><br><span class="line">            active-text-color=&quot;#fff&quot;</span><br><span class="line">        &gt;</span><br><span class="line">          //菜单项</span><br><span class="line">            &lt;SubItem :menuList=&quot;menuList&quot; /&gt;</span><br><span class="line">        &lt;/el-menu&gt;</span><br><span class="line">    &lt;/el-scrollbar&gt;</span><br></pre></td></tr></table></figure>
+
+<p>首先需要获取菜单列表，一般是调用接口根据登录的这个用户的权限获取列表接口，暂时用得请求的json模拟后台接口数据，把菜单数据存到pinia中</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">onMounted(async () =&gt; &#123;</span><br><span class="line">    // 获取菜单列表</span><br><span class="line">    loading.value = true;</span><br><span class="line">    try &#123;</span><br><span class="line">        const res = await getMenuList();</span><br><span class="line">        if (!res.data) return;</span><br><span class="line">        // 把路由菜单处理成一维数组（存储到 pinia 中）</span><br><span class="line">        const dynamicRouter = handleRouter(res.data);</span><br><span class="line">        authStore.setAuthRouter(dynamicRouter);</span><br><span class="line">        menuStore.setMenuList(res.data);</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        loading.value = false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>然后需要有默认激活菜单的index和菜单是否折叠 获取pinia里存着的菜单数据</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//默认激活菜单的 index，当前路由对象的路径</span><br><span class="line">const activeMenu = computed((): string =&gt; route.path);</span><br><span class="line">//菜单是否折叠</span><br><span class="line">const isCollapse = computed((): boolean =&gt; menuStore.isCollapse);</span><br><span class="line">//菜单数据</span><br><span class="line">const menuList = computed((): Menu.MenuOptions[] =&gt; menuStore.menuList);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 监听窗口大小变化，折叠侧边栏</span><br><span class="line">const screenWidth = ref&lt;number&gt;(0);</span><br><span class="line">const listeningWindow = () =&gt; &#123;</span><br><span class="line">    window.onresize = () =&gt; &#123;</span><br><span class="line">        return (() =&gt; &#123;</span><br><span class="line">            screenWidth.value = document.body.clientWidth;</span><br><span class="line">            if (isCollapse.value === false &amp;&amp; screenWidth.value &lt; 1200) menuStore.setCollapse();</span><br><span class="line">            if (isCollapse.value === true &amp;&amp; screenWidth.value &gt; 1200) menuStore.setCollapse();</span><br><span class="line">        &#125;)();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">listeningWindow();</span><br></pre></td></tr></table></figure>
+
+<p>菜单项就是遍历菜单数据展示路由菜单信息（子组件需要defineProps&lt;{ menuList: Menu.MenuOptions[] }&gt;();）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template v-for=&quot;subItem in menuList&quot; :key=&quot;subItem.path&quot;&gt;</span><br><span class="line">        &lt;el-sub-menu v-if=&quot;subItem.children &amp;&amp; subItem.children.length &gt; 0&quot; :index=&quot;subItem.path&quot;&gt;</span><br><span class="line">            &lt;template #title&gt;</span><br><span class="line">                &lt;el-icon&gt;</span><br><span class="line">                    &lt;component :is=&quot;subItem.icon&quot;&gt;&lt;/component&gt;</span><br><span class="line">                &lt;/el-icon&gt;</span><br><span class="line">                &lt;span&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/span&gt;</span><br><span class="line">            &lt;/template&gt;</span><br><span class="line">            &lt;SubItem :menuList=&quot;subItem.children&quot; /&gt;</span><br><span class="line">        &lt;/el-sub-menu&gt;</span><br><span class="line">        &lt;el-menu-item v-else :index=&quot;subItem.path&quot;&gt;</span><br><span class="line">            &lt;el-icon&gt;</span><br><span class="line">                &lt;component :is=&quot;subItem.icon&quot;&gt;&lt;/component&gt;</span><br><span class="line">            &lt;/el-icon&gt;</span><br><span class="line">            &lt;template v-if=&quot;!subItem.isLink&quot; #title&gt;</span><br><span class="line">                &lt;span&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/span&gt;</span><br><span class="line">            &lt;/template&gt;</span><br><span class="line">            &lt;template v-else #title&gt;</span><br><span class="line">                &lt;a class=&quot;menu-href&quot; :href=&quot;subItem.isLink&quot; target=&quot;_blank&quot;&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/a&gt;</span><br><span class="line">            &lt;/template&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">defineProps&lt;&#123; menuList: Menu.MenuOptions[] &#125;&gt;();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="header里的侧边栏折叠开发"><a href="#header里的侧边栏折叠开发" class="headerlink" title="header里的侧边栏折叠开发"></a>header里的侧边栏折叠开发</h2><p>监控屏幕宽度或点击叠判断是否折叠</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//菜单是否折叠</span><br><span class="line">const isCollapse = computed((): boolean =&gt; menuStore.isCollapse);</span><br><span class="line">//菜单数据</span><br><span class="line">const menuList = computed((): Menu.MenuOptions[] =&gt; menuStore.menuList);</span><br><span class="line">// 监听窗口大小变化，合并 aside</span><br><span class="line">const screenWidth = ref&lt;number&gt;(0);</span><br><span class="line">const listeningWindow = () =&gt; &#123;</span><br><span class="line">    window.onresize = () =&gt; &#123;</span><br><span class="line">        return (() =&gt; &#123;</span><br><span class="line">            screenWidth.value = document.body.clientWidth;</span><br><span class="line">            if (isCollapse.value === false &amp;&amp; screenWidth.value &lt; 1200) menuStore.setCollapse();</span><br><span class="line">            if (isCollapse.value === true &amp;&amp; screenWidth.value &gt; 1200) menuStore.setCollapse();</span><br><span class="line">        &#125;)();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="5-vue-router-利用-route-的-matched-属性实现面包屑效果"><a href="#5-vue-router-利用-route-的-matched-属性实现面包屑效果" class="headerlink" title="5.vue-router 利用 $route 的 matched 属性实现面包屑效果"></a>5.vue-router 利用 $route 的 matched 属性实现面包屑效果</h1><p><strong>matched 顾名思义 就是 匹配，假如我们目前的路由是/a/aa-01，那么此时 this.$route.matched匹配到的会是一个数组，包含 ‘/‘，’/a’，’/a/aa-01’，这三个path的路由信息。然后我们可以直接利用路由信息渲染我们的面包屑导航。</strong></p>
+<p>布局需要使用到el-breadcrumb ，和transition-group</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;el-breadcrumb :separator-icon=&quot;ArrowRight&quot;&gt;</span><br><span class="line">        &lt;transition-group name=&quot;breadcrumb&quot; mode=&quot;out-in&quot;&gt;</span><br><span class="line">            &lt;el-breadcrumb-item :to=&quot;&#123; path: HOME_URL &#125;&quot; key=&quot;/home&quot;&gt;首页&lt;/el-breadcrumb-item&gt;</span><br><span class="line">            &lt;el-breadcrumb-item v-for=&quot;item in matched&quot; :key=&quot;item.path&quot; :to=&quot;&#123; path: item.path &#125;&quot;&gt;</span><br><span class="line">                &#123;&#123; item.meta.title &#125;&#125;</span><br><span class="line">            &lt;/el-breadcrumb-item&gt;</span><br><span class="line">        &lt;/transition-group&gt;</span><br><span class="line">    &lt;/el-breadcrumb&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; computed &#125; from &quot;vue&quot;;</span><br><span class="line">import &#123; useRoute &#125; from &quot;vue-router&quot;;</span><br><span class="line">import &#123; ArrowRight &#125; from &quot;@element-plus/icons-vue&quot;;</span><br><span class="line">import &#123; HOME_URL &#125; from &quot;@/config/config&quot;;</span><br><span class="line">const route = useRoute();</span><br><span class="line"></span><br><span class="line">const matched = computed(() =&gt; route.matched.filter(item =&gt;item.meta &amp;&amp; item.meta.title &amp;&amp; item.meta.title !== &quot;首页&quot;));</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>TransitionGroup# 是一个内置组件，用于对 v-for 列表中的元素或组件的插入、移除和顺序改变添加动画效果。这样每次选择侧边栏的路由时，面包屑导航这边就感觉比较平滑的展示</p>
+<h1 id="6-后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现-（标签栏管理）"><a href="#6-后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现-（标签栏管理）" class="headerlink" title="6.后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现 （标签栏管理）"></a>6.后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现 （标签栏管理）</h1><p>1.默认有首页，不能关闭</p>
+<p>主要就是在tabs.ts的state的tabsMenuList写死,剩下的路由历史就是往这里面tabsMenuList添加数据，剩下的就在actions里面处理了，完成增加，移除，选择，路由历史的操作具体在下面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">state: (): TabsState =&gt; (&#123;</span><br><span class="line">    tabsMenuValue: HOME_URL,</span><br><span class="line">    tabsMenuList: [&#123; title: &quot;首页&quot;, path: HOME_URL, icon: &quot;home-filled&quot;, close: false &#125;]</span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
+
+<p>2.点击侧边栏上路由菜单，判断有无存在，没有就添加同时定位到上面(也就是设置tabsMenuValue)，有就定位到上面</p>
+<p>在actions里写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Add Tabs</span><br><span class="line">        async addTabs(tabItem: TabsOptions) &#123;</span><br><span class="line">            // not add tabs black list</span><br><span class="line">            if (TABS_BLACK_LIST.includes(tabItem.path)) return;</span><br><span class="line">            const tabInfo: TabsOptions = &#123;</span><br><span class="line">                title: tabItem.title,</span><br><span class="line">                path: tabItem.path,</span><br><span class="line">                close: tabItem.close</span><br><span class="line">            &#125;;</span><br><span class="line">            if (this.tabsMenuList.every(item =&gt; item.path !== tabItem.path)) &#123;</span><br><span class="line">                this.tabsMenuList.push(tabInfo);</span><br><span class="line">            &#125;</span><br><span class="line">            this.setTabsMenuValue(tabItem.path);</span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>3.关闭当前页，自动跳到上一个tag页面</p>
+<p>在actions里写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Remove Tabs</span><br><span class="line">    async removeTabs(tabPath: string) &#123;</span><br><span class="line">        let tabsMenuValue = this.tabsMenuValue;</span><br><span class="line">        const tabsMenuList = this.tabsMenuList;</span><br><span class="line">        if (tabsMenuValue === tabPath) &#123;</span><br><span class="line">            tabsMenuList.forEach((item, index) =&gt; &#123;</span><br><span class="line">                if (item.path !== tabPath) return;</span><br><span class="line">                const nextTab = tabsMenuList[index + 1] || tabsMenuList[index - 1];</span><br><span class="line">                if (!nextTab) return;</span><br><span class="line">                tabsMenuValue = nextTab.path;</span><br><span class="line">                router.push(nextTab.path);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        this.tabsMenuValue = tabsMenuValue;</span><br><span class="line">        this.tabsMenuList = tabsMenuList.filter(item =&gt; item.path !== tabPath);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>4.选中标签 跳转到标签对应的路由</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Change Tabs</span><br><span class="line">    async changeTabs(tabItem: TabPaneProps) &#123;</span><br><span class="line">        this.tabsMenuList.forEach(item =&gt; &#123;</span><br><span class="line">            if (item.title === tabItem.label) router.push(item.path);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;tabs-box&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;tabs-menu&quot;&gt;</span><br><span class="line">        &lt;el-tabs v-model=&quot;tabsMenuValue&quot; type=&quot;card&quot; @tab-click=&quot;tabClick&quot; @tab-remove=&quot;removeTab&quot;&gt;</span><br><span class="line">            &lt;el-tab-pane</span><br><span class="line">                v-for=&quot;item in tabsMenuList&quot;</span><br><span class="line">                :key=&quot;item.path&quot;</span><br><span class="line">                :path=&quot;item.path&quot;</span><br><span class="line">                :label=&quot;item.title&quot;</span><br><span class="line">                :name=&quot;item.path&quot;</span><br><span class="line">                :closable=&quot;item.close&quot;</span><br><span class="line">            &gt;</span><br><span class="line">                &lt;template #label&gt;</span><br><span class="line">                    &lt;el-icon class=&quot;tabs-icon&quot; v-if=&quot;item.icon&quot;&gt;</span><br><span class="line">                        &lt;component :is=&quot;item.icon&quot;&gt;&lt;/component&gt;</span><br><span class="line">                    &lt;/el-icon&gt;</span><br><span class="line">                    &#123;&#123; item.title &#125;&#125;</span><br><span class="line">                &lt;/template&gt;</span><br><span class="line">            &lt;/el-tab-pane&gt;</span><br><span class="line">        &lt;/el-tabs&gt;</span><br><span class="line">        //&lt;MoreButton /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>页面上具体使用的el-tabs实现</p>
+<p>总结：</p>
+<p>在store-&gt;modules-&gt;tabs.ts</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; defineStore &#125; from &quot;pinia&quot;;</span><br><span class="line">import &#123; TabPaneProps &#125; from &quot;element-plus&quot;;</span><br><span class="line">import &#123; TabsState &#125; from &quot;../interface&quot;;</span><br><span class="line">import &#123; HOME_URL, TABS_BLACK_LIST &#125; from &quot;@/config/config&quot;;</span><br><span class="line">import piniaPersistConfig from &quot;@/config/piniaPersist&quot;;</span><br><span class="line">import router from &quot;@/router/index&quot;;</span><br><span class="line"></span><br><span class="line">// TabsStore</span><br><span class="line">export const TabsStore = defineStore(&#123;</span><br><span class="line">    id: &quot;TabsState&quot;,</span><br><span class="line">    state: (): TabsState =&gt; (&#123;</span><br><span class="line">        tabsMenuValue: HOME_URL,</span><br><span class="line">        tabsMenuList: [&#123; title: &quot;首页&quot;, path: HOME_URL, icon: &quot;home-filled&quot;, close: false &#125;]</span><br><span class="line">    &#125;),</span><br><span class="line">    getters: &#123;&#125;,</span><br><span class="line">    actions: &#123;</span><br><span class="line">        // Add Tabs</span><br><span class="line">        async addTabs(tabItem: TabsOptions) &#123;</span><br><span class="line">            // not add tabs black list</span><br><span class="line">            if (TABS_BLACK_LIST.includes(tabItem.path)) return;</span><br><span class="line">            const tabInfo: TabsOptions = &#123;</span><br><span class="line">                title: tabItem.title,</span><br><span class="line">                path: tabItem.path,</span><br><span class="line">                close: tabItem.close</span><br><span class="line">            &#125;;</span><br><span class="line">            if (this.tabsMenuList.every(item =&gt; item.path !== tabItem.path)) &#123;</span><br><span class="line">                this.tabsMenuList.push(tabInfo);</span><br><span class="line">            &#125;</span><br><span class="line">            this.setTabsMenuValue(tabItem.path);</span><br><span class="line">        &#125;,</span><br><span class="line">        // Remove Tabs</span><br><span class="line">        async removeTabs(tabPath: string) &#123;</span><br><span class="line">            let tabsMenuValue = this.tabsMenuValue;</span><br><span class="line">            const tabsMenuList = this.tabsMenuList;</span><br><span class="line">            if (tabsMenuValue === tabPath) &#123;</span><br><span class="line">                tabsMenuList.forEach((item, index) =&gt; &#123;</span><br><span class="line">                    if (item.path !== tabPath) return;</span><br><span class="line">                    const nextTab = tabsMenuList[index + 1] || tabsMenuList[index - 1];</span><br><span class="line">                    if (!nextTab) return;</span><br><span class="line">                    tabsMenuValue = nextTab.path;</span><br><span class="line">                    router.push(nextTab.path);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">            this.tabsMenuValue = tabsMenuValue;</span><br><span class="line">            this.tabsMenuList = tabsMenuList.filter(item =&gt; item.path !== tabPath);</span><br><span class="line">        &#125;,</span><br><span class="line">        // Change Tabs</span><br><span class="line">        async changeTabs(tabItem: TabPaneProps) &#123;</span><br><span class="line">            this.tabsMenuList.forEach(item =&gt; &#123;</span><br><span class="line">                if (item.title === tabItem.label) router.push(item.path);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">        // Set TabsMenuValue</span><br><span class="line">        async setTabsMenuValue(tabsMenuValue: string) &#123;</span><br><span class="line">            this.tabsMenuValue = tabsMenuValue;</span><br><span class="line">        &#125;,</span><br><span class="line">        // Set TabsMenuList</span><br><span class="line">        async setTabsMenuList(tabsMenuList: TabsOptions[]) &#123;</span><br><span class="line">            this.tabsMenuList = tabsMenuList;</span><br><span class="line">        &#125;,</span><br><span class="line">        // Close MultipleTab</span><br><span class="line">        async closeMultipleTab(tabsMenuValue?: string) &#123;</span><br><span class="line">            this.tabsMenuList = this.tabsMenuList.filter(item =&gt; &#123;</span><br><span class="line">                return item.path === tabsMenuValue || item.path === HOME_URL;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">        // Go Home</span><br><span class="line">        async goHome() &#123;</span><br><span class="line">            router.push(HOME_URL);</span><br><span class="line">            this.tabsMenuValue = HOME_URL;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    persist: piniaPersistConfig(&quot;TabsState&quot;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="最终效果图："><a href="#最终效果图：" class="headerlink" title="最终效果图："></a>最终效果图：</h1><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db741d21a0a24e188a55a28b00466f4d~tplv-k3u1fbpfcp-watermark.image" alt="46972a97567f3ff7c445d12b442ef7b1.png"></p>
+<h1 id="gitHub地址："><a href="#gitHub地址：" class="headerlink" title="gitHub地址："></a>gitHub地址：</h1><p><a href="https://github.com/DarknessZY/zhangyao-management/tree/master">vue3学习完成的后管模板</a></p>
 ]]></content>
       <categories>
         <category>项目搭建</category>
