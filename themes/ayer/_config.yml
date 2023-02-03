@@ -246,3 +246,66 @@ twikoo:
 lock:
   enable: false
   password: 123456
+
+#压缩 加载优化
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css  
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/jquery.fancybox.pack.js'
+    - '**/index.js'
+
+#首屏加载优化
+lazyload:
+  enable: true
+
+#启用all_minifier
+all_minifier: true
+# html压缩
+html_minifier:
+  enable: true
+  ignore_error: false
+  exclude:
+
+# css压缩
+css_minifier:
+  enable: true
+  exclude:
+    - '*.min.css'
+    
+# js压缩
+js_minifier:
+  enable: true
+  mangle: true
+  compress:
+  exclude:
+    - '*.min.js'
+js_concator:
+  enable: false
+  bundle_path: '/js/bundle.js'
+  front: false
+  silent: false
+
+# 图片优化
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
