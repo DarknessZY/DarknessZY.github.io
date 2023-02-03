@@ -28,7 +28,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;前端打印功能的实现&quot;&gt;&lt;a href=&quot;#前端打印功能的实现&quot; class=&quot;headerlink&quot; title=&quot;前端打印功能的实现&quot;&gt;&lt;/a&gt;前端打印功能的实现&lt;/h1&gt;&lt;h2 id=&quot;1-安装与使用&quot;&gt;&lt;a href=&quot;#1-安装与使用&quot;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前端打印功能的实现&quot;&gt;&lt;a href=&quot;#前端打印功能的实现&quot; class=&quot;headerlink&quot; title=&quot;前端打印功能的实现&quot;&gt;&lt;/a&gt;前端打印功能的实现&lt;/h1&gt;&lt;h2 id=&quot;1-安装与使用&quot;&gt;&lt;a</summary>
         
       
     
@@ -53,7 +53,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一-移动端适配和适配后内联样式没有生效&quot;&gt;&lt;a href=&quot;#一-移动端适配和适配后内联样式没有生效&quot; class=&quot;headerlink&quot; title=&quot;一.移动端适配和适配后内联样式没有生效&quot;&gt;&lt;/a&gt;一.移动端适配和适配后内联样式没有生效&lt;/h1&gt;&lt;h2</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一-移动端适配和适配后内联样式没有生效&quot;&gt;&lt;a href=&quot;#一-移动端适配和适配后内联样式没有生效&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -78,10 +78,8 @@
       
         
         
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;前言：&lt;br&gt;  了解浏览器相关原理，自己也在掘金，csdn，知乎上看了别人的文章，觉得部分内容对我有益，复制下来做了下笔记，如有雷同，纯属c+v（手动狗头）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;一、浏览器种类&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;前言：&lt;br&gt; </summary>
         
       
     
@@ -106,7 +104,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、三者的异同&quot;&gt;&lt;a href=&quot;#一、三者的异同&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、三者的异同&quot;&gt;&lt;a href=&quot;#一、三者的异同&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -131,7 +129,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;css滚动条&quot;&gt;&lt;a href=&quot;#css滚动条&quot; class=&quot;headerlink&quot; title=&quot;css滚动条&quot;&gt;&lt;/a&gt;css滚动条&lt;/h1&gt;&lt;p&gt;相关样式属性说明（详情查看图片，序号一一对应）</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;css滚动条&quot;&gt;&lt;a href=&quot;#css滚动条&quot; class=&quot;headerlink&quot; title=&quot;css滚动条&quot;&gt;&lt;/a&gt;css滚动条&lt;/h1&gt;&lt;p&gt;相关样式属性说明（详情查看图片，序号一一对应）</summary>
         
       
     
@@ -156,7 +154,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;React-JSX&quot;&gt;&lt;a href=&quot;#React-JSX&quot; class=&quot;headerlink&quot; title=&quot;React JSX&quot;&gt;&lt;/a&gt;React JSX&lt;/h1&gt;&lt;p&gt;全称：javascript</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;React-JSX&quot;&gt;&lt;a href=&quot;#React-JSX&quot; class=&quot;headerlink&quot; title=&quot;React JSX&quot;&gt;&lt;/a&gt;React JSX&lt;/h1&gt;&lt;p&gt;全称：javascript</summary>
         
       
     
@@ -181,7 +179,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -206,7 +204,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;​    了解JavaScript</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;​    了解JavaScript</summary>
         
       
     
@@ -233,7 +231,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;1-login页面和功能就不多哔哔了&quot;&gt;&lt;a href=&quot;#1-login页面和功能就不多哔哔了&quot; class=&quot;headerlink&quot; title=&quot;1.login页面和功能就不多哔哔了&quot;&gt;&lt;/a&gt;1.login页面和功能就不多哔哔了&lt;/h1&gt;&lt;h1</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;1-login页面和功能就不多哔哔了&quot;&gt;&lt;a href=&quot;#1-login页面和功能就不多哔哔了&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -262,7 +260,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、日期小组件&quot;&gt;&lt;a href=&quot;#一、日期小组件&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、日期小组件&quot;&gt;&lt;a href=&quot;#一、日期小组件&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -287,7 +285,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、hexo框架的主题使用valine&quot;&gt;&lt;a href=&quot;#一、hexo框架的主题使用valine&quot; class=&quot;headerlink&quot; title=&quot;一、hexo框架的主题使用valine&quot;&gt;&lt;/a&gt;一、hexo框架的主题使用valine&lt;/h1&gt;&lt;h2</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、hexo框架的主题使用valine&quot;&gt;&lt;a href=&quot;#一、hexo框架的主题使用valine&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -314,7 +312,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、创建项目&quot;&gt;&lt;a href=&quot;#一、创建项目&quot; class=&quot;headerlink&quot; title=&quot;一、创建项目&quot;&gt;&lt;/a&gt;一、创建项目&lt;/h1&gt;&lt;h2 id=&quot;1-直接创建项目&quot;&gt;&lt;a href=&quot;#1-直接创建项目&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、创建项目&quot;&gt;&lt;a href=&quot;#一、创建项目&quot; class=&quot;headerlink&quot; title=&quot;一、创建项目&quot;&gt;&lt;/a&gt;一、创建项目&lt;/h1&gt;&lt;h2 id=&quot;1-直接创建项目&quot;&gt;&lt;a</summary>
         
       
     
@@ -343,7 +341,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、git基础&quot;&gt;&lt;a href=&quot;#一、git基础&quot; class=&quot;headerlink&quot; title=&quot;一、git基础&quot;&gt;&lt;/a&gt;一、git基础&lt;/h1&gt;&lt;h2 id=&quot;重新下载git后&quot;&gt;&lt;a href=&quot;#重新下载git后&quot;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、git基础&quot;&gt;&lt;a href=&quot;#一、git基础&quot; class=&quot;headerlink&quot; title=&quot;一、git基础&quot;&gt;&lt;/a&gt;一、git基础&lt;/h1&gt;&lt;h2 id=&quot;重新下载git后&quot;&gt;&lt;a</summary>
         
       
     
@@ -370,7 +368,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、什么是路由？&quot;&gt;&lt;a href=&quot;#一、什么是路由？&quot; class=&quot;headerlink&quot; title=&quot;一、什么是路由？&quot;&gt;&lt;/a&gt;一、什么是路由？&lt;/h1&gt;&lt;p&gt;路由的概念起源于服务端，在以前前后端不分离的时候，由后端来控制路由，当接收到客户端发来的 </summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、什么是路由？&quot;&gt;&lt;a href=&quot;#一、什么是路由？&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -397,7 +395,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;关于我页面搭建&quot;&gt;&lt;a href=&quot;#关于我页面搭建&quot; class=&quot;headerlink&quot; title=&quot;关于我页面搭建&quot;&gt;&lt;/a&gt;关于我页面搭建&lt;/h1&gt;&lt;h2 id=&quot;相关链接&quot;&gt;&lt;a href=&quot;#相关链接&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;关于我页面搭建&quot;&gt;&lt;a href=&quot;#关于我页面搭建&quot; class=&quot;headerlink&quot; title=&quot;关于我页面搭建&quot;&gt;&lt;/a&gt;关于我页面搭建&lt;/h1&gt;&lt;h2 id=&quot;相关链接&quot;&gt;&lt;a</summary>
         
       
     
@@ -424,7 +422,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、CSS样式兼容&quot;&gt;&lt;a href=&quot;#一、CSS样式兼容&quot; class=&quot;headerlink&quot; title=&quot;一、CSS样式兼容&quot;&gt;&lt;/a&gt;一、CSS样式兼容&lt;/h1&gt;&lt;h2 id=&quot;1-border移动端兼容&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、CSS样式兼容&quot;&gt;&lt;a href=&quot;#一、CSS样式兼容&quot; class=&quot;headerlink&quot; title=&quot;一、CSS样式兼容&quot;&gt;&lt;/a&gt;一、CSS样式兼容&lt;/h1&gt;&lt;h2</summary>
         
       
     
@@ -449,7 +447,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别&quot;&gt;&lt;a href=&quot;#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别&quot; class=&quot;headerlink&quot; title=&quot;一、npm 安装中的</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别&quot;&gt;&lt;a href=&quot;#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别&quot;</summary>
         
       
     
@@ -476,7 +474,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;我们利用 Hexo</summary>
         
       
@@ -504,7 +502,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、更换-Hexo-博客主题&quot;&gt;&lt;a href=&quot;#一、更换-Hexo-博客主题&quot; class=&quot;headerlink&quot; title=&quot;一、更换 Hexo 博客主题&quot;&gt;&lt;/a&gt;一、更换 Hexo 博客主题&lt;/h1&gt;&lt;h2 id=&quot;1-如何找主题&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、更换-Hexo-博客主题&quot;&gt;&lt;a href=&quot;#一、更换-Hexo-博客主题&quot; class=&quot;headerlink&quot; title=&quot;一、更换 Hexo 博客主题&quot;&gt;&lt;/a&gt;一、更换 Hexo</summary>
         
       
     
@@ -531,7 +529,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一、hexo框架&quot;&gt;&lt;a href=&quot;#一、hexo框架&quot; class=&quot;headerlink&quot; title=&quot;一、hexo框架&quot;&gt;&lt;/a&gt;一、hexo框架&lt;/h1&gt;&lt;h2 id=&quot;1-什么是-Hexo？&quot;&gt;&lt;a href=&quot;#1-什么是-Hexo？&quot;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、hexo框架&quot;&gt;&lt;a href=&quot;#一、hexo框架&quot; class=&quot;headerlink&quot; title=&quot;一、hexo框架&quot;&gt;&lt;/a&gt;一、hexo框架&lt;/h1&gt;&lt;h2 id=&quot;1-什么是-Hexo？&quot;&gt;&lt;a</summary>
         
       
     
