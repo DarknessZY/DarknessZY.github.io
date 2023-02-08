@@ -23,14 +23,17 @@ subtitle:
   showCursor: true # 是否显示光标
 
 # 网站图标和侧边栏logo
-favicon: /favicon.ico
-logo: /favicon.ico
+# favicon: /favicon.ico
+# logo: /favicon.ico
+favicon: /mytouxiang.gif
+logo: /mytouxiang.gif
+
 
 # 封面配置
 # enable-是否启用封面；path-封面背景图；logo-封面logo
 cover:
   enable: true
-  path: /images/bg.png 
+  path: /images/bg.png
   logo: false
 
 # 页面顶部进度条
