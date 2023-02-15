@@ -173,19 +173,19 @@ mermaid:
   theme: forest
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
-since: ''
+since: '2023'
 
 # ICP备案信息尾部显示
 icp:
-  enable: false
+  enable: true
   url: "https://beian.miit.gov.cn/" # 备案链接
-  text: "浙ICP备88888888" # 备案信息
+  text: "京ICP备2023001417号" # 备案信息
 # 公安备案信息尾部显示
 gongan:
-  enable: false
+  enable: true
   img: /images/beian.png #公安备案图片
-  url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" #公安备案链接
-  text: "浙公网安备01234567890123号" #公安备案信息
+  url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42098402000202" #公安备案链接
+  text: "鄂公网安备 42098402000202号" #公安备案信息
 
 # 友情链接
 friends_link:
