@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-10T07:45:41.496Z</updated>
+  <updated>2023-02-17T08:36:45.297Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用的css函数式伪类</title>
+    <link href="http://example.com/2023/02/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%87%BD%E6%95%B0%E5%BC%8F%E4%BC%AA%E7%B1%BB/"/>
+    <id>http://example.com/2023/02/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%87%BD%E6%95%B0%E5%BC%8F%E4%BC%AA%E7%B1%BB/</id>
+    <published>2023-02-17T08:36:00.000Z</published>
+    <updated>2023-02-17T08:36:45.297Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt; 能用css一步解决的，尽量少用js，一些合适的 CSS</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="伪类" scheme="http://example.com/tags/%E4%BC%AA%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>js常用方法</title>
@@ -512,33 +540,6 @@
     <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     <category term="同步管理" scheme="http://example.com/tags/%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始搭建博客(二)——hexo主题搭建</title>
-    <link href="http://example.com/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/"/>
-    <id>http://example.com/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</id>
-    <published>2022-09-22T12:00:00.000Z</published>
-    <updated>2023-01-12T08:28:47.794Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、更换-Hexo-博客主题&quot;&gt;&lt;a href=&quot;#一、更换-Hexo-博客主题&quot; class=&quot;headerlink&quot; title=&quot;一、更换 Hexo 博客主题&quot;&gt;&lt;/a&gt;一、更换 Hexo</summary>
-        
-      
-    
-    
-    
-    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    <category term="hexo框架" scheme="http://example.com/tags/hexo%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   
