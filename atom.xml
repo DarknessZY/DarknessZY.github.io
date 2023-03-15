@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-01T10:12:53.430Z</updated>
+  <updated>2023-03-15T05:35:22.905Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NestJS 建项目</title>
+    <link href="http://example.com/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/"/>
+    <id>http://example.com/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/</id>
+    <published>2023-03-15T05:30:00.000Z</published>
+    <updated>2023-03-15T05:35:22.905Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;学习NestJS，主要看了&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="Nest" scheme="http://example.com/tags/Nest/"/>
+    
+  </entry>
   
   <entry>
     <title>在开发h5移动端项目（v3+vant3+pinia+vite）时遇到的问题总结(二)</title>
@@ -275,7 +301,7 @@
     <link href="http://example.com/2022/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/JavaScript%20%E5%BC%82%E6%AD%A5%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0/"/>
     <id>http://example.com/2022/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/JavaScript%20%E5%BC%82%E6%AD%A5%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0/</id>
     <published>2022-11-10T05:30:00.000Z</published>
-    <updated>2022-11-10T09:57:19.324Z</updated>
+    <updated>2023-03-15T05:35:08.305Z</updated>
     
     
       
@@ -510,33 +536,6 @@
     
     
     <category term="前端兼容" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E5%85%BC%E5%AE%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm随笔</title>
-    <link href="http://example.com/2022/09/26/npm%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://example.com/2022/09/26/npm%E5%AD%A6%E4%B9%A0/</id>
-    <published>2022-09-26T05:12:00.000Z</published>
-    <updated>2022-10-14T01:26:45.301Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别&quot;&gt;&lt;a href=&quot;#一、npm-安装中的-i、-g、–save、–save-dev、-D、-S的区别&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="npm" scheme="http://example.com/tags/npm/"/>
     
   </entry>
   
