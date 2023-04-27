@@ -2,7 +2,7 @@
 title: NestJS 建项目
 date: 2023-03-15 13:30
 tags: [Nest]
-categories: [前端随笔,项目搭建]
+categories: [项目搭建]
 ---
 
 # 前言
