@@ -43,14 +43,6 @@ Demo 示例：[闪烁之狐](http://blinkfox.com/)
 
 GitHub 主页：[hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery)
 
-- **butterfly**
-
-Demo 示例： [Butterfly](https://butterfly.js.org/) | [JerryC](https://jerryc.me/)
-
-GitHub 主页：[hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
-
-
-
 本菜鸟使用的主题就是以简约为主：
 
 - **ayer**
