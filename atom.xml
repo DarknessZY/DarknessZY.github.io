@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-20T06:15:04.465Z</updated>
+  <updated>2023-05-11T02:56:02.060Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ECMAScript 6 异步编程</title>
+    <link href="http://example.com/2023/05/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/ECMAScript%206%20%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/"/>
+    <id>http://example.com/2023/05/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/ECMAScript%206%20%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</id>
+    <published>2023-05-11T02:45:00.000Z</published>
+    <updated>2023-05-11T02:56:02.060Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt; 观&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>常用数据处理方法（例如对象清空，浮点数计算等）</title>
@@ -509,33 +535,6 @@
     <category term="git" scheme="http://example.com/tags/git/"/>
     
     <category term="前端随笔" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端路由随笔</title>
-    <link href="http://example.com/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://example.com/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/</id>
-    <published>2022-09-29T05:30:00.000Z</published>
-    <updated>2022-10-17T02:01:18.864Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、什么是路由？&quot;&gt;&lt;a href=&quot;#一、什么是路由？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="路由" scheme="http://example.com/tags/%E8%B7%AF%E7%94%B1/"/>
-    
-    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
