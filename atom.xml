@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-11T02:56:02.060Z</updated>
+  <updated>2023-05-25T01:42:38.167Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Husky+eslint+ prettier规范代码</title>
+    <link href="http://example.com/2023/05/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/Husky+eslint+%20prettier%E8%A7%84%E8%8C%83%E4%BB%A3%E7%A0%81/"/>
+    <id>http://example.com/2023/05/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/Husky+eslint+%20prettier%E8%A7%84%E8%8C%83%E4%BB%A3%E7%A0%81/</id>
+    <published>2023-05-25T10:12:00.000Z</published>
+    <updated>2023-05-25T01:42:38.167Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;1-Git-Hooks&quot;&gt;&lt;a href=&quot;#1-Git-Hooks&quot; class=&quot;headerlink&quot; title=&quot;1.Git Hooks&quot;&gt;&lt;/a&gt;1.Git Hooks&lt;/h2&gt;&lt;p&gt;  </summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="git，Husky" scheme="http://example.com/tags/git%EF%BC%8CHusky/"/>
+    
+  </entry>
   
   <entry>
     <title>ECMAScript 6 异步编程</title>
@@ -508,33 +533,6 @@
     <category term="vue3" scheme="http://example.com/tags/vue3/"/>
     
     <category term="pinia" scheme="http://example.com/tags/pinia/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git基础</title>
-    <link href="http://example.com/2022/09/30/git%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2022/09/30/git%E5%9F%BA%E7%A1%80/</id>
-    <published>2022-09-30T09:52:00.000Z</published>
-    <updated>2022-10-18T03:00:25.800Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、git基础&quot;&gt;&lt;a href=&quot;#一、git基础&quot; class=&quot;headerlink&quot; title=&quot;一、git基础&quot;&gt;&lt;/a&gt;一、git基础&lt;/h1&gt;&lt;h2 id=&quot;重新下载git后&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="git" scheme="http://example.com/categories/git/"/>
-    
-    
-    <category term="git" scheme="http://example.com/tags/git/"/>
-    
-    <category term="前端随笔" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
