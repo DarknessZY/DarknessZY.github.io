@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-25T01:42:38.167Z</updated>
+  <updated>2023-06-01T01:30:18.688Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git裸仓库并利用post-receive自动化部署hexo博客</title>
+    <link href="http://example.com/2023/06/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/git%E8%A3%B8%E4%BB%93%E5%BA%93%E5%B9%B6%E5%88%A9%E7%94%A8post-receive%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://example.com/2023/06/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/git%E8%A3%B8%E4%BB%93%E5%BA%93%E5%B9%B6%E5%88%A9%E7%94%A8post-receive%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/</id>
+    <published>2023-06-01T01:12:00.000Z</published>
+    <updated>2023-06-01T01:30:18.688Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="git自动化部署" scheme="http://example.com/tags/git%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Husky+eslint+ prettier规范代码</title>
@@ -504,35 +531,6 @@
     <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     <category term="valine" scheme="http://example.com/tags/valine/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vite 搭建vue3项目（一）</title>
-    <link href="http://example.com/2022/10/08/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>http://example.com/2022/10/08/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/</id>
-    <published>2022-10-08T09:52:00.000Z</published>
-    <updated>2022-10-08T10:41:32.092Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、创建项目&quot;&gt;&lt;a href=&quot;#一、创建项目&quot; class=&quot;headerlink&quot; title=&quot;一、创建项目&quot;&gt;&lt;/a&gt;一、创建项目&lt;/h1&gt;&lt;h2 id=&quot;1-直接创建项目&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="项目搭建" scheme="http://example.com/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="vite" scheme="http://example.com/tags/vite/"/>
-    
-    <category term="vue3" scheme="http://example.com/tags/vue3/"/>
-    
-    <category term="pinia" scheme="http://example.com/tags/pinia/"/>
     
   </entry>
   
