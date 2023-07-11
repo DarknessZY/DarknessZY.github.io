@@ -882,6 +882,34 @@ router.addRoute({
     redirect: '/404'
  })
 ```
+**按钮权限**
+
+将之前登录时，用户信息中返回的按钮权限的标识存在pinia中，利用自定义指令，判断该按钮是否需要展示。
+```ts
+/*
+  需求：不同角色后台管理的按钮权限不同
+
+  思路：
+  使用：给 Dom 加上 v-permissionBtn
+  <div v-permissionBtn="服务端返回的对应的权限值"></div>
+*/
+import type { Directive, DirectiveBinding } from 'vue'
+import Storage from '@/utils/storage'
+interface ElType extends HTMLElement {
+	parentNode: any
+}
+const permissionBtn: Directive = {
+	beforeMount(el: ElType, binding: DirectiveBinding) {
+		const permissionList: Array<string> = Storage.getItem('session', 'btn_permission')
+		if (!permissionList.includes(binding.value)) {
+			el.style.display = 'none'
+		}
+	}
+}
+
+export default permissionBtn
+
+```
 ## 前端性能优化
 当考虑前端性能优化时，需要从网络层面、JavaScript 层面和 CSS 层面进行分析和优化。
 
