@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-11T09:54:46.961Z</updated>
+  <updated>2023-07-19T07:46:31.879Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>element-plus表格合并（例如前两列合并）</title>
+    <link href="http://example.com/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/"/>
+    <id>http://example.com/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/</id>
+    <published>2023-07-19T07:45:00.000Z</published>
+    <updated>2023-07-19T07:46:31.879Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="项目搭建" scheme="http://example.com/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="项目搭建" scheme="http://example.com/tags/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="element" scheme="http://example.com/tags/element/"/>
+    
+  </entry>
   
   <entry>
     <title>WEB前端基础知识梳理-笔记</title>
@@ -277,11 +304,11 @@
   </entry>
   
   <entry>
-    <title>NestJS 建项目</title>
+    <title>NestJS搭建项目（跟着掘金大佬的文章学习，自己试着整了个登录注册接口）</title>
     <link href="http://example.com/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/"/>
     <id>http://example.com/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/</id>
     <published>2023-03-15T05:30:00.000Z</published>
-    <updated>2023-04-27T01:22:16.617Z</updated>
+    <updated>2023-07-19T07:42:46.142Z</updated>
     
     
       
@@ -503,31 +530,6 @@
     
     
     <category term="css样式" scheme="http://example.com/tags/css%E6%A0%B7%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React基础</title>
-    <link href="http://example.com/2022/11/23/React%20GO%20GO/React%20jsx%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2022/11/23/React%20GO%20GO/React%20jsx%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
-    <published>2022-11-23T05:30:00.000Z</published>
-    <updated>2022-12-17T09:29:30.052Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;React-JSX&quot;&gt;&lt;a href=&quot;#React-JSX&quot; class=&quot;headerlink&quot; title=&quot;React JSX&quot;&gt;&lt;/a&gt;React JSX&lt;/h1&gt;&lt;p&gt;全称：javascript</summary>
-        
-      
-    
-    
-    
-    <category term="recat" scheme="http://example.com/categories/recat/"/>
-    
-    
-    <category term="recat" scheme="http://example.com/tags/recat/"/>
     
   </entry>
   

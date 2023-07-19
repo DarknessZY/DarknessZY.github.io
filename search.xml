@@ -39,6 +39,39 @@
       </tags>
   </entry>
   <entry>
+    <title>element-plus表格合并（例如前两列合并）</title>
+    <url>/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>做了一个后台管理日清的列表，不上线，只发布到测试环境，只供开发人员自己看的，方便了解啥时候结束联调，测试，上线等，其中有一个表格合并的功能做一下记录</p>
+</blockquote>
+<h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">"dataList"</span> <span class="attr">:span-method</span>=<span class="string">"objectSpanMethod"</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">"日期"</span> <span class="attr">prop</span>=<span class="string">"createTime"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">"业务线"</span> <span class="attr">prop</span>=<span class="string">"projectType"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="comment">&lt;!-- 其他列定义 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight ts"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">const</span>  <span class="title function_">objectSpanMethod</span> =(<span class="params">{ row, column, rowIndex, columnIndex }</span>)=&gt; {</span><br><span class="line"><span class="keyword">const</span> dataList = [.....] <span class="comment">//具体的表格数据</span></span><br><span class="line"><span class="comment">//columnIndex列,前两列</span></span><br><span class="line">      <span class="keyword">if</span> (columnIndex === <span class="number">0</span> || columnIndex === <span class="number">1</span>) {</span><br><span class="line">        <span class="keyword">if</span> (rowIndex === <span class="number">0</span> || (rowIndex &gt; <span class="number">0</span> &amp;&amp; row[column.<span class="property">property</span>] !==dataList[rowIndex - <span class="number">1</span>][column.<span class="property">property</span>])) {</span><br><span class="line">          <span class="keyword">let</span> rowspan = <span class="number">1</span>;</span><br><span class="line">          <span class="keyword">let</span> colspan = <span class="number">1</span>;</span><br><span class="line">          <span class="keyword">let</span> i = <span class="number">1</span>;</span><br><span class="line">          <span class="keyword">while</span> (</span><br><span class="line">            rowIndex + i &lt; dataList.<span class="property">length</span> &amp;&amp;</span><br><span class="line">            row[column.<span class="property">property</span>] === dataList[rowIndex + i][column.<span class="property">property</span>]</span><br><span class="line">          ) {</span><br><span class="line">            rowspan++;</span><br><span class="line">            i++;</span><br><span class="line">          }</span><br><span class="line">          <span class="keyword">return</span> { rowspan, colspan };</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (row[column.<span class="property">property</span>] === dataList[rowIndex - <span class="number">1</span>][column.<span class="property">property</span>]) {</span><br><span class="line">          <span class="keyword">return</span> { <span class="attr">rowspan</span>: <span class="number">0</span>, <span class="attr">colspan</span>: <span class="number">0</span> };</span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="具体思路逻辑"><a href="#具体思路逻辑" class="headerlink" title="具体思路逻辑"></a>具体思路逻辑</h2><ol>
+<li><p> 首先，我们检查当前列 <code>columnIndex</code> 是否为 0 或者 1，以确定我们只对前两列进行合并操作。</p>
+</li>
+<li><p> 对于第一行（<code>rowIndex === 0</code>），我们返回 <code>{ rowspan: 1, colspan: 1 }</code>，表示不进行合并。</p>
+</li>
+<li><p>对于其他行（<code>rowIndex &gt; 0</code>），我们根据合并逻辑进行判断。</p>
+<ul>
+<li>  首先，我们检查当前单元格的值 <code>row[column.property]</code>（例如，对于 “日期” 列，我们通过 <code>column.property</code> 访问 <code>createTime</code> 属性）是否与上一行的值相同，以及当前列是否为 “日期” 或者与上一行的 “业务线” 相同。如果满足这些条件，说明需要进行合并，我们返回 <code>{ rowspan: 0, colspan: 0 }</code>，表示该单元格不需要合并。</li>
+<li>  如果不满足上述条件，我们开始计算正确的合并范围。我们初始化 <code>rowspan</code> 为 1，<code>colspan</code> 为 1，并使用变量 <code>i</code> 设置初始值为 1。</li>
+<li>  接下来，我们使用一个循环，来寻找连续相同数据的范围。在循环中，我们依次检查当前行之后的每一行，判断它们的值是否与当前行相同，并且在 “日期” 列或者与当前行的 “业务线” 相同时。如果满足这些条件，我们将 <code>rowspan</code> 值增加 1，并递增 <code>i</code>。</li>
+<li>  最后，我们返回计算出的 <code>{ rowspan, colspan }</code> 值，表示正确的合并范围。</li>
+</ul>
+</li>
+</ol>
+<p>通过这些逻辑，我们可以准确地合并相同数据的行，并保持表格的正确展示。</p>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1afcad0bcd8541a3856a5a023608a345~tplv-k3u1fbpfcp-watermark.image" alt="17772e34eae0873ab9b82504c5657df_mosaic.png"></p>
+</body></html>]]></content>
+      <categories>
+        <category>项目搭建</category>
+      </categories>
+      <tags>
+        <tag>项目搭建</tag>
+        <tag>element</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WEB前端基础知识梳理-笔记</title>
     <url>/2023/07/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<html><head></head><body><h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2><h3 id="DOM事件流及事件委托机制"><a href="#DOM事件流及事件委托机制" class="headerlink" title="DOM事件流及事件委托机制"></a>DOM事件流及事件委托机制</h3><p><em>DOM事件流（DOM Event Flow）</em>： 是描述浏览器中事件传递的一种模型。当页面上发生事件时，浏览器会按照特定的顺序将事件传递给相关的元素。DOM事件流主要包括三个阶段：<em>捕获阶段（Capture Phase）、目标阶段（Target Phase）、冒泡阶段（Bubble Phase）</em>。</p>
@@ -1265,7 +1298,7 @@
       </tags>
   </entry>
   <entry>
-    <title>NestJS 建项目</title>
+    <title>NestJS搭建项目（跟着掘金大佬的文章学习，自己试着整了个登录注册接口）</title>
     <url>/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>学习NestJS，主要看了<br><a href="https://juejin.cn/post/7032079740982788132#heading-22">学完这篇 Nest.js 实战，还没入门的来锤我！(长文预警) - 掘金 (juejin.cn)</a>，也是跟着整时做一个笔记，大佬讲已经很清晰了，不出意外真入门了，然后试着写了登录注册的接口，成功的那一刻还是挺开心的！！！</p>
