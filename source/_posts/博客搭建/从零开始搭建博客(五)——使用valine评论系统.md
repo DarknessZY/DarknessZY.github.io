@@ -5,6 +5,8 @@ categories: 博客搭建
 tag: [valine,博客搭建] 
 ---
 
+<meta name="referrer" content="no-referrer" />
+
 # 一、hexo框架的主题使用valine
 
 ## **1. 注册 Leancloud 账号**

@@ -4,6 +4,7 @@ date: 2023-06-05 14:22
 tags: [recat]
 categories: recat
 ---
+<meta name="referrer" content="no-referrer" />
 
 # 前言
 

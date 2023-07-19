@@ -5,9 +5,7 @@ categories: 博客搭建
 tag: [为什么要搭建博客,博客搭建] 
 top: true
 ---
-
-
-
+<meta name="referrer" content="no-referrer" />
 
 # 一.为什么要搭建博客？
 

@@ -5,6 +5,8 @@ tags: [Nest]
 categories: [项目搭建]
 ---
 
+<meta name="referrer" content="no-referrer" />
+
 # 前言
 
 > 学习NestJS，主要看了

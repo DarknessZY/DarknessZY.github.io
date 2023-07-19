@@ -5,6 +5,9 @@ categories: 博客搭建
 tag: [博客搭建,git自动化部署] 
 ---
 
+<meta name="referrer" content="no-referrer" />
+
+
 # 前言
 
 > 因为最近想把自己的博客项目实现自动化部署，所以百度百科了这个相关的知识，然后总结，并记录笔记，总结并分享自己的操作！

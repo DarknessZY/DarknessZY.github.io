@@ -1,9 +1,10 @@
 ---
-title: React学习笔记(一)
+title: React学习笔记(二)
 date: 2023-06-06 14:24
 tags: [recat]
 categories: recat
 ---
+<meta name="referrer" content="no-referrer" />
 
 # 前言
 

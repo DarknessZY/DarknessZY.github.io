@@ -4,6 +4,7 @@ date: 2023-06-19 14:22
 tags: [recat]
 categories: recat
 ---
+<meta name="referrer" content="no-referrer" />
 
 > 前面我已经把基础的东西学了，但还是缺点啥，自己得试着搭建一个react项目试试，实践出真知。
 

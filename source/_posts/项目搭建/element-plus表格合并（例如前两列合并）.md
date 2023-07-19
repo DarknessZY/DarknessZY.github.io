@@ -4,7 +4,7 @@ date: 2023-07-19 15:45
 tags: [项目搭建,element]
 categories: 项目搭建
 ---
-
+<meta name="referrer" content="no-referrer" />
 # 前言
 
 > 做了一个后台管理日清的列表，不上线，只发布到测试环境，只供开发人员自己看的，方便了解啥时候结束联调，测试，上线等，其中有一个表格合并的功能做一下记录

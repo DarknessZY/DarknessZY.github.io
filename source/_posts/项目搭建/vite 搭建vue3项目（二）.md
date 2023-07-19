@@ -4,7 +4,7 @@ date: 2022-10-25 18:52
 categories: 项目搭建
 tag: [vite,vue3,pinia] 
 ---
-
+<meta name="referrer" content="no-referrer" />
 # 1.login页面和功能就不多哔哔了
 
 # 2.主体布局

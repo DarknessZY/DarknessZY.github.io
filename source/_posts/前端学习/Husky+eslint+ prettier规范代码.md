@@ -5,6 +5,9 @@ tags: [git，Husky]
 categories: 前端随笔
 ---
 
+<meta name="referrer" content="no-referrer" />
+
+
 ## 1.Git Hooks
 
    **什么是Git Hooks**

@@ -5,6 +5,8 @@ tags: [微任务, 宏任务]
 categories: 前端随笔
 ---
 
+<meta name="referrer" content="no-referrer" />
+
 # 前言
 
 ​	了解JavaScript 异步队列实现，我们需要先了解什么是同步任务，什么是异步任务，异步代码中才区分宏任务微任务，什么是宏任务、微任务？宏任务、微任务有哪些？又是怎么执行的？
