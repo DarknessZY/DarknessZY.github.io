@@ -1,5 +1,5 @@
 ---
-title: NestJS 建项目
+title: NestJS搭建项目（跟着掘金大佬的文章学习，自己试着整了个登录注册接口）
 date: 2023-03-15 13:30
 tags: [Nest]
 categories: [项目搭建]
