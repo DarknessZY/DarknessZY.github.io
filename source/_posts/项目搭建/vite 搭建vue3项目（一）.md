@@ -4,7 +4,7 @@ date: 2022-10-08 17:52
 categories: 项目搭建
 tag: [vite,vue3,pinia] 
 ---
-<meta name="referrer" content="no-referrer" />
+<!-- <meta name="referrer" content="no-referrer" /> -->
 # 一、创建项目
 
 ## 1.直接创建项目

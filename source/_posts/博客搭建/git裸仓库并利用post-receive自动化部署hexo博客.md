@@ -5,7 +5,7 @@ categories: 博客搭建
 tag: [博客搭建,git自动化部署] 
 ---
 
-<meta name="referrer" content="no-referrer" />
+<!-- <meta name="referrer" content="no-referrer" /> -->
 
 
 # 前言
