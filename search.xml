@@ -971,9 +971,7 @@
   <entry>
     <title>React学习笔记(一)</title>
     <url>/2023/06/05/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>vue3的也历经了几个大项目，可以说的上是熟练运用了，本来我也在想，是继续深度研究vue，看看源码实现啥的，半年前买的霍春阳大佬写的《Vue.js的设计与实现》只看了1/2，也是惭愧，看了这么久都没看完，一直断断续续的看，哪怕是这样，我也感觉收获也颇深。先订个目标，react学完后，把这本书后面的学完看完。(可能对外面市场的焦虑，想多掌控一些技能，于是便先开始了对React的学习，之前虽然有了解，但我不怎么系统的学习),当然本文本来就是学习记录，如有雷同，肯定是我C+V过来记录的。</p>
 </blockquote>
 <h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
@@ -2648,8 +2646,8 @@
         <category>前端随笔</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
         <tag>路由</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -2735,8 +2733,8 @@
         <category>前端随笔</category>
       </categories>
       <tags>
-        <tag>npm</tag>
         <tag>随笔</tag>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
