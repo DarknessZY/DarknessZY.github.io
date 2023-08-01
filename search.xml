@@ -3,9 +3,7 @@
   <entry>
     <title>hello，欢迎来到耀耀切克闹的博客！</title>
     <url>/2022/09/22/hello%EF%BC%8C%E5%8D%9A%E5%AE%A2%EF%BC%81/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="一-为什么要搭建博客？"><a href="#一-为什么要搭建博客？" class="headerlink" title="一.为什么要搭建博客？"></a>一.为什么要搭建博客？</h1><ol>
 <li>搭建博客就是为了写博客，整理思路，将学习的知识融会贯通，以教为学。</li>
 <li>在这个过程中，你可以认识更多兴趣相投的人。</li>
 <li>事件驱动学习，每周持续的博客更新，查看自己是否学习到新东西！</li>
@@ -43,10 +41,7 @@
   <entry>
     <title>element-plus表格合并（例如前两列合并）</title>
     <url>/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-</head><body># 前言
-
-<blockquote>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>做了一个后台管理日清的列表，不上线，只发布到测试环境，只供开发人员自己看的，方便了解啥时候结束联调，测试，上线等，其中有一个表格合并的功能做一下记录</p>
 </blockquote>
 <h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">"dataList"</span> <span class="attr">:span-method</span>=<span class="string">"objectSpanMethod"</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">"日期"</span> <span class="attr">prop</span>=<span class="string">"createTime"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">"业务线"</span> <span class="attr">prop</span>=<span class="string">"projectType"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="comment">&lt;!-- 其他列定义 --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
@@ -545,9 +540,7 @@
   <entry>
     <title>React学习笔记(四)-搭建项目</title>
     <url>/2023/06/19/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><blockquote>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><blockquote>
 <p>前面我已经把基础的东西学了，但还是缺点啥，自己得试着搭建一个react项目试试，实践出真知。</p>
 </blockquote>
 <h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>我使用的是vite4.3+react18+zustand+antd创建的一个后台管理模板，主要也是为了巩固所学内容。</p>
@@ -618,9 +611,7 @@
   <entry>
     <title>React学习笔记(三)</title>
     <url>/2023/06/13/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
 <li>  react-事件处理</li>
 <li>  受控组件和非受控组件</li>
 <li>  React Router</li>
@@ -759,9 +750,7 @@
   <entry>
     <title>React学习笔记(二)</title>
     <url>/2023/06/06/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>书接上文，React继续学习并记录笔记。本文有好多是问chatGPT得到的，chatGPT回答结合着例子，感觉更加通俗易懂些。</p>
 </blockquote>
 <h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
@@ -971,7 +960,8 @@
   <entry>
     <title>React学习笔记(一)</title>
     <url>/2023/06/05/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/</url>
-    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+    <content><![CDATA[<!-- <!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body>--&gt;
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>vue3的也历经了几个大项目，可以说的上是熟练运用了，本来我也在想，是继续深度研究vue，看看源码实现啥的，半年前买的霍春阳大佬写的《Vue.js的设计与实现》只看了1/2，也是惭愧，看了这么久都没看完，一直断断续续的看，哪怕是这样，我也感觉收获也颇深。先订个目标，react学完后，把这本书后面的学完看完。(可能对外面市场的焦虑，想多掌控一些技能，于是便先开始了对React的学习，之前虽然有了解，但我不怎么系统的学习),当然本文本来就是学习记录，如有雷同，肯定是我C+V过来记录的。</p>
 </blockquote>
 <h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
@@ -1059,10 +1049,7 @@
   <entry>
     <title>git裸仓库并利用post-receive自动化部署hexo博客</title>
     <url>/2023/06/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/git%E8%A3%B8%E4%BB%93%E5%BA%93%E5%B9%B6%E5%88%A9%E7%94%A8post-receive%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-
-</head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>因为最近想把自己的博客项目实现自动化部署，所以百度百科了这个相关的知识，然后总结，并记录笔记，总结并分享自己的操作！</p>
 </blockquote>
 <h2 id="1-git普通库"><a href="#1-git普通库" class="headerlink" title="1.git普通库"></a>1.git普通库</h2><p><strong>什么是普通库</strong></p>
@@ -1120,10 +1107,7 @@
   <entry>
     <title>Husky+eslint+ prettier规范代码</title>
     <url>/2023/05/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/Husky+eslint+%20prettier%E8%A7%84%E8%8C%83%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-
-</head><body><h2 id="1-Git-Hooks"><a href="#1-Git-Hooks" class="headerlink" title="1.Git Hooks"></a>1.Git Hooks</h2><p>   <strong>什么是Git Hooks</strong></p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h2 id="1-Git-Hooks"><a href="#1-Git-Hooks" class="headerlink" title="1.Git Hooks"></a>1.Git Hooks</h2><p>   <strong>什么是Git Hooks</strong></p>
 <p>   Git Hooks 在Git执行特定事件（如commit、push、receive等）后触发运行脚本,类似于vue的生命周期钩子，git在某些特定事件发生前或后也会有某些执行特定功能的钩子。<code>githooks 保存在 .git 文件夹中</code></p>
 <p>   对于<code>规范代码提交</code>我们主要用到的Git Hooks里的这两个钩子，也就是是在git commit执行前对git commit的提交信息做出规范。</p>
 <ul>
@@ -1317,9 +1301,7 @@
   <entry>
     <title>NestJS搭建项目（跟着掘金大佬的文章学习，自己试着整了个登录注册接口）</title>
     <url>/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>学习NestJS，主要看了<br><a href="https://juejin.cn/post/7032079740982788132#heading-22">学完这篇 Nest.js 实战，还没入门的来锤我！(长文预警) - 掘金 (juejin.cn)</a>，也是跟着整时做一个笔记，大佬讲已经很清晰了，不出意外真入门了，然后试着写了登录注册的接口，成功的那一刻还是挺开心的！！！</p>
 </blockquote>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>我是按照官网的Nest CLI创建的项目，也是官网推荐初学者使用的方式:</p>
@@ -1365,9 +1347,7 @@
   <entry>
     <title>在开发h5移动端项目（v3+vant3+pinia+vite）时遇到的问题总结(二)</title>
     <url>/2023/03/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%9C%A8%E5%BC%80%E5%8F%91h5%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88v3+vant3+pinia+vite%EF%BC%89%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93(%E4%BA%8C)/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h2 id="一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。"><a href="#一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。" class="headerlink" title="一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。"></a>一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。</h2><p>因为我司的项目，当时立项时并没有考虑适配深色模式，所以导致了这种情况<br>解决方式：</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h2 id="一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。"><a href="#一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。" class="headerlink" title="一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。"></a>一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。</h2><p>因为我司的项目，当时立项时并没有考虑适配深色模式，所以导致了这种情况<br>解决方式：</p>
 <blockquote>
 <p>在相应的受深色模式影响的页面最外层div加上css  background设置为白色（因为我司项目，背景基本是白色所以这样改能行，但应该是不是通用的），当时是快上线了，发现这个问题，急着上就没去整适配，只能用这种办法。</p>
 </blockquote>
@@ -1634,9 +1614,9 @@
   <entry>
     <title>在开发h5移动端项目（v3+vant3+pinia+vite）时遇到的问题总结</title>
     <url>/2022/12/30/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%9C%A8%E5%BC%80%E5%8F%91h5%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88v3+vant3+pinia+vite%EF%BC%89%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
+    <content><![CDATA[<!-- <!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body>--&gt;
 
-</head><body><h1 id="一-移动端适配和适配后内联样式没有生效"><a href="#一-移动端适配和适配后内联样式没有生效" class="headerlink" title="一.移动端适配和适配后内联样式没有生效"></a>一.移动端适配和适配后内联样式没有生效</h1><h2 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h2><blockquote>
+<h1 id="一-移动端适配和适配后内联样式没有生效"><a href="#一-移动端适配和适配后内联样式没有生效" class="headerlink" title="一.移动端适配和适配后内联样式没有生效"></a>一.移动端适配和适配后内联样式没有生效</h1><h2 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h2><blockquote>
 <p>既然是整移动端项目，那么移动端适配是必须要整了，目前开发的这个项目就是使用的是<code>rem方案</code>，<code>rem方案</code>的话比较常用的插件就是postcss-pxtorem+lib-flexible，至于为什么没用<code>vw方案</code>, vw 方案 还是有缺点的。如 <code>vw 方案</code><strong>不适合大屏</strong>，因为 vw 是一个比例单位，随着屏幕尺寸变大，使用vw单位的元素、字体也越来越大。但我们肯定是希望在大屏上展示更多的内容，而不是更大的文字、图标。现在用大屏的用户也是挺多的，我自己感觉还是<code>rem方案</code>好一点点（手动狗头）</p>
 </blockquote>
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line">yarn add amfe-flexible</span><br><span class="line">yarn add -D postcss-pxtorem</span><br></pre></td></tr></tbody></table></figure>
@@ -1927,9 +1907,7 @@
   <entry>
     <title>css滚动条，让滚动条看起来更好看</title>
     <url>/2022/12/03/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/css%E6%BB%9A%E5%8A%A8%E6%9D%A1%EF%BC%8C%E8%AE%A9%E6%BB%9A%E5%8A%A8%E6%9D%A1%E7%9C%8B%E8%B5%B7%E6%9D%A5%E6%9B%B4%E5%A5%BD%E7%9C%8B/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="css滚动条"><a href="#css滚动条" class="headerlink" title="css滚动条"></a>css滚动条</h1><p>相关样式属性说明（详情查看图片，序号一一对应） </p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="css滚动条"><a href="#css滚动条" class="headerlink" title="css滚动条"></a>css滚动条</h1><p>相关样式属性说明（详情查看图片，序号一一对应） </p>
 <ol>
 <li>::-webkit-scrollbar 滚动条整体部分，可以设置 width, height, background, border 等</li>
 <li>::-webkit-scrollbar-button 滚动条两端的按钮，可以设置 display:none 让其不显示，也可以添加背景图片、颜色改变其显示效果 </li>
@@ -1991,9 +1969,7 @@
   <entry>
     <title>步骤条小组件的封装</title>
     <url>/2022/11/15/%E7%BB%84%E4%BB%B6/%E6%AD%A5%E9%AA%A4%E6%9D%A1%E5%B0%8F%E7%BB%84%E4%BB%B6/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>公司有一个业务流程是需要步骤条的，为该业务新搭建了个h5的项目（v3+vite3.2+vant），h5页面直接嵌套在app端的，导航条是由app端控制的，第一个步骤是由app端完成，后面两步是由我们完成，步骤条等一切样式要求高度的统一，vant等ui库自带的步骤条组件，还需要自己一个个样式穿透的去改样式，得到的可能还不是自己想要的，于是就自己封装了一个，以便自己以后遇到同样的流程或业务，能够直接C+V。不多bbbb，直接上效果图和代码</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>公司有一个业务流程是需要步骤条的，为该业务新搭建了个h5的项目（v3+vite3.2+vant），h5页面直接嵌套在app端的，导航条是由app端控制的，第一个步骤是由app端完成，后面两步是由我们完成，步骤条等一切样式要求高度的统一，vant等ui库自带的步骤条组件，还需要自己一个个样式穿透的去改样式，得到的可能还不是自己想要的，于是就自己封装了一个，以便自己以后遇到同样的流程或业务，能够直接C+V。不多bbbb，直接上效果图和代码</p>
 <h1 id="一、vue3步骤条组件的封装"><a href="#一、vue3步骤条组件的封装" class="headerlink" title="一、vue3步骤条组件的封装"></a>一、vue3步骤条组件的封装</h1><h1 id="1-效果图"><a href="#1-效果图" class="headerlink" title="1.效果图"></a>1.效果图</h1><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4649316f48046c3b4b5aaa40eba598d~tplv-k3u1fbpfcp-watermark.image" alt="1668496872696.png"></p>
 <h1 id="2-代码"><a href="#2-代码" class="headerlink" title="2.代码"></a>2.代码</h1><p>其中$px2rem(‘72px’)是因为使用了移动端适配的插件postcss-pxtorem并做了相应的配置后，发现行内样式移动端适配的插件不生效。于是在main.ts里定义了一个全局行内的方法，让行内样式也能移动端适配</p>
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 行内样式移动端适配请加这个$px2rem() </span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">px2rem</span> = (<span class="params">px:any</span>) =&gt; {</span><br><span class="line">    <span class="keyword">if</span>(<span class="regexp">/%/ig</span>.<span class="title function_">test</span>(px)){ <span class="comment">// 有百分号%，特殊处理，表述pc是一个有百分号的数，比如：90%</span></span><br><span class="line">      <span class="keyword">return</span> px</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">      <span class="keyword">return</span> (<span class="built_in">parseFloat</span>(px) / <span class="number">37.5</span>) + <span class="string">'rem'</span></span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">app.<span class="property">config</span>.<span class="property">globalProperties</span>.<span class="property">$px2rem</span> = px2rem <span class="comment">// 放到全局</span></span><br></pre></td></tr></tbody></table></figure>
@@ -2036,9 +2012,7 @@
   <entry>
     <title>JavaScript 异步队列实现</title>
     <url>/2022/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/JavaScript%20%E5%BC%82%E6%AD%A5%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​    了解JavaScript 异步队列实现，我们需要先了解什么是同步任务，什么是异步任务，异步代码中才区分宏任务微任务，什么是宏任务、微任务？宏任务、微任务有哪些？又是怎么执行的？</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​    了解JavaScript 异步队列实现，我们需要先了解什么是同步任务，什么是异步任务，异步代码中才区分宏任务微任务，什么是宏任务、微任务？宏任务、微任务有哪些？又是怎么执行的？</p>
 <h1 id="一、异步任务和同步任务"><a href="#一、异步任务和同步任务" class="headerlink" title="一、异步任务和同步任务"></a>一、异步任务和同步任务</h1><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b354be478dd4d369799be4d4f0087e2~tplv-k3u1fbpfcp-watermark.image" alt="同步任务与异步任务"></p>
 <p>​        js 是一种单线程语言，简单的说就是：只有一条通道，那么在任务多的情况下，就会出现拥挤的情况，这种情况下就产生了 ‘多线程’ ，但是这种“多线程”是通过单线程模仿的，一切javascript多线程都是纸老虎！那么就产生了同步任务和异步任务。</p>
 <ul>
@@ -2114,10 +2088,7 @@
   <entry>
     <title>vite 搭建vue3项目（二）</title>
     <url>/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-</head><body># 1.login页面和功能就不多哔哔了
-
-<h1 id="2-主体布局"><a href="#2-主体布局" class="headerlink" title="2.主体布局"></a>2.主体布局</h1><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e77c74aeb743b5a9e159607d1eb0e6~tplv-k3u1fbpfcp-watermark.image" alt="dd7860edba87d1d65d1c03b81f01f4c6.png"><br>layout-&gt;index.vue</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="1-login页面和功能就不多哔哔了"><a href="#1-login页面和功能就不多哔哔了" class="headerlink" title="1.login页面和功能就不多哔哔了"></a>1.login页面和功能就不多哔哔了</h1><h1 id="2-主体布局"><a href="#2-主体布局" class="headerlink" title="2.主体布局"></a>2.主体布局</h1><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e77c74aeb743b5a9e159607d1eb0e6~tplv-k3u1fbpfcp-watermark.image" alt="dd7860edba87d1d65d1c03b81f01f4c6.png"><br>layout-&gt;index.vue</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">   &lt;el-container&gt;</span><br><span class="line">        &lt;el-aside&gt;</span><br><span class="line">            &lt;Menu /&gt;</span><br><span class="line">        &lt;/el-aside&gt;</span><br><span class="line">        &lt;el-container&gt;</span><br><span class="line">            &lt;el-header&gt;</span><br><span class="line">            &lt;/el-header&gt;</span><br><span class="line">            &lt;el-main&gt;</span><br><span class="line">            //mian开发中</span><br><span class="line">                &lt;!-- &lt;router-view v-slot="{ Component, route }"&gt;</span><br><span class="line">                    &lt;transition appear name="fade-transform" mode="out-in"&gt;</span><br><span class="line">                        &lt;keep-alive :include="cacheRouter"&gt;</span><br><span class="line">                            &lt;component :is="Component" :key="route.path"&gt;&lt;/component&gt;</span><br><span class="line">                        &lt;/keep-alive&gt;</span><br><span class="line">                    &lt;/transition&gt;</span><br><span class="line">                &lt;/router-view&gt; --&gt;</span><br><span class="line">            &lt;/el-main&gt;</span><br><span class="line">            &lt;el-footer&gt;</span><br><span class="line">                &lt;Footer /&gt;</span><br><span class="line">            &lt;/el-footer&gt;</span><br><span class="line">        &lt;/el-container&gt;</span><br><span class="line">    &lt;/el-container&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line">import Footer from "./footer/index.vue";</span><br><span class="line">import Menu from "./Menu/index.vue";</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang="scss" scoped&gt;</span><br><span class="line">    @import "./index.scss";</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <h1 id="3-vite中的批量自动化导入：import-meta-globEager"><a href="#3-vite中的批量自动化导入：import-meta-globEager" class="headerlink" title="3.vite中的批量自动化导入：import.meta.globEager"></a>3.vite中的批量自动化导入：import.meta.globEager</h1><p>如果想在vite中批量导入某些文件，实现项目的模块化，vite提供的import.meta.globEager函数就很好用</p>
@@ -2191,9 +2162,7 @@
   <entry>
     <title>日期小组件的封装</title>
     <url>/2022/10/12/%E7%BB%84%E4%BB%B6/%E6%97%A5%E6%9C%9F%E5%B0%8F%E7%BB%84%E4%BB%B6(vue2)/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="一、日期小组件"><a href="#一、日期小组件" class="headerlink" title="一、日期小组件"></a>一、日期小组件</h1><p>公司有一个微信小程序项目用的是uni-app+uview2,uview2上的那个日期组件并不是产品想要样子，那就只好自己动手查阅资料了，看看别人的日历组件怎么搞的，再根据这些，写写样式，改改逻辑，完成产品需要的喽。不和你多bb，直接上效果图和代码，主要也是自己做个笔记，指不定哪天又用上，到时候c+v就行了，哈哈！</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="一、日期小组件"><a href="#一、日期小组件" class="headerlink" title="一、日期小组件"></a>一、日期小组件</h1><p>公司有一个微信小程序项目用的是uni-app+uview2,uview2上的那个日期组件并不是产品想要样子，那就只好自己动手查阅资料了，看看别人的日历组件怎么搞的，再根据这些，写写样式，改改逻辑，完成产品需要的喽。不和你多bb，直接上效果图和代码，主要也是自己做个笔记，指不定哪天又用上，到时候c+v就行了，哈哈！</p>
 <h2 id="1-效果图"><a href="#1-效果图" class="headerlink" title="1.效果图"></a>1.效果图</h2><p align="center"><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c64a3ea7f6cf4209a321d38af9e11d09~tplv-k3u1fbpfcp-watermark.image?" alt="d8a086257743cc6dee6907df3bcfc63.png"></p>
 
 <h2 id="2-代码"><a href="#2-代码" class="headerlink" title="2.代码"></a>2.代码</h2><p>我一般是这样建文件：components=&gt;term-picker=&gt;term-picker.vue</p>
@@ -2288,9 +2257,7 @@
   <entry>
     <title>从零开始搭建博客(五)——使用valine评论系统</title>
     <url>/2022/10/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%94)%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="一、hexo框架的主题使用valine"><a href="#一、hexo框架的主题使用valine" class="headerlink" title="一、hexo框架的主题使用valine"></a>一、hexo框架的主题使用valine</h1><h2 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a><strong>1. 注册 Leancloud 账号</strong></h2><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="一、hexo框架的主题使用valine"><a href="#一、hexo框架的主题使用valine" class="headerlink" title="一、hexo框架的主题使用valine"></a>一、hexo框架的主题使用valine</h1><h2 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a><strong>1. 注册 Leancloud 账号</strong></h2><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。</p>
 <h1 id="2-创建应用获取appid和appkey"><a href="#2-创建应用获取appid和appkey" class="headerlink" title="2.创建应用获取appid和appkey"></a>2.创建应用获取appid和appkey</h1><p>注册完成后进入控制台-&gt;创建应用-&gt;创建开发版应用。创建完开发版应用如下：点击最右边小齿轮也就是设置，找到<code>应用凭证</code>，获取appid和appkey</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88cbb84d544c466fa8b242d80c6e0670~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p>
 <h2 id="3-配置valine"><a href="#3-配置valine" class="headerlink" title="3.配置valine"></a>3.配置valine</h2><p>最后去自己主题下的_config.yml文件下(注意不是根目录下的，是你克隆的主题的_config.yml)，配置一下valine，目前hexo官网给的许多主题都是可以用valine的，直接配置就行</p>
@@ -2311,10 +2278,7 @@
   <entry>
     <title>vite 搭建vue3项目（一）</title>
     <url>/2022/10/08/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-</head><body># 一、创建项目
-
-<h2 id="1-直接创建项目"><a href="#1-直接创建项目" class="headerlink" title="1.直接创建项目"></a>1.直接创建项目</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">使用 NPM:</span><br><span class="line">$ npm create vite@latest</span><br><span class="line">使用 Yarn:</span><br><span class="line">$ yarn create vite</span><br><span class="line">使用 PNPM:</span><br><span class="line">$ pnpm create vite</span><br><span class="line">然后按照提示操作即可！(选择vue，vue-ts)</span><br></pre></td></tr></tbody></table></figure>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="一、创建项目"><a href="#一、创建项目" class="headerlink" title="一、创建项目"></a>一、创建项目</h1><h2 id="1-直接创建项目"><a href="#1-直接创建项目" class="headerlink" title="1.直接创建项目"></a>1.直接创建项目</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">使用 NPM:</span><br><span class="line">$ npm create vite@latest</span><br><span class="line">使用 Yarn:</span><br><span class="line">$ yarn create vite</span><br><span class="line">使用 PNPM:</span><br><span class="line">$ pnpm create vite</span><br><span class="line">然后按照提示操作即可！(选择vue，vue-ts)</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="2-使用模板创建项目"><a href="#2-使用模板创建项目" class="headerlink" title="2.使用模板创建项目"></a>2.使用模板创建项目</h2><p>通过附加的命令行选项直接指定项目名称和你想要使用的模板例如，要构建一个 Vite + Vue 项目，运行:</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">使用 npm 6.x：</span><br><span class="line">npm create vite@latest my-vue-app --template vue</span><br><span class="line">使用 npm 7+, extra double-dash is needed:</span><br><span class="line">npm create vite@latest my-vue-app -- --template vue</span><br><span class="line">使用 yarn：</span><br><span class="line">yarn create vite my-vue-app --template vue</span><br><span class="line">使用 pnpm：</span><br><span class="line">pnpm create vite my-vue-app --template vue</span><br></pre></td></tr></tbody></table></figure>
@@ -2477,9 +2441,7 @@
   <entry>
     <title>git基础</title>
     <url>/2022/09/30/git%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="一、git基础"><a href="#一、git基础" class="headerlink" title="一、git基础"></a>一、git基础</h1><h2 id="重新下载git后"><a href="#重新下载git后" class="headerlink" title="重新下载git后"></a>重新下载git后</h2><p><strong>1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）</strong></p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="一、git基础"><a href="#一、git基础" class="headerlink" title="一、git基础"></a>一、git基础</h1><h2 id="重新下载git后"><a href="#重新下载git后" class="headerlink" title="重新下载git后"></a>重新下载git后</h2><p><strong>1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）</strong></p>
 <p>$ ssh-keygen -t rsa -C “<a href="mailto:your_email@youremail.com">your_email@youremail.com</a>“ //注意啊孩子，双引号里面是你的邮箱(如果在公司你应该有自己的企业邮箱)。填你常用的就行。还有enter代表执行。</p>
 <p>添加公钥到 Github(gitee等) 中</p>
 <p>登录 github 账号，选中并打开 setting，选择 SSH and GPG keys，选择 New SSH key，在 Title 中填入题目，在 Key 中填入id_rsa.pub 文件中的公钥。</p>
@@ -2646,16 +2608,14 @@
         <category>前端随笔</category>
       </categories>
       <tags>
-        <tag>路由</tag>
         <tag>随笔</tag>
+        <tag>路由</tag>
       </tags>
   </entry>
   <entry>
     <title>从零开始搭建博客(四)——关于我页面搭建</title>
     <url>/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
 <blockquote>
 <p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
 </blockquote>
@@ -2733,16 +2693,14 @@
         <category>前端随笔</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
         <tag>npm</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
     <title>从零开始搭建博客(三)——博客在多台终端同步管理</title>
     <url>/2022/09/23/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)%E2%80%94%E2%80%94%E5%8D%9A%E5%AE%A2%E5%9C%A8%E5%A4%9A%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>我们利用 Hexo 框架在本地搭建了一个精美的博客，可是只能本地访问，要想发布到互联网上，还需要将它部署在网站上。博客的功能只要能阅读文章就够了，因此可以考虑将其部署在提供静态网页托管服务的网站上，许多平台都提供了静态网页托管服务，其中最方便的当然是 GitHub Pages，只需要注册一个账号就可以使用。GitHub Pages的服务器毕竟在国外，如果觉得访问太慢，也可以选择国内功能相似的 Gitee Pages。本篇文章介绍怎样利用 GitHub 提供的免费静态网页托管服务 GitHub Pages 建站。后面我应该还是会选择部署在服务</p>
 </blockquote>
 <h2 id="一、GitHub-Pages"><a href="#一、GitHub-Pages" class="headerlink" title="一、GitHub Pages"></a>一、GitHub Pages</h2><p>GitHub 是世界上最流行的软件源代码托管服务平台，为什么要提供网页托管服务呢？</p>
@@ -2794,10 +2752,7 @@
   <entry>
     <title>从零开始搭建博客(二)——hexo主题搭建</title>
     <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%E2%80%94%E2%80%94hexo%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-
-</head><body><h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="一、更换-Hexo-博客主题"><a href="#一、更换-Hexo-博客主题" class="headerlink" title="一、更换 Hexo 博客主题"></a>一、更换 Hexo 博客主题</h1><h2 id="1-如何找主题"><a href="#1-如何找主题" class="headerlink" title="1. 如何找主题"></a>1. 如何找主题</h2><p>默认主题非常简洁，适合大佬使用，像我等菜鸟，自己不会做却又想使用花里胡哨的主题，就要学会找主题了。</p>
 <p>下面是我寻找主题的三个方法。</p>
 <ul>
 <li><p><strong>官方网站</strong></p>
@@ -2858,9 +2813,7 @@
   <entry>
     <title>从零开始搭建博客(一)——本地搭建hexo框架</title>
     <url>/2022/09/22/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAhexo%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<html><head><meta name="referrer" content="no-referrer">
-
-</head><body><h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+    <content><![CDATA[<!-- <meta name="referrer" content="no-referrer" /> --><html><head></head><body><h1 id="一、hexo框架"><a href="#一、hexo框架" class="headerlink" title="一、hexo框架"></a>一、hexo框架</h1><h2 id="1-什么是-Hexo？"><a href="#1-什么是-Hexo？" class="headerlink" title="1.什么是 Hexo？"></a>1.什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <h2 id="2-安装前提"><a href="#2-安装前提" class="headerlink" title="2.安装前提"></a>2.安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
 <ul>
 <li><a href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
