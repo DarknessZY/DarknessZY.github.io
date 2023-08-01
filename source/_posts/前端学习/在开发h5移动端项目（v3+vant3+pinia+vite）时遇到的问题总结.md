@@ -4,7 +4,7 @@ date: 2022-12-30 14:23
 tags: [H5项目，随笔]
 categories: 前端随笔
 ---
-<meta name="referrer" content="no-referrer" />
+<!-- <!-- <meta name="referrer" content="no-referrer" /> --> -->
 
 # 一.移动端适配和适配后内联样式没有生效
 ## 移动端适配

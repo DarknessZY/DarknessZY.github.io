@@ -55,4 +55,10 @@ partial('post/clipboard') %> <% } %>
   if (window.mermaid) {
     mermaid.initialize({ theme: "<%= theme.mermaid.theme %>" });
   }
+  window.onload = function() {
+    var images = document.getElementsByTagName('img');
+    for (var i = 0; i < images.length; i++) {
+        images[i].referrerPolicy = 'no-referrer';
+    }
+}
 </script>

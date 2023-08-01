@@ -5,7 +5,7 @@ tags: [css样式]
 categories: 前端随笔
 ---
 
-<meta name="referrer" content="no-referrer" />
+<!-- <meta name="referrer" content="no-referrer" /> -->
 
 # css滚动条
 相关样式属性说明（详情查看图片，序号一一对应） 
