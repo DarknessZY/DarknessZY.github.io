@@ -5,7 +5,7 @@ categories: 博客搭建
 tag: [hexo框架,博客搭建] 
 ---
 
-<!-- <meta name="referrer" content="no-referrer" /> -->
+<meta name="referrer" content="no-referrer" />
 
 
 # 一、更换 Hexo 博客主题

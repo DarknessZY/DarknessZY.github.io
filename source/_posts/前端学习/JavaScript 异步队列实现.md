@@ -5,7 +5,7 @@ tags: [微任务, 宏任务]
 categories: 前端随笔
 ---
 
-<!-- <meta name="referrer" content="no-referrer" /> -->
+<meta name="referrer" content="no-referrer" />
 
 # 前言
 

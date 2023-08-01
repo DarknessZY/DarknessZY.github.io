@@ -5,7 +5,7 @@ tags: [H5项目，随笔]
 categories: 前端随笔
 ---
 
-<!-- <meta name="referrer" content="no-referrer" /> -->
+<meta name="referrer" content="no-referrer" />
 
 ## 一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。
 因为我司的项目，当时立项时并没有考虑适配深色模式，所以导致了这种情况

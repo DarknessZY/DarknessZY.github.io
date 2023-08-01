@@ -4,7 +4,7 @@ date: 2022-10-12 13:12
 tags: [组件封装]
 categories: 组件
 ---
-<!-- <meta name="referrer" content="no-referrer" /> -->
+<meta name="referrer" content="no-referrer" />
 
 # 一、日期小组件
 

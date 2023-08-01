@@ -4,7 +4,7 @@ date: 2022-09-30 17:52
 categories: git
 tag: [git,前端随笔] 
 ---
-<!-- <meta name="referrer" content="no-referrer" /> -->
+<meta name="referrer" content="no-referrer" />
 
 # 一、git基础
 ## 重新下载git后
