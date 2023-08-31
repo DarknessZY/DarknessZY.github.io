@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-14T01:16:16.753Z</updated>
+  <updated>2023-08-31T07:43:19.628Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,9 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue2源码学习笔记(五)——算属性computed的原理和侦听属性watch的原理</title>
+    <link href="http://example.com/2023/08/31/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%94)%E2%80%94%E2%80%94%E7%AE%97%E5%B1%9E%E6%80%A7computed%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BE%A6%E5%90%AC%E5%B1%9E%E6%80%A7watch%E7%9A%84%E5%8E%9F%E7%90%86/"/>
+    <id>http://example.com/2023/08/31/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%94)%E2%80%94%E2%80%94%E7%AE%97%E5%B1%9E%E6%80%A7computed%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BE%A6%E5%90%AC%E5%B1%9E%E6%80%A7watch%E7%9A%84%E5%8E%9F%E7%90%86/</id>
+    <published>2023-08-31T07:26:00.000Z</published>
+    <updated>2023-08-31T07:43:19.628Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue2源码学习(四)——渲染更新原理</title>
-    <link href="http://example.com/2023/08/14/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0(%E5%9B%9B)%E2%80%94%E2%80%94%E6%B8%B2%E6%9F%93%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86/"/>
-    <id>http://example.com/2023/08/14/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0(%E5%9B%9B)%E2%80%94%E2%80%94%E6%B8%B2%E6%9F%93%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86/</id>
+    <link href="http://example.com/2023/08/14/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)%E2%80%94%E2%80%94%E6%B8%B2%E6%9F%93%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86/"/>
+    <id>http://example.com/2023/08/14/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)%E2%80%94%E2%80%94%E6%B8%B2%E6%9F%93%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86/</id>
     <published>2023-08-14T01:13:00.000Z</published>
     <updated>2023-08-14T01:16:16.753Z</updated>
     
@@ -500,31 +525,6 @@
     <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
     <category term="伪类" scheme="http://example.com/tags/%E4%BC%AA%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js常用方法</title>
-    <link href="http://example.com/2023/02/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%E4%B8%80%E4%B8%8B/"/>
-    <id>http://example.com/2023/02/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%E4%B8%80%E4%B8%8B/</id>
-    <published>2023-02-10T10:46:00.000Z</published>
-    <updated>2023-02-10T07:45:41.496Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;一、对象和字符串常用的方法&quot;&gt;&lt;a href=&quot;#一、对象和字符串常用的方法&quot; class=&quot;headerlink&quot; title=&quot;一、对象和字符串常用的方法&quot;&gt;&lt;/a&gt;一、对象和字符串常用的方法&lt;/h2&gt;&lt;h3</summary>
-        
-      
-    
-    
-    
-    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="前端随笔" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
