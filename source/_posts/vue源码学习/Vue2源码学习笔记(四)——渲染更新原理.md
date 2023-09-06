@@ -80,6 +80,7 @@ Vue 2中的对象的依赖收集是通过使用getter/setter和观察者模式�
 在vue2源码学习(一）中，我们初始化了一个vue实例，并使用defineReactive对其进行了响应式处理。接下来我们需要在访问组件的数据属性时完成一下处理来实现依赖收集
 1. 在getter中，Vue会进行依赖收集。当组件渲染时，会创建一个Watcher实例，并将其设置为全局的Dep.target。当访问组件的数据属性时，会触发属性的getter，并将当前的Watcher实例添加到属性的依赖列表中。   
 2. 在setter中，Vue会通知依赖该属性的Watcher实例进行更新。当属性的值发生变化时，会触发属性的setter，并调用依赖列表中每个Watcher实例的更新方法。
+
 ```js
 // src/observer/index.js
 
@@ -108,6 +109,7 @@ function defineReactive(data, key, value) {
   });
 }
 ```
+
 ## 5.完善watcher
 
 ```js
@@ -208,6 +210,7 @@ Vue中，数组的依赖收集相对于对象稍微复杂一些。由于JavaScri
 3. 接下来，Vue会检查是否有正在进行依赖收集的Watcher实例（即是否存在全局的Dep.target）。如果有，Vue会将这个Watcher实例添加到数组的依赖列表中。  
   
 4. 最后，Vue会通过调用依赖列表中每个Watcher实例的更新方法来派发更新。
+
 ```js
 // src/observer/index.js
 
