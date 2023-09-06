@@ -1,5 +1,5 @@
 ---
-title:Vue2源码学习笔记(六)——vue源码学习（六）—— 异步更新原理和diff算法原理
+title: Vue2源码学习笔记(六)—— 异步更新原理和diff算法原理
 date: 2023-09-06 15:26
 categories: vue2源码学习
 tag: [vue]
