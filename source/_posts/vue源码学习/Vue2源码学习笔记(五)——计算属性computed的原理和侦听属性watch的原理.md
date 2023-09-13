@@ -1,5 +1,5 @@
 ---
-title: Vue2源码学习笔记(五)——算属性computed的原理和侦听属性watch的原理
+title: Vue2源码学习笔记(五)—计算属性computed的原理和侦听属性watch的原理
 date: 2023-08-31 15:26
 categories: vue2源码学习
 tag: [vue]
