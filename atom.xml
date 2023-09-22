@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-06T06:39:54.399Z</updated>
+  <updated>2023-09-22T09:35:35.393Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《Vue.js的设计与实现》阅读笔记（一）</title>
+    <link href="http://example.com/2023/09/22/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://example.com/2023/09/22/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2023-09-22T08:36:00.000Z</published>
+    <updated>2023-09-22T09:35:35.393Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;当初刚开始学习vue3时就买了霍春阳大佬的《Vue.js的设计与实现》，看了1/3，当时还看的迷迷糊糊，有许多地方不太懂，经过一年多的工作,在这期间学习到了很多，对底层的许多东西，也有了自己的了解,</summary>
+        
+      
+    
+    
+    
+    <category term="图书笔记" scheme="http://example.com/categories/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="图书笔记" scheme="http://example.com/tags/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue2源码学习笔记(六)—— 异步更新原理和diff算法原理</title>
@@ -118,31 +144,6 @@
   </entry>
   
   <entry>
-    <title>Vue2源码学习笔记（一）——Vue实例数据初始化和响应式原理</title>
-    <link href="http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94Vue%E5%AE%9E%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/"/>
-    <id>http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94Vue%E5%AE%9E%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</id>
-    <published>2023-08-10T09:52:00.000Z</published>
-    <updated>2023-08-14T01:16:01.663Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="vue" scheme="http://example.com/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Vue2源码学习笔记（二）——编译模板原理</title>
     <link href="http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94%E7%BC%96%E8%AF%91%E6%A8%A1%E6%9D%BF%E5%8E%9F%E7%90%86/"/>
     <id>http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94%E7%BC%96%E8%AF%91%E6%A8%A1%E6%9D%BF%E5%8E%9F%E7%90%86/</id>
@@ -156,6 +157,31 @@
         
     <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;Vue 2的模板编译原理具体可以分为以下几步： </summary>
+        
+      
+    
+    
+    
+    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2源码学习笔记（一）——Vue实例数据初始化和响应式原理</title>
+    <link href="http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94Vue%E5%AE%9E%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/"/>
+    <id>http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94Vue%E5%AE%9E%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</id>
+    <published>2023-08-10T09:52:00.000Z</published>
+    <updated>2023-08-14T01:16:01.663Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -498,31 +524,6 @@
     
     
     <category term="Nest" scheme="http://example.com/tags/Nest/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在开发h5移动端项目（v3+vant3+pinia+vite）时遇到的问题总结(二)</title>
-    <link href="http://example.com/2023/03/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%9C%A8%E5%BC%80%E5%8F%91h5%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88v3+vant3+pinia+vite%EF%BC%89%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93(%E4%BA%8C)/"/>
-    <id>http://example.com/2023/03/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%9C%A8%E5%BC%80%E5%8F%91h5%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88v3+vant3+pinia+vite%EF%BC%89%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93(%E4%BA%8C)/</id>
-    <published>2023-03-01T10:12:00.000Z</published>
-    <updated>2023-08-01T06:59:53.382Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!-- &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt; --&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="H5项目，随笔" scheme="http://example.com/tags/H5%E9%A1%B9%E7%9B%AE%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
