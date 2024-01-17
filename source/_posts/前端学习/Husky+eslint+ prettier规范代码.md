@@ -1,7 +1,7 @@
 ---
 title: Husky+eslint+ prettier规范代码
 date: 2023-05-25 18:12
-tags: [git，Husky]
+tags: [git,Husky]
 categories: 前端随笔
 ---
 

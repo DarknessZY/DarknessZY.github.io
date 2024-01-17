@@ -1,7 +1,7 @@
 ---
 title: cookie、localStorage、sessionStorage
 date: 2022-12-14 13:30
-tags: [面试题，随笔]
+tags: [面试题,随笔]
 categories: 前端随笔
 ---
 

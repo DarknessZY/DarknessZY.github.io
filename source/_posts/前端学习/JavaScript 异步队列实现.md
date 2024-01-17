@@ -1,7 +1,7 @@
 ---
 title: JavaScript 异步队列实现
 date: 2022-11-10 13:30
-tags: [微任务, 宏任务]
+tags: [微任务,宏任务]
 categories: 前端随笔
 ---
 

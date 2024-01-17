@@ -1,7 +1,7 @@
 ---
 title: 在开发h5移动端项目（v3+vant3+pinia+vite）时遇到的问题总结
 date: 2022-12-30 14:23
-tags: [H5项目，随笔]
+tags: [H5项目,随笔]
 categories: 前端随笔
 ---
 <!-- <!-- <meta name="referrer" content="no-referrer" /> --> -->
