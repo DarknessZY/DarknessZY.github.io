@@ -3,7 +3,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        <% if (theme.since && !isNaN(theme.since) && theme.since < date(new Date(), 'YYYY')) { %><%- theme.since%>-<% } %><%= date(new Date(), 'YYYY') %>
+        <% if (theme.since && !isNaN(theme.since) && theme.since < date(new Date(), 'YYYY')) { %><%- theme.since%>-<% } %><%= date(new Date() +1 , 'YYYY') %>
         <i class="ri-heart-fill heart_icon"></i> <%= config.author || config.title %>
       </li>
     </ul>
