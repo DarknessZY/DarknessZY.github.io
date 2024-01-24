@@ -2,6 +2,14 @@
 
 <body>
   <div id="app">
+    <!--自定义添加的 Loading Page CSS 样式-->
+    <% if (theme.preloader.enable) { %>
+    <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.loadingPage %>">
+    <% } %>
+    <!--自定义的 Loading Page-->
+    <% if (theme.preloader.enable) { %>
+      <%- partial('_partial/loading') %>
+    <% } %>
     <% if (theme.click_effect===2){ %>
       <canvas class="fireworks"></canvas>
       <style>

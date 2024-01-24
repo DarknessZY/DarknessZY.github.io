@@ -28,7 +28,6 @@ subtitle:
 favicon: /mytouxiang.gif
 logo: /mytouxiang.gif
 
-
 # 封面配置
 # enable-是否启用封面；path-封面背景图；logo-封面logo
 cover:
@@ -125,7 +124,7 @@ layout:
 github:
   # (关闭请设置为false)
   enable: false
-  url: https://github.com/Shen-Yu/hexo-theme-ayer
+  url: ''
 
 # 网易云音乐插件
 music:
@@ -144,7 +143,7 @@ busuanzi:
 live2d:
   enable: true
   mobile:
-    show: true    # 手机端是否可见，建议不可见否则可能影响阅读
+    show: false    # 手机端是否可见，建议不可见否则可能影响阅读
     scale: 0.5
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
@@ -276,39 +275,45 @@ neat_js:
 #首屏加载优化
 lazyload:
   enable: true
-
-#启用all_minifier
-all_minifier: true
-# html压缩
-html_minifier:
+# 是否开启页面加载动画
+preloader:
   enable: true
-  ignore_error: false
-  exclude:
+# 加载动画的css
+libs:
+  css:
+    loadingPage: /css/loading.css
+# #启用all_minifier
+# all_minifier: true
+# # html压缩
+# html_minifier:
+#   enable: true
+#   ignore_error: false
+#   exclude:
 
-# css压缩
-css_minifier:
-  enable: true
-  exclude:
-    - '*.min.css'
+# # css压缩
+# css_minifier:
+#   enable: true
+#   exclude:
+#     - '*.min.css'
     
-# js压缩
-js_minifier:
-  enable: true
-  mangle: true
-  compress:
-  exclude:
-    - '*.min.js'
-js_concator:
-  enable: false
-  bundle_path: '/js/bundle.js'
-  front: false
-  silent: false
+# # js压缩
+# js_minifier:
+#   enable: true
+#   mangle: true
+#   compress:
+#   exclude:
+#     - '*.min.js'
+# js_concator:
+#   enable: false
+#   bundle_path: '/js/bundle.js'
+#   front: false
+#   silent: false
 
-# 图片优化
-image_minifier:
-  enable: true
-  interlaced: false
-  multipass: false
-  optimizationLevel: 2
-  pngquant: false
-  progressive: false
+# # 图片优化
+# image_minifier:
+#   enable: true
+#   interlaced: false
+#   multipass: false
+#   optimizationLevel: 2
+#   pngquant: false
+#   progressive: false
