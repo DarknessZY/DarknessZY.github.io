@@ -13,7 +13,7 @@ menu:
 # https://github.com/mattboldt/typed.js
 subtitle:
   enable: true # 是否开启动效
-  text:  欢迎来到耀耀切克闹的博客 # 显示的文字
+  text: 欢迎来到耀耀切克闹的博客 # 显示的文字
   text2: 不是因为是主角才成功，而是成功了才成为主角 # 滚动播放，如果不需要可以留空
   text3: 想要的都拥有，得不到的都释怀 # 最多支持三段文字
   startDelay: 0 # 延迟时间
@@ -124,7 +124,7 @@ layout:
 github:
   # (关闭请设置为false)
   enable: false
-  url: ''
+  url: ""
 
 # 网易云音乐插件
 music:
@@ -140,11 +140,24 @@ busuanzi:
 
 # Live2D
 ## https://github.com/EYHN/hexo-helper-live2d
+## Live2D看板娘
 live2d:
   enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-koharu
+  display:
+    position: right
+    width: 150
+    height: 300
   mobile:
-    show: false    # 手机端是否可见，建议不可见否则可能影响阅读
-    scale: 0.5
+    show: false
+
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
   enable: true
@@ -172,7 +185,7 @@ mermaid:
   theme: forest
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
-since: '2022'
+since: "2022"
 
 # ICP备案信息尾部显示
 icp:
@@ -256,11 +269,11 @@ neat_enable: true
 neat_html:
   enable: true
   exclude:
-# 压缩css  
+# 压缩css
 neat_css:
   enable: true
   exclude:
-    - '**/*.min.css'
+    - "**/*.min.css"
 # 压缩js
 neat_js:
   enable: true
@@ -268,9 +281,9 @@ neat_js:
   output:
   compress:
   exclude:
-    - '**/*.min.js'
-    - '**/jquery.fancybox.pack.js'
-    - '**/index.js'
+    - "**/*.min.js"
+    - "**/jquery.fancybox.pack.js"
+    - "**/index.js"
 
 #首屏加载优化
 lazyload:
@@ -295,7 +308,7 @@ libs:
 #   enable: true
 #   exclude:
 #     - '*.min.css'
-    
+
 # # js压缩
 # js_minifier:
 #   enable: true
