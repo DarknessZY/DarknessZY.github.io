@@ -103,7 +103,7 @@ theme: ayer
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
 - type: git
-  repo: git@github.com:DarknessZY/DarknessZY.github.io.git
+  repo: https://github.com/DarknessZY/DarknessZY.github.io.git
   branch: master
 - type: git
   repo: root@101.42.41.69:/myPoject-Yao/repo/myBlog.git
