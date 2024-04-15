@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-03-14T08:06:25.260Z</updated>
+  <updated>2024-04-15T09:42:55.016Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WEB前端基础知识梳理（二）-笔记</title>
+    <link href="http://example.com/2024/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2024/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AC%94%E8%AE%B0/</id>
+    <published>2024-04-15T10:00:00.000Z</published>
+    <updated>2024-04-15T09:42:55.016Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;h3 id=&quot;理解深拷贝和浅拷贝？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="面试，随笔" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>NestJS搭建项目（二）nest+socket.io搭建简易聊天室</title>
@@ -491,31 +517,6 @@
         
         
     <summary type="html">&lt;!-- &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt; --&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;学习步骤&quot;&gt;&lt;a href=&quot;#学习步骤&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="recat" scheme="http://example.com/categories/recat/"/>
-    
-    
-    <category term="recat" scheme="http://example.com/tags/recat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React学习笔记(二)</title>
-    <link href="http://example.com/2023/06/06/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/"/>
-    <id>http://example.com/2023/06/06/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/</id>
-    <published>2023-06-06T06:24:00.000Z</published>
-    <updated>2023-08-01T06:59:53.382Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!-- &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt; --&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
         
       
     
