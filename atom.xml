@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-15T09:42:55.016Z</updated>
+  <updated>2024-06-17T08:53:15.524Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>试了下ai面试，于是我就用魔法打败魔法</title>
+    <link href="http://example.com/2024/06/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E8%AF%95%E4%BA%86%E4%B8%8Bai%E9%9D%A2%E8%AF%95%EF%BC%8C%E4%BA%8E%E6%98%AF%E6%88%91%E5%B0%B1%E7%94%A8%E9%AD%94%E6%B3%95%E6%89%93%E8%B4%A5%E9%AD%94%E6%B3%95/"/>
+    <id>http://example.com/2024/06/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E8%AF%95%E4%BA%86%E4%B8%8Bai%E9%9D%A2%E8%AF%95%EF%BC%8C%E4%BA%8E%E6%98%AF%E6%88%91%E5%B0%B1%E7%94%A8%E9%AD%94%E6%B3%95%E6%89%93%E8%B4%A5%E9%AD%94%E6%B3%95/</id>
+    <published>2024-06-17T03:17:00.000Z</published>
+    <updated>2024-06-17T08:53:15.524Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>WEB前端基础知识梳理（二）-笔记</title>
@@ -492,31 +517,6 @@
         
         
     <summary type="html">&lt;!-- &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="recat" scheme="http://example.com/categories/recat/"/>
-    
-    
-    <category term="recat" scheme="http://example.com/tags/recat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React学习笔记(三)</title>
-    <link href="http://example.com/2023/06/13/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/"/>
-    <id>http://example.com/2023/06/13/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/</id>
-    <published>2023-06-13T06:22:00.000Z</published>
-    <updated>2023-08-01T06:59:53.382Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!-- &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt; --&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;学习步骤&quot;&gt;&lt;a href=&quot;#学习步骤&quot; class=&quot;headerlink&quot;</summary>
         
       
     
