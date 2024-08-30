@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-17T09:15:01.573Z</updated>
+  <updated>2024-08-30T09:07:57.113Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js基础回顾</title>
+    <link href="http://example.com/2024/08/30/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/"/>
+    <id>http://example.com/2024/08/30/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</id>
+    <published>2024-08-30T08:54:00.000Z</published>
+    <updated>2024-08-30T09:07:57.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;javaScripit的数据类型&quot;&gt;&lt;a href=&quot;#javaScripit的数据类型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="前端随笔" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>试了下ai面试，于是我就用魔法打败魔法</title>
@@ -501,31 +526,6 @@
     <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
     <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React学习笔记(四)-搭建项目</title>
-    <link href="http://example.com/2023/06/19/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/"/>
-    <id>http://example.com/2023/06/19/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/</id>
-    <published>2023-06-19T06:22:00.000Z</published>
-    <updated>2023-08-01T06:59:53.382Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!-- &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="recat" scheme="http://example.com/categories/recat/"/>
-    
-    
-    <category term="recat" scheme="http://example.com/tags/recat/"/>
     
   </entry>
   
