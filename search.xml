@@ -39,6 +39,87 @@
       </tags>
   </entry>
   <entry>
+    <title>HTTP了解一下</title>
+    <url>/2024/11/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/http%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="一、什么是HTTP-HTTP-和-HTTPS-的区别"><a href="#一、什么是HTTP-HTTP-和-HTTPS-的区别" class="headerlink" title="一、什么是HTTP? HTTP 和 HTTPS 的区别?"></a>一、什么是HTTP? HTTP 和 HTTPS 的区别?</h1><h2 id="1-HTTP"><a href="#1-HTTP" class="headerlink" title="1.HTTP"></a>1.HTTP</h2><p><code>HTTP </code> (HyperText Transfer Protocol)，即超文本运输协议。是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。</p>
+<p><code>HTTP</code>常被用于在<code>Web</code>浏览器和网站服务器之间传递信息，以明文方式发送内容，不提供任何方式的数据加密</p>
+<p>特点如下：</p>
+<ul>
+<li>支持客户/服务器模式</li>
+<li>简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快</li>
+<li>灵活：HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记</li>
+<li>无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间</li>
+<li>无状态：HTTP协议无法根据之前的状态进行本次的请求处理</li>
+</ul>
+<h2 id="2-HTTPS"><a href="#2-HTTPS" class="headerlink" title="2.HTTPS"></a>2.HTTPS</h2><p><code>HTTPS</code>：是以安全为目标的HTTP通道，简单讲是<code>HTTP</code>的安全版，即<code>HTTP下加入SSL层</code>，<code>HTTPS</code>的安全基础是<code>SSL</code>，因此加密的详细内容就需要SSL。</p>
+<p>因为<code>HTTP</code> 以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了 Web 浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息。因此，<code>HTTP</code> 不适合传输敏感信息，比如：资金账户、密码等。为了解决 <code>HTTP</code> 的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议 <code>HTTPS</code>，为了数据传输的安全，<code>HTTPS</code> 在 <code>HTTP</code> 的基础上加入了 <code>SSL 协议</code>，即 <code>HTTPS = HTTP + SSL/TLS</code>，通过 <code>SSL</code>证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
+<p><code>SSL</code>的实现这些功能主要依赖于三种手段：</p>
+<ul>
+<li><p>对称加密：采用协商的密钥对数据加密</p>
+</li>
+<li><p>非对称加密：实现身份认证和密钥协商</p>
+</li>
+<li><p>摘要算法：验证信息的完整性</p>
+</li>
+<li><p>数字签名：身份验证</p>
+</li>
+<li><p>首先客户端通过URL访问服务器建立SSL连接</p>
+</li>
+<li><p>服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端</p>
+</li>
+<li><p>客户端的服务器开始协商SSL连接的安全等级，也就是信息加密的等级</p>
+</li>
+<li><p>客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站</p>
+</li>
+<li><p>服务器利用自己的私钥解密出会话密钥</p>
+</li>
+<li><p>服务器利用会话密钥加密与客户端之间的通信</p>
+</li>
+</ul>
+<h2 id="3-区别"><a href="#3-区别" class="headerlink" title="3.区别"></a>3.区别</h2><ul>
+<li>HTTPS是HTTP协议的安全版本，HTTP协议的数据传输是明文的，是不安全的，HTTPS使用了SSL/TLS协议进行了加密处理，相对更安全</li>
+<li>HTTP 和 HTTPS 使用连接方式不同，默认端口也不一样，HTTP是80，HTTPS是443</li>
+<li>HTTPS 由于需要设计加密以及多次握手，性能方面不如 HTTP</li>
+<li>HTTPS需要SSL，SSL 证书需要钱，功能越强大的证书费用越高</li>
+</ul>
+<h1 id="二、OSI七层模型"><a href="#二、OSI七层模型" class="headerlink" title="二、OSI七层模型"></a>二、OSI七层模型</h1><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/01c69190f9564db6b965e0e0e27d7cc7~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
+<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><p>应用层位于 OSI 参考模型的第七层，其作用是通过应用程序间的交互来完成特定的网络应用</p>
+<p>该层协议定义了应用进程之间的交互规则，通过不同的应用层协议为不同的网络应用提供服务。例如域名系统&nbsp;<code>DNS</code>，支持万维网应用的&nbsp;<code>HTTP</code>&nbsp;协议，电子邮件系统采用的&nbsp;<code>SMTP</code>协议等</p>
+<p>在应用层交互的数据单元我们称之为报文</p>
+<h2 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h2><p>表示层的作用是使通信的应用程序能够解释交换数据的含义，其位于&nbsp;<code>OSI</code>参考模型的第六层，向上为应用层提供服务，向下接收来自会话层的服务</p>
+<p>该层提供的服务主要包括数据压缩，数据加密以及数据描述，使应用程序不必担心在各台计算机中表示和存储的内部格式差异</p>
+<h2 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h2><p>会话层就是负责建立、管理和终止表示层实体之间的通信会话</p>
+<p>该层提供了数据交换的定界和同步功能，包括了建立检查点和恢复方案的方法</p>
+<h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><p>传输层的主要任务是为两台主机进程之间的通信提供服务，处理数据包错误、数据包次序，以及其他一些关键传输问题</p>
+<p>传输层向高层屏蔽了下层数据通信的细节。因此，它是计算机通信体系结构中关键的一层</p>
+<p>其中，主要的传输层协议是<code>TCP</code>和<code>UDP</code></p>
+<h2 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h2><p>两台计算机之间传送数据时其通信链路往往不止一条，所传输的信息甚至可能经过很多通信子网</p>
+<p>网络层的主要任务就是选择合适的网间路由和交换节点，确保数据按时成功传送</p>
+<p>在发送数据时，网络层把传输层产生的报文或用户数据报封装成分组和包，向下传输到数据链路层</p>
+<p>在网络层使用的协议是无连接的网际协议（Internet Protocol）和许多路由协议，因此我们通常把该层简单地称为 IP 层</p>
+<h2 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h2><p>数据链路层通常也叫做链路层，在物理层和网络层之间。两台主机之间的数据传输，总是在一段一段的链路上传送的，这就需要使用专门的链路层协议</p>
+<p>在两个相邻节点之间传送数据时，数据链路层将网络层交下来的&nbsp;<code>IP</code>数据报组装成帧，在两个相邻节点间的链路上传送帧</p>
+<p>每一帧的数据可以分成：报头<code>head</code>和数据<code>data</code>两部分:</p>
+<ul>
+<li>  head 标明数据发送者、接受者、数据类型，如 MAC地址</li>
+<li>  data 存储了计算机之间交互的数据</li>
+</ul>
+<p>通过控制信息我们可以知道一个帧的起止比特位置，此外，也能使接收端检测出所收到的帧有无差错，如果发现差错，数据链路层能够简单的丢弃掉这个帧，以避免继续占用网络资源</p>
+<h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><p>作为<code>OSI</code>&nbsp;参考模型中最低的一层，物理层的作用是实现计算机节点之间比特流的透明传送</p>
+<p>该层的主要任务是确定与传输媒体的接口的一些特性（机械特性、电气特性、功能特性，过程特性）</p>
+<p>该层主要是和硬件有关，与软件关系不大</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://www.jianshu.com/p/205c0fc51c97">HTTP和HTTPS的区别 - 简书 (jianshu.com)</a></p>
+<p><a href="https://www.cnblogs.com/klb561/p/10289199.html">HTTP与HTTPS的区别 - konglingbin - 博客园 (cnblogs.com)</a></p>
+<h1 id="二、OSI七层模型-1"><a href="#二、OSI七层模型-1" class="headerlink" title="二、OSI七层模型"></a>二、OSI七层模型</h1><p><a href="https://zhuanlan.zhihu.com/p/32059190">OSI 7层模型和TCP/IP 4层模型 - 知乎 (zhihu.com)</a></p>
+</body></html>]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js基础回顾</title>
     <url>/2024/08/30/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</url>
     <content><![CDATA[<html><head></head><body><h2 id="javaScripit的数据类型"><a href="#javaScripit的数据类型" class="headerlink" title="javaScripit的数据类型"></a>javaScripit的数据类型</h2><p>基本数据类型：number、bigint、string、null、undefined、boolean、symbol</p>
@@ -4144,87 +4225,6 @@
       <tags>
         <tag>博客搭建</tag>
         <tag>valine</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTTP了解一下</title>
-    <url>/2022/10/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/http%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="一、什么是HTTP-HTTP-和-HTTPS-的区别"><a href="#一、什么是HTTP-HTTP-和-HTTPS-的区别" class="headerlink" title="一、什么是HTTP? HTTP 和 HTTPS 的区别?"></a>一、什么是HTTP? HTTP 和 HTTPS 的区别?</h1><h2 id="1-HTTP"><a href="#1-HTTP" class="headerlink" title="1.HTTP"></a>1.HTTP</h2><p><code>HTTP </code> (HyperText Transfer Protocol)，即超文本运输协议。是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。</p>
-<p><code>HTTP</code>常被用于在<code>Web</code>浏览器和网站服务器之间传递信息，以明文方式发送内容，不提供任何方式的数据加密</p>
-<p>特点如下：</p>
-<ul>
-<li>支持客户/服务器模式</li>
-<li>简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快</li>
-<li>灵活：HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记</li>
-<li>无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间</li>
-<li>无状态：HTTP协议无法根据之前的状态进行本次的请求处理</li>
-</ul>
-<h2 id="2-HTTPS"><a href="#2-HTTPS" class="headerlink" title="2.HTTPS"></a>2.HTTPS</h2><p><code>HTTPS</code>：是以安全为目标的HTTP通道，简单讲是<code>HTTP</code>的安全版，即<code>HTTP下加入SSL层</code>，<code>HTTPS</code>的安全基础是<code>SSL</code>，因此加密的详细内容就需要SSL。</p>
-<p>因为<code>HTTP</code> 以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了 Web 浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息。因此，<code>HTTP</code> 不适合传输敏感信息，比如：资金账户、密码等。为了解决 <code>HTTP</code> 的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议 <code>HTTPS</code>，为了数据传输的安全，<code>HTTPS</code> 在 <code>HTTP</code> 的基础上加入了 <code>SSL 协议</code>，即 <code>HTTPS = HTTP + SSL/TLS</code>，通过 <code>SSL</code>证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
-<p><code>SSL</code>的实现这些功能主要依赖于三种手段：</p>
-<ul>
-<li><p>对称加密：采用协商的密钥对数据加密</p>
-</li>
-<li><p>非对称加密：实现身份认证和密钥协商</p>
-</li>
-<li><p>摘要算法：验证信息的完整性</p>
-</li>
-<li><p>数字签名：身份验证</p>
-</li>
-<li><p>首先客户端通过URL访问服务器建立SSL连接</p>
-</li>
-<li><p>服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端</p>
-</li>
-<li><p>客户端的服务器开始协商SSL连接的安全等级，也就是信息加密的等级</p>
-</li>
-<li><p>客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站</p>
-</li>
-<li><p>服务器利用自己的私钥解密出会话密钥</p>
-</li>
-<li><p>服务器利用会话密钥加密与客户端之间的通信</p>
-</li>
-</ul>
-<h2 id="3-区别"><a href="#3-区别" class="headerlink" title="3.区别"></a>3.区别</h2><ul>
-<li>HTTPS是HTTP协议的安全版本，HTTP协议的数据传输是明文的，是不安全的，HTTPS使用了SSL/TLS协议进行了加密处理，相对更安全</li>
-<li>HTTP 和 HTTPS 使用连接方式不同，默认端口也不一样，HTTP是80，HTTPS是443</li>
-<li>HTTPS 由于需要设计加密以及多次握手，性能方面不如 HTTP</li>
-<li>HTTPS需要SSL，SSL 证书需要钱，功能越强大的证书费用越高</li>
-</ul>
-<h1 id="二、OSI七层模型"><a href="#二、OSI七层模型" class="headerlink" title="二、OSI七层模型"></a>二、OSI七层模型</h1><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/01c69190f9564db6b965e0e0e27d7cc7~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
-<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><p>应用层位于 OSI 参考模型的第七层，其作用是通过应用程序间的交互来完成特定的网络应用</p>
-<p>该层协议定义了应用进程之间的交互规则，通过不同的应用层协议为不同的网络应用提供服务。例如域名系统&nbsp;<code>DNS</code>，支持万维网应用的&nbsp;<code>HTTP</code>&nbsp;协议，电子邮件系统采用的&nbsp;<code>SMTP</code>协议等</p>
-<p>在应用层交互的数据单元我们称之为报文</p>
-<h2 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h2><p>表示层的作用是使通信的应用程序能够解释交换数据的含义，其位于&nbsp;<code>OSI</code>参考模型的第六层，向上为应用层提供服务，向下接收来自会话层的服务</p>
-<p>该层提供的服务主要包括数据压缩，数据加密以及数据描述，使应用程序不必担心在各台计算机中表示和存储的内部格式差异</p>
-<h2 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h2><p>会话层就是负责建立、管理和终止表示层实体之间的通信会话</p>
-<p>该层提供了数据交换的定界和同步功能，包括了建立检查点和恢复方案的方法</p>
-<h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><p>传输层的主要任务是为两台主机进程之间的通信提供服务，处理数据包错误、数据包次序，以及其他一些关键传输问题</p>
-<p>传输层向高层屏蔽了下层数据通信的细节。因此，它是计算机通信体系结构中关键的一层</p>
-<p>其中，主要的传输层协议是<code>TCP</code>和<code>UDP</code></p>
-<h2 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h2><p>两台计算机之间传送数据时其通信链路往往不止一条，所传输的信息甚至可能经过很多通信子网</p>
-<p>网络层的主要任务就是选择合适的网间路由和交换节点，确保数据按时成功传送</p>
-<p>在发送数据时，网络层把传输层产生的报文或用户数据报封装成分组和包，向下传输到数据链路层</p>
-<p>在网络层使用的协议是无连接的网际协议（Internet Protocol）和许多路由协议，因此我们通常把该层简单地称为 IP 层</p>
-<h2 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h2><p>数据链路层通常也叫做链路层，在物理层和网络层之间。两台主机之间的数据传输，总是在一段一段的链路上传送的，这就需要使用专门的链路层协议</p>
-<p>在两个相邻节点之间传送数据时，数据链路层将网络层交下来的&nbsp;<code>IP</code>数据报组装成帧，在两个相邻节点间的链路上传送帧</p>
-<p>每一帧的数据可以分成：报头<code>head</code>和数据<code>data</code>两部分:</p>
-<ul>
-<li>  head 标明数据发送者、接受者、数据类型，如 MAC地址</li>
-<li>  data 存储了计算机之间交互的数据</li>
-</ul>
-<p>通过控制信息我们可以知道一个帧的起止比特位置，此外，也能使接收端检测出所收到的帧有无差错，如果发现差错，数据链路层能够简单的丢弃掉这个帧，以避免继续占用网络资源</p>
-<h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><p>作为<code>OSI</code>&nbsp;参考模型中最低的一层，物理层的作用是实现计算机节点之间比特流的透明传送</p>
-<p>该层的主要任务是确定与传输媒体的接口的一些特性（机械特性、电气特性、功能特性，过程特性）</p>
-<p>该层主要是和硬件有关，与软件关系不大</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://www.jianshu.com/p/205c0fc51c97">HTTP和HTTPS的区别 - 简书 (jianshu.com)</a></p>
-<p><a href="https://www.cnblogs.com/klb561/p/10289199.html">HTTP与HTTPS的区别 - konglingbin - 博客园 (cnblogs.com)</a></p>
-<h1 id="二、OSI七层模型-1"><a href="#二、OSI七层模型-1" class="headerlink" title="二、OSI七层模型"></a>二、OSI七层模型</h1><p><a href="https://zhuanlan.zhihu.com/p/32059190">OSI 7层模型和TCP/IP 4层模型 - 知乎 (zhihu.com)</a></p>
-</body></html>]]></content>
-      <categories>
-        <category>前端随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
