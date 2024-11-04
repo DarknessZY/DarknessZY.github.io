@@ -1,6 +1,6 @@
 ---
 title: HTTP了解一下
-date: 2022-10-11 18:12
+date: 2024-11-01 18:12
 tags: [随笔]
 categories: 前端随笔
 ---
