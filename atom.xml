@@ -220,6 +220,33 @@
   </entry>
   
   <entry>
+    <title>nginx重启&amp;解决端口冲突</title>
+    <link href="http://example.com/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/"/>
+    <id>http://example.com/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/</id>
+    <published>2023-12-08T11:53:00.000Z</published>
+    <updated>2024-11-29T05:53:40.590Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;前言&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;测试环境突然不能访问了，经排查最开始发现是nignx没进程了，于是我觉得重启下nignx就行了。重启后发现还是不行，看nginx重启的端口中9090有好多使用的，感觉是端口冲突，</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>nginx里各配置含义解析</title>
     <link href="http://example.com/2023/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8C%E5%90%84%E9%85%8D%E7%BD%AE%E5%90%AB%E4%B9%89%E8%A7%A3%E6%9E%90/"/>
     <id>http://example.com/2023/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8C%E5%90%84%E9%85%8D%E7%BD%AE%E5%90%AB%E4%B9%89%E8%A7%A3%E6%9E%90/</id>
@@ -497,33 +524,6 @@
     
     
     <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>element-plus表格合并（例如前两列合并）</title>
-    <link href="http://example.com/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/"/>
-    <id>http://example.com/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/</id>
-    <published>2023-07-19T07:45:00.000Z</published>
-    <updated>2023-08-01T06:59:53.398Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!-- &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt; --&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="项目搭建" scheme="http://example.com/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="项目搭建" scheme="http://example.com/tags/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
-    
-    <category term="element" scheme="http://example.com/tags/element/"/>
     
   </entry>
   

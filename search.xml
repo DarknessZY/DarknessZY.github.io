@@ -966,6 +966,35 @@
       </tags>
   </entry>
   <entry>
+    <title>nginx重启&amp;解决端口冲突</title>
+    <url>/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/</url>
+    <content><![CDATA[<html><head></head><body><p>前言</p>
+<blockquote>
+<p>测试环境突然不能访问了，经排查最开始发现是nignx没进程了，于是我觉得重启下nignx就行了。重启后发现还是不行，看nginx重启的端口中9090有好多使用的，感觉是端口冲突，处理了端口冲突后，测试环境可以使用了。记录一下本次处理</p>
+</blockquote>
+<p>1.查看nginx进程<br>ps -ef | grep nignx<br><img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ea047eef21d446699db635c77614f636~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6ICA6ICA5YiH5YWL6Ze554Gs:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTc4MTY4MTExNjY3OTg1NCJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1733464045&amp;x-orig-sign=Ht1b30zyMgOHYk4CHEpBerbJ4h4=" alt="image.png"></p>
+<p>2.如果没有nginx进程，就需要重启nginx服务,进入nginx所在目录，去重启ginx服务</p>
+<p>cd /opt/nginx/</p>
+<p>sudo service nginx restart</p>
+<p>3.重启后发现还是不行，查看是否是端口冲突了</p>
+<p><img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/04e86eaf09524063ab275f0b04f4e029~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6ICA6ICA5YiH5YWL6Ze554Gs:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTc4MTY4MTExNjY3OTg1NCJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1733464045&amp;x-orig-sign=TunCKAQQbUjA6hxCvXnRtqyHKFw=" alt="image.png"><br>4.确实是端口冲突了，找到端口冲突逻辑，删除冲突端口对应的pid</p>
+<p>sudo lsof -i：9090</p>
+<p>发现是primetheu进程导致的，其pid为7252<br><img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/e39b21196de84367afbfe8c529fdc60d~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6ICA6ICA5YiH5YWL6Ze554Gs:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTc4MTY4MTExNjY3OTg1NCJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1733464045&amp;x-orig-sign=xoznwxqROzSj4zFEdvcr1hUqqpM=" alt="image.png"></p>
+<p>5.将prometheu关闭，再删除冲突端口对应的pid进程</p>
+<p>systemctl stop prometheus.service</p>
+<p>sudo lsof -i :9090</p>
+<p>sudo kill -9 7252</p>
+<p>6.再重启nginx</p>
+<p>sudo service nginx restart</p>
+</body></html>]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>nginx里各配置含义解析</title>
     <url>/2023/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8C%E5%90%84%E9%85%8D%E7%BD%AE%E5%90%AB%E4%B9%89%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
