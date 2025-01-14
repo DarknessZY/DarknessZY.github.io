@@ -188,16 +188,16 @@ mermaid:
 since: "2022"
 
 # ICP备案信息尾部显示
-icp:
-  enable: true
-  url: "https://beian.miit.gov.cn/" # 备案链接
-  text: "京ICP备2023001417号" # 备案信息
-# 公安备案信息尾部显示
-gongan:
-  enable: true
-  img: /images/beian.png #公安备案图片
-  url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42098402000202" #公安备案链接
-  text: "鄂公网安备 42098402000202号" #公安备案信息
+# icp:
+#   enable: true
+#   url: "https://beian.miit.gov.cn/" # 备案链接
+#   text: "京ICP备2023001417号" # 备案信息
+# # 公安备案信息尾部显示
+# gongan:
+#   enable: true
+#   img: /images/beian.png #公安备案图片
+#   url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42098402000202" #公安备案链接
+#   text: "鄂公网安备 42098402000202号" #公安备案信息
 
 # 友情链接
 friends_link:
