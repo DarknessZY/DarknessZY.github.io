@@ -198,6 +198,33 @@
   </entry>
   
   <entry>
+    <title>微信小程序配置主题、按钮颜色等</title>
+    <link href="http://example.com/2024/02/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E6%8C%89%E9%92%AE%E9%A2%9C%E8%89%B2/"/>
+    <id>http://example.com/2024/02/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E6%8C%89%E9%92%AE%E9%A2%9C%E8%89%B2/</id>
+    <published>2024-02-20T09:12:00.000Z</published>
+    <updated>2025-02-20T06:48:22.643Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;一、在utils下新建文件globalPage.js 其作用如下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="微信小程序，随笔" scheme="http://example.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>计算机网络阅读笔记</title>
     <link href="http://example.com/2024/02/18/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2024/02/18/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</id>
@@ -492,32 +519,6 @@
         
         
     <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="vue" scheme="http://example.com/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue2源码学习笔记（二）——编译模板原理</title>
-    <link href="http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94%E7%BC%96%E8%AF%91%E6%A8%A1%E6%9D%BF%E5%8E%9F%E7%90%86/"/>
-    <id>http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94%E7%BC%96%E8%AF%91%E6%A8%A1%E6%9D%BF%E5%8E%9F%E7%90%86/</id>
-    <published>2023-08-10T09:52:00.000Z</published>
-    <updated>2023-08-14T01:13:57.262Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;Vue 2的模板编译原理具体可以分为以下几步： </summary>
         
       
     
