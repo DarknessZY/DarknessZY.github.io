@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>耀耀切克闹</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2025-04-01T07:58:07.048Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>耀耀切克闹</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序配置主题、按钮颜色等</title>
+    <link href="http://example.com/2025/03/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E6%8C%89%E9%92%AE%E9%A2%9C%E8%89%B2/"/>
+    <id>http://example.com/2025/03/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E6%8C%89%E9%92%AE%E9%A2%9C%E8%89%B2/</id>
+    <published>2025-03-20T09:12:00.000Z</published>
+    <updated>2025-04-01T07:58:07.048Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;一、在utils下新建文件globalPage.js 其作用如下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="微信小程序，随笔" scheme="http://example.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>漏洞扫描——react项目源代码泄漏</title>
+    <link href="http://example.com/2025/01/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E2%80%94%E2%80%94react%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F/"/>
+    <id>http://example.com/2025/01/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E2%80%94%E2%80%94react%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F/</id>
+    <published>2025-01-13T06:23:00.000Z</published>
+    <updated>2025-01-14T02:28:24.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;安全部门对我们前端项目进行漏洞扫描发现，前端有一个React项目生产环境源代码泄漏，解决过程的记录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1、React项目源代码泄漏&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="漏扫" scheme="http://example.com/tags/%E6%BC%8F%E6%89%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx重启&amp;解决端口冲突</title>
+    <link href="http://example.com/2024/11/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/"/>
+    <id>http://example.com/2024/11/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/</id>
+    <published>2024-11-29T11:53:00.000Z</published>
+    <updated>2025-01-14T02:34:49.854Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;前言&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;测试环境突然不能访问了，经排查最开始发现是nignx没进程了，于是我觉得重启下nignx就行了。重启后发现还是不行，看nginx重启的端口中9090有好多使用的，感觉是端口冲突，</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP了解一下</title>
+    <link href="http://example.com/2024/11/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/http%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2024/11/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/http%E5%AD%A6%E4%B9%A0/</id>
+    <published>2024-11-01T10:12:00.000Z</published>
+    <updated>2024-11-04T02:45:11.341Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、什么是HTTP-HTTP-和-HTTPS-的区别&quot;&gt;&lt;a href=&quot;#一、什么是HTTP-HTTP-和-HTTPS-的区别&quot; class=&quot;headerlink&quot; title=&quot;一、什么是HTTP?</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js基础回顾</title>
+    <link href="http://example.com/2024/08/30/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/"/>
+    <id>http://example.com/2024/08/30/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</id>
+    <published>2024-08-30T08:54:00.000Z</published>
+    <updated>2024-08-30T09:07:57.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;javaScripit的数据类型&quot;&gt;&lt;a href=&quot;#javaScripit的数据类型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="前端随笔" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>试了下ai面试，于是我就用魔法打败魔法</title>
+    <link href="http://example.com/2024/06/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E8%AF%95%E4%BA%86%E4%B8%8Bai%E9%9D%A2%E8%AF%95%EF%BC%8C%E4%BA%8E%E6%98%AF%E6%88%91%E5%B0%B1%E7%94%A8%E9%AD%94%E6%B3%95%E6%89%93%E8%B4%A5%E9%AD%94%E6%B3%95/"/>
+    <id>http://example.com/2024/06/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E8%AF%95%E4%BA%86%E4%B8%8Bai%E9%9D%A2%E8%AF%95%EF%BC%8C%E4%BA%8E%E6%98%AF%E6%88%91%E5%B0%B1%E7%94%A8%E9%AD%94%E6%B3%95%E6%89%93%E8%B4%A5%E9%AD%94%E6%B3%95/</id>
+    <published>2024-06-17T03:17:00.000Z</published>
+    <updated>2024-06-17T09:15:01.573Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WEB前端基础知识梳理（二）-笔记</title>
+    <link href="http://example.com/2024/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2024/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AC%94%E8%AE%B0/</id>
+    <published>2024-04-15T10:00:00.000Z</published>
+    <updated>2024-04-15T09:42:55.016Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;h3 id=&quot;理解深拷贝和浅拷贝？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="面试，随笔" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95%EF%BC%8C%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NestJS搭建项目（二）nest+socket.io搭建简易聊天室</title>
+    <link href="http://example.com/2024/03/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89nest+socket.io%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
+    <id>http://example.com/2024/03/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89nest+socket.io%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E8%81%8A%E5%A4%A9%E5%AE%A4/</id>
+    <published>2024-03-14T08:04:00.000Z</published>
+    <updated>2024-03-14T08:06:25.260Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;socket-io&quot;&gt;&lt;a href=&quot;#socket-io&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="Nest" scheme="http://example.com/tags/Nest/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络阅读笔记</title>
+    <link href="http://example.com/2024/02/18/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2024/02/18/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</id>
+    <published>2024-02-18T08:36:00.000Z</published>
+    <updated>2024-02-18T08:26:34.592Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="图书笔记" scheme="http://example.com/categories/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="图书笔记" scheme="http://example.com/tags/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用LightHouse对前端网站性能分析和优化</title>
+    <link href="http://example.com/2024/01/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E4%BD%BF%E7%94%A8LightHouse%E5%AF%B9%E5%89%8D%E7%AB%AF%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%92%8C%E4%BC%98%E5%8C%96/"/>
+    <id>http://example.com/2024/01/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E4%BD%BF%E7%94%A8LightHouse%E5%AF%B9%E5%89%8D%E7%AB%AF%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%92%8C%E4%BC%98%E5%8C%96/</id>
+    <published>2024-01-17T09:33:00.000Z</published>
+    <updated>2024-01-17T09:35:10.248Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;LightHouse&quot;&gt;&lt;a href=&quot;#LightHouse&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端性能优化" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebSocket 从入门到入土</title>
+    <link href="http://example.com/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WebSocket%20%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/"/>
+    <id>http://example.com/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WebSocket%20%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/</id>
+    <published>2023-12-08T11:53:00.000Z</published>
+    <updated>2023-12-08T11:42:11.765Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx里各配置含义解析</title>
+    <link href="http://example.com/2023/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8C%E5%90%84%E9%85%8D%E7%BD%AE%E5%90%AB%E4%B9%89%E8%A7%A3%E6%9E%90/"/>
+    <id>http://example.com/2023/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8C%E5%90%84%E9%85%8D%E7%BD%AE%E5%90%AB%E4%B9%89%E8%A7%A3%E6%9E%90/</id>
+    <published>2023-11-10T08:53:00.000Z</published>
+    <updated>2023-11-10T09:44:28.126Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于我调部门感觉又重新面试一次这件事，做出知识总结</title>
+    <link href="http://example.com/2023/10/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E6%88%91%E8%B0%83%E9%83%A8%E9%97%A8%E6%84%9F%E8%A7%89%E5%8F%88%E9%87%8D%E6%96%B0%E9%9D%A2%E8%AF%95%E4%B8%80%E6%AC%A1%E8%BF%99%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%81%9A%E5%87%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2023/10/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E6%88%91%E8%B0%83%E9%83%A8%E9%97%A8%E6%84%9F%E8%A7%89%E5%8F%88%E9%87%8D%E6%96%B0%E9%9D%A2%E8%AF%95%E4%B8%80%E6%AC%A1%E8%BF%99%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%81%9A%E5%87%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</id>
+    <published>2023-10-20T03:17:00.000Z</published>
+    <updated>2023-10-20T03:28:47.038Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="前端随笔" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Vue.js的设计与实现》阅读笔记（二）</title>
+    <link href="http://example.com/2023/10/14/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://example.com/2023/10/14/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <published>2023-10-14T08:36:00.000Z</published>
+    <updated>2023-10-16T08:41:42.932Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;数接上文继续看《Vue.js的设计与实现》，第四章</summary>
+        
+      
+    
+    
+    
+    <category term="图书笔记" scheme="http://example.com/categories/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="图书笔记" scheme="http://example.com/tags/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Vue.js的设计与实现》阅读笔记（一）</title>
+    <link href="http://example.com/2023/09/22/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://example.com/2023/09/22/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2023-09-22T08:36:00.000Z</published>
+    <updated>2023-09-22T09:35:35.393Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;当初刚开始学习vue3时就买了霍春阳大佬的《Vue.js的设计与实现》，看了1/3，当时还看的迷迷糊糊，有许多地方不太懂，经过一年多的工作,在这期间学习到了很多，对底层的许多东西，也有了自己的了解,</summary>
+        
+      
+    
+    
+    
+    <category term="图书笔记" scheme="http://example.com/categories/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="图书笔记" scheme="http://example.com/tags/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2源码学习笔记(六)—— 异步更新原理和diff算法原理</title>
+    <link href="http://example.com/2023/09/06/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%85%AD)%E2%80%94%E2%80%94vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%85%AD%EF%BC%89%E2%80%94%E2%80%94%20%E5%BC%82%E6%AD%A5%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86%E5%92%8Cdiff%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+    <id>http://example.com/2023/09/06/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%85%AD)%E2%80%94%E2%80%94vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%85%AD%EF%BC%89%E2%80%94%E2%80%94%20%E5%BC%82%E6%AD%A5%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86%E5%92%8Cdiff%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</id>
+    <published>2023-09-06T07:26:00.000Z</published>
+    <updated>2023-09-06T06:39:54.399Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;要来力！</summary>
+        
+      
+    
+    
+    
+    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2源码学习笔记(五)—计算属性computed的原理和侦听属性watch的原理</title>
+    <link href="http://example.com/2023/08/31/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%94)%E2%80%94%E2%80%94%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7computed%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BE%A6%E5%90%AC%E5%B1%9E%E6%80%A7watch%E7%9A%84%E5%8E%9F%E7%90%86/"/>
+    <id>http://example.com/2023/08/31/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%94)%E2%80%94%E2%80%94%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7computed%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BE%A6%E5%90%AC%E5%B1%9E%E6%80%A7watch%E7%9A%84%E5%8E%9F%E7%90%86/</id>
+    <published>2023-08-31T07:26:00.000Z</published>
+    <updated>2023-09-13T01:41:29.708Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2源码学习(四)——渲染更新原理</title>
+    <link href="http://example.com/2023/08/14/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)%E2%80%94%E2%80%94%E6%B8%B2%E6%9F%93%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86/"/>
+    <id>http://example.com/2023/08/14/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)%E2%80%94%E2%80%94%E6%B8%B2%E6%9F%93%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86/</id>
+    <published>2023-08-14T01:13:00.000Z</published>
+    <updated>2023-09-06T06:30:07.578Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2源码学习笔记(三)——初次渲染原理</title>
+    <link href="http://example.com/2023/08/11/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)%E2%80%94%E2%80%94%E5%88%9D%E6%AC%A1%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/"/>
+    <id>http://example.com/2023/08/11/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)%E2%80%94%E2%80%94%E5%88%9D%E6%AC%A1%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/</id>
+    <published>2023-08-11T09:52:00.000Z</published>
+    <updated>2023-08-14T01:14:27.088Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue2源码学习笔记（一）——Vue实例数据初始化和响应式原理</title>
+    <link href="http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94Vue%E5%AE%9E%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/"/>
+    <id>http://example.com/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94Vue%E5%AE%9E%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</id>
+    <published>2023-08-10T09:52:00.000Z</published>
+    <updated>2023-08-14T01:16:01.663Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue2源码学习" scheme="http://example.com/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
+  </entry>
+  
+</feed>
