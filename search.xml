@@ -39,6 +39,51 @@
       </tags>
   </entry>
   <entry>
+    <title>公众号下的页面换了域名，需要注意的事项</title>
+    <url>/2025/04/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8B%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%8D%A2%E4%BA%86%E5%9F%9F%E5%90%8D%EF%BC%8C%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%BA%8B%E9%A1%B9/</url>
+    <content><![CDATA[<html><head></head><body><ol>
+<li><p><strong>支付授权目录</strong>：</p>
+<ul>
+<li>在微信公众平台中，找到“微信支付”设置，更新“支付授权目录”。这个目录应该包含新的域名，因为用户点击支付按钮后，微信会跳转到这个目录下的页面进行支付操作。</li>
+</ul>
+</li>
+<li><p><strong>接口安全域名</strong>：</p>
+<ul>
+<li>如果新的域名也需要调用微信的API接口，那么您还需要在“开发设置”中更新“接口安全域名”，确保新的域名在微信的安全域名列表中。</li>
+</ul>
+</li>
+<li><p><strong>业务域名</strong>：</p>
+<ul>
+<li>如果您的公众号使用了JS-SDK，并且新的域名下有前端页面需要调用JS-SDK，那么您还需要在“公众号JS-SDK”页面更新“业务域名”。</li>
+</ul>
+</li>
+<li><p><strong>服务器配置</strong>：</p>
+<ul>
+<li>如果新的域名下有服务器地址用于接收微信的事件消息，那么您还需要在“开发设置”中更新“服务器配置”，包括服务器地址(URL)、Token、EncodingAESKey和消息加解密方式。</li>
+</ul>
+</li>
+<li><p><strong>SSL证书</strong>：</p>
+<ul>
+<li>如果新的域名使用了不同的服务器或服务提供商，您可能需要重新上传或更新SSL证书，以确保HTTPS连接的安全性。</li>
+</ul>
+</li>
+<li><p><strong>代码中的域名引用</strong>：</p>
+<ul>
+<li>您还需要检查并更新代码中所有硬编码的旧域名引用，确保所有请求都指向新的域名。</li>
+</ul>
+</li>
+</ol>
+<p>在更新配置后，请务必进行充分的测试，以确保支付功能和其他相关功能在新的域名下能够正常工作。测试内容包括但不限于支付流程、接口调用、消息接收等。</p>
+<p>请注意，所有配置的域名必须使用HTTPS协议，并且需要具有有效的SSL证书。</p>
+</body></html>]]></content>
+      <categories>
+        <category>前端随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小程序配置主题、按钮颜色等</title>
     <url>/2025/03/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E6%8C%89%E9%92%AE%E9%A2%9C%E8%89%B2/</url>
     <content><![CDATA[<html><head></head><body><p>一、在utils下新建文件globalPage.js 其作用如下</p>
