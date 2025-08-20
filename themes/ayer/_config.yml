@@ -53,9 +53,9 @@ excerpt_all: ture
 # 是否开启代码复制按钮
 copy_btn: true
 # 是否开启文章分享按钮
-share_enable: true
+share_enable: false
 # 国内的社交平台(If you are not in China, maybe you prefer to set:false)
-share_china: true
+share_china: false
 # 文章分享文字
 share_text: 分享
 
@@ -109,11 +109,11 @@ canvas_bg: 1
 
 # 自定义鼠标样式，直接替换/images/mouse.cur文件
 mouse:
-  enable: false
+  enable: true
   path: /images/mouse.cur
 
 # 鼠标点击效果：0-关闭，1-爱心，2-爆炸烟花，3-粒子烟花
-click_effect: 2
+click_effect: 0
 
 # 页面宽度自定义（不建议修改，可能造成布局混乱），article_width文章宽度，sidebar_width侧边栏宽度
 layout:
@@ -134,9 +134,9 @@ music:
   id: 22707008 # 网易云分享的音乐ID(更换音乐请更改此配置项)
   autoPlay: true # 是否开启自动播放
 
-# 访问量统计(不蒜子)
+# 访问量统计(不蒜子) 卡了暂时禁用
 busuanzi:
-  enable: true
+  enable: false
 
 # Live2D
 ## https://github.com/EYHN/hexo-helper-live2d
@@ -160,7 +160,7 @@ live2d:
 
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
-  enable: true
+  enable: false
   url: https://s9.cnzz.com/z_stat.php?id=1278069914&web_id=1278069914
 
 # Google Analytics
