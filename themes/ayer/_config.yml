@@ -41,7 +41,7 @@ progressBar: true
 # 告示板模块
 broadcast:
   enable: false # true开启，false关闭
-  type: 2 # 1：自定义输入，2：一言api(https://hitokoto.cn/)
+  type: 1 # 1：自定义输入，2：一言api(https://hitokoto.cn/)
   text: 一个安静优雅的hexo主题，快速且响应式。 # type为1时有效
 
 # 文章配置
