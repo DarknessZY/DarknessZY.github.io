@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-10-13T09:21:40.863Z</updated>
+  <updated>2025-11-10T09:59:14.798Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>word文档转html（mammoth ）</title>
+    <link href="http://example.com/2025/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/word%E6%96%87%E6%A1%A3%E8%BD%AChtml%EF%BC%88mammoth%20%EF%BC%89/"/>
+    <id>http://example.com/2025/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/word%E6%96%87%E6%A1%A3%E8%BD%AChtml%EF%BC%88mammoth%20%EF%BC%89/</id>
+    <published>2025-11-10T11:53:00.000Z</published>
+    <updated>2025-11-10T09:59:14.798Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="脚本" scheme="http://example.com/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>生成tag号的脚本</title>
     <link href="http://example.com/2025/10/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%94%9F%E6%88%90tag%E5%8F%B7%E7%9A%84%E8%84%9A%E6%9C%AC/"/>
     <id>http://example.com/2025/10/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%94%9F%E6%88%90tag%E5%8F%B7%E7%9A%84%E8%84%9A%E6%9C%AC/</id>
     <published>2025-10-13T09:53:00.000Z</published>
-    <updated>2025-10-13T09:21:40.863Z</updated>
+    <updated>2025-11-10T09:57:18.102Z</updated>
     
     
       
@@ -48,7 +75,7 @@
     <link href="http://example.com/2025/08/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%20%20(%E5%9B%9B)/"/>
     <id>http://example.com/2025/08/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%20%20(%E5%9B%9B)/</id>
     <published>2025-08-15T11:53:00.000Z</published>
-    <updated>2025-08-20T07:57:37.382Z</updated>
+    <updated>2025-11-10T09:57:18.065Z</updated>
     
     
       
@@ -75,7 +102,7 @@
     <link href="http://example.com/2025/07/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%EF%BC%88%E4%B8%89%EF%BC%89/"/>
     <id>http://example.com/2025/07/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%EF%BC%88%E4%B8%89%EF%BC%89/</id>
     <published>2025-07-15T11:53:00.000Z</published>
-    <updated>2025-07-23T08:48:24.833Z</updated>
+    <updated>2025-11-10T09:57:18.068Z</updated>
     
     
       
@@ -102,7 +129,7 @@
     <link href="http://example.com/2025/05/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/css%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0%E8%AE%B0%E5%BD%95/"/>
     <id>http://example.com/2025/05/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/css%E2%80%94%E2%80%94%E7%AC%94%E8%AE%B0%E8%AE%B0%E5%BD%95/</id>
     <published>2025-05-20T05:30:00.000Z</published>
-    <updated>2025-06-05T09:52:35.142Z</updated>
+    <updated>2025-11-10T09:57:18.075Z</updated>
     
     
       
@@ -129,7 +156,7 @@
     <link href="http://example.com/2025/04/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8B%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%8D%A2%E4%BA%86%E5%9F%9F%E5%90%8D%EF%BC%8C%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%BA%8B%E9%A1%B9/"/>
     <id>http://example.com/2025/04/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8B%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%8D%A2%E4%BA%86%E5%9F%9F%E5%90%8D%EF%BC%8C%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%BA%8B%E9%A1%B9/</id>
     <published>2025-04-20T11:53:00.000Z</published>
-    <updated>2025-05-06T09:24:26.843Z</updated>
+    <updated>2025-11-10T09:57:18.088Z</updated>
     
     
       
@@ -157,7 +184,7 @@
     <link href="http://example.com/2025/03/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E6%8C%89%E9%92%AE%E9%A2%9C%E8%89%B2/"/>
     <id>http://example.com/2025/03/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E6%8C%89%E9%92%AE%E9%A2%9C%E8%89%B2/</id>
     <published>2025-03-20T09:12:00.000Z</published>
-    <updated>2025-04-07T01:39:12.921Z</updated>
+    <updated>2025-11-10T09:57:18.096Z</updated>
     
     
       
@@ -184,7 +211,7 @@
     <link href="http://example.com/2025/01/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E2%80%94%E2%80%94react%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F/"/>
     <id>http://example.com/2025/01/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E2%80%94%E2%80%94react%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F/</id>
     <published>2025-01-13T06:23:00.000Z</published>
-    <updated>2025-04-07T01:39:12.923Z</updated>
+    <updated>2025-11-10T09:57:18.101Z</updated>
     
     
       
@@ -212,7 +239,7 @@
     <link href="http://example.com/2024/11/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/"/>
     <id>http://example.com/2024/11/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/</id>
     <published>2024-11-29T11:53:00.000Z</published>
-    <updated>2025-04-07T01:39:12.912Z</updated>
+    <updated>2025-11-10T09:57:18.085Z</updated>
     
     
       
@@ -239,7 +266,7 @@
     <link href="http://example.com/2024/11/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/http%E5%AD%A6%E4%B9%A0/"/>
     <id>http://example.com/2024/11/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/http%E5%AD%A6%E4%B9%A0/</id>
     <published>2024-11-01T10:12:00.000Z</published>
-    <updated>2025-04-07T01:39:12.907Z</updated>
+    <updated>2025-11-10T09:57:18.079Z</updated>
     
     
       
@@ -264,7 +291,7 @@
     <link href="http://example.com/2024/08/30/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/"/>
     <id>http://example.com/2024/08/30/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</id>
     <published>2024-08-30T08:54:00.000Z</published>
-    <updated>2025-04-07T01:39:12.908Z</updated>
+    <updated>2025-11-10T09:57:18.081Z</updated>
     
     
       
@@ -289,7 +316,7 @@
     <link href="http://example.com/2024/06/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E8%AF%95%E4%BA%86%E4%B8%8Bai%E9%9D%A2%E8%AF%95%EF%BC%8C%E4%BA%8E%E6%98%AF%E6%88%91%E5%B0%B1%E7%94%A8%E9%AD%94%E6%B3%95%E6%89%93%E8%B4%A5%E9%AD%94%E6%B3%95/"/>
     <id>http://example.com/2024/06/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E8%AF%95%E4%BA%86%E4%B8%8Bai%E9%9D%A2%E8%AF%95%EF%BC%8C%E4%BA%8E%E6%98%AF%E6%88%91%E5%B0%B1%E7%94%A8%E9%AD%94%E6%B3%95%E6%89%93%E8%B4%A5%E9%AD%94%E6%B3%95/</id>
     <published>2024-06-17T03:17:00.000Z</published>
-    <updated>2025-04-07T01:39:12.925Z</updated>
+    <updated>2025-11-10T09:57:18.103Z</updated>
     
     
       
@@ -314,7 +341,7 @@
     <link href="http://example.com/2024/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2024/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AC%94%E8%AE%B0/</id>
     <published>2024-04-15T10:00:00.000Z</published>
-    <updated>2025-04-07T01:39:12.904Z</updated>
+    <updated>2025-11-10T09:57:18.069Z</updated>
     
     
       
@@ -340,7 +367,7 @@
     <link href="http://example.com/2024/03/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89nest+socket.io%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
     <id>http://example.com/2024/03/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89nest+socket.io%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E8%81%8A%E5%A4%A9%E5%AE%A4/</id>
     <published>2024-03-14T08:04:00.000Z</published>
-    <updated>2025-04-07T01:39:12.900Z</updated>
+    <updated>2025-11-10T09:57:18.062Z</updated>
     
     
       
@@ -365,7 +392,7 @@
     <link href="http://example.com/2024/02/18/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2024/02/18/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</id>
     <published>2024-02-18T08:36:00.000Z</published>
-    <updated>2025-04-07T01:39:12.939Z</updated>
+    <updated>2025-11-10T09:57:18.121Z</updated>
     
     
       
@@ -390,7 +417,7 @@
     <link href="http://example.com/2024/01/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E4%BD%BF%E7%94%A8LightHouse%E5%AF%B9%E5%89%8D%E7%AB%AF%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%92%8C%E4%BC%98%E5%8C%96/"/>
     <id>http://example.com/2024/01/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E4%BD%BF%E7%94%A8LightHouse%E5%AF%B9%E5%89%8D%E7%AB%AF%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%92%8C%E4%BC%98%E5%8C%96/</id>
     <published>2024-01-17T09:33:00.000Z</published>
-    <updated>2025-04-07T01:39:12.913Z</updated>
+    <updated>2025-11-10T09:57:18.087Z</updated>
     
     
       
@@ -417,7 +444,7 @@
     <link href="http://example.com/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WebSocket%20%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/"/>
     <id>http://example.com/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WebSocket%20%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/</id>
     <published>2023-12-08T11:53:00.000Z</published>
-    <updated>2025-04-07T01:39:12.905Z</updated>
+    <updated>2025-11-10T09:57:18.072Z</updated>
     
     
       
@@ -442,7 +469,7 @@
     <link href="http://example.com/2023/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8C%E5%90%84%E9%85%8D%E7%BD%AE%E5%90%AB%E4%B9%89%E8%A7%A3%E6%9E%90/"/>
     <id>http://example.com/2023/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8C%E5%90%84%E9%85%8D%E7%BD%AE%E5%90%AB%E4%B9%89%E8%A7%A3%E6%9E%90/</id>
     <published>2023-11-10T08:53:00.000Z</published>
-    <updated>2025-04-07T01:39:12.911Z</updated>
+    <updated>2025-11-10T09:57:18.084Z</updated>
     
     
       
@@ -467,7 +494,7 @@
     <link href="http://example.com/2023/10/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E6%88%91%E8%B0%83%E9%83%A8%E9%97%A8%E6%84%9F%E8%A7%89%E5%8F%88%E9%87%8D%E6%96%B0%E9%9D%A2%E8%AF%95%E4%B8%80%E6%AC%A1%E8%BF%99%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%81%9A%E5%87%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     <id>http://example.com/2023/10/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E6%88%91%E8%B0%83%E9%83%A8%E9%97%A8%E6%84%9F%E8%A7%89%E5%8F%88%E9%87%8D%E6%96%B0%E9%9D%A2%E8%AF%95%E4%B8%80%E6%AC%A1%E8%BF%99%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%81%9A%E5%87%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</id>
     <published>2023-10-20T03:17:00.000Z</published>
-    <updated>2025-04-07T01:39:12.914Z</updated>
+    <updated>2025-11-10T09:57:18.089Z</updated>
     
     
       
@@ -494,7 +521,7 @@
     <link href="http://example.com/2023/10/14/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://example.com/2023/10/14/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
     <published>2023-10-14T08:36:00.000Z</published>
-    <updated>2025-04-07T01:39:12.938Z</updated>
+    <updated>2025-11-10T09:57:18.119Z</updated>
     
     
       
@@ -503,32 +530,6 @@
         
     <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;数接上文继续看《Vue.js的设计与实现》，第四章</summary>
-        
-      
-    
-    
-    
-    <category term="图书笔记" scheme="http://example.com/categories/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="图书笔记" scheme="http://example.com/tags/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《Vue.js的设计与实现》阅读笔记（一）</title>
-    <link href="http://example.com/2023/09/22/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>http://example.com/2023/09/22/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
-    <published>2023-09-22T08:36:00.000Z</published>
-    <updated>2025-04-07T01:39:12.937Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
-&lt;p&gt;当初刚开始学习vue3时就买了霍春阳大佬的《Vue.js的设计与实现》，看了1/3，当时还看的迷迷糊糊，有许多地方不太懂，经过一年多的工作,在这期间学习到了很多，对底层的许多东西，也有了自己的了解,</summary>
         
       
     
