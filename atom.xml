@@ -235,6 +235,32 @@
   </entry>
   
   <entry>
+    <title>版本更新与缓存清除</title>
+    <link href="http://example.com/2025/01/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E7%BC%93%E5%AD%98%E6%B8%85%E9%99%A4%20/"/>
+    <id>http://example.com/2025/01/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E7%BC%93%E5%AD%98%E6%B8%85%E9%99%A4%20/</id>
+    <published>2025-01-05T09:53:00.000Z</published>
+    <updated>2026-02-06T10:02:04.021Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;update-version.js&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="脚本" scheme="http://example.com/categories/%E8%84%9A%E6%9C%AC/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>nginx重启&amp;解决端口冲突</title>
     <link href="http://example.com/2024/11/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/"/>
     <id>http://example.com/2024/11/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/nginx%E9%87%8D%E5%90%AF&amp;%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81/</id>
@@ -513,32 +539,6 @@
     <category term="前端随笔" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
     
     <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《Vue.js的设计与实现》阅读笔记（二）</title>
-    <link href="http://example.com/2023/10/14/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://example.com/2023/10/14/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AVue.js%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
-    <published>2023-10-14T08:36:00.000Z</published>
-    <updated>2025-11-10T09:57:18.119Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;数接上文继续看《Vue.js的设计与实现》，第四章</summary>
-        
-      
-    
-    
-    
-    <category term="图书笔记" scheme="http://example.com/categories/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="图书笔记" scheme="http://example.com/tags/%E5%9B%BE%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
