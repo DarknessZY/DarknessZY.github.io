@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-11-10T09:59:14.798Z</updated>
+  <updated>2026-02-25T07:30:28.892Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端路由随笔</title>
+    <link href="http://example.com/2026/02/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E7%AD%BE%E7%AB%A0%E6%95%B0%E6%8D%AE%E6%A8%A1%E6%9D%BF%E5%A4%84%E7%90%86/"/>
+    <id>http://example.com/2026/02/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E7%AD%BE%E7%AB%A0%E6%95%B0%E6%8D%AE%E6%A8%A1%E6%9D%BF%E5%A4%84%E7%90%86/</id>
+    <published>2026-02-25T07:30:00.000Z</published>
+    <updated>2026-02-25T07:30:28.892Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;在开发新项目中。我们面临一个具体场景：&lt;strong&gt;纯预览展示的协议文档需要动态填充用户数据&lt;/strong&gt;。这些协议本身是静态HTML模板，但其中包含大量需要根据具体业务数据动态替换的字段，如客户姓名、贷款金额、银行信</summary>
+        
+      
+    
+    
+    
+    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>版本更新与缓存清除</title>
+    <link href="http://example.com/2026/01/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E7%BC%93%E5%AD%98%E6%B8%85%E9%99%A4%20/"/>
+    <id>http://example.com/2026/01/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E7%BC%93%E5%AD%98%E6%B8%85%E9%99%A4%20/</id>
+    <published>2026-01-05T09:53:00.000Z</published>
+    <updated>2026-02-09T01:26:09.767Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;update-version.js&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="脚本" scheme="http://example.com/categories/%E8%84%9A%E6%9C%AC/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>word文档转html（mammoth ）</title>
@@ -231,32 +282,6 @@
     
     
     <category term="漏扫" scheme="http://example.com/tags/%E6%BC%8F%E6%89%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>版本更新与缓存清除</title>
-    <link href="http://example.com/2025/01/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E7%BC%93%E5%AD%98%E6%B8%85%E9%99%A4%20/"/>
-    <id>http://example.com/2025/01/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E7%BC%93%E5%AD%98%E6%B8%85%E9%99%A4%20/</id>
-    <published>2025-01-05T09:53:00.000Z</published>
-    <updated>2026-02-06T10:02:04.021Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;update-version.js&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="脚本" scheme="http://example.com/categories/%E8%84%9A%E6%9C%AC/"/>
-    
-    
-    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
@@ -512,33 +537,6 @@
     
     
     <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于我调部门感觉又重新面试一次这件事，做出知识总结</title>
-    <link href="http://example.com/2023/10/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E6%88%91%E8%B0%83%E9%83%A8%E9%97%A8%E6%84%9F%E8%A7%89%E5%8F%88%E9%87%8D%E6%96%B0%E9%9D%A2%E8%AF%95%E4%B8%80%E6%AC%A1%E8%BF%99%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%81%9A%E5%87%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
-    <id>http://example.com/2023/10/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E6%88%91%E8%B0%83%E9%83%A8%E9%97%A8%E6%84%9F%E8%A7%89%E5%8F%88%E9%87%8D%E6%96%B0%E9%9D%A2%E8%AF%95%E4%B8%80%E6%AC%A1%E8%BF%99%E4%BB%B6%E4%BA%8B%EF%BC%8C%E5%81%9A%E5%87%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</id>
-    <published>2023-10-20T03:17:00.000Z</published>
-    <updated>2025-11-10T09:57:18.089Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-    <category term="前端随笔" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
