@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2026-04-21T08:01:49.276Z</updated>
+  <updated>2026-07-15T08:03:21.744Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>短链跳转</title>
+    <link href="http://example.com/2026/07/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%9F%AD%E9%93%BE%E8%B7%B3%E8%BD%AC/"/>
+    <id>http://example.com/2026/07/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E7%9F%AD%E9%93%BE%E8%B7%B3%E8%BD%AC/</id>
+    <published>2026-07-15T09:53:00.000Z</published>
+    <updated>2026-07-15T08:03:21.744Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;短链跳转&quot;&gt;&lt;a href=&quot;#短链跳转&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识点" scheme="http://example.com/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>Eruda 移动端调试工具使用指南</title>
@@ -512,31 +537,6 @@
     <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
     <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WebSocket 从入门到入土</title>
-    <link href="http://example.com/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WebSocket%20%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/"/>
-    <id>http://example.com/2023/12/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WebSocket%20%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/</id>
-    <published>2023-12-08T11:53:00.000Z</published>
-    <updated>2025-11-10T09:57:18.072Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="前端随笔" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
