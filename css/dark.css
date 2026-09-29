@@ -1,0 +1,236 @@
+/* ============================================
+   ParticleX Dark Mode Override
+   默认黑夜模式：覆盖 main.css 中的浅色样式
+   ============================================ */
+
+/* 基础 */
+body {
+    background: #0d1117;
+    color: #c9d1d9;
+}
+
+* {
+    scrollbar-color: #58a6ff #161b22;
+}
+
+::-webkit-scrollbar-track {
+    background: #161b22;
+}
+
+::selection {
+    background-color: #1f6feb66;
+    color: #fff;
+}
+
+/* 文章标题与正文 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #e6edf3;
+}
+
+a {
+    color: #58a6ff;
+}
+
+/* 顶部菜单栏 */
+#menu {
+    background: #161b22;
+    box-shadow: 0 -1px 10px 0 #00000066;
+}
+
+#menu #desktop-menu .title,
+#menu #desktop-menu a,
+#menu #mobile-menu .items .item,
+#menu #mobile-menu .title {
+    color: #c9d1d9;
+}
+
+#menu #desktop-menu a:hover,
+#menu #mobile-menu .items a:hover {
+    color: #58a6ff;
+}
+
+#menu #mobile-menu .items {
+    background: #161b22ee;
+}
+
+#menu.menu-color {
+    background: #000000aa;
+}
+
+#menu.menu-color #desktop-menu a,
+#menu.menu-color #mobile-menu a,
+#menu.menu-color #mobile-menu .title {
+    color: #c9d1d9;
+}
+
+/* 主页信息卡片（半透明，让星空透出来） */
+#home-card #card-style {
+    background: #161b22b3;
+    box-shadow: 0 0 20px #00000080;
+    backdrop-filter: blur(4px);
+}
+
+#home-card #card-div .avatar {
+    border: #30363d solid 3px;
+}
+
+#home-card #card-div .friend-links a,
+#home-card #card-div .icon-links a {
+    color: #c9d1d9;
+}
+
+#home-card #card-div .icon-links,
+#home-card #card-div .friend-links {
+    border-top: #30363d solid 1px;
+}
+
+#home-card #card-div .friend-links a:hover {
+    background: #1f6feb;
+}
+
+/* 主页文章卡片（半透明，让星空透出来） */
+#home-posts .post {
+    background: #161b22b3;
+    box-shadow: 0 0 20px #00000080;
+    backdrop-filter: blur(4px);
+}
+
+#home-posts .post:hover {
+    box-shadow: 0 0 30px #000000cc;
+}
+
+#home-posts .post-title a {
+    color: #e6edf3;
+}
+
+#home-posts .post .go-post {
+    background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+}
+
+#home-posts .page-current .current {
+    color: #ff7b72;
+}
+
+#home-posts .page-current a {
+    color: #8b949e;
+}
+
+/* 首页背景上的装饰圆环 */
+#home-head #home-info .loop:nth-child(1),
+#home-head #home-info .loop:nth-child(2),
+#home-head #home-info .loop:nth-child(3),
+#home-head #home-info .loop:nth-child(4) {
+    background: #0d1117;
+}
+
+/* 移动端首页信息框 */
+#home-head #home-info .info {
+    background: #0d1117a6;
+}
+
+/* 文章页 / 普通页面 */
+.article .info .date,
+.article .info a,
+.icon,
+.copycode {
+    color: #8b949e;
+}
+
+.article .info a:hover {
+    color: #58a6ff;
+}
+
+/* 归档 / 分类 / 标签 页 */
+.timeline-content {
+    background: #161b22;
+    border: 1px solid #30363d;
+    box-shadow: 0 2px 8px #00000066;
+}
+
+.timeline-content a h3 {
+    color: #e6edf3;
+}
+
+.timeline-tail {
+    background: #0d1117;
+}
+
+#archives .categories-tags span a {
+    color: #fff;
+}
+
+/* 搜索框 */
+.input {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+}
+
+.input:focus {
+    background: #161b22;
+    border-color: #1f6feb;
+    box-shadow: 0 0 0 3px #1f6feb4d;
+}
+
+/* 代码块 */
+pre {
+    border: 1px solid #30363d;
+    box-shadow: 0 2px 12px 0 #00000066;
+}
+
+code {
+    background: #6e768166;
+    color: #e6edf3;
+}
+
+.hljs-ln-numbers {
+    border-right: 1px solid #30363d;
+    color: #484f58;
+}
+
+/* Markdown 内容 */
+blockquote {
+    background: #1f6feb1a;
+    border-left: 3px solid #58a6ff;
+}
+
+table:not(.hljs-ln) td:nth-child(even) {
+    background: #1f6feb1f;
+}
+
+table:not(.hljs-ln) td:nth-child(odd) {
+    background: #161b22;
+}
+
+table:not(.hljs-ln) th {
+    background: #1f6feb33;
+    color: #e6edf3;
+}
+
+hr {
+    border-color: #30363d;
+}
+
+mark {
+    background: #e3b34180;
+    color: #e6edf3;
+}
+
+/* 页脚 */
+#footer {
+    color: #8b949e;
+}
+
+#footer #footer-wrap a {
+    color: #58a6ff;
+}
+
+/* 加载页文字 */
+#loading-circle p {
+    color: #c9d1d9;
+}

@@ -1,1 +1,3212 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>耀耀切克闹</title><meta name="generator" content="hexo-theme-ayer"><link rel="shortcut icon" href="/mytouxiang.gif"><link rel="stylesheet" href="/dist/main.css"><link rel="stylesheet" href="/css/fonts/remixicon.css"><link rel="stylesheet" href="/css/custom.css"><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script><style>.swal2-styled.swal2-confirm{font-size:1.6rem}</style><link rel="alternate" href="/atom.xml" title="耀耀切克闹" type="application/atom+xml"></head><body><div id="app"><link rel="stylesheet" type="text/css" href="/css/loading.css"><div id="loader-box"><div class="loader-wrapper"><div class="loader"></div><div class="loader-text"><div>L</div><div>O</div><div>A</div><div>D</div><div>I</div><div>N</div><div>G</div><div></div><div></div><div></div></div></div><script>!function(){function e(){o||(o=!0,document.body.style.overflow="auto",t&&t.parentNode&&t.parentNode.removeChild(t))}var t=document.getElementById("loader-box"),o=!1;"complete"===document.readyState?e():(window.addEventListener("load",e),window.addEventListener("DOMContentLoaded",function(){setTimeout(e,2e3)}),setTimeout(e,1e4))}()</script></div><main class="content on"><section class="cover"><div class="cover-frame"><div class="bg-box"><img src="/images/bg.png" alt="image frame"></div><div class="cover-inner text-center text-white"><h1><a href="/">耀耀切克闹</a></h1><div id="subtitle-box"><span id="subtitle"></span></div><div></div></div></div><div class="cover-learn-more"><a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a></div></section><script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script><script>try{var typed=new Typed("#subtitle",{strings:["欢迎来到耀耀切克闹的博客","不是因为是主角才成功，而是成功了才成为主角","想要的都拥有，得不到的都释怀"],startDelay:0,typeSpeed:200,loop:!0,backSpeed:100,showCursor:!0})}catch(e){console.log(e)}</script><div id="main"><section class="outer"><article class="articles"><article id="post-vue源码学习/Vue2源码学习笔记（一）——Vue实例数据初始化和响应式原理" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94Vue%E5%AE%9E%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/">Vue2源码学习笔记（一）——Vue实例数据初始化和响应式原理</a></h2></header><div class="article-meta"><a href="/2023/08/10/vue%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/Vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94Vue%E5%AE%9E%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/" class="article-date"><time datetime="2023-08-10T09:52:00.000Z" itemprop="datePublished">2023-08-10</time></a><div class="article-category"><a class="article-category-link" href="/categories/vue2%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/">vue2源码学习</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul></footer></div></article><article id="post-前端学习/前端代码规范" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/08/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">前端代码规范</a></h2></header><div class="article-meta"><a href="/2023/08/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" class="article-date"><time datetime="2023-08-09T02:00:00.000Z" itemprop="datePublished">2023-08-09</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%9A%E6%9C%AC/" rel="tag">脚本</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul></footer></div></article><article id="post-项目搭建/element-plus表格合并（例如前两列合并）" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/">element-plus表格合并（例如前两列合并）</a></h2></header><div class="article-meta"><a href="/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/" class="article-date"><time datetime="2023-07-19T07:45:00.000Z" itemprop="datePublished">2023-07-19</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">项目搭建</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element/" rel="tag">element</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" rel="tag">项目搭建</a></li></ul></footer></div></article><article id="post-前端学习/WEB前端基础知识梳理-笔记" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/07/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-%E7%AC%94%E8%AE%B0/">WEB前端基础知识梳理-笔记</a></h2></header><div class="article-meta"><a href="/2023/07/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-%E7%AC%94%E8%AE%B0/" class="article-date"><time datetime="2023-07-11T08:53:00.000Z" itemprop="datePublished">2023-07-11</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li></ul></footer></div></article><article id="post-React GO GO/React学习笔记(四)-搭建项目" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/06/19/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/">React学习笔记(四)-搭建项目</a></h2></header><div class="article-meta"><a href="/2023/06/19/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/" class="article-date"><time datetime="2023-06-19T06:22:00.000Z" itemprop="datePublished">2023-06-19</time></a><div class="article-category"><a class="article-category-link" href="/categories/recat/">recat</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/recat/" rel="tag">recat</a></li></ul></footer></div></article><article id="post-React GO GO/React学习笔记(三)" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/06/13/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/">React学习笔记(三)</a></h2></header><div class="article-meta"><a href="/2023/06/13/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/" class="article-date"><time datetime="2023-06-13T06:22:00.000Z" itemprop="datePublished">2023-06-13</time></a><div class="article-category"><a class="article-category-link" href="/categories/recat/">recat</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/recat/" rel="tag">recat</a></li></ul></footer></div></article><article id="post-React GO GO/React学习笔记(二)" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/06/06/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/">React学习笔记(二)</a></h2></header><div class="article-meta"><a href="/2023/06/06/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" class="article-date"><time datetime="2023-06-06T06:24:00.000Z" itemprop="datePublished">2023-06-06</time></a><div class="article-category"><a class="article-category-link" href="/categories/recat/">recat</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/recat/" rel="tag">recat</a></li></ul></footer></div></article><article id="post-React GO GO/React学习笔记(一)" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/06/05/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/">React学习笔记(一)</a></h2></header><div class="article-meta"><a href="/2023/06/05/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/" class="article-date"><time datetime="2023-06-05T06:22:00.000Z" itemprop="datePublished">2023-06-05</time></a><div class="article-category"><a class="article-category-link" href="/categories/recat/">recat</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/recat/" rel="tag">recat</a></li></ul></footer></div></article></article><nav class="page-nav"><a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">…</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">…</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/">下一页</a></nav></section></div><footer class="footer"><div class="outer"><ul><li>Copyrights © 2022-2026 <i class="ri-heart-fill heart_icon"></i> 耀耀切克闹</li></ul><ul><li></li></ul><ul></ul><ul></ul><ul></ul><ul><li></li></ul></div></footer></main><div class="float_btns"><div class="totop" id="totop"><i class="ri-arrow-up-line"></i></div><div class="todark" id="todark"><i class="ri-moon-line"></i></div></div><aside class="sidebar on"><button class="navbar-toggle"></button><nav class="navbar"><div class="logo"><a href="/"><img src="/mytouxiang.gif" alt="耀耀切克闹"></a></div><ul class="nav nav-main"><li class="nav-item"><a class="nav-item-link" href="/">主页</a></li><li class="nav-item"><a class="nav-item-link" href="/archives">归档</a></li><li class="nav-item"><a class="nav-item-link" href="/categories">分类</a></li><li class="nav-item"><a class="nav-item-link" href="/tags">标签</a></li><li class="nav-item"><a class="nav-item-link" href="/about">关于我</a></li></ul></nav><nav class="navbar navbar-bottom"><ul class="nav"><li class="nav-item"><a class="nav-item-link nav-item-search" title="搜索"><i class="ri-search-line"></i> </a><a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed"><i class="ri-rss-line"></i></a></li></ul></nav><div class="search-form-wrap"><div class="local-search local-search-plugin"><input type="search" id="local-search-input" class="local-search-input" placeholder="Search..."><div id="local-search-result" class="local-search-result"></div></div></div></aside><div id="mask"></div><div id="reward"><span class="close"><i class="ri-close-line"></i></span><p class="reward-p">我是穷比，在线乞讨！</p><div class="reward-box"><div class="reward-item"><img class="reward-img" src="/images/alipay.png"> <span class="reward-type">支付宝</span></div><div class="reward-item"><img class="reward-img" src="/images/wechat.png"> <span class="reward-type">微信</span></div></div></div><script src="/js/jquery-3.6.0.min.js"></script><script src="/js/lazyload.min.js"></script><script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script><link rel="stylesheet" href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"><script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script><script src="/dist/main.js"></script><div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div><link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css"><script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script><script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script><script>function viewer_init(){let i=document.querySelectorAll(".pswp")[0],r=document.querySelectorAll(".article-entry img:not(.reward-img)");r.forEach((t,e)=>{t.onclick=()=>{if(!document.querySelector(".left-col.show")){let o=[];r.forEach((t,e)=>{t.getAttribute("data-idx",e);var e=t.getAttribute("data-target")||t.getAttribute("src"),i=t.getAttribute("alt"),r=new Image;r.src=e,o.push({src:e,w:r.width||t.width,h:r.height||t.height,title:i})}),new PhotoSwipe(i,PhotoSwipeUI_Default,o,{index:parseInt(e)}).init()}}})}viewer_init()</script><link rel="stylesheet" href="/css/clipboard.css"><script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script><script>function wait(e,i){window.setTimeout(e,i)}!function(){var e;e="",e+='<button class="btn-copy" data-clipboard-snippet=""><i class="ri-file-copy-2-line"></i><span>COPY</span></button>',$(".highlight .code pre").before(e),$(".article pre code").before(e),(e=new ClipboardJS(".btn-copy",{target:function(e){return e.nextElementSibling}})).on("success",function(e){e=$(e.trigger);e.addClass("copied");let i=$(e.find("i")),n=(i.removeClass("ri-file-copy-2-line"),i.addClass("ri-checkbox-circle-line"),$(e.find("span")));n[0].innerText="COPIED",wait(function(){i.removeClass("ri-checkbox-circle-line"),i.addClass("ri-file-copy-2-line"),n[0].innerText="COPY"},2e3)}),e.on("error",function(e){e.clearSelection();e=$(e.trigger);e.addClass("copy-failed");let i=$(e.find("i")),n=(i.removeClass("ri-file-copy-2-line"),i.addClass("ri-time-line"),$(e.find("span")));n[0].innerText="COPY FAILED",wait(function(){i.removeClass("ri-time-line"),i.addClass("ri-file-copy-2-line"),n[0].innerText="COPY"},2e3)})}((window,document))</script><script src="/js/snow2.js"></script><script>window.mermaid&&mermaid.initialize({theme:"forest"}),document.addEventListener("DOMContentLoaded",function(){for(var e=document.getElementsByTagName("img"),r=0;r<e.length;r++)e[r].referrerPolicy="no-referrer"})</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({log:!1,pluginJsPath:"lib/",pluginModelPath:"assets/",pluginRootPath:"live2dw/",tagMode:!1})</script><script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>耀耀切克闹</title>
+    <meta name="author" content="耀耀切克闹" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/mytouxiang.gif" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<link rel="preload" as="image" href="/images/loading.gif" fetchpriority="high" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;700&family=Lexend:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" id="dark-style" href="/css/dark.css" />
+<style>
+    /* 切换按钮图标随主题显隐，不依赖 dark.css（浅色被禁用时也生效） */
+    [data-theme-toggle] .icon-light { display: none; }
+    html[data-theme="light"] [data-theme-toggle] .icon-dark { display: none; }
+    html[data-theme="light"] [data-theme-toggle] .icon-light { display: inline-block; }
+</style>
+<script>
+    // 首屏防闪：在样式生效后立即应用已保存的主题
+    (function () {
+        var t = "dark";
+        try {
+            t = localStorage.getItem("theme") || "dark";
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", t);
+        var l = document.getElementById("dark-style");
+        if (l && t === "light") l.disabled = true;
+    })();
+</script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="耀耀切克闹" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>耀耀切克闹</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="javascript:;" class="theme-toggle" data-theme-toggle title="切换明暗主题">
+            <i class="fa-solid fa-moon fa-fw icon-dark"></i>
+            <i class="fa-solid fa-sun fa-fw icon-light"></i>
+        </a>
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;耀耀切克闹</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="javascript:;" class="theme-toggle" data-theme-toggle title="切换明暗主题">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-moon fa-fw icon-dark"></i>
+                            <i class="fa-solid fa-sun fa-fw icon-light"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Theme</div>
+                    </div>
+                </a>
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/bg.png"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>耀耀切克闹</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2023/08/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+        <h2 class="post-title">前端代码规范</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/8/9
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="一、命名规范"><a href="#一、命名规范" class="headerlink" title="一、命名规范"></a>一、<strong>命名规范</strong></h2><h3 id="文件命名："><a href="#文件命名：" class="headerlink" title="文件命名："></a><strong>文件命名</strong>：</h3><ul>
+<li>  所有文件名统一使用小写，首页命名为index.xxx，文件名禁止特殊字符比如空格、$等。统一使用英文单词或拼音缩写，必须小写。</li>
+<li>  文件名包含多个单词时，单词之间建议使用半角的连词线 ( - ) 分隔。</li>
+<li>  文件目录结构嵌套层级不要过深</li>
+</ul>
+<h3 id="变量命名："><a href="#变量命名：" class="headerlink" title="变量命名："></a><strong>变量命名：</strong></h3><p>采用小驼峰式命名规范，类型+对象描述的方式，如果没有明确的类型，就可以使前缀为名词。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>array</td>
+<td>a</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>b</td>
+</tr>
+<tr>
+<td>function</td>
+<td>fn</td>
+</tr>
+<tr>
+<td>int</td>
+<td>i</td>
+</tr>
+<tr>
+<td>object</td>
+<td>o</td>
+</tr>
+<tr>
+<td>regular</td>
+<td>r</td>
+</tr>
+<tr>
+<td>string</td>
+<td>s</td>
+</tr>
+</tbody></table>
+<h3 id="函数命名："><a href="#函数命名：" class="headerlink" title="函数命名："></a><strong>函数命名：</strong></h3><p>采用小驼峰式命名（构造函数大驼峰式），前缀为动词</p>
+<table>
+<thead>
+<tr>
+<th>动词</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>can</td>
+<td>判断是否可执行某个动作 ( 权限 )</td>
+</tr>
+<tr>
+<td>has</td>
+<td>判断是否含有某个值</td>
+</tr>
+<tr>
+<td>is</td>
+<td>判断是否为某个值</td>
+</tr>
+<tr>
+<td>get</td>
+<td>获取某个值</td>
+</tr>
+<tr>
+<td>set</td>
+<td>设置某个值</td>
+</tr>
+</tbody></table>
+<h3 id="常量命名："><a href="#常量命名：" class="headerlink" title="常量命名："></a><strong>常量命名：</strong></h3><p>全部大写命名规范，使用大写字母和下划线来组合命名，下划线用以分割单词</p>
+<h3 id="类命名："><a href="#类命名：" class="headerlink" title="类命名："></a><strong>类命名：</strong></h3><ul>
+<li>  公共属性和方法 : 同变量命名方式</li>
+<li>  私有属性和方法 : 前缀为下划线(_或#)后面跟公共属性和方法一样的命名方式</li>
+</ul>
+<p><strong>文件目录结构：</strong></p>
+<p>同功能放在同一个文件目录下，目录结构不要嵌套过深，文件名语义化一些，方便后续维护</p>
+<ul>
+<li>  文件夹名称全部采用小写+”-“ 来隔开；</li>
+<li>  避免多层嵌套，单个项目中的目录嵌套控制在最多三到四个层级内；</li>
+</ul>
+<h2 id="二、代码规范"><a href="#二、代码规范" class="headerlink" title="二、代码规范"></a>二、代码规范</h2><h3 id="JS："><a href="#JS：" class="headerlink" title="JS："></a><strong>JS：</strong></h3><p>JS/TS主流的大致有这几种</p>
+<ul>
+<li>  <a href="https://link.juejin.cn/?target=https://www.npmjs.com/package/eslint-config-airbnb" title="https://www.npmjs.com/package/eslint-config-airbnb">Airbnb JavaScript Style Guide</a></li>
+<li>  <a href="https://link.juejin.cn/?target=https://github.com/rwaldron/idiomatic.js" title="https://github.com/rwaldron/idiomatic.js">Idiomatic JavaScript Style Guide</a></li>
+<li>  <a href="https://link.juejin.cn/?target=https://github.com/standard/standard" title="https://github.com/standard/standard">JavaScript Standard Style</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命名规范</td>
+<td>1. 普通命名采用小驼峰式命名 2. 命名是复数的时候需要加s 3. 命名需要符合语义化，尽量减少缩写的情况发生，做到见名知意，如果函数命名，可以采用加上动词前缀</td>
+</tr>
+<tr>
+<td>变量规范</td>
+<td>1. 变量定义尽量使用const、let 2. 变量兜底</td>
+</tr>
+<tr>
+<td>字符串</td>
+<td>1. 统一使用单引号而不是双引号，配置安装eslint后，保存会自动格式化处理 2. 用字符串模板而不是’+’来拼接字符串 3. 不要使用不必要的转义字符 4. 不要在字符串中用eval()，漏洞太多</td>
+</tr>
+<tr>
+<td>数组</td>
+<td>1.用扩展运算符（…）做数组浅拷贝2.使用数组解构</td>
+</tr>
+<tr>
+<td>对象</td>
+<td>1. ES6 使用属性值缩写，将属性的缩写放在对象声明的开头 2. 对象浅拷贝时，更推荐使用扩展运算符 …使用对象解构</td>
+</tr>
+<tr>
+<td>函数</td>
+<td>1. 函数参数使用默认值替代使用条件语句进行赋值 2. 函数参数越少越好，如果参数超过两个，要使用 ES6 的解构语法，不用考虑参数的顺序。把默认参数赋值放在最后 3. 尽量使用箭头函数 4. 用命名函数表达式而不是函数声明,函数声明作用域会提升，降低了代码可读性和可维护性 5. 不要改参数，不要对参数重新赋值 6. 功能函数使用纯函数，输入一致，输出结果永远唯一 7. 优先使用函数式编程</td>
+</tr>
+<tr>
+<td>for循环</td>
+<td>使用for循环过程中，数组的长度，使用一个变量来接收, 有利于代码执行效率得到提高，而不是每走一次循环，都得重新计算数组长度</td>
+</tr>
+</tbody></table>
+<h3 id="VUE："><a href="#VUE：" class="headerlink" title="VUE："></a><strong>VUE：</strong></h3><p>遵循vue.js官方风格指南：<a target="_blank" rel="noopener" href="https://vuejs.bootcss.com/style-guide/">https://vuejs.bootcss.com/style-guide/</a></p>
+<p>组件：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>组件命名</td>
+<td>1. 组件名为多个单词，命名为组件用途，完整单词的组件名（倾向于完整单词而不是缩写） 2. 文件名应该要么始终是单词大写开头 (PascalCase)，要么始终是横线连接 (kebab-case)，例如：todo-item或TodoItem 3. 基础组件名, 应用特定样式和约定的基础组件 (也就是展示类的、无逻辑的或无状态的组件) 应该全部以一个特定的前缀开头，比如Base、App或V 4. 单例组件名，只应该拥有单个活跃实例的组件应该以The前缀命名，以示其唯一性 5. 紧密耦合的组件名, 和父组件紧密耦合的子组件应该以父组件名作为前缀命名 6. 组件名中的单词顺序, 组件名应该以高级别的 (通常是一般化描述的) 单词开头，以描述性的修饰词结尾 7.模板中的组件名大小写，对于绝大多数项目来说，在单文件组件和字符串模板中组件名应该总是PascalCase的——但是在DOM模板中总是kebab-case的 8. JS/JSX中的组件名大小写,JS/JSX 中的组件名应该始终是 PascalCase 的，尽管在较为简单的应用中只使用Vue.component进行全局组件注册时，可以使用kebab-case字符串</td>
+</tr>
+<tr>
+<td>组件数据</td>
+<td>组件的data必须是一个函数</td>
+</tr>
+<tr>
+<td>props定义</td>
+<td>1. prop定义应该尽量详细  2. prop名大小写,在声明prop的时候，其命名应该始终使用camelCase，而在模板和JSX中应该始终使用kebab-case</td>
+</tr>
+<tr>
+<td>v-for使用</td>
+<td>1. 为v-for设置键值，尽量避免使用index作为key  2. 避免v-if和v-for用在一起</td>
+</tr>
+<tr>
+<td>样式</td>
+<td>为组件样式设置作用域，使用scoped属性，使用BEM约定</td>
+</tr>
+<tr>
+<td>私有property名</td>
+<td>1. Vue使用<em>前缀来定义其自身的私有 property 2. 推荐使用$</em>  ，作为一个用户定义的私有property的约定，以确保不会和Vue自身相冲突</td>
+</tr>
+<tr>
+<td>自闭合组件</td>
+<td>在单文件组件、字符串模板和JSX中没有内容的组件应该是自闭合的——但在DOM模板里永远不要这样做</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>1. 多个attribute的元素应该分多行撰写，每个attribute一行  2. 带引号的attribute值</td>
+</tr>
+<tr>
+<td>模板中简单的表达式</td>
+<td>组件模板应该只包含简单的表达式，复杂的表达式则应该重构为计算属性或方法</td>
+</tr>
+<tr>
+<td>简单的计算属性</td>
+<td>应该把复杂计算属性分割为尽可能多的更简单的property，计算属性不能产生副作用</td>
+</tr>
+<tr>
+<td>指令</td>
+<td>指令缩写 (用:表示 v-bind:、用@表示 v-on: 和用#表示 v-slot:)</td>
+</tr>
+<tr>
+<td>组件通信</td>
+<td>应该优先通过prop和事件进行父子组件之间的通信，而不是this.$parent或变更prop</td>
+</tr>
+<tr>
+<td>事件、定时器</td>
+<td>清除定时器或者事件监听</td>
+</tr>
+<tr>
+<td>代码文件</td>
+<td>开发过程中单个文件不允许超过600行，特别复杂的功能，文件不允许超过1000行</td>
+</tr>
+</tbody></table>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a><strong>CSS</strong></h3><p>stylelint插件，规范则推荐使用<a href="https://link.juejin.cn/?target=https://github.com/stylelint/stylelint-config-standard" title="https://github.com/stylelint/stylelint-config-standard">stylelint-config-standard</a></p>
+<p>BEM命名规则</p>
+<ul>
+<li>  block：模块，名字单词间用-连接</li>
+<li>  element：元素，模块的子元素，以__与block连接</li>
+<li>  modifier：修饰，模块的变体，定义特殊模块，以–与block连接</li>
+</ul>
+<p>有效使用css选择器，需遵循以下原则：</p>
+<ul>
+<li>  保持简单，不要使用嵌套过多过于复杂的选择器，选择器嵌套应少于3级；</li>
+<li>  通配符和属性选择器效率最低，需要匹配的元素最多，尽量避免使用；</li>
+<li>  避免使用CSS表达式；</li>
+<li>  慎重选择高消耗的样式（高消耗属性在绘制前需要浏览器进行大量计算），避免重绘重排；</li>
+<li>  css选择器中避免使用标签名；</li>
+<li>  尽量使用缩写属性；</li>
+<li>  使用子选择器；</li>
+<li>  0后面不带单位；</li>
+<li>id和class，命名名称语义化，不要过于简单，防止模块之间样式互相影响；合理的使用id，一般情况下id不应该被用于样式，并且id的权重很高，所以不使用id解决样式的问题，而是使用class；</li>
+</ul>
+<h2 id="三、项目实战配置"><a href="#三、项目实战配置" class="headerlink" title="三、项目实战配置"></a>三、项目实战配置</h2><p><a target="_blank" rel="noopener" href="https://yaoyaoqiekenao.com/2023/05/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/Husky+eslint+%20prettier%E8%A7%84%E8%8C%83%E4%BB%A3%E7%A0%81/">Husky+eslint+ prettier规范代码 | 耀耀切克闹 (yaoyaoqiekenao.com)</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%9A%8F%E7%AC%94/" style="color: #ff7d73">随笔</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E8%84%9A%E6%9C%AC/" style="color: #ffa2c4">脚本</a>
+        </span>
+        
+    </div>
+    <a href="/2023/08/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/">
+        <h2 class="post-title">element-plus表格合并（例如前两列合并）</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                项目搭建
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/19
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>做了一个后台管理日清的列表，不上线，只发布到测试环境，只供开发人员自己看的，方便了解啥时候结束联调，测试，上线等，其中有一个表格合并的功能做一下记录</p>
+</blockquote>
+<h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><pre><code class="js">&lt;template&gt;
+  &lt;div&gt;
+    &lt;el-table :data=&quot;dataList&quot; :span-method=&quot;objectSpanMethod&quot;&gt;
+      &lt;el-table-column label=&quot;日期&quot; prop=&quot;createTime&quot;&gt;&lt;/el-table-column&gt;
+      &lt;el-table-column label=&quot;业务线&quot; prop=&quot;projectType&quot;&gt;&lt;/el-table-column&gt;
+      &lt;!-- 其他列定义 --&gt;
+    &lt;/el-table&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<pre><code class="ts">const  objectSpanMethod =(&#123; row, column, rowIndex, columnIndex &#125;)=&gt; &#123;
+const dataList = [.....] //具体的表格数据
+//columnIndex列,前两列
+      if (columnIndex === 0 || columnIndex === 1) &#123;
+        if (rowIndex === 0 || (rowIndex &gt; 0 &amp;&amp; row[column.property] !==dataList[rowIndex - 1][column.property])) &#123;
+          let rowspan = 1;
+          let colspan = 1;
+          let i = 1;
+          while (
+            rowIndex + i &lt; dataList.length &amp;&amp;
+            row[column.property] === dataList[rowIndex + i][column.property]
+          ) &#123;
+            rowspan++;
+            i++;
+          &#125;
+          return &#123; rowspan, colspan &#125;;
+        &#125; else if (row[column.property] === dataList[rowIndex - 1][column.property]) &#123;
+          return &#123; rowspan: 0, colspan: 0 &#125;;
+        &#125;
+&#125;
+</code></pre>
+<h2 id="具体思路逻辑"><a href="#具体思路逻辑" class="headerlink" title="具体思路逻辑"></a>具体思路逻辑</h2><ol>
+<li><p> 首先，我们检查当前列 <code>columnIndex</code> 是否为 0 或者 1，以确定我们只对前两列进行合并操作。</p>
+</li>
+<li><p> 对于第一行（<code>rowIndex === 0</code>），我们返回 <code>&#123; rowspan: 1, colspan: 1 &#125;</code>，表示不进行合并。</p>
+</li>
+<li><p>对于其他行（<code>rowIndex &gt; 0</code>），我们根据合并逻辑进行判断。</p>
+<ul>
+<li>  首先，我们检查当前单元格的值 <code>row[column.property]</code>（例如，对于 “日期” 列，我们通过 <code>column.property</code> 访问 <code>createTime</code> 属性）是否与上一行的值相同，以及当前列是否为 “日期” 或者与上一行的 “业务线” 相同。如果满足这些条件，说明需要进行合并，我们返回 <code>&#123; rowspan: 0, colspan: 0 &#125;</code>，表示该单元格不需要合并。</li>
+<li>  如果不满足上述条件，我们开始计算正确的合并范围。我们初始化 <code>rowspan</code> 为 1，<code>colspan</code> 为 1，并使用变量 <code>i</code> 设置初始值为 1。</li>
+<li>  接下来，我们使用一个循环，来寻找连续相同数据的范围。在循环中，我们依次检查当前行之后的每一行，判断它们的值是否与当前行相同，并且在 “日期” 列或者与当前行的 “业务线” 相同时。如果满足这些条件，我们将 <code>rowspan</code> 值增加 1，并递增 <code>i</code>。</li>
+<li>  最后，我们返回计算出的 <code>&#123; rowspan, colspan &#125;</code> 值，表示正确的合并范围。</li>
+</ul>
+</li>
+</ol>
+<p>通过这些逻辑，我们可以准确地合并相同数据的行，并保持表格的正确展示。</p>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1afcad0bcd8541a3856a5a023608a345~tplv-k3u1fbpfcp-watermark.image" alt="17772e34eae0873ab9b82504c5657df_mosaic.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" style="color: #00a596">项目搭建</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/element/" style="color: #ffa2c4">element</a>
+        </span>
+        
+    </div>
+    <a href="/2023/07/19/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/element-plus%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6%EF%BC%88%E4%BE%8B%E5%A6%82%E5%89%8D%E4%B8%A4%E5%88%97%E5%90%88%E5%B9%B6%EF%BC%89/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/07/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-%E7%AC%94%E8%AE%B0/">
+        <h2 class="post-title">WEB前端基础知识梳理-笔记</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2><h3 id="DOM事件流及事件委托机制"><a href="#DOM事件流及事件委托机制" class="headerlink" title="DOM事件流及事件委托机制"></a>DOM事件流及事件委托机制</h3><p><em>DOM事件流（DOM Event Flow）</em>： 是描述浏览器中事件传递的一种模型。当页面上发生事件时，浏览器会按照特定的顺序将事件传递给相关的元素。DOM事件流主要包括三个阶段：<em>捕获阶段（Capture Phase）、目标阶段（Target Phase）、冒泡阶段（Bubble Phase）</em>。</p>
+<ol>
+<li> 捕获阶段（Capture Phase）：事件从文档的根节点（即window对象）开始，逐级向下传递到事件的目标元素之前的节点。在捕获阶段，事件是从最外层的祖先元素依次捕获到目标元素，直到达到触发事件的元素。</li>
+<li> 目标阶段（Target Phase）：事件到达触发事件的元素。</li>
+<li> 冒泡阶段（Bubble Phase）：事件从触发事件的元素开始，逐级向上冒泡到文档的根节点。在冒泡阶段，事件会依次冒泡到祖先元素，直到达到文档的根节点。</li>
+</ol>
+<p><em>事件委托（Event Delegation）</em>：是一种利用事件冒泡机制的技术。通过将事件监听器绑定在祖先元素上，然后利用事件冒泡的原理，从而在事件冒泡到祖先元素时触发事件监听器。这样可以减少事件监听器的数量，提高性能和代码的可维护性。</p>
+<p>事件委托的主要原理是通过事件冒泡，将事件处理器绑定到祖先元素上，而不是直接绑定到每个子元素上。当事件发生时，事件会冒泡到祖先元素，然后在祖先元素上触发事件处理器。通过判断事件的目标元素，可以实现根据目标元素的不同做出相应的操作。</p>
+<p>事件委托机制的好处有：</p>
+<ul>
+<li>  减少事件处理器的数量，节省内存和提高性能。</li>
+<li>  可以动态地添加或移除子元素，而不需要重新绑定事件处理器。</li>
+<li>  可以处理动态生成的元素，即使在绑定事件处理器之前。</li>
+</ul>
+<h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><p><em>Ajax（Asynchronous JavaScript and XML）</em>： 是一种利用JavaScript、XML和HTTP请求的技术，用于在不重载整个页面的情况下与服务器进行异步通信。它可以实现在后台与服务器进行数据交换，并使用JavaScript更新页面的部分内容，从而提升用户体验和页面性能。</p>
+<p><strong>Ajax的特点和优势包括：</strong></p>
+<ol>
+<li>异步通信：Ajax使用异步方式发送和接收数据，可以在后台与服务器进行数据交换，而不需要阻塞用户界面。这允许页面在等待服务器响应时仍然保持响应，并且可以同时进行其他操作。</li>
+<li>增量更新：Ajax可以根据需要只更新页面的一部分内容，而不是整个页面。通过使用JavaScript动态地更新DOM，可以提高页面的加载速度和响应速度。</li>
+<li>减少带宽消耗：由于只需要传输数据而不是整个页面，Ajax可以减少网络流量，降低带宽消耗。</li>
+<li>更好的用户体验：Ajax可以使用户与网站进行交互更加流畅，减少页面加载时间和响应延迟，提升用户体验。</li>
+<li>支持多种数据格式：虽然名字中包含XML，但Ajax并不限于只使用XML。它可以使用各种数据格式，如JSON、HTML、纯文本等。</li>
+</ol>
+<p><strong>在使用Ajax时，常见的步骤包括：</strong></p>
+<ol>
+<li>建立XMLHttpRequest对象</li>
+<li>设置回调函数</li>
+<li>配置请求信息，(如open,get方法)，使用open方法与服务器建立链接</li>
+<li>向服务器发送数据</li>
+<li>在回调函数中针对不同的响应状态进行处理;</li>
+</ol>
+<pre><code class="js">function myAjax() &#123;
+    // 1. 建立XMLHttpRequest对象
+    var xhr = new XMLHttpRequest()
+    // 2. 设置回调函数
+    xhr.onreadystatechange = callback
+    // 3. 配置请求信息，(如open,get方法)，使用open方法与服务器建立链接
+    xhr.open(&#39;post&#39;, &#39;/xxx&#39;, true)
+    // 3. 设置请求头信息
+    xhr.setRequestHeader(&#39;Content-type&#39;, &#39;application/json;charset=UTF-8&#39;)
+    //4. 向服务器发送数据
+    var params = &#123; ... &#125;
+    xhr.send(params)
+    
+&#125;
+// 5.  在回调函数中针对不同的响应状态进行处理;
+function callback() &#123; 
+// 判断异步对象的状态 
+    if(xhr.readyState == 4) &#123; 
+    // 判断交互是否成功 
+        if(xhr.status == 200) &#123; 
+        // 获取服务器响应的数据 
+        var res = xhr.responseText 
+        // 解析数据 
+        res = JSON.parse(res) 
+        &#125; 
+    &#125; 
+&#125;
+</code></pre>
+<h2 id="浏览器相关"><a href="#浏览器相关" class="headerlink" title="浏览器相关"></a>浏览器相关</h2><h3 id="输入-URL-回车后经过哪些过程"><a href="#输入-URL-回车后经过哪些过程" class="headerlink" title="输入 URL 回车后经过哪些过程"></a>输入 URL 回车后经过哪些过程</h3><ol>
+<li> 解析 URL，判断是否命中缓存（DNS prefetch）</li>
+<li> 访问 DNS 服务器，将域名解析获取 IP 地址</li>
+<li> 三次握手建立 TCP 连接</li>
+<li> 发送 HTTP 请求</li>
+<li> 服务器处理请求并返回 HTTP 报文</li>
+<li> 浏览器解析渲染页面</li>
+<li> 断开连接：TCP 四次挥手</li>
+</ol>
+<h3 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h3><p>在前端开发中，常见的前端解决跨域问题的方法包括：</p>
+<ol>
+<li><em>JSONP（JSON with Padding）</em>：JSONP利用&lt;script&gt;标签可以跨域加载外部资源的特性，通过动态创建&lt;script&gt;标签，将请求发送到其他域，并在返回的数据中包含一个回调函数调用，以实现跨域通信。但是JSONP只支持GET请求，且需要目标服务器支持返回预先定义好的回调函数。</li>
+</ol>
+<pre><code class="javascript">function handleResponse(data) &#123;
+  // 处理响应数据
+  console.log(data);
+&#125;
+
+var script = document.createElement(&#39;script&#39;);
+script.src = &#39;http://example.com/api/data?callback=handleResponse&#39;;
+document.body.appendChild(script);
+</code></pre>
+<ol start="2">
+<li><p><em>CORS（Cross-Origin Resource Sharing）</em>：CORS是一种现代化的跨域解决方案，需要服务器设置响应头来允许跨域访问。前端代码无需特殊处理，只需发送跨域请求即可。在服务器响应中，设置Access-Control-Allow-Origin头为允许访问的域名或使用通配符*来表示允许所有域名访问。</p>
+</li>
+<li><p><em>使用代理服务器（本地工程化项目配置 Proxy 代理来跨域请求后端（Webpack、Vite），Nginx反向代理）</em>：前端代码将请求发送到同域的代理服务器，然后由代理服务器转发请求到目标服务器，在代理服务器与目标服务器之间跨域请求。前者更适合在开发环境中使用，而后者更适合在生产环境中使用。至于为什么（有性能，安全性等方面），NGINX具备一些强大的安全功能，如SSL终止、防止DDoS攻击等，安全性肯定是强些，又具有许多高级功能，如反向代理、负载均衡、缓存等。这些功能对于处理大量并发请求、提供高可用性和水平扩展方面非常有用，性能上也肯定好。</p>
+</li>
+<li><p><em>WebSocket</em>：WebSocket是一种支持在浏览器和服务器之间进行全双工通信的协议，它不受同源策略的限制，可以直接进行跨域访问。</p>
+</li>
+<li><p><em>postMessage</em>：postMessage是H5新引入的可跨源通信的API，可以通过这个api，让主页面和任意iframe页面或者windows.open打开的页面进行双向通信。</p>
+</li>
+</ol>
+<p>需要注意的是，为了保护用户的安全性，浏览器实施了同源策略，限制了不同源（协议、域名、端口号任一不同）之间的交互行为。因此，跨域请求在默认情况下是受到限制的。上述方法都是在特定条件下解决跨域问题的方案，不同的场景可以选择不同的方法。</p>
+<p><strong>postMessage的使用</strong></p>
+<p>window.postMessage()是一个JavaScript方法，允许在不同的window或iframe之间进行跨域通信。它允许你向其他浏览上下文（页面、iframe、子窗口等）发送消息，并且不需要同源限制。</p>
+<p>该方法接受两个参数（实际是3个参数，但一般只用到前2个）：</p>
+<ol>
+<li><p>message：要发送的数据，可以是字符串、数字、对象等。</p>
+</li>
+<li><p>targetOrigin：目标窗口的源，即目标窗口的域名。只有在目标窗口与当前窗口具有相同的源时，目标窗口才能接收到消息。也可以使用通配符 “*” 表示允许任何源接收消息，但这样可能会存在安全风险。</p>
+</li>
+</ol>
+<p>使用示例：</p>
+<p>在当前页面中发送消息：</p>
+<pre><code class="javascript">var otherWindow = window.opener;  // 获取目标窗口的引用
+var message = &#39;Hello, World!&#39;;    // 要发送的消息
+
+otherWindow.postMessage(message, &#39;https://example.com&#39;);
+</code></pre>
+<p>在目标窗口中接收消息：</p>
+<pre><code class="javascript">window.addEventListener(&#39;message&#39;, function(event) &#123;
+  if (event.origin === &#39;https://example.com&#39;) &#123;  // 检验消息来自合法的源
+    var receivedMessage = event.data;             // 接收到的消息
+    console.log(receivedMessage);
+  &#125;
+&#125;);
+</code></pre>
+<p><code>window.opener</code>获取了打开当前窗口的窗口的引用。然后使用<code>postMessage()</code>方法将消息发送给目标窗口，并指定目标窗口的源。目标窗口中使用<code>window.addEventListener()</code>监听<code>message</code>事件，并通过<code>event.origin</code>检验消息的源。如果消息来自合法的源，就可以获取到消息内容<code>event.data</code>。</p>
+<h3 id="移动端屏幕适配"><a href="#移动端屏幕适配" class="headerlink" title="移动端屏幕适配"></a>移动端屏幕适配</h3><p>在移动端屏幕适配中，我们需要确保网页或应用程序能够在不同尺寸和分辨率的移动设备上呈现良好的用户体验。以下是一些常见的移动端屏幕适配方法：</p>
+<ol>
+<li><p><em>响应式布局</em>：使用CSS媒体查询和弹性布局等技术，根据不同的屏幕尺寸和设备方向，调整页面布局和样式。这使得页面能自适应不同的屏幕大小，并保持可读性和操作性。</p>
+</li>
+<li><p><em>流体布局</em>：使用百分比或rem等相对单位来定义元素的尺寸和间距，而不是使用固定像素值。这允许页面元素相对于屏幕大小进行伸缩，以适应不同的设备。（通过插件postcss-pxtorem完成）</p>
+</li>
+<li><p><em>视口设置</em>：通过设置视口的meta标签来调整页面在移动设备上的显示方式。使用<code>&lt;meta name=&quot;viewport&quot;&gt;</code>标签来设置视口宽度、缩放、禁止缩放等选项，以确保页面在不同设备上呈现正确。</p>
+</li>
+<li><p><em>移动端特定样式</em>：通过使用CSS媒体查询和移动端特定的样式规则，为移动设备提供更好的用户体验。例如，调整字体大小、按钮大小、触摸目标的可点击区域等。</p>
+</li>
+<li><p><em>使用Flexbox或Grid布局</em>：Flexbox和Grid布局是强大的CSS布局工具，可以帮助我们以更灵活的方式创建响应式布局。它们提供了一种简单而直观的方式来控制页面中元素的位置和尺寸。</p>
+</li>
+<li><p><em>测试和调试</em>：在开发过程中，务必经常在不同的移动设备上测试和调试应用程序。使用浏览器开发者工具、模拟器或真实设备进行调试，以确保页面在各种设备上呈现正确且良好的用户体验。</p>
+</li>
+</ol>
+<p><code>注意在使用这些方案时需要注意一下兼容性的问题</code></p>
+<h3 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7161965374374674468">cookie、localStorage、sessionStorage随笔</a></p>
+<h3 id="浏览器缓存"><a href="#浏览器缓存" class="headerlink" title="浏览器缓存"></a>浏览器缓存</h3><p><em>浏览器缓存</em>是指浏览器在访问网页时将一些静态资源（如图片、CSS文件、JavaScript文件等）保存在本地的临时存储空间中，以便在下次访问同一网页时能够更快地加载这些资源，提高网页的加载速度和用户体验。</p>
+<p>浏览器缓存分为两种类型：<code>强缓存和协商缓存</code>。</p>
+<p><em>强缓存</em>是通过设置响应头中的Cache-Control和Expires字段来实现的。当浏览器发送请求时，会先检查本地缓存中是否存在该资源的副本，并根据Cache-Control和Expires字段的值判断是否可使用缓存。如果可使用缓存，则直接从本地缓存中加载资源，不会发送请求到服务器。</p>
+<ul>
+<li><strong>Expires</strong>（http 1.0 时期产物）：设置的是具体的过期时间。</li>
+<li><strong>cache-control</strong>（http 1.1 时期产物）：设置的是经过多少时间（单位秒）之后过期，与 Expires 同时存在的话优先级更高。</li>
+</ul>
+<p><em>协商缓存</em>是通过设置响应头中的Last-Modified和ETag字段来实现的。当浏览器发送请求时，会先发送一个带有If-Modified-Since和If-None-Match字段的请求到服务器，服务器根据这些字段的值判断资源是否有更新。如果资源没有更新，则返回304 Not Modified状态码，浏览器直接从本地缓存中加载资源。如果资源有更新，则返回新的资源，并更新本地缓存。</p>
+<ul>
+<li><p>  <strong>Last-modified</strong>：顾名思义，最后一次更改时间。</p>
+</li>
+<li><p>  <strong>ETag</strong>：优先级更高，资源的唯一标识。优点是精度更高，因为 Last-modified 时间单位是秒，如果文件在 1 秒内被修改多次就很难侦测到。缺点是性能有一定消耗，因为获得资源的hash值需要额外计算。</p>
+</li>
+</ul>
+<p>浏览器缓存可以有效减少网络请求，提高网页的加载速度。但有时候也会导致问题，例如当网站更新了静态资源但用户的浏览器缓存仍然存在旧版本的资源时，用户可能无法看到最新的内容。为了解决这个问题，可以通过修改资源的文件名或者使用版本号来强制浏览器重新加载资源。</p>
+<h3 id="前端路由"><a href="#前端路由" class="headerlink" title="前端路由"></a>前端路由</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7150118507030511624">前端路由的基础理解</a></p>
+<h3 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h3><p>javaScript中的垃圾回收机制是自动管理内存的一种方式。JavaScript引擎使用的垃圾回收算法主要是基于<code>标记-清除（Mark and Sweep）算法</code>。</p>
+<p>标记-清除算法分为两个阶段：</p>
+<ul>
+<li>标记阶段：垃圾回收器会从根对象开始，遍历所有的对象，并标记出那些仍然被引用的对象。在JavaScript中，全局变量、当前调用栈上的局部变量以及正在运行的函数中的变量都被视为根对象。</li>
+<li>清除阶段：垃圾回收器会对内存进行清理，释放那些没有被标记的对象所占用的内存空间。<br>不管什么程序语言，内存生命周期基本是一致的：</li>
+</ul>
+<p>JS 是在定义变量时就完成了内存分配，而“垃圾回收器”的工作是跟踪内存的分配和使用，以便当分配的内存不再使用时，自动释放它。</p>
+<p>除了标记-清除算法，JavaScript引擎还使用了其他优化算法来提高垃圾回收的效率，例如<code>分代回收（Generational Collection）</code>和<code>增量回收（Incremental Collection）</code>。</p>
+<p><em>分代回收</em>将对象分为新生代和老生代两个年代。新生代中的对象生命周期较短，垃圾回收频率较高；而老生代中的对象生命周期较长，垃圾回收频率较低。通过不同的回收算法和策略来处理不同年代的对象，可以提高垃圾回收的效率。</p>
+<p><em>增量回收</em>是一种在执行垃圾回收时，与程序交替执行的方式。这样可以将垃圾回收的任务分解成多个小部分，在每个小部分执行完后让程序继续执行，以减少垃圾回收对程序执行的影响，并提高响应性能。</p>
+<p>总的来说，JavaScript的垃圾回收机制是一种自动管理内存的方式，通过使用标记-清除算法以及其他优化算法来检测和释放不再使用的内存空间，从而提高程序的性能和可靠性。</p>
+<h3 id="V8引擎垃圾回收机制"><a href="#V8引擎垃圾回收机制" class="headerlink" title="V8引擎垃圾回收机制"></a>V8引擎垃圾回收机制</h3><p>V8是一款用于执行JavaScript代码的高性能JavaScript引擎，它内置了独特的垃圾回收机制，与普通的垃圾回收机制存在一些不同之处。以下是V8垃圾回收机制的主要特点：</p>
+<ol>
+<li> 分代回收：V8的垃圾回收器采用了分代回收策略。它将内存分为新生代（young generation）和老生代（old generation）两个代。新生代中存放的是新创建的对象，生命周期较短；而老生代中存放的是存活时间较长的对象。通过将内存分代，可以根据对象的生命周期采用不同的回收策略，提高垃圾回收的效率。</li>
+<li> 增量式垃圾回收：V8的垃圾回收器采用了增量式垃圾回收，在执行JavaScript代码的过程中，将垃圾回收的任务分解为多个小部分，并与程序交替执行。这样可以将垃圾回收的负担分散到程序执行的过程中，减少了垃圾回收对应用程序的影响，提高了响应性能。</li>
+<li> Scavenge算法：新生代内存的垃圾回收使用了Scavenge算法。该算法将新生代内存空间分为From空间和To空间，对象首先分配到From空间，随着垃圾回收的进行，存活的对象会被复制到To空间，同时进行压缩操作，然后清空From空间。这种方式有效地解决了新生代内存中频繁发生的垃圾回收问题。</li>
+<li> 标记-清除算法：老生代内存的垃圾回收使用了标记-清除算法。垃圾回收器首先通过根对象遍历，标记所有可达的对象，然后清除那些未标记的对象，并回收它们占用的内存空间。V8的垃圾回收器还采用了增量标记和压缩操作，提高了清除过程的效率。</li>
+</ol>
+<p>总体而言，V8的垃圾回收机制在分代回收、增量式垃圾回收、Scavenge算法和标记-清除算法等方面与普通的垃圾回收机制有一些不同。这些特点使得V8能够在执行高性能JavaScript代码的同时，有效地管理内存并提高垃圾回收的效率。</p>
+<h2 id="网络相关"><a href="#网络相关" class="headerlink" title="网络相关"></a>网络相关</h2><h3 id="HTTP-1-0-1-1-2-0-3-0-的特性"><a href="#HTTP-1-0-1-1-2-0-3-0-的特性" class="headerlink" title="HTTP 1.0/1.1/2.0/3.0 的特性"></a>HTTP 1.0/1.1/2.0/3.0 的特性</h3><p><em>HTTP 1.0</em></p>
+<ol>
+<li> 确定了协议是<strong>无状态</strong>的，即同一客户端每次请求都没有任何关系</li>
+<li> 消息结构包含请求头和请求体</li>
+</ol>
+<p><em>HTTP 1.1</em></p>
+<ol>
+<li> 持久连接：引入了持久连接（Persistent Connection），可以在一次TCP连接中发送多个HTTP请求和响应，减少了连接建立和关闭的开销。</li>
+<li> 流水线：引入了流水线（Pipelining），允许客户端同时发送多个请求，提高了并发性能。</li>
+<li> 虚拟主机：通过Host请求头字段，可以在一台服务器上运行多个网站。</li>
+<li> 缓存控制：引入了缓存控制机制，使得服务器和客户端可以更好地管理缓存和减少数据传输。</li>
+<li> 分块传输编码：支持分块传输编码（Chunked Transfer Encoding），可以在不知道内容长度的情况下逐块发送数据。</li>
+</ol>
+<p><em>HTTP 2.0</em></p>
+<ol>
+<li> 二进制传输：HTTP 2.0使用二进制格式传输数据，替代了HTTP 1.x的文本格式，提高了传输效率和容错性。</li>
+<li> 多路复用：引入了多路复用（Multiplexing），可以通过一个连接并发发送多个请求和响应，解决了HTTP 1.x的队头阻塞问题，提高了性能。</li>
+<li> 请求优先级：可以设置请求的优先级，确保重要请求优先处理。</li>
+<li> 头部压缩：使用HPACK算法对HTTP头部进行压缩，减少了数据传输的大小。</li>
+<li> 服务器推送：服务器可以主动推送数据给客户端，减少客户端请求的延迟。</li>
+</ol>
+<p><em>HTTP 3.0</em></p>
+<ol>
+<li> 使用QUIC协议：HTTP 3.0使用QUIC（Quick UDP Internet Connections）作为传输协议，基于UDP提供更快的连接建立和数据传输。</li>
+<li> 强化安全性：HTTP 3.0默认使用加密的传输，提供更好的安全性和隐私保护。</li>
+<li> 抗网络阻塞：引入了拥塞控制机制，可以更好地应对网络阻塞和高延迟的情况。</li>
+</ol>
+<h3 id="GET-和-POST-区别"><a href="#GET-和-POST-区别" class="headerlink" title="GET 和 POST 区别"></a>GET 和 POST 区别</h3><ul>
+<li>  Get 传输<strong>大小相对受限</strong>（不同浏览器之间不同），Post <strong>大小不受限制</strong></li>
+<li>  Get 通过 <strong>URL</strong> 编码传输数据，Post 通过 <strong>body</strong> 传输，支持多种编码格式（两者都是<strong>明文传输</strong>，都不是安全的，但 Get 参数直接暴露在 URL 上，不能用来传递敏感信息）</li>
+<li>  浏览器会<strong>缓存</strong> Get 请求，Post 则<strong>不会缓存</strong>。（在该特性下Get请求可能会出现 304 不更新，解决方法：链接加个随机参数）</li>
+</ul>
+<h3 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h3><p><strong>XSS</strong>（跨站脚本攻击）：</p>
+<p>利用了浏览器对于从服务器所获取的内容的信任，注入恶意脚本在受害者的浏览器中得以运行，分为反射型、储存型、DOM型。开启 <em>CSP</em>（内容安全策略）可以减少或消除这类攻击，副作用是 <code>eval</code>、<code>Function()</code> 等方法会失效。类似的还有 <em>CRLF</em> 攻击，防御此类攻击的核心就是严格控制用户提交的内容，对输入进行过滤，对输出进行转义。</p>
+<p><strong>CSRF</strong>（跨站伪造请求）：<br>利用受害者的登录凭证（cookie）达到冒充该用户执行操作的目的，这在被攻击方很难完全防御，所以只能尽量减少 cookie 的使用，目前大部分网站也都是用 Token 来进行身份验证的，可以有效避免该类攻击。</p>
+<p><strong>Injection</strong>（注入攻击）<br>这种攻击主要是接口设计不当导致的，例如接口根据用户传递的内容拼接 SQL，那么就可以通过传递 SQL 语句来注入攻击；又例如根据传递的内容来拼接 Shell 命令，那么攻击者如果传了类似 <em>&amp;&amp; rm -rf xxx</em> 这样的命令就会被执行，后果不言而喻。  </p>
+<p><strong>DoS</strong>（服务拒绝）、<strong>DDoS</strong>（分布式服务拒绝）：</p>
+<p>通过构造大量特定请求，导致服务器资源被消耗过度，挤压正常的请求，进而产生雪崩效应。在 DDoS 攻击中更是利用了僵尸网络，使得追溯源头的可能性几乎为零，这类攻击主要目的在于消耗服务器带宽，非常难防御，常见的有 SYN 洪泛攻击（利用 TCP 三次握手），只能通过一些手段缓解，例如缩短超时，让服务器更快地释放掉长时间响应的连接，从而增加攻击者的成本。  </p>
+<p><strong>中间人攻击</strong>：</p>
+<p>通过拦截窃取手段破坏通信，信息在用户和服务之间的传递都会暴露在攻击者的视野中。使用 HTTPS 协议传输一般可以避免，还有就是敏感信息不要使用明文传输，剩下的就只能交给用户的安全意识了，比如用户连接了不安全的公共 wifi，那么他就有可能被攻击。</p>
+<h3 id="TCP-三次握手四次挥手的理解"><a href="#TCP-三次握手四次挥手的理解" class="headerlink" title="TCP 三次握手四次挥手的理解"></a>TCP 三次握手四次挥手的理解</h3><p><em>TCP（Transmission Control Protocol）</em> 是一种常用的传输层协议，用于在计算机网络中进行可靠的数据传输。为了建立和终止一个TCP连接，TCP使用了三次握手和四次挥手的过程。</p>
+<p><em>三次握手（Three-way Handshake）</em> 是在客户端和服务器之间建立TCP连接的过程。具体步骤如下：</p>
+<ol>
+<li>第一次握手：客户端向服务器发送一个连接请求报文段（SYN）,服务端接收了报文，此时服务端可以确定客户端发送功能正常，自己接收也正常。</li>
+<li>第二次握手： 服务器收到请求后，确认连接请求，并发送一个带有确认标志的报文段（SYN+ACK）作为响应,但此时服务端还不确定自己的发送是否正常</li>
+<li>客户端收到服务器的响应后，再发送一个带有确认标志的报文段（ACK），表示连接已建立，双方都确认各自收发功能正常。</li>
+</ol>
+<p>这样，双方就完成了三次握手，建立了可靠的TCP连接，可以开始进行数据传输。</p>
+<p><em>四次挥手（Four-way Handshake）</em> 是在客户端和服务器之间终止TCP连接的过程。具体步骤如下：</p>
+<ol>
+<li>客户端发送一个终止连接请求报文段（FIN）给服务器，表示客户端不再发送数据了。</li>
+<li>服务器收到请求后，发送一个确认报文段（ACK），表示已收到客户端的终止请求。</li>
+<li>服务器发送一个终止连接请求报文段（FIN）给客户端，表示服务器也不再发送数据了。</li>
+<li>客户端收到请求后，发送一个确认报文段（ACK），表示已收到服务器的终止请求。</li>
+</ol>
+<p>这样，双方就完成了四次挥手，TCP连接成功终止。</p>
+<p>三次握手和四次挥手的目的是为了保证双方都同意建立和终止连接，并确保数据的可靠传输。通过握手和挥手过程，双方可以进行信息交换，协商参数，并确保连接的稳定性和可靠性。</p>
+<h3 id="域名发散和域名收敛"><a href="#域名发散和域名收敛" class="headerlink" title="域名发散和域名收敛"></a>域名发散和域名收敛</h3><p><em>域名发散（Domain Name Expansion）和域名收敛（Domain Name Convergence）</em> 是在网络中管理和分配域名的两种不同策略。</p>
+<p><em>域名发散</em> 是指将一个域名分配给多个不同的IP地址或资源。这意味着同一个域名可能会映射到不同的服务器或资源上。这种策略在分布式系统或负载均衡环境中常见。例如，一个大型网站可能会将其域名映射到多个服务器上，以实现更好的性能和可靠性。</p>
+<p><em>域名收敛</em>是指将多个域名指向同一个IP地址或资源。这意味着多个不同的域名将指向同一个服务器或资源。这种策略经常用于集中管理和简化网络架构。例如，一个公司可能会有多个域名，但它们都指向同一台服务器，这样可以方便地管理和维护这些域名和服务器。</p>
+<p>选择采用域名发散或域名收敛策略取决于特定的网络需求和设计目标。域名发散可以提供更好的负载均衡和容错能力，但需要更复杂的配置和管理。域名收敛可以简化管理，但可能会对性能和可靠性产生风险。</p>
+<h2 id="CSS相关"><a href="#CSS相关" class="headerlink" title="CSS相关"></a>CSS相关</h2><h3 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h3><p>CSS盒模型（CSS Box Model）是用于定义和布局HTML元素的一种模型。它将每个HTML元素看作一个矩形的盒子，包括内容区域、内边距、边框和外边距</p>
+<ol>
+<li> 内容区域（Content）：这是盒子中放置实际内容的部分，如文本、图像等。它的大小由<code>width</code>和<code>height</code>属性定义。</li>
+<li> 内边距（Padding）：这是内容区域与边框之间的空白区域。它的大小由<code>padding-top</code>、<code>padding-right</code>、<code>padding-bottom</code>和<code>padding-left</code>属性定义。</li>
+<li> 边框（Border）：这是一个包围内容区域和内边距的线条或样式。它的大小和样式由<code>border-width</code>、<code>border-style</code>和<code>border-color</code>属性定义。</li>
+<li> 外边距（Margin）：这是盒子与其他盒子之间的空白区域。它的大小由<code>margin-top</code>、<code>margin-right</code>、<code>margin-bottom</code>和<code>margin-left</code>属性定义。</li>
+</ol>
+<p>标准盒模型：<code>box-sizing: content-box</code>，另外也可通过可以在HTML文档的<code>&lt;head&gt;</code>标签中添加文档类型声明（DOCTYPE）设置标准盒模型</p>
+<ul>
+<li>  在标准盒模型中，元素的总宽度和高度包括了内容区域、内边距、边框和外边距。</li>
+<li>  元素的宽度（<code>width</code>）和高度（<code>height</code>）属性指定的是内容区域的尺寸。</li>
+<li>  总宽度 = <code>width</code> + 左内边距 + 右内边距 + 左边框 + 右边框 + 左外边距 + 右外边距。</li>
+<li>  总高度 = <code>height</code> + 上内边距 + 下内边距 + 上边框 + 下边框 + 上外边距 + 下外边距。</li>
+</ul>
+<p>IE盒模型（怪异盒子模型）：<code>box-sizing: border-box</code></p>
+<p>元素宽度为内容宽度+边距+边框（content + padding + border = width）</p>
+<h3 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h3><p>BFC的全称是块状格式化上下文</p>
+<blockquote>
+<p>一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。</p>
+<p> 一个块状格式化上下文可由以下方法创建：</p>
+</blockquote>
+<ol>
+<li> 根元素（html元素）或其它包含它的元素</li>
+<li> 浮动元素 (元素的 float 不是 none)</li>
+<li> position 的值不为relative和static</li>
+<li> 内联块 (元素具有 display: inline-block)</li>
+<li> 表格单元格 (元素具有 display: table-cell，HTML表格单元格默认属性)</li>
+<li> 表格标题 (元素具有 display: table-caption, HTML表格标题默认属性)</li>
+<li> 具有overflow 且值不是 visible 的块元素</li>
+<li> display: flow-root</li>
+<li> column-span: all 应当总是会创建一个新的格式化上下文，即便具有 column-span: all 的元素并不被包裹在一个多列容器中。</li>
+<li>弹性盒flex boxes（元素具有display: flex或inline-flex）</li>
+</ol>
+<p><strong>应用：</strong></p>
+<ol>
+<li> 阻止 <code>margin</code> 重叠</li>
+<li> 阻止元素被浮动元素覆盖（以前常用于<strong>自适应两栏布局</strong>）</li>
+<li> 清除内部浮动（父级元素<strong>高度塌陷</strong>问题）</li>
+</ol>
+<h3 id="回流与重绘"><a href="#回流与重绘" class="headerlink" title="回流与重绘"></a>回流与重绘</h3><p><em>回流</em>：是指浏览器根据DOM树和CSS样式计算元素的几何属性和布局信息的过程。当页面中的元素发生了改变（如添加、删除、修改元素的位置、大小等），浏览器会重新计算元素的布局信息，以确定每个元素在文档中的准确位置。回流是一种比较昂贵的操作，因为它会影响页面的整体布局，可能需要重新计算许多元素的位置，对性能有一定的影响。</p>
+<p><strong>具体哪些情况会导致回流：</strong></p>
+<ol>
+<li>页面首次渲染</li>
+<li>浏览器窗口变化</li>
+<li>元素<strong>尺寸</strong>或<strong>位置</strong>变化（宽高、边距、边框等）</li>
+<li>元素<strong>内容</strong>发生变化（文字数量、图片大小、字体大小变化）</li>
+<li>添加删除<strong>可见</strong>的 DOM 节点</li>
+<li>激活 css 伪类（hover、active等）</li>
+<li>查询某些属性或调用某些方法（浏览器会必须回流来保证数据的准确性）</li>
+</ol>
+<p><em>重绘</em>：是指浏览器对页面进行重新绘制的过程，即根据元素的新的样式计算并绘制页面的外观。当元素的样式发生了改变（如颜色、背景、边框等），浏览器会重新计算元素的视觉效果，并将其重新绘制在屏幕上。相比于回流，重绘的开销较小，因为它只需要更新元素的样式，不需要重新计算布局。</p>
+<p><em>回流必将引起重绘，重绘不一定引起回流。回流的性能开销更大</em></p>
+<p><strong>如何减少回流重绘（性能优化）：</strong></p>
+<p><strong>HTML层面</strong>：</p>
+<ol>
+<li> 避免使用 <code>table</code> 布局</li>
+<li> 在 DOM 树最末端改变 class</li>
+</ol>
+<p><strong>CSS层面</strong>：</p>
+<ol>
+<li> 尽量减少使用 CSS 表达式（如：<code>calc</code>）</li>
+<li> 避免多层内联样式</li>
+<li> 将复杂动效应用在脱离文档流的元素上（<code>position: absolute / fixed</code>）</li>
+</ol>
+<p><strong>JS层面</strong>：</p>
+<ol>
+<li> 避免用 JS 操作样式（多个样式改变尽量<strong>合并为一次操作</strong>）</li>
+<li> 如无法避免多次应用样式或操作 DOM，则可以先设置元素隐藏（先 <code>display:none</code> 再操作）</li>
+<li> 重复使用元素属性时赋值给变量（避免重复查询元素导致回流）</li>
+<li> 某些操作尽量采用防抖节流（如 resize、scroll）</li>
+</ol>
+<h3 id="实现水平垂直居中"><a href="#实现水平垂直居中" class="headerlink" title="实现水平垂直居中"></a>实现水平垂直居中</h3><p><strong>flex布局（最常用）</strong></p>
+<pre><code class="css">.parent &#123;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+&#125;
+</code></pre>
+<p><strong>grid布局（兼容性不太好，适合内部系统，自己用）</strong></p>
+<pre><code class="css">.parent &#123;
+    display: grid;
+    place-items: center;
+&#125;
+</code></pre>
+<p><strong>translate偏移居中(绝对定位中最好用的方式，不限宽高)</strong></p>
+<pre><code class="js">.prant&#123;
+    position:relative;
+&#125;
+.child&#123;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+&#125;
+</code></pre>
+<h3 id="css多行文本隐藏"><a href="#css多行文本隐藏" class="headerlink" title="css多行文本隐藏"></a>css多行文本隐藏</h3><p>单行文本溢出隐藏</p>
+<pre><code class="css">overflow: hidden;
+</code></pre>
+<p>单行文本溢出隐藏显示省略号</p>
+<pre><code class="css">white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+</code></pre>
+<p>多换文本溢出隐藏显示省略号</p>
+<pre><code class="css">text-overflow: -o-ellipsis-lastline;
+overflow: hidden
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;//想显示几行改成几
+-webkit-box-orient: vertical;
+</code></pre>
+<h3 id="css换行"><a href="#css换行" class="headerlink" title="css换行"></a>css换行</h3><p><strong>1.自动换行：</strong></p>
+<pre><code class="css">word-wrap:break-word;
+word-break:normal; 
+</code></pre>
+<p><strong>2.强制换行：</strong></p>
+<pre><code class="css">word-break:break-all;       按字符截断换行 /* 支持IE和chrome，FF不支持*/
+word-wrap:break-word;    按英文单词整体截断换行  /* 以上三个浏览器均支持 */
+</code></pre>
+<ul>
+<li>注意：单词换行需要父盒子为块级元素  </li>
+</ul>
+<p><strong>3.强制不换行：</strong></p>
+<pre><code class="css">white-space:nowrap;
+</code></pre>
+<h3 id="隐藏元素的办法"><a href="#隐藏元素的办法" class="headerlink" title="隐藏元素的办法"></a>隐藏元素的办法</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7210412098810740795">聊聊 CSS 隐藏元素的 10 种实用方法</a></p>
+<h3 id="css常见问题"><a href="#css常见问题" class="headerlink" title="css常见问题"></a>css常见问题</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Howto">解决常见的 CSS 问题 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+<h2 id="JS基础知识"><a href="#JS基础知识" class="headerlink" title="JS基础知识"></a>JS基础知识</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>基本数据类型：<code>undefined</code>、<code>null</code>、<code>string</code>、<code>number</code>、<code>boolean</code>、<code>bigint</code>、<code>symbol</code>,基本数据类型存放在栈内存中，大小是可预期的。</p>
+<p>引用数据类型有：  <code>Object</code>、<code>Array</code>，引用数据类型存放在堆内存中，主要储存复杂数据。</p>
+<p><strong>怎样理解 堆、栈、队列 ？</strong></p>
+<p>【<em>堆</em>】：想象一个仓库，在申请到一片空间后就可以放任何东西，但是东西放多了找起来就比较麻烦，所以需要一份“清单”，通过查找清单上的索引去找你要的那堆东西，就不用每次都进仓库乱翻。</p>
+<p>【<em>栈</em>】：想象一个箱子，先放进去的东西反而被压在了箱底，也就最慢才会被拿出来，所以说<em>先进后出，后进先出</em>。</p>
+<p>【<em>队列</em>】：排队没什么好说吧，讲究一个先来后到，所以肯定<em>先进先出</em>。</p>
+<p>这是我笔记主要来源的一篇文章作者的理解，感觉非常通俗易懂。</p>
+<h3 id="JS-处理数组常用的方法"><a href="#JS-处理数组常用的方法" class="headerlink" title="JS 处理数组常用的方法"></a>JS 处理数组常用的方法</h3><pre><code class="js">Array.push() //末尾添加
+Array.unshift()//头部添加
+Array.pop() //末尾删除
+Array.shift() //末尾添加
+Array.reserve()//翻转数组
+Array.sort() //排序
+Array.slice(start, end)//切割，不改变原数组，返回新数组
+Array.splice(start, length, newItem)//更改数组（删除，添加数组）
+Array.indexOf()//查元素下标，查到返回元素下标，没有返回-1
+</code></pre>
+<p><strong>数组循环</strong></p>
+<pre><code class="js">Array.forEach((item,index)=&gt;&#123;&#125;)//用来循环遍历数组的,无返回值 代替了for
+Array.map((item,index)=&gt;&#123;returen ...&#125;) //映射数组的，有返回值
+Array.filter((item,index)=&gt;&#123;return ...&#125;) //过滤数组,返回过滤后的数组
+Array.every((item,index)=&gt;&#123;return ...&#125;) //主要是用来判断数组中是不是每一个都满足条件，返回一个布尔值
+Array.some((item,index)=&gt;&#123;return ...&#125;) //主要是用来判断数组中有没有满足条件的,返回布尔值
+Array.find((item,index)=&gt;&#123;return ...&#125;) //用来获取数组中满足条件的第一个数据，没有返回undefined
+Array.reduce((prev,item,index)=&gt;&#123;return ...&#125;) //用来叠加的，prev :一开始就是初始值 当第一次有了结果以后；这个值就是第一次的结果
+</code></pre>
+<h3 id="JS-处理对象常用的方法"><a href="#JS-处理对象常用的方法" class="headerlink" title="JS 处理对象常用的方法"></a>JS 处理对象常用的方法</h3><p>1.对象遍历</p>
+<pre><code class="js">const obj = &#123; property1: &quot;value1&quot;, property2: &quot;value2&quot;, property3: &quot;value3&quot; &#125;;
+for(let key in obj ) &#123;
+    console.log(key, obj[key]);
+&#125;
+</code></pre>
+<p>2.对象合并</p>
+<pre><code class="js">const target = &#123;property1: &quot;value1&quot;&#125;
+const source = &#123;property2 &quot;value2,property3 &quot;value3,&#125;
+Object.assign(target,source)
+console.log(target);
+// 输出: &#123; property1: &quot;value1&quot;, property2: &quot;value2&quot;, property3: &quot;value3&quot; &#125;
+</code></pre>
+<p>3.对象中的属性检查</p>
+<pre><code class="js">const obj = &#123; property: &quot;value&quot; &#125;; 
+console.log(&quot;property&quot; in obj); // 输出: true 
+console.log(&quot;nonexistent&quot; in obj); // 输出: false
+</code></pre>
+<p>4.对象拷贝</p>
+<pre><code class="js">//使用 Object.assign(&#123;&#125;,Obj)
+const obj = &#123; property: &quot;value&quot; &#125;; 
+const clone = Object.assign(&#123;&#125;, obj); 
+console.log(clone); // 输出: &#123; property: &quot;value&quot; &#125; 
+// 或者 使用解构赋值和扩展运算符(...)
+const clone2 = &#123; ...obj &#125;; 
+console.log(clone2); // 输出: &#123; property: &quot;value&quot; &#125;
+</code></pre>
+<blockquote>
+<p>上面的2种方式，如果对象的属性值为简单类型，通过这两种方式得到的新对象为深拷贝，如果属性值为【对象或者其他引用类型】，那对于这个对象实际上还是浅拷贝。</p>
+</blockquote>
+<p><strong>深拷贝方案</strong></p>
+<p>1.使用 JSON 序列化和反序列化</p>
+<pre><code class="js">const obj = &#123; property: &quot;value&quot;, nestedObj: &#123; nestedProperty: &quot;nestedValue&quot; &#125; &#125;; 
+const clone = JSON.parse(JSON.stringify(obj)); 
+console.log(clone); // 输出: &#123; property: &quot;value&quot;, nestedObj: &#123; nestedProperty: &quot;nestedValue&quot; &#125; &#125; 
+// 修改克隆对象的属性不会影响原始对象 
+clone.property = &quot;new value&quot;; 
+clone.nestedObj.nestedProperty = &quot;new nested value&quot;; 
+console.log(obj); // 输出: &#123; property: &quot;value&quot;, nestedObj: &#123; nestedProperty: &quot;nestedValue&quot; &#125; &#125;
+</code></pre>
+<p><code>需要注意的是，使用 JSON 序列化和反序列化的方法无法处理函数、循环引用等特殊类型数据。</code></p>
+<p>2.递归复制对象</p>
+<p>这种方法通过递归地遍历原始对象，并针对对象的属性逐个进行深拷贝，以创建一个原对象的独立副本。</p>
+<pre><code class="js">function deepClone(obj) &#123;
+    if(obj === null || typeof obj!==&#39;object&#39;) &#123;
+        return obj;
+    &#125;
+    const clone = Array.isArray(obj)?[]:&#123;&#125;;
+    for(let key in obj) &#123;
+        if(Object.prototype.hasOwnProperty.call(obj,key)) &#123;
+            clone[key] = deepClone(obj[key]);
+        &#125;
+    &#125;
+    return clone;
+&#125;
+const obj = &#123;property: &quot;value&quot;, nestedObj: &#123; nestedProperty: &quot;nestedValue&quot; &#125;&#125;
+const clone = deepClone(obj)
+// 修改克隆对象的属性不会影响原始对象 
+clone.property = &quot;new value&quot;; 
+clone.nestedObj.nestedProperty = &quot;new nested value&quot;; 
+console.log(obj); // 输出: &#123; property: &quot;value&quot;, nestedObj: &#123; nestedProperty: &quot;nestedValue&quot; &#125; &#125;
+</code></pre>
+<p><code>要注意处理循环引用的情况，否则可能导致无限循环</code></p>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>闭包就是函数里面嵌套函数，并且内部函数可以访问外包函数的变量和作用域。</p>
+<p><strong>闭包的主要作用：</strong></p>
+<ol>
+<li><p><em>保护数据和方法</em>：闭包可以创建私有变量和函数，避免全局污染，只有内部函数才能访问和修改这些数据和方法。这提供了一种封装和隐藏实现细节的方式，增加了代码的安全性和可维护性。</p>
+</li>
+<li><p><em>保持状态</em>：通过在闭包内部保存变量的状态，可以在函数调用之间保持数据的持久性。这在处理异步操作、循环事件绑定等场景中非常有用。</p>
+</li>
+<li><p><em>记忆和缓存</em>：使用闭包可以实现记忆功能和缓存计算结果。例如，可以使用闭包缓存函数的计算结果，避免重复计算，提高性能。（在vue中计算属性中，可以使用闭包来缓存一些计算结果，当依赖的数据没有发生变化时，可以直接使用缓存结果而不进行重复计算，提高性能。）</p>
+</li>
+<li><p><em>延迟执行</em>：闭包可以用来实现延迟执行功能，包括延迟函数调用、动画效果、事件监听等。闭包可以在特定条件满足时触发函数执行。（节流和防抖）</p>
+</li>
+<li><p><em>实现模块化和封装</em>：通过使用闭包，可以将相关的数据和方法封装在一个独立的作用域中，形成一个模块，提供模块化开发的能力。这样可以提高代码的可读性和可维护性。（axios的封装）</p>
+</li>
+<li><p><em>共享数据和状态管理</em>：闭包可以用于共享数据和状态管理。通过将数据存储在闭包作用域中，并提供访问和修改的方法，可以实现多个组件或函数之间的状态共享和管理。(vueX）</p>
+</li>
+</ol>
+<p>总的来说，闭包是一种强大的编程概念，在JavaScript和其他编程语言中都有广泛的应用。它可以用来<em>处理数据封装、状态管理、模块化开发、函数式编程等</em>多个方面，提供了简洁、灵活和高度可控的编程方式。</p>
+<p><code>当然不恰当的使用闭包将会导致内存泄漏，以下是常见的闭包导致内存泄漏的情况</code>：</p>
+<p>1.<em>保留外部变量</em>：<br>    闭包会引用外部函数中的变量，导致这些变量无法被垃圾回收。当闭包存在时，外部函数的作用域仍然存在，即使外部函数已经执行完毕或不再需要。如果闭包中引用的变量占用大量内存，而且没有正确释放闭包，就会导致内存泄漏。</p>
+<p>2.<em>不恰当的循环引用</em>：<br>    闭包内部的函数引用了其外部函数中的变量，而外部函数又引用了闭包内部函数，形成循环引用。如果这些循环引用无法被及时释放，就会导致内存泄漏。这种情况在使用事件监听器、定时器、异步操作等场景中比较常见。</p>
+<p>3.<em>未正确清理资源</em>：<br>    闭包中可能引用了一些需要手动清理的资源，比如事件监听器定时等。如果不正确地释放这些资源，就会造成内存泄漏。</p>
+<p><code>处理方式：</code></p>
+<ul>
+<li>  及时销毁闭包：在不再需要闭包时，确保将其置为null，这样可以打破对外部作用域的引用，使垃圾回收器能够回收内存。</li>
+<li>  避免循环引用：确保闭包中引用的外部变量能够被及时释放，避免形成循环引用。</li>
+<li>  显式清理资源：当闭包中引用了需要手动清理的资源时，确保适时释放这些资源，比如解绑事件监听器、取消定时器等。</li>
+</ul>
+<h3 id="JS-原型链"><a href="#JS-原型链" class="headerlink" title="JS 原型链"></a>JS 原型链</h3><p>JavaScript中的原型链是一种对象之间继承属性和方法的机制。每个JavaScript对象在创建时都有一个内部属性<code>[Prototype]</code>，它指向另一个对象，我们称之为原型对象（prototype）。</p>
+<p>每个函数都有 <code>prototype</code> 属性，每个函数实例对象都有一个 <code>__proto__</code> 属性，<code>__proto__</code> 指向了 <code>prototype</code>，当访问实例对象的属性或方法，会先从自身构造函数中查找，如果找不到就通过 <code>__proto__</code> 去原型中查找，直到找到该属性或方法或到达原型链的顶端（即Object.prototype）。(全篇背诵，手动狗头）</p>
+<p>以下是原型链的一些关键概念和操作：</p>
+<ol>
+<li><p>__proto__属性：每个JavaScript对象都有一个特殊的<code>__proto__</code>属性，它指向该对象的原型对象。通过<code>obj.__proto__</code>可以访问到对象的原型对象。</p>
+</li>
+<li><p>prototype属性：函数对象（包括构造函数和普通函数）会有一个<code>prototype</code>属性，它指向一个对象，成为该函数的原型对象。对于构造函数来说，它的<code>prototype</code>属性会被用作新创建的实例对象的原型。例如：</p>
+<pre><code class="javascript">function Person() &#123;&#125;
+Person.prototype.age = 25;
+var john = new Person();
+console.log(john.age); // 25
+</code></pre>
+</li>
+<li><p>instanceof操作符：用于检查一个对象是否是某个构造函数的实例。它会沿着原型链向上查找。例如：</p>
+<pre><code class="javascript">function Person() &#123;&#125;
+var john = new Person();
+console.log(john instanceof Person); // true
+</code></pre>
+</li>
+<li><p>创建对象的方式：通过构造函数、对象字面量或<code>Object.create()</code>方法来创建对象时，会根据原型链来确定新创建对象的原型。</p>
+<pre><code class="javascript">function Person() &#123;&#125;
+var john = new Person(); // john的原型为Person.prototype
+var jane = Object.create(Person.prototype); // jane的原型为Person.prototype
+var jim = &#123;&#125;; // jim的原型为Object.prototype
+</code></pre>
+</li>
+</ol>
+<h3 id="call、apply、bind"><a href="#call、apply、bind" class="headerlink" title="call、apply、bind"></a>call、apply、bind</h3><p><code>call</code>、<code>apply</code>和<code>bind</code>都是JavaScript中用于控制函数执行上下文（即函数的<code>this</code>值）的方法。</p>
+<p><strong>1.call</strong></p>
+<p><code>call</code>方法：<code>call</code>方法允许你显式地指定函数的执行上下文（即函数内部的<code>this</code>指向哪个对象），并且可以传入多个参数。具体用法是通过函数对象调用<code>call</code>方法，传入一个对象作为第一个参数，这个对象将成为函数执行时的<code>this</code>值，之后可以跟随多个参数。</p>
+<pre><code class="js">function greet() &#123; 
+    console.log(&quot;Hello, &quot; + this.name); 
+&#125; 
+var person = &#123; name: &quot;John&quot; &#125;; 
+greet.call(person); // 输出：Hello, John
+</code></pre>
+<p>在上述例子中，通过调用<code>greet.call(person)</code>，将<code>greet</code>函数的执行上下文绑定为<code>person</code>对象，函数内部的<code>this</code>指向<code>person</code>，从而得到正确的输出结果。</p>
+<p>以下是一个<code>手写call方法的简单版</code>：</p>
+<pre><code class="js">Function.prototype.customCall = function(context,...args) &#123;
+    context = context || window;
+    const key = Symbol();//创建一个唯一的键值，避免命名冲突
+    context[key] = this //将当前函数作为对象的方法
+    const result = context[key](...args) //执行函数
+    delete context[key];
+    return result;//返回函数执行结果
+&#125;
+</code></pre>
+<p><strong>2.apply</strong></p>
+<p>apply()方法与call方法类似都是，用于指定函数执行的上下文，也可以传入多个参数。不同之处在于，apply方法接受一个数组作为参数列表。数组中的元素作为实参传递给函数</p>
+<pre><code class="js">function greet(greeting) &#123; 
+    console.log(greeting + &quot;, &quot; + this.name); 
+&#125; 
+var person = &#123; name: &quot;John&quot; &#125;; 
+greet.apply(person, [&quot;Hello&quot;]); // 输出：Hello, John
+</code></pre>
+<p>通过调用<code>greet.apply(person, [&quot;Hello&quot;])</code>，将<code>greet</code>函数的执行上下文绑定为<code>person</code>对象，并传入一个参数数组<code>[&quot;Hello&quot;]</code>，函数内部的<code>this.name</code>将获得正确的值。</p>
+<p>以下是一个<code>手写apply方法的简单版</code>：</p>
+<pre><code class="js">Function.prototype.customApply = function(context,args=[])&#123;
+    context = context || window;
+    const key =Symbol();
+    context[key] = this;
+    const result = context[key](...args);
+    delete context[key];
+    return result;
+&#125;
+</code></pre>
+<p><strong>3.bind</strong></p>
+<p><code>bind</code>方法用于创建一个新的函数，并将指定的对象作为这个新函数的执行上下文，同时可以在调用新函数时传入一些参数。区别于前两者的是，<code>bind方法不会立即执行函数，而是返回一个绑定上下文后的新函数</code>。</p>
+<pre><code class="js">function greet() &#123; 
+    console.log(&quot;Hello, &quot; + this.name); 
+&#125; 
+var person = &#123; name: &quot;John&quot; &#125;; 
+var greetPerson = greet.bind(person); 
+greetPerson(); // 输出：Hello, John
+</code></pre>
+<p>通过<code>greet.bind(person)</code>创建了一个新函数<code>greetPerson</code>，并将<code>person</code>对象作为执行上下文。当调用<code>greetPerson()</code>,发现页是改变这个新函数的执行上下文</p>
+<p><code>以下是一个手写bind方法的简单版</code>：</p>
+<pre><code class="js">Function.prototype = function(context,...args) &#123;
+    const self = this;
+    return function boundFn(...innerArgs) &#123;
+        if(this instanceof boundFn) &#123;
+            return new self(...args,...innerArgs);
+        &#125; else &#123;
+            return self.apply(context,[...args,...innerArgs])
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="JS进阶"><a href="#JS进阶" class="headerlink" title="JS进阶"></a>JS进阶</h2><h3 id="ES6-新语法-特性"><a href="#ES6-新语法-特性" class="headerlink" title="ES6 新语法/特性"></a>ES6 新语法/特性</h3><p><strong>模板字符串</strong></p>
+<p> 使用反引号（``）括起来的字符串，可以包含变量和表达式，并支持多行字符串。</p>
+<pre><code class="js">let name = &quot;耀耀&quot;; 
+let message = `Hello, $&#123;name&#125;! Welcome to the world of JavaScript `;
+</code></pre>
+<p><strong><code>let</code>、<code>const</code></strong></p>
+<pre><code class="js">let zy = &#39;zy&#39;; //块级作用域
+const R =3.1415 //声明常量，并且不可更改，块级作用域
+</code></pre>
+<p><strong>箭头函数（没有自己的 <code>this</code>，不能使用 <code>new</code> 命令，不能调用 <code>call</code>）</strong></p>
+<p>箭头函数提供了更简洁的函数定义语法，同时绑定了上下文的this值</p>
+<pre><code class="js">let sum = (a, b) =&gt; a + b;
+</code></pre>
+<p> <strong><code>class</code> 类</strong></p>
+<p> 类是一种创建对象的模板，支持构造函数、方法和继承等特性</p>
+<pre><code class="js">class Person &#123; 
+    constructor(name) &#123; 
+        this.name = name; 
+    &#125; 
+    sayHello() &#123; 
+    console.log(`Hello, $&#123;this.name&#125;!`);
+    &#125; 
+&#125; 
+let person = new Person(&quot;耀&quot;); 
+person.sayHello(); // 输出: &quot;Hello, 耀!&quot;
+</code></pre>
+<p><strong><code>export</code>、<code>import</code> 模块化（ES Module）</strong></p>
+<pre><code class="js">// math.js 
+export function add(a, b) &#123; return a + b; &#125; 
+// app.js 
+import &#123; add &#125; from &quot;./math.js&quot;; 
+console.log(add(2, 3)); // 输出: 5
+</code></pre>
+<p><strong>扩展运算符（很常用，<code>...</code> 用于组装数组/对象）</strong></p>
+<pre><code class="js">let obj1 = &#123; x: 1, y: 2 &#125;; 
+let obj2 = &#123; ...obj1, z: 3 &#125;; 
+console.log(obj2); // 输出: &#123; x: 1, y: 2, z: 3 &#125;
+</code></pre>
+<p> <strong>解构赋值</strong></p>
+<p> 可以将数组或对象的属性解构赋值给变量</p>
+<pre><code class="js">let [x, y] = [1, 2]; 
+let &#123;firstName, lastName&#125; = &#123;firstName: &quot;Alice&quot;, lastName: &quot;Smith&quot;&#125;;
+</code></pre>
+<p> <strong><code>Set</code>（元素值是唯一的，常用于数组去重）</strong></p>
+<pre><code class="js">const arr = [1,2,2,3,3]
+const uniqueArr = [...new Set(arr)] //[1,2,3]
+</code></pre>
+<p> <strong><code>Map</code>（性能更好的对象）</strong></p>
+<p><code>Map</code>在JavaScript中的作用是提供了一种存储和访问键值对的方式，可以用于数据处理、查询、遍历和优化等多种场景。根据具体的需求，你可以选择使用<code>Map</code>作为数据结构来更高效地处理和操作数据。</p>
+<p><strong><code>Promise</code>、<code>async/await</code>（es7之后才支持）</strong></p>
+<p>下面的异步编程有说明</p>
+<h3 id="JS异步编程"><a href="#JS异步编程" class="headerlink" title="JS异步编程"></a>JS异步编程</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7164559783830224904">JavaScript 异步队列 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7231735955794444344">ECMAScript 6 异步编程 阅读笔记 - 掘金 (juejin.cn)</a></p>
+<h3 id="JS实现继承的方式"><a href="#JS实现继承的方式" class="headerlink" title="JS实现继承的方式"></a>JS实现继承的方式</h3><ol>
+<li> 原型继承</li>
+<li> 构造函数继承</li>
+<li> 组合继承（call / apply）</li>
+<li> 寄生组合继承</li>
+<li> class继承（es6）</li>
+</ol>
+<h2 id="vue相关"><a href="#vue相关" class="headerlink" title="vue相关"></a>vue相关</h2><h3 id="vue的数据双向绑定原理"><a href="#vue的数据双向绑定原理" class="headerlink" title="vue的数据双向绑定原理"></a>vue的数据双向绑定原理</h3><p>采用了”发布-订阅”的设计模式，通过Object.defineProperty()劫持各个属性的getter、setter，在数据变动时调用Dep.notify发布消息给订阅者Watcher，使之更新相应的视图</p>
+<p>vue2使用Object.defineProperty的缺陷:</p>
+<p>1.不能监听数组的变化，所以vue2需要对数组原型链上的方法进行一些修改才能实现监听</p>
+<p>2.只能劫持对象的属性，所以需要深度遍历对象</p>
+<p>Vue3中将Object.defineProperty替换为Proxy解决了对象深度监听的问题，因为 <code>Proxy</code> 代理了整个对象。</p>
+<h3 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a>diff算法</h3><p>Vue中的diff算法也叫做虚拟DOM的周界算法，主要用来比较两个虚拟DOM节点的差异。当一个组件的数据发生变化时，Vue通过重新渲染一个虚拟DOM树，然后将新旧虚拟DOM树进行对比。通过比较新旧虚拟DOM树的差异，Vue就能够明确哪些地方需要被更新，哪些地方无需重新渲染。</p>
+<p>Vue的diff算法是通过深度优先、先序遍历的方式进行的，它将两个虚拟DOM树进行逐层比较，当找到某一层不一样的节点时，停止下降，然后比较这些节点的子节点。当所有的子节点都完成了比较之后，算法会由下至上进行回溯，此过程被称为执行patch操作。在执行patch操作时，Vue对于不同类型的节点的更新方式也不同，对于元素节点，可以更新它的属性和子节点；对于文本节点，只能更新它的文本内容；对于每个子节点，如果key值相同，可以进行复用或者重新排序，或者将其他的节点移动到这个位置。</p>
+<p>通过这种逐层对比，Vue的diff算法能够快速高效地计算出哪些界面需要更新，从而避免了不必要的渲染和重绘，提高了渲染性能和用户体验。</p>
+<h3 id="Virtual-Dom（虚拟DOM）"><a href="#Virtual-Dom（虚拟DOM）" class="headerlink" title="Virtual Dom（虚拟DOM）"></a>Virtual Dom（虚拟DOM）</h3><p>虚拟Dom是一种用来表示真实Dom结果的javaScript对象树。它是构建在浏览器原生Dom上的一个抽象层，虚拟dom可以在内存中进行操作，而不需要直接更新真实的Dom，最终通过diff 算法比较新旧差异，才会将最终的变化应用到真实的DOM上。</p>
+<p>其实虚拟 DOM 并不能直接提升 DOM 操作性能，它出现的理由是 <em>JS 执行速度远比真实 DOM 操作要快</em>,因此结合diff算法，可以批量更新dom来提高性能，减少直接操作真实DOM的开销。</p>
+<h3 id="vue权限管理该怎么做？"><a href="#vue权限管理该怎么做？" class="headerlink" title="vue权限管理该怎么做？"></a>vue权限管理该怎么做？</h3><p>方案有很多，我就只说我常用的一种。</p>
+<p>菜单和路由都由后端返回，前端统一定义路由组件，需要将数据处理一下，将<code>component</code>换为真正的组件，将处理完的路由表通过pinia存好，然后通过router.addRoute(route)动态挂载，完成菜单权限管理。</p>
+<pre><code class="ts">
+/**
+ * 根据 menu 服务器返回的路由
+ * @param menu
+ * @returns
+ */
+
+const getRoutesByMenu = (menu: Array&lt;IMenuModel&gt;): Array&lt;RouteRecordRaw&gt; =&gt; &#123;
+    const routes: Array&lt;RouteRecordRaw&gt; = []
+    for (const item of menu) &#123;
+        routes.push(&#123;
+            path: item.path,
+            component: shallowRef(Layout),
+            name: item.name,
+            meta: item.meta,
+            children: getChildren(item.children, item)
+        &#125;)
+    &#125;
+    // console.log(&#39;router&#39;, routes)
+
+    return routes
+&#125;
+
+/**
+ * 获取 menu children
+ * @param children
+ * @param item
+ * @returns
+ */
+const getChildren = (children: Array&lt;IMenuModel&gt; | undefined, item: IMenuModel | RouteRecordRaw): Array&lt;RouteRecordRaw&gt; =&gt; &#123;
+    const childArray: Array&lt;RouteRecordRaw&gt; = []
+    if (!children || children.length === 0) &#123;
+        childArray.push(&#123;
+            path: item.path,
+            name: item.name,
+            component的处理: modules[&#39;/src/views&#39; + item.path + &#39;/index.vue&#39;],//component的处理
+            meta: item.meta
+        &#125;)
+    &#125; else &#123;
+        for (let i = 0; i &lt; (children as any).length; i++) &#123;
+            childArray.push(...getChildren((children as any)[i].children, (children as any)[i]))
+        &#125;
+    &#125;
+    return childArray
+&#125;
+</code></pre>
+<p>使用，其中404页面，一般放在最后add到路由表中，避免出现啥未知错误。</p>
+<pre><code class="ts">//menu 将后端返回的菜单数据处理过了的
+await permissionStore.setRoutes(menu)
+    permissionStore.dynamicRoutes.forEach((route: RouteRecordRaw) =&gt; &#123;
+            router.addRoute(route)
+    &#125;)
+// 添加 404
+router.addRoute(&#123;
+    path: &#39;/:pathMatch(.*)&#39;,
+    redirect: &#39;/404&#39;
+ &#125;)
+</code></pre>
+<p><strong>按钮权限</strong></p>
+<p>将之前登录时，用户信息中返回的按钮权限的标识存在pinia中，利用自定义指令，判断该按钮是否需要展示。</p>
+<pre><code class="ts">/*
+  需求：不同角色后台管理的按钮权限不同
+
+  思路：
+  使用：给 Dom 加上 v-permissionBtn
+  &lt;div v-permissionBtn=&quot;服务端返回的对应的权限值&quot;&gt;&lt;/div&gt;
+*/
+import type &#123; Directive, DirectiveBinding &#125; from &#39;vue&#39;
+import Storage from &#39;@/utils/storage&#39;
+interface ElType extends HTMLElement &#123;
+    parentNode: any
+&#125;
+const permissionBtn: Directive = &#123;
+    beforeMount(el: ElType, binding: DirectiveBinding) &#123;
+        const permissionList: Array&lt;string&gt; = Storage.getItem(&#39;session&#39;, &#39;btn_permission&#39;)
+        if (!permissionList.includes(binding.value)) &#123;
+            el.style.display = &#39;none&#39;
+        &#125;
+    &#125;
+&#125;
+
+export default permissionBtn
+</code></pre>
+<h2 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h2><p>当考虑前端性能优化时，需要从网络层面、JavaScript 层面和 CSS 层面进行分析和优化。</p>
+<h3 id="网络层面优化"><a href="#网络层面优化" class="headerlink" title="网络层面优化"></a>网络层面优化</h3><ol>
+<li> 减小文件大小：通过压缩文件、使用图像压缩算法、删除不必要的注释和空格等方式来减小文件大小。使用适当的文件格式（如 WebP 图片格式）来提高图像的压缩效率。</li>
+<li> HTTP/2 和 HTTP/3：利用 HTTP/2 或 HTTP/3 协议提供的多路复用、头部压缩、服务器推送等性能优化特性，减少网络请求的开销。</li>
+<li> 加载资源顺序：使用预加载和按需加载的技术，按照优先级加载关键资源，避免阻塞主要内容的加载。</li>
+<li> 缓存：配置适当的缓存策略，通过设置适当的缓存头（如 Cache-Control、Expires），使浏览器可以缓存静态资源以减少重复请求。</li>
+</ol>
+<h3 id="JavaScript-层面优化"><a href="#JavaScript-层面优化" class="headerlink" title="JavaScript 层面优化"></a>JavaScript 层面优化</h3><ol>
+<li> 代码压缩与混淆：使用压缩工具（如 UglifyJS、Terser）来删除不必要的字符、注释和空格，并进行变量名缩减，以减小文件大小。</li>
+<li> 延迟加载和异步加载：使用延迟加载和异步加载技术来减少初始加载的 JavaScript 文件大小，只在需要时加载相关脚本。</li>
+<li> 代码优化：避免不必要的计算、循环和操作，在关键路径上进行性能分析和优化。优化算法和数据结构的选择，避免性能瓶颈。</li>
+<li> 避免频繁的 DOM 操作：减少直接操作 DOM 的次数，使用虚拟 DOM 或动态模板来优化页面渲染性能。</li>
+</ol>
+<h3 id="CSS-层面优化"><a href="#CSS-层面优化" class="headerlink" title="CSS 层面优化"></a>CSS 层面优化</h3><ol>
+<li> 压缩和合并 CSS：使用压缩工具（如 cssnano）来删除不必要的字符、注释和空格，并将多个 CSS 文件合并为一个以减少网络请求次数。</li>
+<li> 避免使用低效的选择器：避免使用通配符、属性选择器等效率较低的选择器，尽量使用 ID 选择器和类选择器。</li>
+<li> 避免过多的 CSS 动画和过渡：过多的 CSS 动画和过渡可能会导致性能下降。限制动画的数量和复杂性，并使用硬件加速技术（如使用 <code>transform</code> 和 <code>opacity</code>）来提高性能。</li>
+<li> 使用媒体查询和响应式布局：使用媒体查询来为不同屏幕尺寸和设备提供不同的样式，以实现响应式布局，减少不必要的布局更改。</li>
+</ol>
+<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p><a target="_blank" rel="noopener" href="https://yaoyaoqiekenao.com/">耀耀切克闹</a></p>
+<h2 id="笔记来源"><a href="#笔记来源" class="headerlink" title="笔记来源"></a>笔记来源</h2><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7216174863447146552#heading-31">「1.5w字总结」Web前端开发必知必会详尽知识手册</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7210412098810740795">聊聊 CSS 隐藏元素的 10 种实用方法</a></p>
+<p> <a target="_blank" rel="noopener" href="https://juejin.cn/post/7117245974031892510#heading-1">BFC-块状格式化上下文的特性及具体应用</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%9A%8F%E7%AC%94/" style="color: #ffa2c4">随笔</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%9D%A2%E8%AF%95/" style="color: #00a596">面试</a>
+        </span>
+        
+    </div>
+    <a href="/2023/07/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/WEB%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-%E7%AC%94%E8%AE%B0/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/06/19/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/">
+        <h2 class="post-title">React学习笔记(四)-搭建项目</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/recat/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                recat
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/6/19
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<blockquote>
+<p>前面我已经把基础的东西学了，但还是缺点啥，自己得试着搭建一个react项目试试，实践出真知。</p>
+</blockquote>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>我使用的是vite4.3+react18+zustand+antd创建的一个后台管理模板，主要也是为了巩固所学内容。</p>
+<ul>
+<li>vite创建react项目命令：<code>yarn create vite</code>,然后给项目起个名，选择react，选择TypeScript</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a6569517e15448c1b6f5b5c9f0174ed3~tplv-k3u1fbpfcp-watermark.image" alt="image.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<ul>
+<li>安装依赖：<code>yarn add</code></li>
+<li>运行：<code>yarn dev</code>,项目就启动起来了<h2 id="Husky-eslint-prettier规范代码"><a href="#Husky-eslint-prettier规范代码" class="headerlink" title="Husky+eslint+ prettier规范代码"></a>Husky+eslint+ prettier规范代码</h2>具体可看我另一篇文章：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7233581502889443365">Husky+eslint+ prettier规范代码</a><h2 id="相关配置"><a href="#相关配置" class="headerlink" title="相关配置"></a>相关配置</h2><h3 id="路径配置和vite兼容旧浏览器"><a href="#路径配置和vite兼容旧浏览器" class="headerlink" title="路径配置和vite兼容旧浏览器"></a>路径配置和vite兼容旧浏览器</h3>vite兼容旧浏览器:安装插件 <code>yarn add @vitejs/plugin-legacy -D</code><br>在vite.config.ts中<pre><code class="ts">import &#123; defineConfig &#125; from &#39;vite&#39;
+import react from &#39;@vitejs/plugin-react&#39;
+import viteEslint from &#39;vite-plugin-eslint&#39;
+import path from &#39;path&#39;
+import legacy from &#39;@vitejs/plugin-legacy&#39;
+export default defineConfig(&#123;
+plugins: [
+  react(),
+  viteEslint(&#123;
+    failOnError: false
+  &#125;),
+  /** 兼容传统浏览器*/
+  legacy(&#123;
+    targets: [&#39;ie &gt;= 11&#39;],
+    additionalLegacyPolyfills: [&#39;regenerator-runtime/runtime&#39;]
+  &#125;)
+],
+resolve: &#123;
+  alias: &#123;
+    &#39;@&#39;: path.resolve(__dirname, &#39;src&#39;),
+    &#39;@components&#39;: path.resolve(__dirname, &#39;src/components&#39;),
+    &#39;@utils&#39;: path.resolve(__dirname, &#39;src/utils&#39;)
+  &#125;
+&#125;
+&#125;)
+</code></pre>
+<h3 id="添加-env配置文件"><a href="#添加-env配置文件" class="headerlink" title="添加.env配置文件"></a>添加.env配置文件</h3>根目录下添加.env.production<pre><code class="ts">VITE_APP_ENV = &#39;production&#39;
+VITE_BASE_URL = &#39;/&#39;
+VITE_API_URL = &#39;/&#39;
+</code></pre>
+根目录下添加.env.development</li>
+</ul>
+<pre><code class="js">VITE_APP_ENV = &#39;development&#39;
+VITE_BASE_URL = &#39;/&#39;
+VITE_API_URL = &#39;/&#39;
+</code></pre>
+<h2 id="安装需要的插件和依赖"><a href="#安装需要的插件和依赖" class="headerlink" title="安装需要的插件和依赖"></a>安装需要的插件和依赖</h2><h3 id="recat路由"><a href="#recat路由" class="headerlink" title="recat路由"></a>recat路由</h3><ul>
+<li>安装react路由:<code>yarn add react-router-dom@latest</code><br>在src下新建router/lazyLoad.tsx</li>
+</ul>
+<pre><code class="ts">import &#123; Suspense &#125; from &#39;react&#39;
+
+const lazyLoad = (Component: React.LazyExoticComponent&lt;() =&gt; JSX.Element&gt;) =&gt; &#123;
+  return (
+    &lt;Suspense&gt;
+      &lt;Component /&gt;
+    &lt;/Suspense&gt;
+  )
+&#125;
+export default lazyLoad
+</code></pre>
+<p>在router/index.tsx</p>
+<pre><code class="ts">import &#123; lazy &#125; from &#39;react&#39;
+import &#123; createBrowserRouter, Navigate &#125; from &#39;react-router-dom&#39;
+import type &#123; RouteObject &#125; from &#39;react-router-dom&#39;
+
+import lazyLoad from &#39;./lazyLoad&#39;
+import Layout from &#39;@/layouts/index&#39;
+import IsloginStatus from &#39;@/components/auth/loginStatus&#39;
+import Login from &#39;@/views/login&#39;
+
+const Home = lazy(() =&gt; import(&#39;@/views/home&#39;))
+const About = lazy(() =&gt; import(&#39;@/views/aboutMy/about&#39;))
+const Study = lazy(() =&gt; import(&#39;@/views/aboutMy/study&#39;))
+const routes: RouteObject[] = [
+  &#123;
+    path: &#39;/login&#39;,
+    element: &lt;Login /&gt;
+  &#125;,
+  &#123;
+    path: &#39;/&#39;,
+    element: (
+      &lt;IsloginStatus&gt;
+        &lt;Layout /&gt;
+      &lt;/IsloginStatus&gt;
+    ),
+    children: [
+      &#123;
+        index: true,
+        element: &lt;Navigate to=&quot;/home&quot; replace /&gt;
+      &#125;,
+      &#123;
+        path: &#39;/home&#39;,
+        element: lazyLoad(Home)
+      &#125;,
+      &#123;
+        path: &#39;/about&#39;,
+        children: [
+          &#123;
+            index: true,
+            element: &lt;Navigate to=&quot;/about/study&quot; replace /&gt;
+          &#125;,
+          &#123;
+            path: &#39;study&#39;,
+            element: lazyLoad(Study)
+          &#125;,
+          &#123;
+            path: &#39;aboutMy&#39;,
+            element: lazyLoad(About)
+          &#125;
+        ]
+      &#125;
+    ]
+  &#125;
+]
+
+export default createBrowserRouter(routes, &#123;
+  basename: &#39;/&#39;
+&#125;)
+</code></pre>
+<h3 id="zustand"><a href="#zustand" class="headerlink" title="zustand"></a>zustand</h3><ul>
+<li>安装zustand:<code>zustand一款简洁好用的状态管理库</code> <code>yarn add zustand</code></li>
+</ul>
+<ol>
+<li> 在 src 目录下新建 stores 文件夹，添加 counter.ts 文件：</li>
+</ol>
+<pre><code class="ts">import &#123; create &#125; from &#39;zustand&#39;
+
+interface CounterState &#123;
+  counter: number
+  delcounter: number
+  increase: (by: number) =&gt; void
+  decrease: (by: number) =&gt; void
+&#125;
+
+const useCounterStore = create&lt;CounterState&gt;()((set) =&gt; (&#123;
+  counter: 0,
+  delcounter: 10,
+  increase: (by) =&gt; set((state) =&gt; (&#123; counter: state.counter + by &#125;)),
+  decrease: (by) =&gt; set((state) =&gt; (&#123; delcounter: state.delcounter - by &#125;))
+&#125;))
+
+export default useCounterStore
+</code></pre>
+<p>src/home/index.tsx，在home组件中使用</p>
+<pre><code class="js">import useCounterStore from &#39;@/store/counter&#39;
+import styles from &#39;./index.module.scss&#39;
+const Home = () =&gt; &#123;
+  const counter = useCounterStore((state) =&gt; state.counter)
+  const delcounter = useCounterStore((state) =&gt; state.delcounter)
+  const increase = useCounterStore((state) =&gt; state.increase)
+  const decrease = useCounterStore((state) =&gt; state.decrease)
+  return (
+    &lt;div className=&#123;styles.home_content&#125;&gt;
+      &lt;div&gt;zustand状态管理小练习&lt;/div&gt;
+      &lt;button onClick=&#123;() =&gt; increase(1)&#125;&gt;增加 counter:&#123;counter&#125;&lt;/button&gt;
+      &lt;button onClick=&#123;() =&gt; decrease(1)&#125;&gt;减少 counter:&#123;delcounter&#125;&lt;/button&gt;
+    &lt;/div&gt;
+  )
+&#125;
+
+export default Home
+</code></pre>
+<p>效果如下：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ddc61eaddbf3426194cf09f235cdba4e~tplv-k3u1fbpfcp-watermark.image" alt="image.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h3 id="Antd"><a href="#Antd" class="headerlink" title="Antd"></a>Antd</h3><ul>
+<li>安装Antd:<code>yarn add antd</code></li>
+</ul>
+<p> 具体使用就不详述了，还是看官网去吧：<a target="_blank" rel="noopener" href="https://ant.design/index-cn">Ant Design - 一套企业级 UI 设计语言和 React 组件库</a></p>
+<h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><ul>
+<li>安装Axios: <code>yarn add axios</code></li>
+</ul>
+<p>在 src 中添加 utils/https.ts 封装一下 axios</p>
+<pre><code class="ts">import &#123; lazy &#125; from &#39;react&#39;
+import &#123; createBrowserRouter, Navigate &#125; from &#39;react-router-dom&#39;
+import type &#123; RouteObject &#125; from &#39;react-router-dom&#39;
+
+import lazyLoad from &#39;./lazyLoad&#39;
+import Layout from &#39;@/layouts/index&#39;
+import IsloginStatus from &#39;@/components/auth/loginStatus&#39;
+import Login from &#39;@/views/login&#39;
+
+const Home = lazy(() =&gt; import(&#39;@/views/home&#39;))
+const About = lazy(() =&gt; import(&#39;@/views/aboutMy/about&#39;))
+const Study = lazy(() =&gt; import(&#39;@/views/aboutMy/study&#39;))
+const routes: RouteObject[] = [
+  &#123;
+    path: &#39;/login&#39;,
+    element: &lt;Login /&gt;
+  &#125;,
+  &#123;
+    path: &#39;/&#39;,
+    element: (
+      &lt;IsloginStatus&gt;
+        &lt;Layout /&gt;
+      &lt;/IsloginStatus&gt;
+    ),
+    children: [
+      &#123;
+        index: true,
+        element: &lt;Navigate to=&quot;/home&quot; replace /&gt;
+      &#125;,
+      &#123;
+        path: &#39;/home&#39;,
+        element: lazyLoad(Home)
+      &#125;,
+      &#123;
+        path: &#39;/about&#39;,
+        children: [
+          &#123;
+            index: true,
+            element: &lt;Navigate to=&quot;/about/study&quot; replace /&gt;
+          &#125;,
+          &#123;
+            path: &#39;study&#39;,
+            element: lazyLoad(Study)
+          &#125;,
+          &#123;
+            path: &#39;aboutMy&#39;,
+            element: lazyLoad(About)
+          &#125;
+        ]
+      &#125;
+    ]
+  &#125;
+]
+
+export default createBrowserRouter(routes, &#123;
+  basename: &#39;/&#39;
+&#125;)
+</code></pre>
+<h3 id="SWR"><a href="#SWR" class="headerlink" title="SWR"></a>SWR</h3><p>SWR 是一个 React Hooks 库，它用于管理组件的数据获取和缓存。使用 SWR 可以方便地进行数据获取和处理，同时也有良好的缓存机制，可以减少对服务器的请求。</p>
+<p>如果你正在使用 React，那么可以考虑采用 SWR。SWR 很容易安装和使用，并且可以与其他 React 库和组件配合使用。SWR 还支持多种数据源，包括 RESTful APIs、GraphQL、WebSocket 等。</p>
+<p>要使用 SWR，你需要先安装它。可以使用 npm 或者 yarn 进行安装：</p>
+<pre><code class="ts">yarn add swr
+</code></pre>
+<p>安装完成后，就可以在 React 组件中使用 SWR。例如：<br>在api/hotNewApi</p>
+<pre><code class="ts">import useSWR from &#39;swr&#39;
+import &#123; httpClient &#125; from &#39;@/utils/https&#39;
+export const useFetchHotNews = (type: string) =&gt; &#123;
+  const &#123; data, isValidating, error &#125; = useSWR(
+    `/new?type=$&#123;type&#125;`,
+    (url) =&gt; httpClient.get(url),
+    &#123;
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false
+    &#125;
+  )
+  return &#123;
+    hotNews: data?.data.list,
+    isValidating,
+    error
+  &#125;
+&#125;
+</code></pre>
+<p>使用</p>
+<pre><code class="js">import &#123; useFetchHotNews &#125; from &#39;@/api/hotNewsApi&#39;
+const &#123; hotNews, isValidating, error &#125; = useFetchHotNews(&#39;入参&#39;)
+</code></pre>
+<p><strong>swr中需要了解的属性<code>isValidating</code></strong></p>
+<p><code>isValidating</code> 是 SWR 中一个非常有用的属性，它表示当前请求是否仍在进行中，即请求是否仍在等待服务器响应。</p>
+<p>在使用 SWR 进行数据请求时，SWR 会首先在本地缓存中查找数据，如果缓存不存在或已经过期，则会发送一个新的请求，并标记 <code>isValidating</code> 为 <code>true</code>，表示请求正在进行中。当响应到达后，SWR 会将 <code>data</code> 更新为最新的响应数据，并将 <code>isValidating</code> 标记为 <code>false</code>，表示请求已经完成。</p>
+<p>因此，我们可以利用 <code>isValidating</code> 属性来显示一个 loading 状态，告诉用户请求正在进行中，例如：</p>
+<pre><code class="jsx">import useSWR from &#39;swr&#39;;
+
+function Profile() &#123;
+  const &#123; data, error, isValidating &#125; = useSWR(&#39;/api/user&#39;, fetch);
+
+  if (error) return &lt;div&gt;Failed to load user data&lt;/div&gt;;
+  if (!data &amp;&amp; isValidating) return &lt;div&gt;Loading...&lt;/div&gt;;
+  if (!data) return &lt;div&gt;No data available.&lt;/div&gt;;
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;&#123;data.name&#125;&lt;/h1&gt;
+      &lt;p&gt;&#123;data.email&#125;&lt;/p&gt;
+    &lt;/div&gt;
+  );
+&#125;
+</code></pre>
+<p>在这个例子中，我们根据数据、错误和 <code>isValidating</code> 来判断组件应该显示的内容。如果数据不存在且请求正在进行中，我们会显示 “Loading…”，否则就是显示错误信息或最终的数据。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>整完之后的项目源码：<br><a target="_blank" rel="noopener" href="https://github.com/DarknessZY/Recat-vite.git">Recat-vite (github.com)</a> 该项目的账号密码随便填，没做校验。</p>
+<p>通过一系列的学习，现在能用react完成一些普通的功能，也跟着大佬的文章熟悉了react搭建项目的过程，个人感觉和vue搭建时差不多，果然熟悉了一个框架后，再去了解另一个框架，上手也会快些，类比着学习，也能明确感受到他们的区别，也算成功入门了react，提升了自己。就是目前公司都是vue的项目，可能没真实线上的项目练手了，后面再工作之余也只能去github上找一些好的开源项目练练手了。</p>
+<h1 id="笔记来源"><a href="#笔记来源" class="headerlink" title="笔记来源"></a>笔记来源</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7237840998985072698#heading-2">react@18 + vite@4 + react-router@6 + zustand + antd@5 + axios + swr 保姆级搭建后台管理系统 - 掘金 (juejin.cn)</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/recat/" style="color: #00a596">recat</a>
+        </span>
+        
+    </div>
+    <a href="/2023/06/19/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/06/13/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/">
+        <h2 class="post-title">React学习笔记(三)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/recat/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                recat
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/6/13
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
+<li>  react-事件处理</li>
+<li>  受控组件和非受控组件</li>
+<li>  React Router</li>
+</ul>
+<h2 id="react-事件处理"><a href="#react-事件处理" class="headerlink" title="react-事件处理"></a>react-事件处理</h2><h3 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件"></a><strong>注册事件</strong></h3><p>React注册事件与DOM的事件语法非常像。语法<code>on+事件名=｛事件处理程序｝</code> 比如<code>onClick=&#123;this.handleClick&#125;</code>。React事件采用<strong>驼峰命名法</strong>，比如<code>onMouseEnter</code>, <code>onClick</code>。</p>
+<pre><code class="js">import React from &#39;react&#39;;
+
+function MyComponent() &#123;
+  function handleClick() &#123;
+    console.log(&#39;Button clicked!&#39;);
+  &#125;
+
+  return (
+    &lt;button onClick=&#123;handleClick&#125;&gt;Click me&lt;/button&gt;
+  );
+&#125;
+
+export default MyComponent;
+</code></pre>
+<h3 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a><strong>事件对象</strong></h3><p>在React中，事件处理函数的第一个参数是事件对象（event object），它提供了一些关于事件的信息。例如，在一个点击事件处理函数中，事件对象将包含关于点击的位置、按下的键和其他信息。</p>
+<pre><code class="js">import React from &#39;react&#39;;
+
+function handleClick(event) &#123;
+  console.log(event.target.textContent);
+&#125;
+
+function App() &#123;
+  return (
+    &lt;div&gt;
+      &lt;button onClick=&#123;handleClick&#125;&gt;Click Me!&lt;/button&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<h3 id="react中this的指向问题"><a href="#react中this的指向问题" class="headerlink" title="react中this的指向问题"></a><strong>react中this的指向问题</strong></h3><p>在React中，函数组件和类组件具有不同的this指向方式。</p>
+<p>在函数组件中，this指向<code>undefined</code>，因为<code>函数组件是无状态的</code>，它们不会在实例化过程中创建this。因此，在函数组件中，你应该使用Hooks API（如useState）管理组件状态，或使用redux（或其他状态管理库）管理全局状态。而在类组件中，this指向类的实例对象。在React类组件中访问props和state时，你必须使用this关键字。否则，你将在当前作用域中引用未定义的变量。</p>
+<h4 id="this丢失的问题（类组件开发时估计会遇到，我现在学时一直用的函数式组件开发，没遇上网上说的this丢失的问题，但也做个记录吧）"><a href="#this丢失的问题（类组件开发时估计会遇到，我现在学时一直用的函数式组件开发，没遇上网上说的this丢失的问题，但也做个记录吧）" class="headerlink" title="this丢失的问题（类组件开发时估计会遇到，我现在学时一直用的函数式组件开发，没遇上网上说的this丢失的问题，但也做个记录吧）"></a><code>this</code>丢失的问题（类组件开发时估计会遇到，我现在学时一直用的函数式组件开发，没遇上网上说的<code>this</code>丢失的问题，但也做个记录吧）</h4><p>但如果你是vue开发者，估计遇到<code>this</code>丢失的问题，例如：</p>
+<pre><code class="js">class Demo extends Component&#123;
+    constructor(props)&#123;
+        super(props)
+    &#125;
+    handleClick()&#123;
+        console.log(&#39;this&#39;, this)
+    &#125;
+    render()&#123;
+        return (
+            &lt;div&gt;
+                &lt;button onClick=&#123;this.handleClick&#125;&gt;点我&lt;/button&gt;
+            &lt;/div&gt;
+        )
+    &#125;
+&#125;
+ReactDOM.render(&lt;Demo/&gt;, document.getElementById(&#39;test&#39;))
+</code></pre>
+<p>在<code>react</code>中，像上面这样写，在执行的时候我们就会找不到<code>this</code>的引用。 我们首先要了解，我们在类中定义的<code>handleClick</code>和<code>render</code>方式是定义在类的原型上了。只有类的实例对象才可以调用，且函数内部的<code>this</code>指向实例本身。 在<code>ReactDOM.render()</code>执行的时候，会帮我们<code>new</code>一个实例对象，并调用<code>render</code>方法，所以在<code>render</code>方法内部的<code>this</code>指向实例自身。但是<code>&lt;button onClick=&#123;this.handleClick&#125;&gt;点我&lt;/button&gt;</code>这里绑定的事件处理函数为<code>this.handleClick</code>方法的引用。但是当我们点击的时候，<code>handleClick</code>的执行上下文为<code>Window</code>，由于<code>jsx</code>经<code>babel</code>编译后会开启严格模式。所以<code>this</code>指向变为<code>undefined</code>。</p>
+<h4 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h4><p><strong>1.在构造函数中使用bind改变this的指向</strong></p>
+<pre><code class="js">import React, &#123; Component &#125; from &#39;react&#39;;
+
+class App extends Component &#123;
+  constructor(props) &#123;
+    super(props);
+    this.state = &#123;
+      count: 0
+    &#125;;
+    this.handleClick = this.handleClick.bind(this);
+  &#125;
+
+  handleClick() &#123;
+    this.setState(&#123;
+      count: this.state.count + 1
+    &#125;);
+  &#125;
+
+  render() &#123;
+    return (
+      &lt;div&gt;
+        &lt;p&gt;You clicked &#123;this.state.count&#125; times&lt;/p&gt;
+        &lt;button onClick=&#123;this.handleClick&#125;&gt;Click Me&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  &#125;
+&#125;
+export default App;
+</code></pre>
+<p>上面实例中，我们通过将<code>this.handleClick</code>绑定到类实例上来保证该方法中的this指向正确。 在render方法中，使用<code>this.state</code>和<code>this.handleClick</code>访问计数器状态和点击处理程序</p>
+<p><strong>2.使用箭头函数绑定事件</strong></p>
+<pre><code class="js">class Demo extends Component&#123;
+
+    handleClick()&#123;
+        console.log(&#39;this&#39;, this)
+    &#125;
+    render()&#123;
+        return (
+            &lt;div&gt;
+                &lt;button onClick=&#123;(e) =&gt; this.handleClick(e)&#125;&gt;点我&lt;/button&gt;
+            &lt;/div&gt;
+        )
+    &#125;
+&#125;
+ReactDOM.render(&lt;Demo/&gt;, document.getElementById(&#39;test&#39;))
+</code></pre>
+<p><code>render</code>函数的<code>this</code>指向为实例自身，所以，我们可以直接在绑定的时候使用箭头函数，此时<code>handleClick</code>的执行上下文为箭头函数定义时的作用域。</p>
+<p><strong>3.使用箭头函数定义实例方法</strong></p>
+<pre><code class="js">class Demo extends Component&#123;
+
+    // 该方法定义在实例对象，且执行上下文为实例自身
+    handleClick = ()=&gt;&#123;
+        console.log(&#39;this&#39;, this)
+    &#125;
+    render()&#123;
+        return (
+            &lt;div&gt;
+                &lt;button onClick=&#123;this.handleClick&#125;&gt;点我&lt;/button&gt;
+            &lt;/div&gt;
+        )
+    &#125;
+&#125;
+ReactDOM.render(&lt;Demo/&gt;, document.getElementById(&#39;test&#39;))
+</code></pre>
+<h2 id="受控组件和非受控组件"><a href="#受控组件和非受控组件" class="headerlink" title="受控组件和非受控组件"></a>受控组件和非受控组件</h2><p>在React中，表单元素（例如输入框、复选框、下拉框等）可以是“受控”组件或“非受控”组件。</p>
+<h3 id="受控组件"><a href="#受控组件" class="headerlink" title="受控组件"></a><strong>受控组件</strong></h3><p>受控组件是指受React控制的表单元素，其值通过React state来管理。在受控组件中每次用户输入时，都会更新组件状态并重新渲染组件（或更新虚拟DOM），从而反映表单元素的当前值。要使用受控组件，你需要将表单元素的值绑定到状态（state）并在改变时通过事件监听程序更新该状态。</p>
+<h3 id="非受控组件"><a href="#非受控组件" class="headerlink" title="非受控组件"></a><strong>非受控组件</strong></h3><p>非受控组件是指值通过DOM节点本身管理的表单元素。在非受控组件中，组件自己掌控着输入框的值。非受控组件的值并不受React控制，所以React不会通过重新渲染来更新值。相反，您必须使用原生JavaScript来获取或设置组件的当前值。因此，在绝大多数情况下，我们都建议使用受控组件。</p>
+<h3 id="受控组件与非受控组件对比"><a href="#受控组件与非受控组件对比" class="headerlink" title="受控组件与非受控组件对比"></a><strong>受控组件与非受控组件对比</strong></h3><p>我们来看一个使用受控组件，以及一个使用非受控组件的示例：</p>
+<pre><code class="js">   import React, &#123; useState &#125; from &#39;react&#39;;
+
+    function App() &#123;
+      const [value, setValue] = useState(&#39;&#39;);
+
+      function handleChange(event) &#123;
+        setValue(event.target.value);
+      &#125;
+
+      function handleSubmit(event) &#123;
+        event.preventDefault();
+        console.log(&#39;You typed: &#39;, value);
+        setValue(&#39;&#39;);
+      &#125;
+
+      return (
+        &lt;div&gt;
+          &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
+            &lt;label&gt;
+              Name:
+              &lt;input type=&quot;text&quot; value=&#123;value&#125; onChange=&#123;handleChange&#125; /&gt;
+            &lt;/label&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      );
+    &#125;
+
+    export default App;
+</code></pre>
+<p>在这个示例中，我们定义了一个带有一个文本框和一个提交按钮的表单。文本框的值是一个受控组件，我们绑定它的值到状态变量<code>value</code>，每次文本变化时触发<code>handleChange</code>事件处理程序，<code>handleSubmit</code>处理表单的提交，把表单文本内容打印到控制台，并将状态<code>value</code>重置为空字符串。我们还可以通过使用非受控组件来改编相似的表单，但是将输入值传递给事件处理程序需要使用表单节点的引用来实现。如下所示：</p>
+<pre><code class="js">  import React, &#123; useRef &#125; from &#39;react&#39;;
+
+    function App() &#123;
+      const inputRef = useRef(null);
+
+      function handleSubmit(event) &#123;
+        event.preventDefault();
+        console.log(&#39;You typed: &#39;, inputRef.current.value);
+        inputRef.current.value = &#39;&#39;;
+        inputRef.current.focus();
+      &#125;
+
+      return (
+        &lt;div&gt;
+          &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
+            &lt;label&gt;
+              Name:
+              &lt;input type=&quot;text&quot; ref=&#123;inputRef&#125; /&gt;
+            &lt;/label&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      );
+    &#125;
+
+    export default App;
+</code></pre>
+<p>在这个示例中，我们定义了一个带有一个文本框和一个提交按钮的表单。文本框是一个非受控组件，通过使用<code>ref</code>来获取其当前值。在<code>handleSubmit</code>事件处理程序中，我们将使用该方法记录输入值，并清空文本框，并将焦点设置回文本框中。</p>
+<h2 id="React-Router"><a href="#React-Router" class="headerlink" title="React Router"></a>React Router</h2><h3 id="什么是React-router"><a href="#什么是React-router" class="headerlink" title="什么是React router"></a><strong>什么是React router</strong></h3><p>React Router是React的一个第三方库，它提供了一种利用组件 <code>&lt;Route /&gt; &lt;Link /&gt;</code>等来定义路由的方式。通过React Router，开发者可以方便地实现路由控制，将不同的组件映射到不同的URL路径上，以达到构建单页应用的目的。React Router还提供了一些高级功能，如动态路由匹配、嵌套路由和程序性导航等。</p>
+<h3 id="安装使用React-Router"><a href="#安装使用React-Router" class="headerlink" title="安装使用React-Router"></a><strong>安装使用React-Router</strong></h3><p><code>npm install react-router-dom@6</code></p>
+<p>如果在 web 上的话，你需要的是 <code>react-router-dom</code> 而不是 <code>react-router</code> 这个包。<a href="https://link.juejin.cn/?target=https://github.com/remix-run/react-router/issues/4648" title="https://github.com/remix-run/react-router/issues/4648">它们的区别</a>是，后者包含了 <code>react-native</code> 中需要的一些组件，如果你只需要做网页应用的话，用前者就可以了。</p>
+<p>React Router 6 是 React Router 的下一个版本，与 React 18 兼容。它具有许多新功能和改进，包括全新的 Hooks API、对导航声明语法和后台路由的支持等。在 React 18 中使用 React Router 6，需要进行以下步骤：</p>
+<ol>
+<li><p>创建路由：在应用程序中定义路由。应用程序中可能有多种方式定义路由，例如通过 JavaScript 文件，或通过组件内部的以路径名为 key 的对象。</p>
+<p> Javascript 文件：</p>
+<pre><code class="js">// routes.js
+import &#123;Routes, Route&#125; from &#39;react-router-dom&#39;;
+import &#123;Home, About&#125; from &#39;./pages&#39;;
+
+function AppRoutes() &#123;
+  return (
+    &lt;Routes&gt;
+      &lt;Route path=&quot;/&quot; element=&#123;&lt;Home /&gt;&#125; /&gt;
+      &lt;Route path=&quot;about&quot; element=&#123;&lt;About /&gt;&#125; /&gt;
+    &lt;/Routes&gt;
+  );
+&#125;
+
+export default AppRoutes;
+</code></pre>
+<p> 组件内部：</p>
+<pre><code class="js">// App.js
+import &#123;Routes, Route&#125; from &#39;react-router-dom&#39;;
+
+function App() &#123;
+  return (
+    &lt;Routes&gt;
+      &lt;Route path=&quot;/&quot; element=&#123;&lt;Home /&gt;&#125; /&gt;
+      &lt;Route path=&quot;about&quot; element=&#123;&lt;About /&gt;&#125; /&gt;
+    &lt;/Routes&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+</li>
+<li><p>定义页面组件：在应用程序中定义页面组件，与路由结合使用。</p>
+<pre><code class="js">// pages/Home.js
+function Home() &#123;
+  return &lt;h1&gt;Home Page&lt;/h1&gt;;
+&#125;
+
+export default Home;
+
+// pages/About.js
+function About() &#123;
+  return &lt;h1&gt;About Page&lt;/h1&gt;;
+&#125;
+
+export default About;
+</code></pre>
+</li>
+<li><p>定义导航：在应用程序中定义导航栏，以便在视图之间导航。</p>
+<pre><code class="js">// components/Nav.js
+import &#123;Link&#125; from &#39;react-router-dom&#39;;
+
+function Nav() &#123;
+  return (
+    &lt;ul&gt;
+      &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;Link to=&quot;/about&quot;&gt;About&lt;/Link&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  );
+&#125;
+
+export default Nav;
+</code></pre>
+</li>
+</ol>
+<p>上述代码中，我们首先在 <code>routes.js</code> 文件中配置了两个路由，并通过 <code>element</code> 属性指定了路由所对应的组件。然后我们在组件中使用 <code>Routes</code> 和 <code>Route</code> 组件来设置路由，路径为 <code>/</code> 的路由对应 <code>Home</code> 组件，路径为 <code>/about</code> 的路由对应 <code>About</code> 组件。</p>
+<p>最后我们在 <code>Nav</code> 组件中使用 <code>Link</code> 组件来完成页面之间的跳转。</p>
+<p>需要注意的是，在 React Router 6 中，<code>&lt;Switch&gt;</code> 组件不再存在，取代它的是 <code>&lt;Routes&gt;</code> 组件，我们可以在 <code>&lt;Routes&gt;</code> 中定义多个路由，并在 <code>&lt;Route&gt;</code> 中设置 <code>path</code> 属性，React Router 6 会自动匹配路径，并渲染相应的组件。</p>
+<h3 id="React-Router-1"><a href="#React-Router-1" class="headerlink" title="React Router"></a><strong>React Router</strong></h3><p>官网的介绍：</p>
+<table>
+<thead>
+<tr>
+<th>组件名</th>
+<th>作用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;Routers&gt;</code></td>
+<td>一组路由</td>
+<td>代替原有<code>&lt;Switch&gt;</code>，所有子路由都用基础的Router children来表示</td>
+</tr>
+<tr>
+<td><code>&lt;Router&gt;</code></td>
+<td>基础路由</td>
+<td>Router是可以嵌套的，解决原有V5中严格模式，后面与V5区别会详细介绍</td>
+</tr>
+<tr>
+<td><code>&lt;Link&gt;</code></td>
+<td>导航组件</td>
+<td>在实际页面中跳转使用</td>
+</tr>
+<tr>
+<td><code>&lt;Outlet/&gt;</code></td>
+<td>自适应渲染组件</td>
+<td>根据实际路由url自动选择组件</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>hooks名</th>
+<th>作用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>useParams</code></td>
+<td>返回当前参数</td>
+<td>根据路径读取参数</td>
+</tr>
+<tr>
+<td><code>useNavigate</code></td>
+<td>返回当前路由</td>
+<td>代替原有V5中的 useHistory</td>
+</tr>
+<tr>
+<td><code>useOutlet</code></td>
+<td>返回根据路由生成的element</td>
+<td></td>
+</tr>
+<tr>
+<td><code>useLocation</code></td>
+<td>返回当前的location 对象</td>
+<td></td>
+</tr>
+<tr>
+<td><code>useRoutes</code></td>
+<td>同Routers组件一样，只不过是在js中使用</td>
+<td></td>
+</tr>
+<tr>
+<td><code>useSearchParams</code></td>
+<td>用来匹配URL中?后面的搜索参数</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="笔记来源"><a href="#笔记来源" class="headerlink" title="笔记来源"></a>笔记来源</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7127277986667036685#heading-7">react笔记（四）—— 事件处理 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7033313711947251743">React-Router V6 使用详解(干货) - 掘金 (juejin.cn)</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/recat/" style="color: #00bcd4">recat</a>
+        </span>
+        
+    </div>
+    <a href="/2023/06/13/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/06/06/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/">
+        <h2 class="post-title">React学习笔记(二)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/recat/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                recat
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/6/6
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>书接上文，React继续学习并记录笔记。本文有好多是问chatGPT得到的，chatGPT回答结合着例子，感觉更加通俗易懂些。</p>
+</blockquote>
+<h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
+<li>  react hooks</li>
+<li>  组件间的传值</li>
+<li>  组件内常用的使用方式（类比vue，v-if，v-for试试例子）</li>
+</ul>
+<h2 id="react-hooks"><a href="#react-hooks" class="headerlink" title="react hooks"></a>react hooks</h2><h3 id="什么是react-hooks"><a href="#什么是react-hooks" class="headerlink" title="什么是react hooks"></a><strong>什么是react hooks</strong></h3><p>我去问了问chatGPT，回答如下：<br><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/34da3027f4f9455091486b9b0cabeaad~tplv-k3u1fbpfcp-watermark.image" alt="image.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h3 id="react-hooks解决了什么问题"><a href="#react-hooks解决了什么问题" class="headerlink" title="react hooks解决了什么问题"></a><strong>react hooks解决了什么问题</strong></h3><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fc3b40969b0e4ebe911168439d38238c~tplv-k3u1fbpfcp-watermark.image" alt="image.png" loading="lazy" decoding="async" fetchpriority="low"><br>大概就是这三点，网上的回答也大同小异：</p>
+<ul>
+<li>  让函数组件也能做类组件的事，有自己的状态，可以处理一些副作用，能获取 ref ，也能做数据缓存。</li>
+<li>  解决逻辑复用难的问题</li>
+<li>  放弃面向对象编程，拥抱函数式编程</li>
+</ul>
+<h3 id="什么是自定义hooks"><a href="#什么是自定义hooks" class="headerlink" title="什么是自定义hooks"></a><strong>什么是自定义hooks</strong></h3><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ef1cb12e0e241babe962e58bdea3abd~tplv-k3u1fbpfcp-watermark.image" alt="image.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h3 id="常用的React-hooks"><a href="#常用的React-hooks" class="headerlink" title="常用的React hooks"></a><strong>常用的React hooks</strong></h3><h4 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h4><p>useState 可以使函数组件像类组件一样拥有 state，函数组件通过 useState 可以让组件重新渲染，更新视图。</p>
+<pre><code class="js">const [ ①state , ②dispatchAction ] = useState(③initData)
+</code></pre>
+<p>① state，目的提供给 UI ，作为渲染视图的数据源。</p>
+<p>② dispatchAction 改变 state 的函数，可以理解为推动函数组件渲染的渲染函数。</p>
+<p>③ initData 有两种情况，第一种情况是非函数，将作为 state 初始化的值。 第二种情况是函数，函数的返回值作为 useState 初始化的值。</p>
+<pre><code class="js">import &#123; useState &#125; from &quot;react&quot;
+
+interface myInterface&#123;
+    name:string;
+&#125;
+
+const DemoState = (props:myInterface) =&gt; &#123;
+    console.log(props)
+    /* number为此时state读取值 ，setNumber为派发更新的函数 */
+    let [number, setNumber] = useState(0) /* 0为初始值 */
+    return (&lt;div&gt;
+        &#123;/* 这里展示的又是最新的值，因为在整个事件处理结束之后再重新渲染组件，此时state已经更新好的 */&#125;
+        &lt;span&gt;&#123; number &#125;&lt;/span&gt;  
+        &lt;button onClick=&#123; ()=&gt; &#123;
+        setNumber(number+1)
+      console.log(number) /* 由于 useState 是异步的，点击时state还没有更新好，所以 console.log 同步输出的是上一次更新后的值，并不是最新的值。  */
+    &#125; &#125; &gt;&lt;/button&gt;
+    &lt;/div&gt;)
+&#125;
+
+export default DemoState
+</code></pre>
+<h4 id="useRef"><a href="#useRef" class="headerlink" title="useRef"></a>useRef</h4><p>useRef 可以用来获取元素，缓存状态，接受一个状态 initState 作为初始值，返回一个 ref 对象, 这个对象上有一个 current 属性就是 ref 对象需要获取的内容。</p>
+<pre><code class="js">const ref = React.useRef(initState)
+console.log(ref.current)
+</code></pre>
+<p><code>useRef常用用法</code>：</p>
+<ul>
+<li>  useRef 获取 DOM 元素，在 React Native 中虽然没有 DOM 元素，但是也能够获取组件的节点信息,如下：</li>
+</ul>
+<pre><code class="js">const DemoUseRef = ()=&gt;&#123;
+  const dom= useRef(null)
+  const handerSubmit = ()=&gt;&#123;
+    /*  &lt;div &gt;表单组件&lt;/div&gt;  dom 节点 */
+    console.log(dom.current)
+  &#125;
+  return &lt;div&gt;
+    &#123;/* ref 标记当前dom节点 */&#125;
+    &lt;div ref=&#123;dom&#125; &gt;表单组件&lt;/div&gt;
+    &lt;button onClick=&#123;()=&gt;handerSubmit()&#125; &gt;提交&lt;/button&gt; 
+  &lt;/div&gt;
+&#125;
+</code></pre>
+<ul>
+<li>  可以利用 useRef 返回的 ref 对象来保存状态，只要当前组件不被销毁，那么状态就会一直存在。具体如下：</li>
+</ul>
+<ol>
+<li> 定义一个ref变量</li>
+</ol>
+<pre><code class="javascript">const myRef = useRef(null);
+</code></pre>
+<ol start="2">
+<li> 使用myRef保存状态</li>
+</ol>
+<pre><code class="javascript">const [myState, setMyState] = useState(0);
+useEffect(() =&gt; &#123;
+  myRef.current = myState;
+&#125;, [myState]);
+</code></pre>
+<p>上面的代码中，我们定义了一个名为myRef的ref变量，并在useEffect钩子函数中将myState保存到myRef中。这里要注意的是，因为myRef.current是一个可变的变量，所以当myState变化时，我们需要使用数组的解构赋值和useState钩子来更新myState的值。</p>
+<ol start="3">
+<li> 读取保存的状态</li>
+</ol>
+<pre><code class="javascript">console.log(myRef.current);
+</code></pre>
+<p>在组件的任何部分，我们都可以使用myRef.current来读取已经保存的状态。</p>
+<p>最后需要说明的是，useRef保存的状态在每次重新渲染时都会持续存在，这意味着它可以在不同的渲染之间长期存储数据，而不像useState只会在当前的渲染周期中有效。所以如果需要保存状态并且不想在render时失去这个状态，可以用useRef钩子。</p>
+<h4 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h4><p>React的useEffect钩子用于在React组件渲染完成后执行一些副作用操作，比如访问API、更新DOM等。它的作用类似于类组件中的生命周期函数。<br>useEffect具有三种执行方式：</p>
+<p><strong>初始化渲染</strong></p>
+<p>初始渲染在初始渲染时，useEffect会在组件挂载之后立即执行回调函数。如果指定了依赖项，React会检查每个依赖项是否发生变化，如果有，则重新执行回调函数。<br>三种依赖项：</p>
+<ul>
+<li>   1.<code>不传值</code>  <code>现象</code>: useEffect 会在第一次渲染以及每次更新渲染后都执行。</li>
+<li>   2.<code>空数组作为依赖</code>  <code>现象</code>:useEffect 会在第一次渲染后执行一次。</li>
+<li>   3.<code>基本类型作为依赖</code> <code>现象:</code>  useEffect 会在第一次渲染以及每次更新渲染后都执行。</li>
+</ul>
+<p>具体可看：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7083308347331444750#heading-9">React useEffect 两个参数你用对了吗 - 掘金 (juejin.cn)</a></p>
+<p><strong>更新渲染</strong></p>
+<p>在组件更新时，useEffect会在所有更新完毕后执行回调函数。如果指定了依赖项，React会检查每个依赖项是否发生变化，如果有，则重新执行回调函数。</p>
+<p><strong>卸载组件</strong></p>
+<p>在组件卸载时，useEffect会执行清除副作用操作的回调函数。这种情况下不需要指定依赖项。</p>
+<p>useEffect钩子接收两个参数，第一个参数是一个函数，这个函数包含需要执行的副作用操作，例如在钩子中访问API或者更新DOM。第二个参数是一个数组，它用来指定useEffect什么情况下需要重新运行。如果不需要重新运行，可以将数组参数留空。</p>
+<p><strong>例子</strong></p>
+<p>下面是一些useEffect的用例：</p>
+<ol>
+<li> 访问API并更新状态</li>
+</ol>
+<pre><code class="javascript">import React, &#123; useState, useEffect &#125; from &quot;react&quot;;
+
+function App() &#123;
+  const [data, setData] = useState([]);
+
+  useEffect(() =&gt; &#123;
+    async function fetchData() &#123;
+      const result = await axios.get(&quot;https://api.example.com/data&quot;);
+      setData(result.data);
+    &#125;
+    fetchData();
+  &#125;, []);
+
+  return (
+    &lt;div&gt;
+      &#123;data.map((item) =&gt; (
+        &lt;p key=&#123;item.id&#125;&gt;&#123;item.name&#125;&lt;/p&gt;
+      ))&#125;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<p>上面的代码中，我们在useEffect钩子中发起了一个axios的get请求，并将获取到的数据设置到data状态中。需要注意的是，由于我们在useEffect钩子函数中调用了async函数，所以我们需要在函数前面加上async关键字。</p>
+<ol start="2">
+<li> 监听props的变化并更新状态</li>
+</ol>
+<pre><code class="javascript">import React, &#123; useState, useEffect &#125; from &quot;react&quot;;
+
+function App(props) &#123;
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() =&gt; &#123;
+    setCounter(props.value);
+  &#125;, [props.value]);
+
+  const handleClick = () =&gt; setCounter(counter + 1);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;&#123;counter&#125;&lt;/p&gt;
+      &lt;button onClick=&#123;handleClick&#125;&gt;Increase&lt;/button&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<p>上面的代码中，我们使用了useEffect钩子和useState钩子，以响应props的变化并更新状态。钩子中的函数会在props.value改变时触发，它将props.value的值设置到counter变量中。</p>
+<p>总的来说，useEffect是React中非常重要的一个钩子，它可以让我们更加容易地进行组件的副作用操作，并且可以防止我们在组件渲染完成前执行操作。</p>
+<h4 id="useMemo"><a href="#useMemo" class="headerlink" title="useMemo"></a>useMemo</h4><p>React的useMemo钩子用于缓存函数的计算结果，以减少不必要的计算和渲染。它的作用范围更广，可以缓存任何复杂的计算结果。</p>
+<p>useMemo接收两个参数，第一个参数是一个函数，这个函数包含需要执行的计算操作，例如根据props和状态计算出一个值或者过滤一些数据。第二个参数是一个数组，它用来指定这个函数依赖的数据，只有当依赖数据发生变化时才会重新计算缓存结果。如果依赖数据没有变化，则直接返回上一次计算的缓存结果。</p>
+<p>下面是一些useMemo的用例：</p>
+<ol>
+<li> 根据props和状态计算出一个值</li>
+</ol>
+<pre><code class="javascript">import React, &#123; useMemo, useState &#125; from &quot;react&quot;;
+
+function App(props) &#123;
+  const [count, setCount] = useState(0);
+
+  const result = useMemo(() =&gt; &#123;
+    console.log(&quot;Compute Result&quot;);
+    return count * props.value;
+  &#125;, [count, props.value]);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: &#123;count&#125;&lt;/p&gt;
+      &lt;p&gt;Value: &#123;props.value&#125;&lt;/p&gt;
+      &lt;p&gt;Result: &#123;result&#125;&lt;/p&gt;
+      &lt;button onClick=&#123;() =&gt; setCount(count + 1)&#125;&gt;Increase Count&lt;/button&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<p>上面的代码中，我们使用了useMemo钩子来缓存计算结果，这个计算结果基于state变量count和props中的值计算而来。由于这个计算结果只依赖于count和props.value，所以只有count或props.value变化时，useMemo才会重新计算这个计算结果。同时，由于这个计算结果被缓存起来了，所以即使我们反复点击Increase Count按钮，计算结果也不会重新计算和渲染。</p>
+<ol start="2">
+<li> 从数组中过滤出存在某个字符的项</li>
+</ol>
+<pre><code class="javascript">import React, &#123; useState, useMemo &#125; from &quot;react&quot;;
+
+function App() &#123;
+  const [list, setList] = useState([&quot;apple&quot;, &quot;banana&quot;, &quot;mango&quot;, &quot;peach&quot;]);
+  const [search, setSearch] = useState(&quot;&quot;);
+
+  const filteredList = useMemo(() =&gt; &#123;
+    console.log(&quot;Filter List&quot;);
+    return list.filter((item) =&gt; item.includes(search));
+  &#125;, [list, search]);
+
+  const handleChange = (event) =&gt; &#123;
+    setSearch(event.target.value);
+  &#125;;
+
+  return (
+    &lt;div&gt;
+      &lt;input value=&#123;search&#125; onChange=&#123;handleChange&#125; /&gt;
+      &lt;ul&gt;
+        &#123;filteredList.map((item) =&gt; (
+          &lt;li key=&#123;item&#125;&gt;&#123;item&#125;&lt;/li&gt;
+        ))&#125;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<p>上面的代码中，我们使用了useMemo钩子来缓存计算结果，这个计算结果被过滤离数组list中包含搜索关键词的项。由于这个计算结果只依赖于list和search变量，所以只有这两个变量发生变化时，useMemo才会重新计算。同样，由于这个过滤结果被缓存起来了，即使我们在搜索框中不断输入文字或者反复添加删除项，useMemo也只会在依赖变化时重新计算。</p>
+<h4 id="useLayoutEffect"><a href="#useLayoutEffect" class="headerlink" title="useLayoutEffect"></a>useLayoutEffect</h4><p>React的useLayoutEffect钩子与useEffect类似，都是用于执行副作用操作，但是useLayoutEffect会在浏览器绘制之前执行，可以保证副作用操作对页面布局的影响被计算在内。</p>
+<p>useLayoutEffect的使用方法和useEffect一样，都是接收一个函数和一个依赖数组。useLayoutEffect钩子的使用场景与useEffect相似，当需要在组件挂载或更新后立即执行一个副作用操作，以确保副作用操作对页面布局有影响时，可以使用useLayoutEffect。</p>
+<p>下面是一个useLayoutEffect的用例：</p>
+<pre><code class="javascript">import &#123; useState, useLayoutEffect, useRef &#125; from &quot;react&quot;;
+
+function App() &#123;
+  const [width, setWidth] = useState(0);
+  const ref = useRef();
+
+  useLayoutEffect(() =&gt; &#123;
+    setWidth(ref.current.offsetWidth);
+  &#125;, []);
+
+  return (
+    &lt;div&gt;
+      &lt;h1 ref=&#123;ref&#125;&gt;Hello, World!&lt;/h1&gt;
+      &lt;p&gt;The width of the h1 element is &#123;width&#125;px.&lt;/p&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<p>上面的代码中，我们使用了useLayoutEffect钩子来获取h1元素的宽度，并将它保存到width状态变量中。由于useLayoutEffect钩子在DOM更新之前执行，在这个例子中，我们可以保证获取的宽度值是最新的，同时，由于我们使用useLayoutEffect钩子来获取宽度值，所以这个宽度值的更新不会导致额外的页面渲染。</p>
+<h4 id="useContext"><a href="#useContext" class="headerlink" title="useContext"></a>useContext</h4><p>React的useContext钩子用于获取React上下文的值。上下文可以理解为一个全局对象，其中保存了在组件树中被共享的数据。使用useContext可以使得在组件树的任何一个组件中都能够访问到上下文的值。</p>
+<p>useContext接收一个上下文对象作为参数，并返回这个上下文对象的当前值。上下文对象在创建时由React.createContext函数创建。</p>
+<p>下面是一个useContext的用例：</p>
+<pre><code class="javascript">import &#123; createContext, useContext &#125; from &quot;react&quot;;
+
+const ThemeContext = createContext(&quot;light&quot;);
+
+function App() &#123;
+  return (
+    &lt;ThemeContext.Provider value=&quot;dark&quot;&gt;
+      &lt;Parent /&gt;
+    &lt;/ThemeContext.Provider&gt;
+  );
+&#125;
+
+function Parent() &#123;
+  return &lt;Child /&gt;;
+&#125;
+
+function Child() &#123;
+  const theme = useContext(ThemeContext);
+
+  return &lt;div&gt;Current theme is &#123;theme&#125;&lt;/div&gt;;
+&#125;
+
+export default App;
+</code></pre>
+<p>上面的代码中，我们创建了一个名为ThemeContext的上下文，它的默认值为”light”。在App组件中，我们使用ThemeContext.Provider提供了一个新的值”dark”，并将这个值传递给了Child组件。在Child组件中，我们使用了useContext钩子来获取当前的主题值，并将这个值显示在页面上。</p>
+<p>需要注意的是，由于useContext只能在函数组件中使用，所以需要将上下文对象和Provider组件都放在函数组件外面或者使用React.memo包裹组件。另外，需要通过Context.Provider提供一个新值，以便在组件层次中下传下去。</p>
+<h4 id="useReducer"><a href="#useReducer" class="headerlink" title="useReducer"></a>useReducer</h4><p>React的useReducer钩子用于管理和更新应用程序的状态，可与Redux架构相比。与useState（类似）不同之处在于，useState钩子通常用于管理状态值。useReducer则被视为管理复杂状态和操作的更好解决方案。</p>
+<p>useReducer接收两个参数：一个是reducer函数，一个是初始状态值。reducer函数的作用是在更新状态之前处理一个操作（或动作），并且需要返回一个新的状态值。所得到的状态值将被作为useReducer钩子的返回值，同时，还将被传递到应用程序中的其他组件中。</p>
+<p>下面是一个useReducer的用例：</p>
+<pre><code class="js">  import &#123; useReducer &#125; from &quot;react&quot;;
+
+    const initialState = &#123;
+        count: 0
+    &#125;;
+
+    function reducer(state, action) &#123;
+        switch (action.type) &#123;
+            case &quot;increment&quot;:
+                return &#123; count: state.count + 1 &#125;;
+            case &quot;reset&quot;:
+                return &#123; count: initialState.count &#125;;
+            default:
+                throw new Error(&quot;Invalid action type&quot;);
+        &#125;
+    &#125;
+
+    function App() &#123;
+        const [state, dispatch] = useReducer(reducer, initialState);
+
+        return (
+            &lt;div&gt;
+                &lt;p&gt;Count: &#123;state.count&#125;&lt;/p&gt;
+                &lt;button onClick=&#123;() =&gt; dispatch(&#123; type: &quot;increment&quot; &#125;)&#125;&gt;Click to increment count: &#123;state.count&#125;&lt;/button&gt;
+                &lt;button onClick=&#123;() =&gt; dispatch(&#123; type: &quot;reset&quot; &#125;)&#125;&gt;Reset count&lt;/button&gt;
+            &lt;/div&gt;
+        );
+    &#125;
+
+    export default App;
+</code></pre>
+<p>上面的代码中，我们使用了useReducer钩子来创建一个与状态相关的reduce函数。该reduce函数管理一个名为“count”的状态计数器。在组件中，我们显示此计数器状态的当前值，并将两个按钮连接到dispatch方法。第一个按钮将用于increment操作，第二个用于reset计数器。</p>
+<p>需要注意的是，在dispatch方法中，我们使用action对象来通知reducer函数要执行什么样的操作。这个对象是一个简单的JavaScript对象，包含一个字符串类型的属性，表示操作类型（在本例中，我们使用“increment”和“reset”作为操作类型字符串）。</p>
+<p>总之，useReducer是一种更好的状态管理解决方案，可以轻松地管理复杂的组件状态。</p>
+<h4 id="useImperativeHandle"><a href="#useImperativeHandle" class="headerlink" title="useImperativeHandle"></a>useImperativeHandle</h4><p>useImperativeHandle 可以配合 forwardRef 自定义暴露给父组件的实例值。使得父组件能够通过ref获取到子组件的实例，并且调用这些自定义的API。通常用于实现一些跨组件的通讯，或者是对某些组件逻辑的封装，可以将它看成是将一些子组件的方法暴露给父组件来调用。</p>
+<p>useImperativeHandle接收两个参数：一个Ref（引用）对象和一个返回一个对象的函数。返回的对象表示要暴露给父组件的API接口。父组件可以通过ref来调用这些自定义的方法。</p>
+<p>下面是一个useImperativeHandle的用例：</p>
+<pre><code class="javascript">import &#123; forwardRef, useImperativeHandle, useState &#125; from &quot;react&quot;;
+
+const Child = forwardRef((props, ref) =&gt; &#123;
+  const [count, setCount] = useState(0);
+
+  useImperativeHandle(ref, () =&gt; (&#123;
+    increment() &#123;
+      setCount(count + 1);
+    &#125;,
+    reset() &#123;
+      setCount(0);
+    &#125;,
+  &#125;));
+
+  return &lt;div&gt;Count: &#123;count&#125;&lt;/div&gt;;
+&#125;);
+
+function App() &#123;
+  const childRef = useRef();
+
+  function handleIncrement() &#123;
+    childRef.current.increment();
+  &#125;
+
+  function handleReset() &#123;
+    childRef.current.reset();
+  &#125;
+
+  return (
+    &lt;div&gt;
+      &lt;Child ref=&#123;childRef&#125; /&gt;
+      &lt;button onClick=&#123;handleIncrement&#125;&gt;Increment&lt;/button&gt;
+      &lt;button onClick=&#123;handleReset&#125;&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<p>上面的代码中，我们创建了一个名为Child的组件，它包含了一个名为“count”的状态计数器，并将它通过useImperativeHandle钩子暴露给了父组件。然后，我们使用forwardRef钩子将Child组件的ref引用传递给了App组件。在App组件中，我们使用ref来调用Child组件中的increment和reset方法。通过useImperativeHandle，我们可以在父组件中调用Child组件的自定义方法，实现了跨组件的通讯。</p>
+<p>需要注意的是，如果你正在使用useImperativeHandle来暴露方法，则必须将子组件包装在forwardRef中，以便可以在父组件中使用ref引用。</p>
+<h3 id="实现一个自定义的React的自定义Hooks"><a href="#实现一个自定义的React的自定义Hooks" class="headerlink" title="实现一个自定义的React的自定义Hooks"></a>实现一个自定义的React的自定义Hooks</h3><p>可以采用以下步骤来创建一个自定义Hooks:</p>
+<ol>
+<li> 创建一个以”use”开头的函数，这是React在命名约定中使用的方法，以通知其他程序员此函数是一个Hook；</li>
+<li> 在函数中编写一些逻辑，可以使用现有的Hooks，如useState、useEffect;</li>
+<li> 根据需要返回一些有用的值。</li>
+</ol>
+<p>以下是一个简单的示例，它使用useState和useEffect自定义了一个计时器hooks：</p>
+<pre><code class="javascript">import &#123; useState, useEffect &#125; from &quot;react&quot;;
+
+function useTimer(initialTime) &#123;
+  const [time, setTime] = useState(initialTime);
+
+  useEffect(() =&gt; &#123;
+    const timer = setInterval(() =&gt; &#123;
+      setTime(time =&gt; time + 1);
+    &#125;, 1000);
+
+    return () =&gt; &#123;
+      clearInterval(timer);
+    &#125;;
+  &#125;, []);
+
+  return time;
+&#125;
+
+export default useTimer;
+</code></pre>
+<p>上面的代码中，我们定义了一个名为useTimer的自定义Hooks，并使用useState和useEffect在内部实现了一个计时器的逻辑，以输出时间。这个自定义Hooks可以用于任何需要计时器的组件中，并使得代码的重复度更低。</p>
+<p>使用自定义Hooks非常简单，只需要导入并使用即可。例如：</p>
+<pre><code class="javascript">import useTimer from &quot;./useTimer&quot;;
+
+function App() &#123;
+  const time = useTimer(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Current Time: &#123;time&#125; seconds&lt;/p&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<p>在上面这个例子中，我们导入了自定义Hooks useTimer，并在App组件中调用了它。最终，我们成功地使用自定义Hooks来达到了逻辑复用的效果。</p>
+<p>总之，自定义Hooks是非常有用的，可以让我们在函数组件之间共享逻辑，并且使得我们的代码更加简洁易懂。当多个组件需要相同的逻辑时，它可以提高代码的重用性和可维护性。</p>
+<h2 id="组件间的传值"><a href="#组件间的传值" class="headerlink" title="组件间的传值"></a>组件间的传值</h2><h3 id="父子组件传值"><a href="#父子组件传值" class="headerlink" title="父子组件传值"></a>父子组件传值</h3><h4 id="父传子"><a href="#父传子" class="headerlink" title="父传子"></a>父传子</h4><p>在React中，父组件可以向子组件传递数据（props）以及函数作为回调来处理事件。在函数式组件中，可以通过参数的形式来接收父组件传递的props。</p>
+<p>例如，父组件可以这样传递数据和函数：</p>
+<pre><code class="js">  function ParentComponent() &#123;
+      const data = &#123; name: &#39;John&#39;, age: 30 &#125;;
+      const handleClick = () =&gt; console.log(&#39;Button clicked&#39;);
+
+      return (
+        &lt;ChildComponent data=&#123;data&#125; onClick=&#123;handleClick&#125; /&gt;
+      );
+    &#125;
+</code></pre>
+<p>而在子组件中，可以使用props来接收这些参数：</p>
+<pre><code class="js"> function ChildComponent(props) &#123;
+      const &#123; data, onClick &#125; = props;
+
+      return (
+        &lt;div&gt;
+          &lt;p&gt;Name: &#123;data.name&#125;&lt;/p&gt;
+          &lt;p&gt;Age: &#123;data.age&#125;&lt;/p&gt;
+          &lt;button onClick=&#123;onClick&#125;&gt;Click me&lt;/button&gt;
+        &lt;/div&gt;
+      );
+    &#125;
+</code></pre>
+<p>在子组件中使用<code>props.xxx</code>即可获取父组件传递的数据或函数。这样，在子组件中就可以使用这些数据和函数来展示内容或处理事件了。</p>
+<h4 id="子传父"><a href="#子传父" class="headerlink" title="子传父"></a>子传父</h4><p>在React中，在函数式组件中子组件向父组件传递数据的方式是通过回调函数，父组件将一个函数作为props传递给子组件，然后子组件在需要向父组件传递数据时，调用该函数并传递参数即可。具体实现方法如下：</p>
+<p>父组件：</p>
+<pre><code class="jsx">import React, &#123; useState &#125; from &#39;react&#39;;
+import Child from &#39;./Child&#39;;
+
+function Parent() &#123;
+  const [message, setMessage] = useState(&#39;&#39;);
+
+  function handleMessage(message) &#123;
+    setMessage(message);
+  &#125;
+
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Parent Component&lt;/h2&gt;
+      &lt;Child onMessage=&#123;handleMessage&#125; /&gt;
+      &lt;p&gt;Message from child: &#123;message&#125;&lt;/p&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default Parent;
+</code></pre>
+<p>子组件：</p>
+<pre><code class="jsx">import React, &#123; useState &#125; from &#39;react&#39;;
+
+function Child(props) &#123;
+  const [inputValue, setInputValue] = useState(&#39;&#39;);
+
+  function handleInput(event) &#123;
+    setInputValue(event.target.value);
+  &#125;
+
+  function sendMessage() &#123;
+    props.onMessage(inputValue);
+  &#125;
+
+  return (
+    &lt;div&gt;
+      &lt;h3&gt;Child Component&lt;/h3&gt;
+      &lt;input type=&quot;text&quot; value=&#123;inputValue&#125; onChange=&#123;handleInput&#125; /&gt;
+      &lt;button onClick=&#123;sendMessage&#125;&gt;Send message to parent&lt;/button&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default Child;
+</code></pre>
+<p>在上述代码中，父组件通过<code>onMessage</code>属性向子组件传递一个函数<code>handleMessage</code>，子组件触发<code>sendMessage</code>函数来传递参数<code>inputValue</code>给父组件。子组件通过调用<code>props.onMessage(inputValue)</code>来触发父组件中的回调函数<code>handleMessage</code>，实现了子组件向父组件传递数据的功能。</p>
+<h3 id="兄弟组件传值"><a href="#兄弟组件传值" class="headerlink" title="兄弟组件传值"></a>兄弟组件传值</h3><p>在 React 中，兄弟组件之间的传值通常需要借助父组件作为中间层，通过向父组件传递数据再由父组件传递给另一个兄弟组件实现。同时，我们可以使用 <code>context API</code>、<code>Redux</code> 等方案进行数据管理。</p>
+<p>总体思路：将状态共享，提升到最近的公共父组件中，由父组件管理状态</p>
+<ul>
+<li>  提升公共状态</li>
+<li>  提供操作共享状态的方法</li>
+</ul>
+<pre><code class="js">import React, &#123; useState &#125; from &#39;react&#39;;
+
+function Parent() &#123;
+  const [message, setMessage] = useState(&#39;Hello, World!&#39;);
+
+  function handleMessageChange(message) &#123;
+    setMessage(message);
+  &#125;
+
+  return (
+    &lt;div&gt;
+      &lt;Child1 onMessageChange=&#123;handleMessageChange&#125; /&gt;
+      &lt;Child2 message=&#123;message&#125; /&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+function Child1(props) &#123;
+  function handleChange(e) &#123;
+    props.onMessageChange(e.target.value);
+  &#125;
+
+  return (
+    &lt;div&gt;
+      &lt;input type=&quot;text&quot; onChange=&#123;handleChange&#125; /&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+function Child2(props) &#123;
+  return (
+    &lt;div&gt;
+      &lt;p&gt;&#123;props.message&#125;&lt;/p&gt;
+    &lt;/div&gt;
+  );
+&#125;
+</code></pre>
+<p>我们定义了一个名为 <code>Parent</code> 的组件作为中间层，分别传递给了 <code>Child1</code> 和 <code>Child2</code> 两个组件。<code>Child1</code> 的输入框可以让用户输入任意文本，并将文本内容通过 <code>props.onMessageChange</code> 传递给父组件 <code>Parent</code> 中的 <code>handleMessageChange</code> 方法进行处理。父组件 <code>Parent</code> 的 <code>handleMessageChange</code> 方法通过设置 <code>message</code> 的状态来记录下输入框中的文本。最后，将 <code>message</code> 状态通过 <code>props</code> 传递给 <code>Child2</code> 组件进行渲染。</p>
+<p>需要注意的是，在实际开发中，如果组件之间关系比较紧密，或者组件之间需要频繁地传递数据，则建议考虑使用 <code>context API</code>、<code>Redux</code> 等方案进行数据管理，这样可以使代码更加简洁和易于维护。</p>
+<p>总之，在 React 中，兄弟组件之间的传值需要通过父组件作为中间层来实现。可以通过 <code>props</code>、<code>context API</code>、<code>Redux</code> 等方式实现数据的传递和管理。</p>
+<h3 id="祖孙组件传值"><a href="#祖孙组件传值" class="headerlink" title="祖孙组件传值"></a>祖孙组件传值</h3><p>Context 跨组件传递数据 【类似vue的 provide / inject】</p>
+<p>1、首先，在父组件中创建一个 <strong>Contex对象：</strong></p>
+<pre><code class="js">import React from &#39;react&#39;;
+const MyContext = React.createContext();
+</code></pre>
+<p>2、然后，在需要共享数据的组件的父组件中，通过 <strong>Provider</strong> <strong>提供数据：</strong></p>
+<pre><code class="js">import React from &#39;react&#39;;
+import MyContext from &#39;./MyContext&#39;;
+
+function ParentComponent() &#123;
+  const sharedData = &#39;Hello, world!&#39;;
+
+  return (
+    &lt;MyContext.Provider value=&#123;sharedData&#125;&gt;
+      &lt;ChildComponent /&gt;
+    &lt;/MyContext.Provider&gt;
+  );
+&#125;
+</code></pre>
+<p>3、最后，在需要访问共享数据的组件中，可以使用 <strong>useContext</strong> <strong>获取数据：</strong></p>
+<pre><code class="js">import React, &#123; useContext &#125; from &#39;react&#39;;
+import MyContext from &#39;./MyContext&#39;;
+
+function ChildComponent() &#123;
+  const value = useContext(MyContext);
+
+  return &lt;div&gt;&#123;value&#125;&lt;/div&gt;;
+&#125;
+</code></pre>
+<h2 id="组件内常用的使用方式（类比vue，v-if，v-for试试例子）"><a href="#组件内常用的使用方式（类比vue，v-if，v-for试试例子）" class="headerlink" title="组件内常用的使用方式（类比vue，v-if，v-for试试例子）"></a>组件内常用的使用方式（类比vue，v-if，v-for试试例子）</h2><h3 id="类比v-if，react里的实现dom元素的切换显示隐藏"><a href="#类比v-if，react里的实现dom元素的切换显示隐藏" class="headerlink" title="类比v-if，react里的实现dom元素的切换显示隐藏"></a>类比v-if，react里的实现dom元素的切换显示隐藏</h3><p>在React中，你可以使用state来控制组件的显示和隐藏。下面是一个简单的代码示例来切换一个div元素的显示和隐藏：</p>
+<pre><code class="js">import React, &#123; useState &#125; from &#39;react&#39;;
+
+function App() &#123;
+  const [show, setShow] = useState(false);
+
+  function toggleDiv() &#123;
+    setShow(!show);
+  &#125;
+
+  return (
+    &lt;div&gt;
+      &lt;button onClick=&#123;toggleDiv&#125;&gt;Toggle Div&lt;/button&gt;
+      &#123;show &amp;&amp; &lt;div&gt;Some content to show&lt;/div&gt;&#125;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default App;
+</code></pre>
+<p>初始状态设置为不显示元素。当按钮被点击时，<code>toggleDiv</code>函数会被调用并更新<code>show</code>状态，如果<code>show</code>为<code>true</code>，则显示div元素，否则隐藏div元素。在JSX中使用<code>&#123;&#125;</code>，可以将变量嵌入到标签中。如果<code>show</code>为<code>false</code>，则<code>&#123;show &amp;&amp; &lt;div&gt;Some content to show&lt;/div&gt;&#125;</code>的内容会被忽略。</p>
+<h3 id="类比v-if-else，react里的实现多个dom元素之间的显示隐藏"><a href="#类比v-if-else，react里的实现多个dom元素之间的显示隐藏" class="headerlink" title="类比v-if-else，react里的实现多个dom元素之间的显示隐藏"></a>类比v-if-else，react里的实现多个dom元素之间的显示隐藏</h3><p>React中，并没有 <code>v-else</code> 指令，但可以通过JavaScript中的条件运算符 <code>ternary operator</code> （三元运算符）来实现类似的效果。</p>
+<p>例如，假设有一个条件为 <code>showComponent</code> 的状态，当为 <code>true</code> 时渲染 <code>Component1</code>，否则渲染 <code>Component2</code>，可以这样编写：</p>
+<pre><code class="js">&#123; showComponent ? &lt;Component1 /&gt; : &lt;Component2 /&gt; &#125;
+</code></pre>
+<p>上述代码中，<code>&#123;&#125;</code> 表示JSX中的JS表达式，其中使用三目运算符检查 <code>showComponent</code> 的状态，根据结果渲染相应的组件。</p>
+<p>在React中也可以使用 <code>if-else</code> 语句来实现条件渲染，例如：</p>
+<pre><code class="js">let component;
+
+if (showComponent) &#123;
+  component = &lt;Component1 /&gt;;
+&#125; else &#123;
+  component = &lt;Component2 /&gt;;
+&#125;
+
+return (
+  &lt;div&gt;
+    &#123;component&#125;
+  &lt;/div&gt;
+);
+</code></pre>
+<p>以上代码中，根据 <code>showComponent</code> 的状态来分配 <code>component</code> 的值，然后在JSX中渲染该组件。</p>
+<h3 id="类比v-for，实现列表遍历展示"><a href="#类比v-for，实现列表遍历展示" class="headerlink" title="类比v-for，实现列表遍历展示"></a>类比v-for，实现列表遍历展示</h3><p>在React中，你可以使用<code>map()</code>方法来遍历列表，并将列表项渲染到页面上。</p>
+<pre><code class="js">    import React from &#39;react&#39;;
+
+    function App() &#123;
+      const list = [&#39;item1&#39;, &#39;item2&#39;, &#39;item3&#39;];
+
+      return (
+        &lt;div&gt;
+          &lt;h1&gt;My List&lt;/h1&gt;
+          &lt;ul&gt;
+            &#123;list.map((item, index) =&gt; (
+              &lt;li key=&#123;index&#125;&gt;&#123;item&#125;&lt;/li&gt;
+            ))&#125;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      );
+    &#125;
+
+    export default App;
+</code></pre>
+<p>在这个示例中，<code>list</code>变量是一个包含三个字符串的数组。使用<code>map()</code>方法遍历数组，并为每个项创建一个<code>&lt;li&gt;</code>元素，并在元素中显示该项的值。<code>key</code>属性是必须的，并且必须是每个列表项的唯一标识符。在此示例中，使用<code>index</code>作为<code>key</code>属性，但更好的做法是使用每个项的唯一标识符。</p>
+<h1 id="笔记来源"><a href="#笔记来源" class="headerlink" title="笔记来源"></a>笔记来源</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7083308347331444750#heading-9">React useEffect 两个参数你用对了吗 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7235279096312463421#heading-35">Vite+React+TS基础学习，看这里就够了！（上） - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7123612981895626760#heading-5">十分钟搭建一个 Vite+React+TS+ESLint+Prettier+Husky+Commitlint 项目 - 掘金 (juejin.cn)</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/recat/" style="color: #00bcd4">recat</a>
+        </span>
+        
+    </div>
+    <a href="/2023/06/06/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/06/05/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/">
+        <h2 class="post-title">React学习笔记(一)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/recat/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                recat
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/6/5
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <!-- <meta name="referrer" content="no-referrer" /> --> -->
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>vue3的也历经了几个大项目，可以说的上是熟练运用了，本来我也在想，是继续深度研究vue，看看源码实现啥的，半年前买的霍春阳大佬写的《Vue.js的设计与实现》只看了1/2，也是惭愧，看了这么久都没看完，一直断断续续的看，哪怕是这样，我也感觉收获也颇深。先订个目标，react学完后，把这本书后面的学完看完。(可能对外面市场的焦虑，想多掌控一些技能，于是便先开始了对React的学习，之前虽然有了解，但我不怎么系统的学习),当然本文本来就是学习记录，如有雷同，肯定是我C+V过来记录的。</p>
+</blockquote>
+<h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
+<li>  官网的快速入门 =&gt; 井字棋小游戏（因为有vue基础，我先去官网，试了试提供的例子，感觉挺有趣的）</li>
+<li>  react组件</li>
+<li>  react生命周期</li>
+</ul>
+<h2 id="react组件"><a href="#react组件" class="headerlink" title="react组件"></a>react组件</h2><h3 id="什么是react组件"><a href="#什么是react组件" class="headerlink" title="什么是react组件"></a><strong>什么是react组件</strong></h3><p>它接收任意的输入参数（props），并返回用于描述页面展示内容的React元素，也就是说我们在javascript函数中写一些react元素，处理一些逻辑，其实这就是一个组件。 组件可以将UI拆分成一个个独立的可复用的代码片段，并且可以对每个片段进行独立构思和管理，因此组件还能够很好的实现代码的复用。</p>
+<h3 id="react组件的分类"><a href="#react组件的分类" class="headerlink" title="react组件的分类"></a><strong>react组件的分类</strong></h3><p>React 组件可以分为两种形式：<em>类（class）组件</em>和<em>函数（function）组件</em></p>
+<h4 id="函数（function）组件"><a href="#函数（function）组件" class="headerlink" title="函数（function）组件"></a><strong>函数（function）组件</strong></h4><ul>
+<li>  <em>函数式（function）组件</em>：函数式组件其实就是写一个JavaScript函数，接收一个props对象作为参数，并返回用于描述页面内容的React元素（JSX语法），这就构成了一个函数式组件。官网例子就是使用的这种方式。</li>
+</ul>
+<pre><code class="js">export default function MyApp() &#123;  
+return (  
+    &lt;div&gt;  
+        &lt;h1&gt;Welcome to my app&lt;/h1&gt;  
+        &lt;MyButton /&gt;  
+    &lt;/div&gt;  
+    );  
+&#125;
+</code></pre>
+<p><em>注意</em>：</p>
+<pre><code>1.组件名称必须以大写字母开头
+2.return出去的React元素需要有一个外层节点包裹着
+</code></pre>
+<h4 id="类（class）组件"><a href="#类（class）组件" class="headerlink" title="类（class）组件"></a><strong>类（class）组件</strong></h4><ul>
+<li>  <em>类（class）组件</em>：使用ES6中的类（class）来定义React组件，通过声明一个类来实现定义一个React组件</li>
+</ul>
+<pre><code class="js">import React from &#39;raeact&#39; ​
+class B extends React.Component &#123;    
+  constructor(props)&#123;        
+    super(props)   
+  &#125;    
+  render()&#123;        
+    return(       
+      &lt;div&gt;hi&lt;/div&gt;       
+    )   
+  &#125; 
+&#125;
+export default B
+</code></pre>
+<p><em>注意</em>：</p>
+<pre><code> 1.定义类组件必须要继承自React的Component类或React.PureComponent
+ 2.类中必须要定义一个名为render的函数，函数的返回值应该是React元素（JSX语法）
+ 3.在类的内部默认会有个props属性（继承自Component）可以直接使用
+ 4.与函数组件一样，组件名称必须以大写字母开头
+ 5.在类的构造函数（constructor）中通过this.props访问属性值是获取不到的，因为这时props还没有挂载到this.props上，要等constructor执行完成之后才会挂载
+ 6.如果非要在构造函数（constructor）中使用this.props来获取，则可以把外面传进来的props传递给constructor中的父类构造函数super从而实现this.props的挂载
+ 7.类组件是动态组件，基于数据驱动视图渲染
+</code></pre>
+<h3 id="react组件生命周期"><a href="#react组件生命周期" class="headerlink" title="react组件生命周期"></a>react组件生命周期</h3><h4 id="什么是react组件生命周期"><a href="#什么是react组件生命周期" class="headerlink" title="什么是react组件生命周期"></a><strong>什么是react组件生命周期</strong></h4><p>在 React 中，对于每一次由状态改变导致页面视图的改变，都会经历两个阶段：<code>render 阶段</code>、<code>commit 阶段</code>。只有 class 组件才有生命周期，因为 class 组件会创建对应的实例，而函数组件不会。组件实例从被创建到被销毁的过程称为<strong>组件的生命周期</strong>。红色的为react18删除,删除的我也就没深入了解。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/da24c97e83f94eda99b0f0677fb3ef04~tplv-k3u1fbpfcp-watermark.image" alt="image.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h4 id="初始化阶段-render-阶段"><a href="#初始化阶段-render-阶段" class="headerlink" title="初始化阶段(render 阶段)"></a><strong>初始化阶段(render 阶段)</strong></h4><p><em>constructor</em></p>
+<p><code>constructor</code>是JavaScript中的一个构造函数，在创建一个新对象时被调用。它通常用于初始化实例的属性或方法。继承了React.Component后，该方法只会执行一次，调用该方法会返回一个组件实例。<br>在初始化阶段执行，可直接对 <code>this.state</code> 赋值。其他生命周期函数中只能通过 <code>this.setState</code> 修改 state，不能直接为 <code>this.state</code> 赋值。</p>
+<p><em>使用场景：</em> 一般在 constructor 中做一些组件的初始化工作，例如：初始化组件的 state。</p>
+<p><em>getDerivedStateFromProps</em></p>
+<p>简单翻译过来就是从Props中获得State，所以该函数的功能就是从<code>更新后的props中获取State，它让组件在 props 发生改变时更新它自身的内部 state</code>。</p>
+<p><em>shouldComponentUpdate</em></p>
+<p>在组件准备更新之前调用，但是首次渲染或者使用 forceUpdate 函数时不会被调用。跟它的名字一样，它用来判断一个组件是否应该更新。</p>
+<p>默认情况下，当组件的 props 或者 state 变化时，都会导致组件更新。它在 render 方法之前执行，如果它的返回值为 false，则不会更新组件，也不会执行后面的 render 方法。</p>
+<p>它接收两个参数，nextProps 和 nextState，即下一次更新的 props 和下一次更新的 state。我们可以将 <code>this.props</code> 和 nextProps 比较，以及将 <code>this.state</code> 与 nextState 比较，并返回 false，让组件跳过更新。</p>
+<p><em>使用场景：</em> 这个生命周期方法通常用来做性能优化</p>
+<p><em>render</em></p>
+<p>render 方法是类组件中唯一必须实现的方法，它的返回值将作为页面渲染的视图。render 函数应该为纯函数，也就是对于相同的 state 和 props，它总是返回相同的渲染结果。</p>
+<h4 id="commit-阶段-运行中阶段"><a href="#commit-阶段-运行中阶段" class="headerlink" title="commit 阶段(运行中阶段)"></a><strong>commit 阶段(运行中阶段)</strong></h4><p>commit 阶段在首次渲染时会执行 componentDidMount，在组件更新时会执行 getSnapshotBeforeUpdate 和 componentDidUpdate。</p>
+<p><em>componentDidMount</em></p>
+<p>该生命周期方法会在组件挂载之后执行，也只会执行一次，也就是将组件对应的 DOM 插入 DOM 树中之后调用。它会在浏览器更新视图之前调用，如果在 componentDidMount 中直接调用 <code>this.setState</code>，它会触发额外的渲染，会再一次调用 render 函数，但是浏览器中视图的更新只会执行一次。</p>
+<p><em>使用场景:</em> 依赖于 DOM 的初始化操作应该放在这里，此外，我们一般在这个生命周期方法中<code>发送网络请求</code>、<code>添加订阅</code>等。</p>
+<p>在函数式组件中，可以使用React的钩子函数 <code>useEffect()</code> 来完成 <code>componentDidMount()</code> 的功能。针对不同的需求，可以使用不同的函数来替代 <code>componentDidMount()</code>。</p>
+<p><em>使用hooks代替：</em></p>
+<p>如果需要在组件挂载时执行一次某些操作，可以在 <code>useEffect()</code> 的回调函数中加入空数组作为第二个参数，该回调函数仅会在组件挂载时被调用一次，就类似于 <code>componentDidMount()</code>：</p>
+<pre><code class="js">import &#123; useEffect &#125; from &#39;react&#39;;
+
+function MyComponent(props) &#123;
+  useEffect(() =&gt; &#123;
+    // 挂载时的操作
+    console.log(&#39;Component is mounted&#39;);
+  &#125;, []); // 空数组作为第二个参数
+  // ...
+&#125;
+</code></pre>
+<p>**</p>
+<p>如果需要在组件挂载和更新时都执行某些操作，可以省略掉第二个参数，这样 <code>useEffect()</code> 的回调函数会在每次组件更新时都被调用，就类似于 <code>componentDidMount()</code> 和 <code>componentDidUpdate()</code> 的结合：</p>
+<pre><code class="js">import &#123; useEffect &#125; from &#39;react&#39;;
+
+function MyComponent(props) &#123;
+  useEffect(() =&gt; &#123;
+    // 挂载或更新时的操作
+    console.log(&#39;Component is mounted or updated&#39;);
+  &#125;);
+  // ...
+&#125;
+</code></pre>
+<p>**</p>
+<p>有了 <code>useEffect()</code>，我们就可以在函数式组件中获得和使用 <code>componentDidMount()</code> 相同的能力，以做到更好的组件控制和管理。</p>
+<p><em>getSnapshotBeforeUpdate</em></p>
+<p>此生命周期函数在最近一次渲染提交至 DOM 树之前执行，此时 DOM 树还未改变，我们可以在这里获取 DOM 改变前的信息，例如：更新前 DOM 的滚动位置。</p>
+<p>它接收两个参数，分别是：prevProps、prevState，上一个状态的 props 和上一个状态的 state。它的返回值将会传递给 componentDidUpdate 生命周期钩子的第三个参数。</p>
+<p><em>使用场景：</em> 需要<code>获取更新前 DOM 的信息</code>时。例如：需要以特殊方式处理滚动位置的聊天线程等。</p>
+<p><em>componentDidUpdate</em></p>
+<p>在组件更新后立即调用，首次渲染不会调用该方法。它的执行时机和 componentDidMount 一致，只是 componentDidMount 在首次渲染时调用，而 componentDidUpdate 在后续的组件更新时调用。可以在这个生命周期中直接调用 <code>this.setState</code>，但是必须包裹在一个条件语句中，否则会导致死循环。</p>
+<p>componentDidUpdate 接收三个参数，分别是 prevProps、prevState、snapshot，即：前一个状态的 props，前一个状态的 state、getSnapshotBeforeUpdate 的返回值。</p>
+<p>如果组件实现了 getSnapshotBeforeUpdate 生命周期函数，则 getSnapshotBeforeUpdate 的返回值将作为 componentDidUpdate 的第三个参数。</p>
+<p><strong>使用场景：</strong></p>
+<p>在这个生命周期方法中，可以<code>对 DOM 进行操作</code>或者进行<code>网络请求</code>。</p>
+<p><strong>componentWillUnmount</strong></p>
+<p>这个生命周期函数会在组件卸载以及销毁之前调用。</p>
+<p><em>使用场景：</em> 通常用来执行组件的<code>清理操作</code>，例如：清除 timer、取消网络请求、清除订阅等。</p>
+<h1 id="笔记来源"><a href="#笔记来源" class="headerlink" title="笔记来源"></a>笔记来源</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7096137407409422344">React 生命周期详解 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7111693389921255455">【react】 手把手学习react - state 及组件的生命周期 - 掘金 (juejin.cn)</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/recat/" style="color: #00bcd4">recat</a>
+        </span>
+        
+    </div>
+    <a href="/2023/06/05/React%20GO%20GO/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/06/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/git%E8%A3%B8%E4%BB%93%E5%BA%93%E5%B9%B6%E5%88%A9%E7%94%A8post-receive%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/">
+        <h2 class="post-title">git裸仓库并利用post-receive自动化部署hexo博客</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                博客搭建
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/6/1
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>因为最近想把自己的博客项目实现自动化部署，所以百度百科了这个相关的知识，然后总结，并记录笔记，总结并分享自己的操作！</p>
+</blockquote>
+<h2 id="1-git普通库"><a href="#1-git普通库" class="headerlink" title="1.git普通库"></a>1.git普通库</h2><p><strong>什么是普通库</strong></p>
+<p>就是使用<code>git init</code>命令创建git仓库，可以先看看其目录结构</p>
+<pre><code class="js">
+[root@VM-0-3-centos data]# git init simple
+Initialized empty Git repository in /data/simple/.git/
+[root@VM-0-3-centos data]# cd simple/
+[root@VM-0-3-centos simple]# touch README.md
+[root@VM-0-3-centos simple]# cd ..
+[root@VM-0-3-centos data]# tree -a simple/
+simple/
+|-- .git
+|   |-- branches
+|   |-- config
+|   |-- description
+|   |-- HEAD
+|   |-- hooks
+|   |   |-- applypatch-msg.sample
+|   |   |-- commit-msg.sample
+|   |   |-- post-update.sample
+|   |   |-- pre-applypatch.sample
+|   |   |-- pre-commit.sample
+|   |   |-- prepare-commit-msg.sample
+|   |   |-- pre-push.sample
+|   |   |-- pre-rebase.sample
+|   |   `-- update.sample
+|   |-- info
+|   |   `-- exclude
+|   |-- objects
+|   |   |-- info
+|   |   `-- pack
+|   `-- refs
+|       |-- heads
+|       `-- tags
+`-- README.md
+
+10 directories, 14 files
+</code></pre>
+<p>通过上述命令操作后可以看到，<code>git init simple</code> 操作之后，创建了一个名为 simple 的库，simple 目录下还有一个<code> .git</code> 子目录，其中包含了git系统常用的文件，在<code> .git 目录</code>外是我们的工作区，可以存放我们库中待更新的文件，修改之后可以通过 <code>git add</code>，<code>git commi</code>t 等命令更新 .git 中的内容，简单来说普通库就是在工作目录 simple 中还包括一个 <code>.git 目录</code></p>
+<h2 id="git裸仓库"><a href="#git裸仓库" class="headerlink" title="git裸仓库"></a>git裸仓库</h2><p><strong>什么是裸仓库</strong></p>
+<p>就是使用git init –bare 命令创建git仓库，可以先看看其目录结构</p>
+<pre><code class="js">[root@VM-0-3-centos data]# git init --bare bare.git
+Initialized empty Git repository in /data/bare.git/
+[root@VM-0-3-centos data]# tree bare.git/ -a
+bare.git/
+|-- branches
+|-- config
+|-- description
+|-- HEAD
+|-- hooks
+|   |-- applypatch-msg.sample
+|   |-- commit-msg.sample
+|   |-- post-update.sample
+|   |-- pre-applypatch.sample
+|   |-- pre-commit.sample
+|   |-- prepare-commit-msg.sample
+|   |-- pre-push.sample
+|   |-- pre-rebase.sample
+|   `-- update.sample
+|-- info
+|   `-- exclude
+|-- objects
+|   |-- info
+|   `-- pack
+`-- refs
+    |-- heads
+    `-- tags
+
+9 directories, 13 files
+</code></pre>
+<p>目录结构来看裸仓库和普通库很像，甚至是一模一样，那么我们仿照普通库操作在这个目录下提交一个文件会怎样呢？</p>
+<pre><code class="js">[root@VM-0-3-centos data]# cd bare.git/
+[root@VM-0-3-centos bare.git]# touch README.md
+[root@VM-0-3-centos bare.git]# git add README.md
+fatal: This operation must be run in a work tree
+[root@VM-0-3-centos bare.git]# git status
+fatal: This operation must be run in a work tree
+[root@VM-0-3-centos bare.git]#
+</code></pre>
+<p>通过操作发现这个裸仓库<code>不允许增删改库内的文件</code>，甚至连 <code>git status</code> 这种命令都无法使用，统一提示了 <code>fatal: This operation must be run in a work tree</code> 这句话，告诉用户这些命令都必须在工作区内操作，既然不能修改，那么这个裸仓库就是“只读”的，那么它还有什么用呢？<br>虽然裸仓库不允许直接修改，但是可以<code>作为服务端远程仓库</code>，在本地克隆这个远程仓库之后再进行修改，这也是最常见的应用方式，总结来说，<code>普通库和裸仓库的区别就是：普通库拥有工作目录，并且工作目录中可以存放正常编辑和提交的文件，而裸库只存放这些文件的commit记录，不允许用户直接在上面进行各种git操作</code>。</p>
+<h2 id="3-为什么使用裸仓库而不使用普通库"><a href="#3-为什么使用裸仓库而不使用普通库" class="headerlink" title="3.为什么使用裸仓库而不使用普通库"></a>3.为什么使用裸仓库而不使用普通库</h2><p>普通库实际上包含两份数据的，一份在 .git 目录中以object形式存在，一份在工作目录中以源文件形式存在，我们每次使用 git 命令，可以保证工作目录内文件和 .git 目录数据是一致的，但是如果将普通库作为远端时，在下游提交数据时，远端库中的 .git 目录会直接更新，但是工作区却不知道此时谁在用，不能直接更新覆盖，这就造成了数据不一致的情况。</p>
+<h2 id="4-自动化部署"><a href="#4-自动化部署" class="headerlink" title="4.自动化部署"></a>4.自动化部署</h2><p><strong>post-receive</strong></p>
+<p>post-receive是服务端钩子，<code>post-receive</code> 挂钩在整个过程完结以后运行，可以用来更新其他系统服务或者通知用户。 它接受与 <code>pre-receive</code> 相同的标准输入数据。 它的用途包括给某个邮件列表发信，通知持续集成（continous integration）的服务器， 或者更新问题追踪系统（ticket-tracking system） —— 甚至可以通过分析提交信息来决定某个问题（ticket）是否应该被开启，修改或者关闭。 该脚本无法终止推送进程，不过客户端在它结束运行之前将保持连接状态， 所以如果你想做其他操作需谨慎使用它，因为它将耗费你很长的一段时间。</p>
+<p><strong>自动化部署原理</strong></p>
+<p>利用 <code>post-receive</code> 进行自动化部署的原理就是，我们可以修改 <code>post-receive</code> 脚本，在修改提交后自动部署最新内容，实现自自动化部署。</p>
+<h2 id="5-具体操作"><a href="#5-具体操作" class="headerlink" title="5.具体操作"></a>5.具体操作</h2><p>需求：服务端建立裸仓库，在接收到新的提交时，自动将项目部署到<code>/myPoject-Yao/distblog/DarknessZY.github.io</code> 目录下</p>
+<p><strong>服务端远端操作</strong></p>
+<ul>
+<li>  建立裸仓库<code>/myPoject-Yao/repo/myBlog.git</code>,建立对应的部署目录<code>/myPoject-Yao/distblog</code></li>
+<li>  新建 <code>/myPoject-Yao/repo/myBlog.git/hooks/post-receive</code>脚本,内容如下：</li>
+</ul>
+<pre><code class="js">#!/bin/sh
+echo &#39;======上传代码到服务器======&#39;
+unset GIT_DIR
+DeployPath=/myPoject-Yao/distblog/DarknessZY.github.io
+cd $DeployPath
+git pull origin master
+echo &#39;======代码更新完成======&#39;
+</code></pre>
+<p><strong>本地hexo项目操作</strong></p>
+<ul>
+<li>  关联服务器的远程裸仓库</li>
+</ul>
+<pre><code class="js">git remote add origin2 root@服务器公网地址:/myPoject-Yao/repo/myBlog.git
+</code></pre>
+<ul>
+<li>  修改hexo博客根目录下的_config.yml</li>
+</ul>
+<pre><code class="js">deploy:
+- type: git
+  repo: git@github.com:DarknessZY/DarknessZY.github.io.git
+  branch: master
+- type: git
+  repo: root@服务器公网地址:/myPoject-Yao/repo/myBlog.git
+  branch: master
+</code></pre>
+<h2 id="6-注意"><a href="#6-注意" class="headerlink" title="6.注意"></a>6.注意</h2><ul>
+<li>  如果服务器不是直接用的root用户，而是新建了一个用户，记得给给用户高权限，用户名尽量不要起和其他命令冲突的语义化命名</li>
+<li>  建立的裸仓库和脚本文件也记得给高权限</li>
+<li>  如果不想输入密码，可把本地git生成的公钥id_pub复制到服务器的/root/.ssh/authorized_keys下</li>
+</ul>
+<h2 id="7-我的博客"><a href="#7-我的博客" class="headerlink" title="7.我的博客"></a>7.我的博客</h2><p><em><a target="_blank" rel="noopener" href="https://yaoyaoqiekenao.com/">耀耀切克闹</a></em> </p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="color: #ffa2c4">博客搭建</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/git%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" style="color: #03a9f4">git自动化部署</a>
+        </span>
+        
+    </div>
+    <a href="/2023/06/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/git%E8%A3%B8%E4%BB%93%E5%BA%93%E5%B9%B6%E5%88%A9%E7%94%A8post-receive%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/page/4/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">5</span>
+    
+    <a class="page-num" href="/page/6">
+        6
+    </a>
+    
+    
+    <a class="page-num" href="/page/7">
+        7
+    </a>
+    
+    
+    <span class="page-omit">...</span>
+    <a class="page-num" href="/page/9">9</a>
+    
+    
+    <a class="page-num" href="/page/6/">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/mytouxiang.gif" alt="avatar" />
+        </div>
+        <div class="name">耀耀切克闹</div>
+        <div class="description">
+            <p>欢迎来到耀耀切克闹的博客</p>
+<p>不是因为是主角才成功，而是成功了才成为主角</p>
+<p>想要的都拥有，得不到的都释怀</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/DarknessZY">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://juejin.cn/user/1781681116679854/columns">
+                    <i
+                        class="fa-brands fa-b fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://hexo.io">Hexo官网</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX主题</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 耀耀切克闹
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;耀耀切克闹
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/lib/stars.js"></script>
+    <script src="/js/lib/theme.js"></script>
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

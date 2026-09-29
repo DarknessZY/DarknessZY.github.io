@@ -28,7 +28,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;Skyline-渲染模式下-scroll-view-高度塌缩&quot;&gt;&lt;a href=&quot;#Skyline-渲染模式下-scroll-view-高度塌缩&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;Skyline-渲染模式下-scroll-view-高度塌缩&quot;&gt;&lt;a href=&quot;#Skyline-渲染模式下-scroll-view-高度塌缩&quot; class=&quot;headerlink&quot; title=&quot;Skyline 渲染模式下 scroll-view</summary>
         
       
     
@@ -53,7 +53,8 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;短链跳转&quot;&gt;&lt;a href=&quot;#短链跳转&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;短链跳转&quot;&gt;&lt;a href=&quot;#短链跳转&quot; class=&quot;headerlink&quot; title=&quot;短链跳转&quot;&gt;&lt;/a&gt;短链跳转&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;短链服务（服务端/运维负责）&lt;/strong&gt;：短链（如</summary>
         
       
     
@@ -78,7 +79,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;一、什么是Eruda？&quot;&gt;&lt;a href=&quot;#一、什么是Eruda？&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;一、什么是Eruda？&quot;&gt;&lt;a href=&quot;#一、什么是Eruda？&quot; class=&quot;headerlink&quot; title=&quot;一、什么是Eruda？&quot;&gt;&lt;/a&gt;一、什么是Eruda？&lt;/h2&gt;&lt;p&gt;Eruda是一个专为手机网页前端设计的调试面板，类似于Chrome</summary>
         
       
     
@@ -103,7 +104,8 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;在开发新项目中。我们面临一个具体场景：&lt;strong&gt;纯预览展示的协议文档需要动态填充用户数据&lt;/strong&gt;。这些协议本身是静态HTML模板，但其中包含大量需要根据具体业务数据动态替换的字段，如客户姓名、贷款金额、银行信</summary>
+    <summary type="html">&lt;p&gt;在开发新项目中。我们面临一个具体场景：&lt;strong&gt;纯预览展示的协议文档需要动态填充用户数据&lt;/strong&gt;。这些协议本身是静态HTML模板，但其中包含大量需要根据具体业务数据动态替换的字段，如客户姓名、贷款金额、银行信息等。&lt;/p&gt;
+&lt;h2 id=&quot;技术挑战&quot;&gt;&lt;a</summary>
         
       
     
@@ -128,8 +130,13 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;update-version.js&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+    <summary type="html">&lt;p&gt;update-version.js&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;#!/usr/bin/env node
+
+/**
+ * @FileDesc: 部署前自动更新版本号脚本
+ * @Usage: 在package.json的build脚本中调用
+ *</summary>
         
       
     
@@ -154,7 +161,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -181,9 +188,10 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;平时改完bug重新部署测试环境，总要重新打tag，虽然也就几行git命令的事，但能用一句命令解决还是舒服的&lt;/p&gt;
+    <summary type="html">&lt;p&gt;平时改完bug重新部署测试环境，总要重新打tag，虽然也就几行git命令的事，但能用一句命令解决还是舒服的&lt;/p&gt;
 &lt;p&gt;在scripts新建文件 generateTag.js&lt;/p&gt;
-&lt;figure</summary>
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;/**
+ * 基于当前分支生成 tag</summary>
         
       
     
@@ -208,7 +216,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;手写简单的节流和防抖&quot;&gt;&lt;a href=&quot;#手写简单的节流和防抖&quot; class=&quot;headerlink&quot; title=&quot;手写简单的节流和防抖&quot;&gt;&lt;/a&gt;手写简单的节流和防抖&lt;/h3&gt;&lt;figure</summary>
+    <summary type="html">&lt;h3 id=&quot;手写简单的节流和防抖&quot;&gt;&lt;a href=&quot;#手写简单的节流和防抖&quot; class=&quot;headerlink&quot; title=&quot;手写简单的节流和防抖&quot;&gt;&lt;/a&gt;手写简单的节流和防抖&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;// 节流 n 秒内只运行一次，若在</summary>
         
       
     
@@ -235,7 +243,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;v-model的实现原理&quot;&gt;&lt;a href=&quot;#v-model的实现原理&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h3 id=&quot;v-model的实现原理&quot;&gt;&lt;a href=&quot;#v-model的实现原理&quot; class=&quot;headerlink&quot; title=&quot;v-model的实现原理&quot;&gt;&lt;/a&gt;v-model的实现原理&lt;/h3&gt;&lt;p&gt;v-model</summary>
         
       
     
@@ -262,7 +270,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;1-说说你对css盒模型的理解&quot;&gt;&lt;a href=&quot;#1-说说你对css盒模型的理解&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;1-说说你对css盒模型的理解&quot;&gt;&lt;a href=&quot;#1-说说你对css盒模型的理解&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -289,10 +297,12 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;ol&gt;
+    <summary type="html">&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;支付授权目录&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;在微信公众平台中，找到“微信支付”设置，更新“支付授权目录”。这个目录应该包含新的域名，因为用户点击支付按钮后，微信会跳转到这个目</summary>
+&lt;li&gt;在微信公众平台中，找到“微信支付”设置，更新“支付授权目录”。这个目录应该包含新的域名，因为用户点击支付按钮后，微信会跳转到这个目录下的页面进行支付操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;</summary>
         
       
     
@@ -317,7 +327,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;一、在utils下新建文件globalPage.js 其作用如下&lt;/p&gt;
+    <summary type="html">&lt;p&gt;一、在utils下新建文件globalPage.js 其作用如下&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;</summary>
         
@@ -344,10 +354,10 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+    <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;安全部门对我们前端项目进行漏洞扫描发现，前端有一个React项目生产环境源代码泄漏，解决过程的记录&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;1、React项目源代码泄漏&quot;&gt;&lt;a</summary>
+&lt;h2 id=&quot;1、React项目源代码泄漏&quot;&gt;&lt;a href=&quot;#1、React项目源代码泄漏&quot;</summary>
         
       
     
@@ -372,9 +382,9 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;前言&lt;/p&gt;
+    <summary type="html">&lt;p&gt;前言&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;测试环境突然不能访问了，经排查最开始发现是nignx没进程了，于是我觉得重启下nignx就行了。重启后发现还是不行，看nginx重启的端口中9090有好多使用的，感觉是端口冲突，</summary>
+&lt;p&gt;测试环境突然不能访问了，经排查最开始发现是nignx没进程了，于是我觉得重启下nignx就行了。重启后发现还是不行，看nginx重启的端口中9090有好多使用的，感觉是端口冲突，处理了端口冲突后，测试环境可以使用了。记录一下本次</summary>
         
       
     
@@ -399,7 +409,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;一、什么是HTTP-HTTP-和-HTTPS-的区别&quot;&gt;&lt;a href=&quot;#一、什么是HTTP-HTTP-和-HTTPS-的区别&quot; class=&quot;headerlink&quot; title=&quot;一、什么是HTTP?</summary>
+    <summary type="html">&lt;h1 id=&quot;一、什么是HTTP-HTTP-和-HTTPS-的区别&quot;&gt;&lt;a href=&quot;#一、什么是HTTP-HTTP-和-HTTPS-的区别&quot; class=&quot;headerlink&quot; title=&quot;一、什么是HTTP? HTTP 和 HTTPS</summary>
         
       
     
@@ -424,7 +434,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;javaScripit的数据类型&quot;&gt;&lt;a href=&quot;#javaScripit的数据类型&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;javaScripit的数据类型&quot;&gt;&lt;a href=&quot;#javaScripit的数据类型&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -449,7 +459,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -474,8 +484,8 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;h3 id=&quot;理解深拷贝和浅拷贝？&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;h3 id=&quot;理解深拷贝和浅拷贝？&quot;&gt;&lt;a href=&quot;#理解深拷贝和浅拷贝？&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -500,7 +510,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;socket-io&quot;&gt;&lt;a href=&quot;#socket-io&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;socket-io&quot;&gt;&lt;a href=&quot;#socket-io&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -525,7 +535,7 @@
       
         
         
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
         
       
     

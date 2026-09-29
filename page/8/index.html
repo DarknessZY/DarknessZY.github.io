@@ -1,1 +1,2796 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>耀耀切克闹</title><meta name="generator" content="hexo-theme-ayer"><link rel="shortcut icon" href="/mytouxiang.gif"><link rel="stylesheet" href="/dist/main.css"><link rel="stylesheet" href="/css/fonts/remixicon.css"><link rel="stylesheet" href="/css/custom.css"><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script><style>.swal2-styled.swal2-confirm{font-size:1.6rem}</style><link rel="alternate" href="/atom.xml" title="耀耀切克闹" type="application/atom+xml"></head><body><div id="app"><link rel="stylesheet" type="text/css" href="/css/loading.css"><div id="loader-box"><div class="loader-wrapper"><div class="loader"></div><div class="loader-text"><div>L</div><div>O</div><div>A</div><div>D</div><div>I</div><div>N</div><div>G</div><div></div><div></div><div></div></div></div><script>!function(){function e(){o||(o=!0,document.body.style.overflow="auto",t&&t.parentNode&&t.parentNode.removeChild(t))}var t=document.getElementById("loader-box"),o=!1;"complete"===document.readyState?e():(window.addEventListener("load",e),window.addEventListener("DOMContentLoaded",function(){setTimeout(e,2e3)}),setTimeout(e,1e4))}()</script></div><main class="content on"><section class="cover"><div class="cover-frame"><div class="bg-box"><img src="/images/bg.png" alt="image frame"></div><div class="cover-inner text-center text-white"><h1><a href="/">耀耀切克闹</a></h1><div id="subtitle-box"><span id="subtitle"></span></div><div></div></div></div><div class="cover-learn-more"><a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a></div></section><script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script><script>try{var typed=new Typed("#subtitle",{strings:["欢迎来到耀耀切克闹的博客","不是因为是主角才成功，而是成功了才成为主角","想要的都拥有，得不到的都释怀"],startDelay:0,typeSpeed:200,loop:!0,backSpeed:100,showCursor:!0})}catch(e){console.log(e)}</script><div id="main"><section class="outer"><article class="articles"><article id="post-前端学习/JavaScript 异步队列实现" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2022/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/JavaScript%20%E5%BC%82%E6%AD%A5%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0/">JavaScript 异步队列实现</a></h2></header><div class="article-meta"><a href="/2022/11/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/JavaScript%20%E5%BC%82%E6%AD%A5%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0/" class="article-date"><time datetime="2022-11-10T05:30:00.000Z" itemprop="datePublished">2022-11-10</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%8F%E4%BB%BB%E5%8A%A1/" rel="tag">宏任务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BB%BB%E5%8A%A1/" rel="tag">微任务</a></li></ul></footer></div></article><article id="post-项目搭建/vite 搭建vue3项目（二）" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/">vite 搭建vue3项目（二）</a></h2></header><div class="article-meta"><a href="/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-date"><time datetime="2022-10-25T10:52:00.000Z" itemprop="datePublished">2022-10-25</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">项目搭建</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pinia/" rel="tag">pinia</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vite/" rel="tag">vite</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue3/" rel="tag">vue3</a></li></ul></footer></div></article><article id="post-组件/日期小组件(vue2)" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2022/10/12/%E7%BB%84%E4%BB%B6/%E6%97%A5%E6%9C%9F%E5%B0%8F%E7%BB%84%E4%BB%B6(vue2)/">日期小组件的封装</a></h2></header><div class="article-meta"><a href="/2022/10/12/%E7%BB%84%E4%BB%B6/%E6%97%A5%E6%9C%9F%E5%B0%8F%E7%BB%84%E4%BB%B6(vue2)/" class="article-date"><time datetime="2022-10-12T05:12:00.000Z" itemprop="datePublished">2022-10-12</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E7%BB%84%E4%BB%B6/">组件</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" rel="tag">组件封装</a></li></ul></footer></div></article><article id="post-博客搭建/从零开始搭建博客(五)——使用valine评论系统" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2022/10/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%94)%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">从零开始搭建博客(五)——使用valine评论系统</a></h2></header><div class="article-meta"><a href="/2022/10/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%94)%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" class="article-date"><time datetime="2022-10-11T12:00:00.000Z" itemprop="datePublished">2022-10-11</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/valine/" rel="tag">valine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li></ul></footer></div></article><article id="post-项目搭建/vite 搭建vue3项目（一）" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2022/10/08/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/">vite 搭建vue3项目（一）</a></h2></header><div class="article-meta"><a href="/2022/10/08/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/" class="article-date"><time datetime="2022-10-08T09:52:00.000Z" itemprop="datePublished">2022-10-08</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">项目搭建</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pinia/" rel="tag">pinia</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vite/" rel="tag">vite</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue3/" rel="tag">vue3</a></li></ul></footer></div></article><article id="post-git基础" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2022/09/30/git%E5%9F%BA%E7%A1%80/">git基础</a></h2></header><div class="article-meta"><a href="/2022/09/30/git%E5%9F%BA%E7%A1%80/" class="article-date"><time datetime="2022-09-30T09:52:00.000Z" itemprop="datePublished">2022-09-30</time></a><div class="article-category"><a class="article-category-link" href="/categories/git/">git</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/" rel="tag">前端随笔</a></li></ul></footer></div></article><article id="post-前端路由理解与实现" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/">前端路由随笔</a></h2></header><div class="article-meta"><a href="/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/" class="article-date"><time datetime="2022-09-29T05:30:00.000Z" itemprop="datePublished">2022-09-29</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B7%AF%E7%94%B1/" rel="tag">路由</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul></footer></div></article><article id="post-博客搭建/从零开始搭建博客(四)——关于我页面搭建" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/">从零开始搭建博客(四)——关于我页面搭建</a></h2></header><div class="article-meta"><a href="/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/" class="article-date"><time datetime="2022-09-28T11:00:00.000Z" itemprop="datePublished">2022-09-28</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo%E6%A1%86%E6%9E%B6/" rel="tag">hexo框架</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li></ul></footer></div></article></article><nav class="page-nav"><a class="extend prev" rel="prev" href="/page/7/">上一页</a><a class="page-number" href="/">1</a><span class="space">…</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/">下一页</a></nav></section></div><footer class="footer"><div class="outer"><ul><li>Copyrights © 2022-2026 <i class="ri-heart-fill heart_icon"></i> 耀耀切克闹</li></ul><ul><li></li></ul><ul></ul><ul></ul><ul></ul><ul><li></li></ul></div></footer></main><div class="float_btns"><div class="totop" id="totop"><i class="ri-arrow-up-line"></i></div><div class="todark" id="todark"><i class="ri-moon-line"></i></div></div><aside class="sidebar on"><button class="navbar-toggle"></button><nav class="navbar"><div class="logo"><a href="/"><img src="/mytouxiang.gif" alt="耀耀切克闹"></a></div><ul class="nav nav-main"><li class="nav-item"><a class="nav-item-link" href="/">主页</a></li><li class="nav-item"><a class="nav-item-link" href="/archives">归档</a></li><li class="nav-item"><a class="nav-item-link" href="/categories">分类</a></li><li class="nav-item"><a class="nav-item-link" href="/tags">标签</a></li><li class="nav-item"><a class="nav-item-link" href="/about">关于我</a></li></ul></nav><nav class="navbar navbar-bottom"><ul class="nav"><li class="nav-item"><a class="nav-item-link nav-item-search" title="搜索"><i class="ri-search-line"></i> </a><a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed"><i class="ri-rss-line"></i></a></li></ul></nav><div class="search-form-wrap"><div class="local-search local-search-plugin"><input type="search" id="local-search-input" class="local-search-input" placeholder="Search..."><div id="local-search-result" class="local-search-result"></div></div></div></aside><div id="mask"></div><div id="reward"><span class="close"><i class="ri-close-line"></i></span><p class="reward-p">我是穷比，在线乞讨！</p><div class="reward-box"><div class="reward-item"><img class="reward-img" src="/images/alipay.png"> <span class="reward-type">支付宝</span></div><div class="reward-item"><img class="reward-img" src="/images/wechat.png"> <span class="reward-type">微信</span></div></div></div><script src="/js/jquery-3.6.0.min.js"></script><script src="/js/lazyload.min.js"></script><script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script><link rel="stylesheet" href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"><script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script><script src="/dist/main.js"></script><div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div><link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css"><script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script><script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script><script>function viewer_init(){let i=document.querySelectorAll(".pswp")[0],r=document.querySelectorAll(".article-entry img:not(.reward-img)");r.forEach((t,e)=>{t.onclick=()=>{if(!document.querySelector(".left-col.show")){let o=[];r.forEach((t,e)=>{t.getAttribute("data-idx",e);var e=t.getAttribute("data-target")||t.getAttribute("src"),i=t.getAttribute("alt"),r=new Image;r.src=e,o.push({src:e,w:r.width||t.width,h:r.height||t.height,title:i})}),new PhotoSwipe(i,PhotoSwipeUI_Default,o,{index:parseInt(e)}).init()}}})}viewer_init()</script><link rel="stylesheet" href="/css/clipboard.css"><script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script><script>function wait(e,i){window.setTimeout(e,i)}!function(){var e;e="",e+='<button class="btn-copy" data-clipboard-snippet=""><i class="ri-file-copy-2-line"></i><span>COPY</span></button>',$(".highlight .code pre").before(e),$(".article pre code").before(e),(e=new ClipboardJS(".btn-copy",{target:function(e){return e.nextElementSibling}})).on("success",function(e){e=$(e.trigger);e.addClass("copied");let i=$(e.find("i")),n=(i.removeClass("ri-file-copy-2-line"),i.addClass("ri-checkbox-circle-line"),$(e.find("span")));n[0].innerText="COPIED",wait(function(){i.removeClass("ri-checkbox-circle-line"),i.addClass("ri-file-copy-2-line"),n[0].innerText="COPY"},2e3)}),e.on("error",function(e){e.clearSelection();e=$(e.trigger);e.addClass("copy-failed");let i=$(e.find("i")),n=(i.removeClass("ri-file-copy-2-line"),i.addClass("ri-time-line"),$(e.find("span")));n[0].innerText="COPY FAILED",wait(function(){i.removeClass("ri-time-line"),i.addClass("ri-file-copy-2-line"),n[0].innerText="COPY"},2e3)})}((window,document))</script><script src="/js/snow2.js"></script><script>window.mermaid&&mermaid.initialize({theme:"forest"}),document.addEventListener("DOMContentLoaded",function(){for(var e=document.getElementsByTagName("img"),r=0;r<e.length;r++)e[r].referrerPolicy="no-referrer"})</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({log:!1,pluginJsPath:"lib/",pluginModelPath:"assets/",pluginRootPath:"live2dw/",tagMode:!1})</script><script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>耀耀切克闹</title>
+    <meta name="author" content="耀耀切克闹" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/mytouxiang.gif" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<link rel="preload" as="image" href="/images/loading.gif" fetchpriority="high" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;700&family=Lexend:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" id="dark-style" href="/css/dark.css" />
+<style>
+    /* 切换按钮图标随主题显隐，不依赖 dark.css（浅色被禁用时也生效） */
+    [data-theme-toggle] .icon-light { display: none; }
+    html[data-theme="light"] [data-theme-toggle] .icon-dark { display: none; }
+    html[data-theme="light"] [data-theme-toggle] .icon-light { display: inline-block; }
+</style>
+<script>
+    // 首屏防闪：在样式生效后立即应用已保存的主题
+    (function () {
+        var t = "dark";
+        try {
+            t = localStorage.getItem("theme") || "dark";
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", t);
+        var l = document.getElementById("dark-style");
+        if (l && t === "light") l.disabled = true;
+    })();
+</script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="耀耀切克闹" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>耀耀切克闹</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="javascript:;" class="theme-toggle" data-theme-toggle title="切换明暗主题">
+            <i class="fa-solid fa-moon fa-fw icon-dark"></i>
+            <i class="fa-solid fa-sun fa-fw icon-light"></i>
+        </a>
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;耀耀切克闹</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="javascript:;" class="theme-toggle" data-theme-toggle title="切换明暗主题">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-moon fa-fw icon-dark"></i>
+                            <i class="fa-solid fa-sun fa-fw icon-light"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Theme</div>
+                    </div>
+                </a>
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/bg.png"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>耀耀切克闹</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/">
+        <h2 class="post-title">vite 搭建vue3项目（二）</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                项目搭建
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/10/25
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+<h1 id="1-login页面和功能就不多哔哔了"><a href="#1-login页面和功能就不多哔哔了" class="headerlink" title="1.login页面和功能就不多哔哔了"></a>1.login页面和功能就不多哔哔了</h1><h1 id="2-主体布局"><a href="#2-主体布局" class="headerlink" title="2.主体布局"></a>2.主体布局</h1><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e77c74aeb743b5a9e159607d1eb0e6~tplv-k3u1fbpfcp-watermark.image" alt="dd7860edba87d1d65d1c03b81f01f4c6.png" loading="lazy" decoding="async" fetchpriority="low"><br>layout-&gt;index.vue</p>
+<pre><code>&lt;template&gt;
+   &lt;el-container&gt;
+        &lt;el-aside&gt;
+            &lt;Menu /&gt;
+        &lt;/el-aside&gt;
+        &lt;el-container&gt;
+            &lt;el-header&gt;
+            &lt;/el-header&gt;
+            &lt;el-main&gt;
+            //mian开发中
+                &lt;!-- &lt;router-view v-slot=&quot;&#123; Component, route &#125;&quot;&gt;
+                    &lt;transition appear name=&quot;fade-transform&quot; mode=&quot;out-in&quot;&gt;
+                        &lt;keep-alive :include=&quot;cacheRouter&quot;&gt;
+                            &lt;component :is=&quot;Component&quot; :key=&quot;route.path&quot;&gt;&lt;/component&gt;
+                        &lt;/keep-alive&gt;
+                    &lt;/transition&gt;
+                &lt;/router-view&gt; --&gt;
+            &lt;/el-main&gt;
+            &lt;el-footer&gt;
+                &lt;Footer /&gt;
+            &lt;/el-footer&gt;
+        &lt;/el-container&gt;
+    &lt;/el-container&gt;
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import Footer from &quot;./footer/index.vue&quot;;
+import Menu from &quot;./Menu/index.vue&quot;;
+&lt;/script&gt;
+
+&lt;style lang=&quot;scss&quot; scoped&gt;
+    @import &quot;./index.scss&quot;;
+&lt;/style&gt;
+</code></pre>
+<h1 id="3-vite中的批量自动化导入：import-meta-globEager"><a href="#3-vite中的批量自动化导入：import-meta-globEager" class="headerlink" title="3.vite中的批量自动化导入：import.meta.globEager"></a>3.vite中的批量自动化导入：import.meta.globEager</h1><p>如果想在vite中批量导入某些文件，实现项目的模块化，vite提供的import.meta.globEager函数就很好用</p>
+<p>比如用在路由模块化：</p>
+<p>1、需求：不想把路由文件全部放在一个文件里面，找的时候要拖动很麻烦，就想着把每一个模块的路由按功能分成单个的文件</p>
+<p>2、思路：在routers文件夹内新增一个modules文件夹：里面放不同功能的routers文件，然后在vue引入的路由入口处批量导入模块化的routers</p>
+<p>3、实现：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c9d6edc09e5e4e8fbb012d6155e3a5d1~tplv-k3u1fbpfcp-watermark.image" alt="87e7997f3c15921b398a37d928ac3a32.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<p>在router文件内批量引入modules内模块化的文件并处理：</p>
+<pre><code>import &#123; createRouter, createWebHashHistory, RouteRecordRaw &#125; from &quot;vue-router&quot;;
+
+// * 导入所有router
+//const metaRouters = import.meta.globEager(&quot;./modules/*.ts&quot;);
+//最新vite应该是弃用了上面的，用下面的
+const metaRouters:any = import.meta.glob(&#39;./modules/*.ts&#39;, &#123; eager: true &#125;)
+// * 处理路由表
+export const routerArray: RouteRecordRaw[] = [];
+Object.keys(metaRouters).forEach(item =&gt; &#123;
+    Object.keys(metaRouters[item]).forEach((key: any) =&gt; &#123;
+    //    routerArray.push(...metaRouters[item][key]);
+    routerArray.push(metaRouters[item][key]);
+    &#125;);
+&#125;);
+
+/**
+ * @description 路由配置简介
+ * @param path ==&gt; 路由路径
+ * @param name ==&gt; 路由名称
+ * @param redirect ==&gt; 路由重定向
+ * @param component ==&gt; 路由组件
+ * @param meta ==&gt; 路由元信息
+ * @param meta.requireAuth ==&gt; 是否需要权限验证
+ * @param meta.keepAlive ==&gt; 是否需要缓存该路由
+ * @param meta.title ==&gt; 路由标题
+ * @param meta.key    ==&gt; 路由key,用来匹配按钮权限
+ * */
+const routes: RouteRecordRaw[] = [
+  ...routerArray,
+];
+
+const router = createRouter(&#123;
+    history: createWebHashHistory(),
+    routes,
+    strict: false,
+    // 切换页面，滚动到最顶部
+    scrollBehavior: () =&gt; (&#123; left: 0, top: 0 &#125;)
+&#125;);
+
+export default router;
+</code></pre>
+<p><strong>注意 再使用时出现import.meta.globEager(“./modules/*.ts”);报错说什么弃用了，</strong></p>
+<p><strong>去源码看标注：已弃用，使用这个什么代替</strong></p>
+<p><strong>@deprecated Use <code>import.meta.glob(&#39;*&#39;, &#123; eager: true &#125;)</code> instead</strong></p>
+<h1 id="4-侧边栏的开发和header里的侧边栏折叠-底部栏就不多bb"><a href="#4-侧边栏的开发和header里的侧边栏折叠-底部栏就不多bb" class="headerlink" title="4.侧边栏的开发和header里的侧边栏折叠(底部栏就不多bb)"></a>4.侧边栏的开发和header里的侧边栏折叠(底部栏就不多bb)</h1><h2 id="侧边栏的开发"><a href="#侧边栏的开发" class="headerlink" title="侧边栏的开发"></a><strong>侧边栏的开发</strong></h2><p>主要是分为两部分，一部分是logo，一部分是路由菜单</p>
+<p>logo是图片加文字，文字根据侧边栏折叠是否展示</p>
+<p><strong>路由菜单</strong></p>
+<pre><code>    &lt;el-scrollbar&gt;
+            &lt;el-menu
+                :default-active=&quot;activeMenu&quot;
+                :router=&quot;true&quot;
+                :collapse=&quot;isCollapse&quot;
+                :collapse-transition=&quot;false&quot;
+                :unique-opened=&quot;true&quot;
+                background-color=&quot;#191a20&quot;
+                text-color=&quot;#bdbdc0&quot;
+                active-text-color=&quot;#fff&quot;
+            &gt;
+              //菜单项
+                &lt;SubItem :menuList=&quot;menuList&quot; /&gt;
+            &lt;/el-menu&gt;
+        &lt;/el-scrollbar&gt;
+</code></pre>
+<p>首先需要获取菜单列表，一般是调用接口根据登录的这个用户的权限获取列表接口，暂时用得请求的json模拟后台接口数据，把菜单数据存到pinia中</p>
+<pre><code>onMounted(async () =&gt; &#123;
+    // 获取菜单列表
+    loading.value = true;
+    try &#123;
+        const res = await getMenuList();
+        if (!res.data) return;
+        // 把路由菜单处理成一维数组（存储到 pinia 中）
+        const dynamicRouter = handleRouter(res.data);
+        authStore.setAuthRouter(dynamicRouter);
+        menuStore.setMenuList(res.data);
+    &#125; finally &#123;
+        loading.value = false;
+    &#125;
+&#125;);
+</code></pre>
+<p>然后需要有默认激活菜单的index和菜单是否折叠 获取pinia里存着的菜单数据</p>
+<pre><code>//默认激活菜单的 index，当前路由对象的路径
+const activeMenu = computed((): string =&gt; route.path);
+//菜单是否折叠
+const isCollapse = computed((): boolean =&gt; menuStore.isCollapse);
+//菜单数据
+const menuList = computed((): Menu.MenuOptions[] =&gt; menuStore.menuList);
+</code></pre>
+<pre><code>// 监听窗口大小变化，折叠侧边栏
+const screenWidth = ref&lt;number&gt;(0);
+const listeningWindow = () =&gt; &#123;
+    window.onresize = () =&gt; &#123;
+        return (() =&gt; &#123;
+            screenWidth.value = document.body.clientWidth;
+            if (isCollapse.value === false &amp;&amp; screenWidth.value &lt; 1200) menuStore.setCollapse();
+            if (isCollapse.value === true &amp;&amp; screenWidth.value &gt; 1200) menuStore.setCollapse();
+        &#125;)();
+    &#125;;
+&#125;;
+listeningWindow();
+</code></pre>
+<p>菜单项就是遍历菜单数据展示路由菜单信息（子组件需要defineProps&lt;{ menuList: Menu.MenuOptions[] }&gt;();）</p>
+<pre><code>&lt;template v-for=&quot;subItem in menuList&quot; :key=&quot;subItem.path&quot;&gt;
+        &lt;el-sub-menu v-if=&quot;subItem.children &amp;&amp; subItem.children.length &gt; 0&quot; :index=&quot;subItem.path&quot;&gt;
+            &lt;template #title&gt;
+                &lt;el-icon&gt;
+                    &lt;component :is=&quot;subItem.icon&quot;&gt;&lt;/component&gt;
+                &lt;/el-icon&gt;
+                &lt;span&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/span&gt;
+            &lt;/template&gt;
+            &lt;SubItem :menuList=&quot;subItem.children&quot; /&gt;
+        &lt;/el-sub-menu&gt;
+        &lt;el-menu-item v-else :index=&quot;subItem.path&quot;&gt;
+            &lt;el-icon&gt;
+                &lt;component :is=&quot;subItem.icon&quot;&gt;&lt;/component&gt;
+            &lt;/el-icon&gt;
+            &lt;template v-if=&quot;!subItem.isLink&quot; #title&gt;
+                &lt;span&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/span&gt;
+            &lt;/template&gt;
+            &lt;template v-else #title&gt;
+                &lt;a class=&quot;menu-href&quot; :href=&quot;subItem.isLink&quot; target=&quot;_blank&quot;&gt;&#123;&#123; subItem.title &#125;&#125;&lt;/a&gt;
+            &lt;/template&gt;
+        &lt;/el-menu-item&gt;
+    &lt;/template&gt;
+&lt;script setup lang=&quot;ts&quot;&gt;
+defineProps&lt;&#123; menuList: Menu.MenuOptions[] &#125;&gt;();
+&lt;/script&gt;
+</code></pre>
+<h2 id="header里的侧边栏折叠开发"><a href="#header里的侧边栏折叠开发" class="headerlink" title="header里的侧边栏折叠开发"></a>header里的侧边栏折叠开发</h2><p>监控屏幕宽度或点击叠判断是否折叠</p>
+<pre><code>//菜单是否折叠
+const isCollapse = computed((): boolean =&gt; menuStore.isCollapse);
+//菜单数据
+const menuList = computed((): Menu.MenuOptions[] =&gt; menuStore.menuList);
+// 监听窗口大小变化，合并 aside
+const screenWidth = ref&lt;number&gt;(0);
+const listeningWindow = () =&gt; &#123;
+    window.onresize = () =&gt; &#123;
+        return (() =&gt; &#123;
+            screenWidth.value = document.body.clientWidth;
+            if (isCollapse.value === false &amp;&amp; screenWidth.value &lt; 1200) menuStore.setCollapse();
+            if (isCollapse.value === true &amp;&amp; screenWidth.value &gt; 1200) menuStore.setCollapse();
+        &#125;)();
+    &#125;;
+&#125;;
+</code></pre>
+<h1 id="5-vue-router-利用-route-的-matched-属性实现面包屑效果"><a href="#5-vue-router-利用-route-的-matched-属性实现面包屑效果" class="headerlink" title="5.vue-router 利用 $route 的 matched 属性实现面包屑效果"></a>5.vue-router 利用 $route 的 matched 属性实现面包屑效果</h1><p><strong>matched 顾名思义 就是 匹配，假如我们目前的路由是/a/aa-01，那么此时 this.$route.matched匹配到的会是一个数组，包含 ‘/‘，’/a’，’/a/aa-01’，这三个path的路由信息。然后我们可以直接利用路由信息渲染我们的面包屑导航。</strong></p>
+<p>布局需要使用到el-breadcrumb ，和transition-group</p>
+<pre><code>&lt;template&gt;
+    &lt;el-breadcrumb :separator-icon=&quot;ArrowRight&quot;&gt;
+        &lt;transition-group name=&quot;breadcrumb&quot; mode=&quot;out-in&quot;&gt;
+            &lt;el-breadcrumb-item :to=&quot;&#123; path: HOME_URL &#125;&quot; key=&quot;/home&quot;&gt;首页&lt;/el-breadcrumb-item&gt;
+            &lt;el-breadcrumb-item v-for=&quot;item in matched&quot; :key=&quot;item.path&quot; :to=&quot;&#123; path: item.path &#125;&quot;&gt;
+                &#123;&#123; item.meta.title &#125;&#125;
+            &lt;/el-breadcrumb-item&gt;
+        &lt;/transition-group&gt;
+    &lt;/el-breadcrumb&gt;
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import &#123; computed &#125; from &quot;vue&quot;;
+import &#123; useRoute &#125; from &quot;vue-router&quot;;
+import &#123; ArrowRight &#125; from &quot;@element-plus/icons-vue&quot;;
+import &#123; HOME_URL &#125; from &quot;@/config/config&quot;;
+const route = useRoute();
+
+const matched = computed(() =&gt; route.matched.filter(item =&gt;item.meta &amp;&amp; item.meta.title &amp;&amp; item.meta.title !== &quot;首页&quot;));
+&lt;/script&gt;
+</code></pre>
+<p>TransitionGroup# 是一个内置组件，用于对 v-for 列表中的元素或组件的插入、移除和顺序改变添加动画效果。这样每次选择侧边栏的路由时，面包屑导航这边就感觉比较平滑的展示</p>
+<h1 id="6-后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现-（标签栏管理）"><a href="#6-后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现-（标签栏管理）" class="headerlink" title="6.后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现 （标签栏管理）"></a>6.后台管理系统顶部使用el-tag或el-tab实现浏览路由历史实现 （标签栏管理）</h1><p>1.默认有首页，不能关闭</p>
+<p>主要就是在tabs.ts的state的tabsMenuList写死,剩下的路由历史就是往这里面tabsMenuList添加数据，剩下的就在actions里面处理了，完成增加，移除，选择，路由历史的操作具体在下面</p>
+<pre><code>    state: (): TabsState =&gt; (&#123;
+        tabsMenuValue: HOME_URL,
+        tabsMenuList: [&#123; title: &quot;首页&quot;, path: HOME_URL, icon: &quot;home-filled&quot;, close: false &#125;]
+    &#125;),
+</code></pre>
+<p>2.点击侧边栏上路由菜单，判断有无存在，没有就添加同时定位到上面(也就是设置tabsMenuValue)，有就定位到上面</p>
+<p>在actions里写</p>
+<pre><code>// Add Tabs
+        async addTabs(tabItem: TabsOptions) &#123;
+            // not add tabs black list
+            if (TABS_BLACK_LIST.includes(tabItem.path)) return;
+            const tabInfo: TabsOptions = &#123;
+                title: tabItem.title,
+                path: tabItem.path,
+                close: tabItem.close
+            &#125;;
+            if (this.tabsMenuList.every(item =&gt; item.path !== tabItem.path)) &#123;
+                this.tabsMenuList.push(tabInfo);
+            &#125;
+            this.setTabsMenuValue(tabItem.path);
+        &#125;,
+</code></pre>
+<p>3.关闭当前页，自动跳到上一个tag页面</p>
+<p>在actions里写</p>
+<pre><code>    // Remove Tabs
+        async removeTabs(tabPath: string) &#123;
+            let tabsMenuValue = this.tabsMenuValue;
+            const tabsMenuList = this.tabsMenuList;
+            if (tabsMenuValue === tabPath) &#123;
+                tabsMenuList.forEach((item, index) =&gt; &#123;
+                    if (item.path !== tabPath) return;
+                    const nextTab = tabsMenuList[index + 1] || tabsMenuList[index - 1];
+                    if (!nextTab) return;
+                    tabsMenuValue = nextTab.path;
+                    router.push(nextTab.path);
+                &#125;);
+            &#125;
+            this.tabsMenuValue = tabsMenuValue;
+            this.tabsMenuList = tabsMenuList.filter(item =&gt; item.path !== tabPath);
+        &#125;,
+</code></pre>
+<p>4.选中标签 跳转到标签对应的路由</p>
+<pre><code>    // Change Tabs
+        async changeTabs(tabItem: TabPaneProps) &#123;
+            this.tabsMenuList.forEach(item =&gt; &#123;
+                if (item.title === tabItem.label) router.push(item.path);
+            &#125;);
+        &#125;,
+</code></pre>
+<pre><code>    &lt;div class=&quot;tabs-box&quot;&gt;
+        &lt;div class=&quot;tabs-menu&quot;&gt;
+            &lt;el-tabs v-model=&quot;tabsMenuValue&quot; type=&quot;card&quot; @tab-click=&quot;tabClick&quot; @tab-remove=&quot;removeTab&quot;&gt;
+                &lt;el-tab-pane
+                    v-for=&quot;item in tabsMenuList&quot;
+                    :key=&quot;item.path&quot;
+                    :path=&quot;item.path&quot;
+                    :label=&quot;item.title&quot;
+                    :name=&quot;item.path&quot;
+                    :closable=&quot;item.close&quot;
+                &gt;
+                    &lt;template #label&gt;
+                        &lt;el-icon class=&quot;tabs-icon&quot; v-if=&quot;item.icon&quot;&gt;
+                            &lt;component :is=&quot;item.icon&quot;&gt;&lt;/component&gt;
+                        &lt;/el-icon&gt;
+                        &#123;&#123; item.title &#125;&#125;
+                    &lt;/template&gt;
+                &lt;/el-tab-pane&gt;
+            &lt;/el-tabs&gt;
+            //&lt;MoreButton /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+<p>页面上具体使用的el-tabs实现</p>
+<p>总结：</p>
+<p>在store-&gt;modules-&gt;tabs.ts</p>
+<pre><code>import &#123; defineStore &#125; from &quot;pinia&quot;;
+import &#123; TabPaneProps &#125; from &quot;element-plus&quot;;
+import &#123; TabsState &#125; from &quot;../interface&quot;;
+import &#123; HOME_URL, TABS_BLACK_LIST &#125; from &quot;@/config/config&quot;;
+import piniaPersistConfig from &quot;@/config/piniaPersist&quot;;
+import router from &quot;@/router/index&quot;;
+
+// TabsStore
+export const TabsStore = defineStore(&#123;
+    id: &quot;TabsState&quot;,
+    state: (): TabsState =&gt; (&#123;
+        tabsMenuValue: HOME_URL,
+        tabsMenuList: [&#123; title: &quot;首页&quot;, path: HOME_URL, icon: &quot;home-filled&quot;, close: false &#125;]
+    &#125;),
+    getters: &#123;&#125;,
+    actions: &#123;
+        // Add Tabs
+        async addTabs(tabItem: TabsOptions) &#123;
+            // not add tabs black list
+            if (TABS_BLACK_LIST.includes(tabItem.path)) return;
+            const tabInfo: TabsOptions = &#123;
+                title: tabItem.title,
+                path: tabItem.path,
+                close: tabItem.close
+            &#125;;
+            if (this.tabsMenuList.every(item =&gt; item.path !== tabItem.path)) &#123;
+                this.tabsMenuList.push(tabInfo);
+            &#125;
+            this.setTabsMenuValue(tabItem.path);
+        &#125;,
+        // Remove Tabs
+        async removeTabs(tabPath: string) &#123;
+            let tabsMenuValue = this.tabsMenuValue;
+            const tabsMenuList = this.tabsMenuList;
+            if (tabsMenuValue === tabPath) &#123;
+                tabsMenuList.forEach((item, index) =&gt; &#123;
+                    if (item.path !== tabPath) return;
+                    const nextTab = tabsMenuList[index + 1] || tabsMenuList[index - 1];
+                    if (!nextTab) return;
+                    tabsMenuValue = nextTab.path;
+                    router.push(nextTab.path);
+                &#125;);
+            &#125;
+            this.tabsMenuValue = tabsMenuValue;
+            this.tabsMenuList = tabsMenuList.filter(item =&gt; item.path !== tabPath);
+        &#125;,
+        // Change Tabs
+        async changeTabs(tabItem: TabPaneProps) &#123;
+            this.tabsMenuList.forEach(item =&gt; &#123;
+                if (item.title === tabItem.label) router.push(item.path);
+            &#125;);
+        &#125;,
+        // Set TabsMenuValue
+        async setTabsMenuValue(tabsMenuValue: string) &#123;
+            this.tabsMenuValue = tabsMenuValue;
+        &#125;,
+        // Set TabsMenuList
+        async setTabsMenuList(tabsMenuList: TabsOptions[]) &#123;
+            this.tabsMenuList = tabsMenuList;
+        &#125;,
+        // Close MultipleTab
+        async closeMultipleTab(tabsMenuValue?: string) &#123;
+            this.tabsMenuList = this.tabsMenuList.filter(item =&gt; &#123;
+                return item.path === tabsMenuValue || item.path === HOME_URL;
+            &#125;);
+        &#125;,
+        // Go Home
+        async goHome() &#123;
+            router.push(HOME_URL);
+            this.tabsMenuValue = HOME_URL;
+        &#125;
+    &#125;,
+    persist: piniaPersistConfig(&quot;TabsState&quot;)
+&#125;);
+</code></pre>
+<h1 id="最终效果图："><a href="#最终效果图：" class="headerlink" title="最终效果图："></a>最终效果图：</h1><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db741d21a0a24e188a55a28b00466f4d~tplv-k3u1fbpfcp-watermark.image" alt="46972a97567f3ff7c445d12b442ef7b1.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h1 id="gitHub地址："><a href="#gitHub地址：" class="headerlink" title="gitHub地址："></a>gitHub地址：</h1><p><a target="_blank" rel="noopener" href="https://github.com/DarknessZY/zhangyao-management/tree/master">vue3学习完成的后管模板</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/vite/" style="color: #00bcd4">vite</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/vue3/" style="color: #ffa2c4">vue3</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/pinia/" style="color: #00a596">pinia</a>
+        </span>
+        
+    </div>
+    <a href="/2022/10/25/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%BA%8C%EF%BC%89/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/10/12/%E7%BB%84%E4%BB%B6/%E6%97%A5%E6%9C%9F%E5%B0%8F%E7%BB%84%E4%BB%B6(vue2)/">
+        <h2 class="post-title">日期小组件的封装</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E7%BB%84%E4%BB%B6/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                组件
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/10/12
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<h1 id="一、日期小组件"><a href="#一、日期小组件" class="headerlink" title="一、日期小组件"></a>一、日期小组件</h1><p>公司有一个微信小程序项目用的是uni-app+uview2,uview2上的那个日期组件并不是产品想要样子，那就只好自己动手查阅资料了，看看别人的日历组件怎么搞的，再根据这些，写写样式，改改逻辑，完成产品需要的喽。不和你多bb，直接上效果图和代码，主要也是自己做个笔记，指不定哪天又用上，到时候c+v就行了，哈哈！</p>
+<h2 id="1-效果图"><a href="#1-效果图" class="headerlink" title="1.效果图"></a>1.效果图</h2><p align=center><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c64a3ea7f6cf4209a321d38af9e11d09~tplv-k3u1fbpfcp-watermark.image?" alt="d8a086257743cc6dee6907df3bcfc63.png"  / loading="lazy" decoding="async" fetchpriority="low"></p>
+
+<h2 id="2-代码"><a href="#2-代码" class="headerlink" title="2.代码"></a>2.代码</h2><p>我一般是这样建文件：components=&gt;term-picker=&gt;term-picker.vue</p>
+<pre><code>&lt;template&gt;
+    &lt;view :class=&quot;&#123;&#39;pickerMask&#39;:visable&#125;&quot; @click=&quot;maskClick&quot; @touchmove.stop.prevent=&quot;returnHandle&quot;&gt;
+        &lt;view class=&quot;picker-box&quot; :class=&quot;&#123;&#39;picker-show&#39;:visable&#125;&quot;&gt;
+      &lt;view class=&quot;selectDate&quot;&gt;
+        &lt;view class=&quot;selectDateTxt&quot;&gt;
+          &lt;text&gt;选择日期&lt;/text&gt;
+        &lt;/view&gt;
+      &lt;/view&gt;
+      &lt;view class=&quot;lineshow&quot;&gt;
+        &lt;view class=&quot;line&quot;&gt;&lt;/view&gt;
+      &lt;/view&gt;
+            &lt;view class=&quot;operate-box&quot; @touchmove.stop.prevent=&quot;returnHandle&quot; @tap.stop=&quot;returnHandle&quot;&gt;
+
+                &lt;view class=&quot;time-box&quot;&gt;
+                    &lt;view @click=&quot;touchSelect(0)&quot; class=&quot;time-item&quot; :style=&quot;&#123;color:touchIndex?&#39;#000000&#39;:themeColor&#125;&quot;&gt;
+                        &lt;text&gt;&#123;&#123;startText&#125;&#125;&lt;/text&gt;
+                        &lt;text&gt;&#123;&#123;resultDate[0]&#125;&#125;&lt;/text&gt;
+                    &lt;/view&gt;
+                    &lt;text&gt;至&lt;/text&gt;
+                    &lt;view @click=&quot;touchSelect(1)&quot; class=&quot;time-item&quot; :style=&quot;&#123;color:touchIndex?themeColor:&#39;#000000&#39;&#125;&quot;&gt;
+                        &lt;text&gt;&#123;&#123;endText&#125;&#125;&lt;/text&gt;
+                        &lt;text&gt;&#123;&#123;resultDate[1]&#125;&#125;&lt;/text&gt;
+                    &lt;/view&gt;
+                &lt;/view&gt;
+
+            &lt;/view&gt;
+      &lt;view class=&quot;lineshow&quot;&gt;
+        &lt;view class=&quot;line&quot;&gt;&lt;/view&gt;
+      &lt;/view&gt;
+            &lt;picker-view :value=&quot;pickerValue&quot; @change=&quot;pickerChange&quot; class=&quot;picker-view&quot; :indicator-style=&quot;indicatorStyle&quot; @tap.stop=&quot;returnHandle&quot;&gt;
+        &lt;picker-view-column style=&quot;flex: 0 0 30.5%&quot;&gt;
+                    &lt;view class=&quot;picker-item&quot; v-for=&quot;(item, index) in years&quot; :key=&quot;index&quot;&gt;&#123;&#123;item&#125;&#125;年&lt;/view&gt;
+                &lt;/picker-view-column&gt;
+                &lt;picker-view-column style=&quot;flex: 0 0 30.5%&quot;&gt;
+                    &lt;view class=&quot;picker-item&quot; v-for=&quot;(item, index) in months&quot; :key=&quot;index&quot;&gt;&#123;&#123; item &#125;&#125;月&lt;/view&gt;
+                &lt;/picker-view-column&gt;
+                &lt;picker-view-column v-if=&quot;days.length &gt; 0&quot; style=&quot;flex: 0 0 30.5%&quot;&gt;
+                    &lt;view class=&quot;picker-item&quot; v-for=&quot;(item, index) in days&quot; :key=&quot;index&quot;&gt;&#123;&#123; item &#125;&#125;日&lt;/view&gt;
+                &lt;/picker-view-column &gt;
+            &lt;/picker-view&gt;
+      &lt;view class=&quot;button&quot;&gt;
+        &lt;view  class=&quot;buttonClose&quot; @click=&quot;pickerClose&quot;&gt;
+          &lt;view class=&quot;buttonClosetxt&quot;&gt;
+            取消
+          &lt;/view&gt;
+
+        &lt;/view&gt;
+        &lt;view  class=&quot;buttonConfirm&quot; @click=&quot;pickerConfirm&quot;&gt;
+          &lt;view class=&quot;buttonConfirmtxt&quot;&gt;
+            确认
+          &lt;/view&gt;
+        &lt;/view&gt;
+      &lt;/view&gt;
+        &lt;/view&gt;
+    &lt;/view&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default &#123;
+  name: &#39;termPicker&#39;,
+  props: &#123;
+    visable: &#123;
+      type: Boolean,
+      default: false
+    &#125;,
+    defaultDate: &#123;
+      type: Array,
+      default: () =&gt; []
+    &#125;,
+    minYear: &#123;
+      type: Number,
+      default: 2020,
+    &#125;,
+    timeLimit: &#123;
+      type: Boolean,
+      default: false
+    &#125;,
+    deferYear: &#123;
+      type: Number,
+      default: 0,
+    &#125;,
+    themeColor: &#123;
+      type: String,
+      default: &#39;#10BE9D&#39;
+    &#125;,
+    startText: &#123;
+      type: String,
+      default: &#39;开始时间&#39;
+    &#125;,
+    endText: &#123;
+      type: String,
+      default: &#39;结束时间&#39;
+    &#125;
+  &#125;,
+  data() &#123;
+    const date = new Date()
+    const years = []
+    const year = date.getFullYear()
+    const months = []
+    const month = date.getMonth() + 1
+    const day = date.getDate()
+    const maxYear = this.timeLimit ? year : year + this.deferYear
+    for (let i = this.minYear;i &lt;= maxYear;i++) &#123;
+      years.push(i)
+    &#125;
+    for (let i = 1;i &lt;= 12;i++) &#123;
+      months.push(i)
+    &#125;
+    return &#123;
+      indicatorStyle: &#39;height: 100rpx;&#39;,
+      touchIndex: 0,
+      year,
+      month,
+      day,
+      years,
+      months,
+      days: [],
+      pickerValue: [],
+      resultDate: []
+    &#125;
+  &#125;,
+  mounted() &#123;
+    this.setDate()
+  &#125;,
+  methods: &#123;
+    returnHandle() &#123;&#125;,
+    setDate() &#123;
+      if (this.defaultDate.length) &#123;
+        if (this.defaultDate.length &gt; 0) &#123;
+          const date = this.defaultDate[0]
+          this.resultDate = this.defaultDate
+          this.setPicker(date)
+        &#125; else &#123;
+          const month = this.month &lt; 10 ? &#39;0&#39; + this.month : this.month
+          const day = this.day &lt; 10 ? &#39;0&#39; + this.day : this.day
+          const nowTime = this.year + &#39;-&#39; + month + &#39;-&#39; + day
+          this.resultDate = [nowTime, nowTime]
+          this.setPicker(nowTime)
+        &#125;
+      &#125;
+    &#125;,
+    setPicker(date) &#123;
+      if (date) &#123;
+        const splitVal = date.split(&#39;-&#39;)
+        const year = this.years.indexOf(Number(splitVal[0]))
+        const month = Number(splitVal[1]) - 1
+        const day = Number(splitVal[2]) - 1
+        this.pickerChange(&#123;
+          detail: &#123;
+            value: [year, month, day]
+          &#125;
+        &#125;)
+      &#125;
+    &#125;,
+    touchSelect(val) &#123;
+      const date = this.resultDate[val]
+      this.touchIndex = val
+      this.setPicker(date)
+    &#125;,
+    getDateTime(date) &#123;
+      const year = this.years[date[0]]
+      let month = this.months[date[1]]
+      let day = this.days[date[2]]
+      if (month &lt; 10) &#123;
+        month = &#39;0&#39; + month
+      &#125;
+      if (day &lt; 10) &#123;
+        day = &#39;0&#39; + day
+      &#125;
+      this.resultDate[this.touchIndex] = year + &#39;-&#39; + month + &#39;-&#39; + day
+    &#125;,
+    pickerChange(e) &#123;
+      const currents = e.detail.value
+      if (currents[1] + 1 === 2) &#123;
+        this.days = []
+        if (
+          ((currents[0] + this.minYear) % 4 === 0 &amp;&amp;
+            (currents[0] + this.minYear) % 100 !== 0) ||
+          (currents[0] + this.minYear) % 400 === 0
+        ) &#123;
+          for (let i = 1;i &lt; 30;i++) &#123;
+            this.days.push(i)
+          &#125;
+        &#125; else &#123;
+          for (let i = 1;i &lt; 29;i++) &#123;
+            this.days.push(i)
+          &#125;
+        &#125;
+      &#125; else if ([4, 6, 9, 11].some((item) =&gt; currents[1] + 1 === item)) &#123;
+        this.days = []
+        for (let i = 1;i &lt; 31;i++) &#123;
+          this.days.push(i)
+        &#125;
+      &#125; else if (
+        [1, 3, 5, 7, 8, 10, 12].some((item) =&gt; currents[1] + 1 === item)
+      ) &#123;
+        this.days = []
+        for (let i = 1;i &lt; 32;i++) &#123;
+          this.days.push(i)
+        &#125;
+      &#125;
+      this.pickerValue = currents
+      this.getDateTime(currents)
+    &#125;,
+    maskClick() &#123;
+      this.$emit(&#39;update:visable&#39;, false)
+    &#125;,
+    pickerClose() &#123;
+      console.log(&#39;我是取消&#39;)
+      this.maskClick()
+    &#125;,
+    pickerConfirm() &#123;
+      const &#123; resultDate, timeLimit &#125; = this
+      const startTime = new Date(resultDate[0]).getTime()
+      const endTime = new Date(resultDate[1]).getTime()
+      const nowTime = timeLimit ? new Date().getTime() : endTime
+      if (startTime &lt;= endTime) &#123;
+        if (endTime &lt;= nowTime) &#123;
+          this.$emit(&#39;confirm&#39;, resultDate)
+          this.maskClick()
+        &#125; else &#123;
+          uni.showToast(&#123;
+            title: &#39;时间不能超过今天&#39;,
+            icon: &#39;none&#39;
+          &#125;)
+        &#125;
+      &#125; else &#123;
+        uni.showToast(&#123;
+          title: &#39;时间范围不正确！&#39;,
+          icon: &#39;none&#39;
+        &#125;)
+      &#125;
+    &#125;
+  &#125;
+&#125;
+&lt;/script&gt;
+
+&lt;style lang=&quot;scss&quot; scoped&gt;
+.pickerMask &#123;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+&#125;
+
+.picker-box &#123;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  transform: translateY(100%);
+  z-index: 998;
+
+  .selectDate &#123;
+    width: 100%;
+    height: 60rpx;
+    padding: 30rpx 30rpx;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+
+    .selectDateTxt &#123;
+      width: 112rpx;
+      height: 40rpx;
+      font-size: 28rpx;
+      font-family: &#39;PingFangSC-Medium&#39;, &#39;PingFang SC&#39;;
+      font-weight: 500;
+      color: #212034;
+      line-height: 40rpx;
+    &#125;
+  &#125;
+
+  .lineshow &#123;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+
+    .line &#123;
+      width: 690rpx;
+      border: 1rpx solid #f1eff3;
+    &#125;
+  &#125;
+
+  .operate-box &#123;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18rpx 30rpx;
+    background-color: #fff;
+    text-align: center;
+    font-size: 30rpx;
+
+    .time-box &#123;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .time-item &#123;
+        display: flex;
+        flex-direction: column;
+      &#125;
+    &#125;
+  &#125;
+
+  .button &#123;
+    width: 100%;
+    background-color: #fff;
+    height: 157rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .buttonClose &#123;
+      width: 330rpx;
+      height: 80rpx;
+      border-radius: 40rpx;
+      border: 1rpx solid #5368ef;
+      transform: rotateZ(360deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .buttonClosetxt &#123;
+        width: 60rpx;
+        height: 42rpx;
+        font-size: 30rpx;
+        font-family: &#39;PingFangSC-Medium&#39;, &#39;PingFang SC&#39;;
+        font-weight: 400;
+        color: #5368ef;
+        line-height: 42rpx;
+      &#125;
+    &#125;
+
+    .buttonConfirm &#123;
+      width: 330rpx;
+      height: 80rpx;
+      background: linear-gradient(159deg, #7486fc 0%, #5368ef 100%);
+      border-radius: 35px;
+      margin-left: 30rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .buttonConfirmtxt &#123;
+        width: 60rpx;
+        height: 42rpx;
+        font-size: 30rpx;
+        font-family: &#39;PingFangSC-Medium&#39;, &#39;PingFang SC&#39;;
+        font-weight: 400;
+        color: #fff;
+        line-height: 42rpx;
+      &#125;
+    &#125;
+  &#125;
+&#125;
+
+.picker-show &#123;
+  transform: translateY(0);
+&#125;
+
+.picker-view &#123;
+  width: 750rpx;
+  height: 450rpx;
+  background-color: #fff;
+  padding-left: 5.5%;
+
+  .picker-item &#123;
+    height: 42rpx;
+    font-family: &#39;PingFangSC-Medium&#39;, &#39;PingFang SC&#39;;
+    font-weight: 400;
+    font-size: 30rpx;
+    color: #20253b ;
+    line-height: 42rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  &#125;
+&#125;
+&lt;/style&gt;
+</code></pre>
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><p>在需要这个用到的组件那块导入</p>
+<blockquote>
+<p>import termPicker from ‘@/components/term-picker/term-picker.vue’</p>
+</blockquote>
+<pre><code>&lt;!-- 日期选择 --&gt;
+  &lt;term-picker
+    visable.sync=&quot;showDateSelect&quot;
+    :defaultDate=&quot;defaultDate&quot;
+    :minYear=&quot;1990&quot;
+    :timeLimit=&quot;true&quot;
+    :deferYear=&quot;0&quot;
+    themeColor=&quot;#5368ef&quot;
+    @confirm=&quot;confirm&quot;&gt;
+  &lt;/term-picker&gt;
+ 
+</code></pre>
+<h4 id="Props-参数说明"><a href="#Props-参数说明" class="headerlink" title="Props 参数说明"></a>Props 参数说明</h4><table>
+<thead>
+<tr>
+<th align="center">参数名</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">visable</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">日期选择控件的显示/隐藏，注意使用<code>.sync</code>修饰符(true: 显示; false: 隐藏)</td>
+</tr>
+<tr>
+<td align="center">defaultDate</td>
+<td align="center">Array</td>
+<td align="center">[]</td>
+<td align="center">默认预设值(比如:<code>[&#39;2021-06-01&#39;, &#39;2021-07-01&#39;]</code>)</td>
+</tr>
+<tr>
+<td align="center">minYear</td>
+<td align="center">Number</td>
+<td align="center">1990</td>
+<td align="center">最小年份</td>
+</tr>
+<tr>
+<td align="center">timeLimit</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">日期区间限制(true: 限制结束日期<code>&lt;=</code>当前日期; false: 不限制)</td>
+</tr>
+<tr>
+<td align="center">deferYear</td>
+<td align="center">Number</td>
+<td align="center">0</td>
+<td align="center">年份选项顺延数，仅当<code>timeLimit</code>为<code>false</code>时生效(举个栗子: <code>deferYear = 1</code>, 则年份选项的最大值为: <code>当前年份 + deferYear</code>)</td>
+</tr>
+<tr>
+<td align="center">themeColor</td>
+<td align="center">String</td>
+<td align="center">#10BE9D</td>
+<td align="center">选择框操作栏部分字体颜色</td>
+</tr>
+<tr>
+<td align="center">startText</td>
+<td align="center">String</td>
+<td align="center">开始时间</td>
+<td align="center">日期范围起始处文本</td>
+</tr>
+<tr>
+<td align="center">endText</td>
+<td align="center">String</td>
+<td align="center">结束时间</td>
+<td align="center">日期范围结束处文本</td>
+</tr>
+</tbody></table>
+<h4 id="Events-事件说明"><a href="#Events-事件说明" class="headerlink" title="Events 事件说明"></a>Events 事件说明</h4><table>
+<thead>
+<tr>
+<th align="center">事件名</th>
+<th align="center">说明</th>
+<th align="center">返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">@confirm</td>
+<td align="center">点击确定按钮，返回当前选择的值</td>
+<td align="center"><code>Array</code>数组类型</td>
+</tr>
+</tbody></table>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" style="color: #ff7d73">组件封装</a>
+        </span>
+        
+    </div>
+    <a href="/2022/10/12/%E7%BB%84%E4%BB%B6/%E6%97%A5%E6%9C%9F%E5%B0%8F%E7%BB%84%E4%BB%B6(vue2)/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/10/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%94)%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">
+        <h2 class="post-title">从零开始搭建博客(五)——使用valine评论系统</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                博客搭建
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/10/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<h1 id="一、hexo框架的主题使用valine"><a href="#一、hexo框架的主题使用valine" class="headerlink" title="一、hexo框架的主题使用valine"></a>一、hexo框架的主题使用valine</h1><h2 id="1-注册-Leancloud-账号"><a href="#1-注册-Leancloud-账号" class="headerlink" title="1. 注册 Leancloud 账号"></a><strong>1. 注册 Leancloud 账号</strong></h2><p>在leancloud官网注册一个账号，海外同学推荐使用leancloud国际版，国内同学可以使用华东或华北节点。</p>
+<h1 id="2-创建应用获取appid和appkey"><a href="#2-创建应用获取appid和appkey" class="headerlink" title="2.创建应用获取appid和appkey"></a>2.创建应用获取appid和appkey</h1><p>注册完成后进入控制台-&gt;创建应用-&gt;创建开发版应用。创建完开发版应用如下：点击最右边小齿轮也就是设置，找到<code>应用凭证</code>，获取appid和appkey</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88cbb84d544c466fa8b242d80c6e0670~tplv-k3u1fbpfcp-zoom-1.image" alt="img" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h2 id="3-配置valine"><a href="#3-配置valine" class="headerlink" title="3.配置valine"></a>3.配置valine</h2><p>最后去自己主题下的_config.yml文件下(注意不是根目录下的，是你克隆的主题的_config.yml)，配置一下valine，目前hexo官网给的许多主题都是可以用valine的，直接配置就行</p>
+<p>以ayer主题为例，具体配置含义如下：</p>
+<pre><code># 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
+leancloud:
+  enable: true
+  app_id:# 将应用key的App ID设置在这里
+  appkey: # 将应用key的App Key设置在这里
+valine:
+  enable: true #是否启用valine
+  notify: false# 邮箱通知 , https://github.com/xCss/Valine/wiki，默认为false
+  verify: false# 验证码 默认为false
+  placeholder: Just go go ^_^ # 初始化评论显示，根据自己修改，这里默认，
+  avatar: monsterid # 头像风格，默认为mm，可进入网址：https://valine.js.org/visitor.html查看头像设置，这里有许多头像风格，进行设置
+  guest_info: nick,mail,link # 自定义评论标题
+  pageSize: 10 # 分页大小，10页就自动分页
+  visitor: true # 是否允许游客评论 ，进入官网查看设置：https://valine.js.org/visitor.html
+</code></pre>
+<h1 id="二、valine评论数据管理"><a href="#二、valine评论数据管理" class="headerlink" title="二、valine评论数据管理"></a>二、valine评论数据管理</h1><p>去LeanCloud的控制台找到数据存储=&gt;结构化数据=&gt;Comment,在这里你可以对评论的数据进行管理</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f28620488c6540d6b80756e2ac125719~tplv-k3u1fbpfcp-watermark.image" alt="1673512632892.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="color: #00a596">博客搭建</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/valine/" style="color: #03a9f4">valine</a>
+        </span>
+        
+    </div>
+    <a href="/2022/10/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E4%BA%94)%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/10/08/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/">
+        <h2 class="post-title">vite 搭建vue3项目（一）</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                项目搭建
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/10/8
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+<h1 id="一、创建项目"><a href="#一、创建项目" class="headerlink" title="一、创建项目"></a>一、创建项目</h1><h2 id="1-直接创建项目"><a href="#1-直接创建项目" class="headerlink" title="1.直接创建项目"></a>1.直接创建项目</h2><pre><code>使用 NPM:
+$ npm create vite@latest
+使用 Yarn:
+$ yarn create vite
+使用 PNPM:
+$ pnpm create vite
+然后按照提示操作即可！(选择vue，vue-ts)
+</code></pre>
+<h2 id="2-使用模板创建项目"><a href="#2-使用模板创建项目" class="headerlink" title="2.使用模板创建项目"></a>2.使用模板创建项目</h2><p>通过附加的命令行选项直接指定项目名称和你想要使用的模板例如，要构建一个 Vite + Vue 项目，运行:</p>
+<pre><code>使用 npm 6.x：
+npm create vite@latest my-vue-app --template vue
+使用 npm 7+, extra double-dash is needed:
+npm create vite@latest my-vue-app -- --template vue
+使用 yarn：
+yarn create vite my-vue-app --template vue
+使用 pnpm：
+pnpm create vite my-vue-app --template vue
+</code></pre>
+<p>然后npm i 或者 yarn install    运行yarn dev 看看浏览器运行成了没，第一步就大功告成了</p>
+<h1 id="二、vite配置别名和环境变量的配置"><a href="#二、vite配置别名和环境变量的配置" class="headerlink" title="二、vite配置别名和环境变量的配置"></a>二、vite配置别名和环境变量的配置</h1><h2 id="1-配置别名"><a href="#1-配置别名" class="headerlink" title="1.配置别名"></a>1.配置别名</h2><p>使用编辑器VScode打开刚刚搭建好的项目 进入配置文件 vite.config.ts</p>
+<p>配置别名后的vite.config.ts：</p>
+<pre><code class="js">import &#123; defineConfig &#125; from &#39;vite&#39;
+import vue from &#39;@vitejs/plugin-vue&#39;
+import path from &#39;path&#39;
+const resolve = (dir: string) =&gt; path.join(__dirname, dir)
+
+export default defineConfig(&#123;
+    plugins: [vue()],
+    resolve: &#123;
+        alias: &#123;
+            &#39;@&#39;: resolve(&#39;src&#39;),
+        &#125;
+    &#125;
+&#125;)
+</code></pre>
+<p>此时 TS 可能有这个错误提示：找不到模块“path”或其相应的类型声明</p>
+<p>解决方法：</p>
+<pre><code>npm install @types/node --save-dev或者yarn add @types/node --save-dev
+</code></pre>
+<p>还需要在tsconfig.json的paths配置</p>
+<pre><code class="json"> &quot;baseUrl&quot;: &quot;.&quot;,
+    &quot;paths&quot;: &#123;
+      &quot;@/*&quot;: [
+        &quot;src/*&quot;
+      ],
+      &quot;comps/*&quot;: [
+        &quot;src/components/*&quot;
+      ],
+      &quot;views/*&quot;: [
+        &quot;src/views/*&quot;
+      ],
+      &quot;store/*&quot;: [
+        &quot;src/store/*&quot;
+      ]
+    &#125;,
+</code></pre>
+<h2 id="2-环境变量的配置"><a href="#2-环境变量的配置" class="headerlink" title="2.环境变量的配置"></a>2.环境变量的配置</h2><p>vite 提供了两种模式：具有开发服务器的开发模式（development）和生产模式（production）</p>
+<p>项目根目录新建:.env.development :</p>
+<pre><code>NODE_ENV=development
+
+VITE_APP_WEB_URL= &#39;YOUR WEB URL&#39;
+</code></pre>
+<p>项目根目录新建:.env.production :</p>
+<pre><code>NODE_ENV=production
+
+VITE_APP_WEB_URL= &#39;YOUR WEB URL&#39;
+</code></pre>
+<p>组件中使用：</p>
+<pre><code>console.log(import.meta.env.VITE_APP_WEB_URL)
+</code></pre>
+<p>配置 package.json:</p>
+<p>打包区分开发环境和生产环境</p>
+<pre><code>&quot;build:dev&quot;: &quot;vite build --mode development&quot;,
+&quot;build:pro&quot;: &quot;vite build --mode production&quot;,
+</code></pre>
+<h1 id="三、配置跨域代理"><a href="#三、配置跨域代理" class="headerlink" title="三、配置跨域代理"></a>三、配置跨域代理</h1><p>在vite.config.ts中</p>
+<pre><code class="js">export default defineConfig(&#123;
+    plugins: [vue()],
+    resolve: &#123;
+        alias: &#123;
+            &#39;@&#39;: resolve(&#39;src&#39;),
+            comps: resolve(&#39;src/components&#39;),
+            apis: resolve(&#39;src/apis&#39;),
+            views: resolve(&#39;src/views&#39;),
+            utils: resolve(&#39;src/utils&#39;),
+            routes: resolve(&#39;src/routes&#39;),
+            styles: resolve(&#39;src/styles&#39;)
+        &#125;
+    &#125;,
+    server: &#123;
+     // 配置前端服务地址和端口
+        //服务器主机名
+        host: &#39;&#39;,
+        //端口号
+        port: 3088,
+        //设为 true 时若端口已被占用则会直接退出，而不是尝试下一个可用端口
+        strictPort: false,
+        //服务器启动时自动在浏览器中打开应用程序,当此值为字符串时，会被用作 URL 的路径名
+        open: false,
+        //自定义代理规则
+        proxy: &#123;
+            // 选项写法
+            &#39;/api&#39;: &#123;
+                target: &#39;&#39;,
+                changeOrigin: true,
+                rewrite: path =&gt; path.replace(/^\/api/, &#39;&#39;)
+            &#125;
+        &#125;
+    &#125;
+&#125;)
+</code></pre>
+<p>使用跨域代理：</p>
+<p>​        用代理, 首先你得有一个标识, 告诉他你这个连接要用代理. 不然的话, 可能你的 html, css, js这些静态资源都跑去代理. 所以我们一般只有接口用代理, 静态文件用本地.‘/api’: {}, 就是告诉node, 我接口只有是’/api’开头的才用代理.所以你的接口就要这么写 /api/xx/xx. 最后代理的路径就是 <a target="_blank" rel="noopener" href="http://xxx.xx.com/api/xx/xx.%E5%8F%AF%E6%98%AF%E4%B8%8D%E5%AF%B9%E5%95%8A">http://xxx.xx.com/api/xx/xx.可是不对啊</a>, 我正确的接口路径里面没有/api啊. 所以就需要 pathRewrite,把’/api’去掉, 这样既能有正确标识, 又能在请求接口的时候去掉api.</p>
+<h1 id="四、添加-css-预处理器-sass"><a href="#四、添加-css-预处理器-sass" class="headerlink" title="四、添加 css 预处理器 sass"></a>四、添加 css 预处理器 sass</h1><p>安装 ：</p>
+<pre><code>npm install -D sass sass-loader
+或者yarn add sass sass-loader
+</code></pre>
+<p>在 src/assets 下新增 style 文件夹，用于存放全局样式文件</p>
+<h1 id="五、约束代码风格"><a href="#五、约束代码风格" class="headerlink" title="五、约束代码风格"></a>五、约束代码风格</h1><p>TypeScirpt 官方决定全面采用 ESLint 作为代码检查的工具，并创建了一个新项目 typescript-eslint，提供了 TypeScript 文件的解析器 @typescript-eslint/parser 和相关的配置选项 @typescript-eslint/eslint-plugin 等</p>
+<h2 id="1-Eslint支持"><a href="#1-Eslint支持" class="headerlink" title="1.Eslint支持"></a><strong>1.Eslint支持</strong></h2><pre><code># eslint 安装
+yarn add eslint --dev
+# eslint 插件安装
+yarn add eslint-plugin-vue --dev
+
+yarn add @typescript-eslint/eslint-plugin --dev
+
+yarn add eslint-plugin-prettier --dev
+
+# typescript parser
+yarn add @typescript-eslint/parser --dev
+
+
+直接：npm i typescript eslint eslint-plugin-vue @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+</code></pre>
+<p>注意: 如果 eslint 安装报错:</p>
+<p>可以尝试运行以下命令:</p>
+<pre><code>yarn config set ignore-engines true
+</code></pre>
+<p><strong>项目下新建 .eslintrc.js配置 eslint 校验规则:</strong></p>
+<pre><code class="js">// 需要安装依赖:  npm i eslint-define-config
+const &#123; defineConfig &#125; = require(&#39;eslint-define-config&#39;)
+module.exports = defineConfig(&#123;
+    root: true,
+    /* 指定如何解析语法。*/
+    parser: &#39;vue-eslint-parser&#39;,
+    /* 优先级低于parse的语法解析配置 */
+    parserOptions: &#123;
+        parser: &#39;@typescript-eslint/parser&#39;,
+    &#125;,
+    // https://eslint.bootcss.com/docs/user-guide/configuring#specifying-globals
+    globals: &#123;
+        Nullable: true,
+    &#125;,
+    extends: [
+        // add more generic rulesets here, such as:
+        // &#39;eslint:recommended&#39;,
+        // &#39;plugin:vue/vue3-recommended&#39;,
+        // &#39;plugin:vue/recommended&#39; // Use this if you are using Vue.js 2.x.
+
+        &#39;plugin:vue/vue3-recommended&#39;,
+        // 此条内容开启会导致 全局定义的 ts 类型报  no-undef 错误，因为
+        // https://cn.eslint.org/docs/rules/
+        &#39;eslint:recommended&#39;,
+        &#39;plugin:@typescript-eslint/recommended&#39;, // typescript-eslint推荐规则,
+        &#39;prettier&#39;,
+        &#39;plugin:prettier/recommended&#39;,
+    ],
+    rules: &#123;
+        // &#39;no-undef&#39;: &#39;off&#39;,
+        // 禁止使用 var
+        &#39;no-var&#39;: &#39;error&#39;,
+        semi: &#39;off&#39;,
+        // 优先使用 interface 而不是 type
+        &#39;@typescript-eslint/consistent-type-definitions&#39;: [&#39;error&#39;, &#39;interface&#39;],
+        &#39;@typescript-eslint/no-explicit-any&#39;: &#39;off&#39;,
+        &#39;@typescript-eslint/explicit-module-boundary-types&#39;: &#39;off&#39;,
+        &#39;@typescript-eslint/ban-types&#39;: &#39;off&#39;,
+        &#39;@typescript-eslint/no-unused-vars&#39;: &#39;off&#39;,
+        &#39;vue/html-indent&#39;: [
+            &#39;error&#39;,
+            4,
+            &#123;
+                attribute: 1,
+                baseIndent: 1,
+                closeBracket: 0,
+                alignAttributesVertically: true,
+                ignores: [],
+            &#125;,
+        ],
+        // 关闭此规则 使用 prettier 的格式化规则， 感觉prettier 更加合理，
+        // 而且一起使用会有冲突
+        &#39;vue/max-attributes-per-line&#39;: [&#39;off&#39;],
+        // 强制使用驼峰命名
+        &#39;vue/component-name-in-template-casing&#39;: [
+            &#39;error&#39;,
+            &#39;PascalCase&#39;,
+            &#123;
+                registeredComponentsOnly: false,
+                ignores: [],
+            &#125;,
+        ],
+    &#125;,
+&#125;)
+</code></pre>
+<p><strong>项目下新建 .eslintignore</strong></p>
+<pre><code># eslint 忽略检查 (根据项目需要自行添加)
+node_modules
+dist
+</code></pre>
+<h2 id="2-prettier支持"><a href="#2-prettier支持" class="headerlink" title="2.prettier支持"></a>2.prettier支持</h2><pre><code># 安装 prettier
+yarn add prettier --dev
+</code></pre>
+<p>解决 eslint 和 prettier 冲突</p>
+<p>解决 ESLint 中的样式规范和 prettier 中样式规范的冲突，以 prettier 的样式规范为准，使 ESLint 中的样式规范自动失效</p>
+<pre><code># 安装插件 eslint-config-prettier
+yarn add eslint-config-prettier --dev
+</code></pre>
+<p><strong>项目下新建 .prettier.js</strong></p>
+<p>配置 prettier 格式化规则:</p>
+<pre><code>module.exports = &#123;
+  tabWidth: 2,
+  jsxSingleQuote: true,
+  jsxBracketSameLine: true,
+  printWidth: 100,
+  singleQuote: true,
+  semi: false,
+  overrides: [
+    &#123;
+      files: &#39;*.json&#39;,
+      options: &#123;
+        printWidth: 200,
+      &#125;,
+    &#125;,
+  ],
+  arrowParens: &#39;always&#39;,
+&#125;
+</code></pre>
+<p>项目下新建 .prettierignore</p>
+<pre><code># 忽略格式化文件 (根据项目需要自行添加)
+node_modules
+dist
+</code></pre>
+<p>package.json 配置:</p>
+<pre><code>&#123;
+  &quot;script&quot;: &#123;
+    &quot;lint&quot;: &quot;eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx&quot;,
+    &quot;prettier&quot;: &quot;prettier --write .&quot;
+  &#125;
+&#125;
+</code></pre>
+<p>上面配置完成后,可以运行以下<code>命令</code>测试下代码检查个<code>格式化</code>效果:</p>
+<pre><code># eslint 检查
+yarn lint
+# prettier 自动格式化
+yarn prettier
+</code></pre>
+<h1 id="六、安装路由"><a href="#六、安装路由" class="headerlink" title="六、安装路由"></a>六、安装路由</h1><pre><code># 安装路由
+yarn add vue-router@4
+</code></pre>
+<p>在 src 文件下新增 router 文件夹 =&gt; index.ts 文件,内容如下:</p>
+<pre><code class="js">import &#123; createRouter, createWebHistory, RouteRecordRaw &#125; from &#39;vue-router&#39;
+
+const routes: RouteRecordRaw[] = [
+  &#123;
+    path: &#39;/&#39;,
+    name: &#39;Login&#39;,
+    component: () =&gt; import(&#39;@/pages/login/Login.vue&#39;), // 注意这里要带上 文件后缀.vue
+  &#125;,
+]
+
+const router = createRouter(&#123;
+  history: createWebHistory(),
+  routes,
+&#125;)
+
+export default router
+</code></pre>
+<p>修改入口文件 mian.ts :</p>
+<pre><code class="js">import &#123; createApp &#125; from &#39;vue&#39;
+import App from &#39;./App.vue&#39;
+import router from &#39;./router/index&#39;
+
+const app = createApp(App)
+app.use(router)
+app.mount(&#39;#app&#39;)
+</code></pre>
+<h1 id="七、axios统一请求封装"><a href="#七、axios统一请求封装" class="headerlink" title="七、axios统一请求封装"></a>七、axios统一请求封装</h1><pre><code># 安装 axios
+yarn add axios
+# 安装 nprogress 用于请求 loading
+# 也可以根据项目需求自定义其它 loading
+yarn add nprogress
+# 类型声明，或者添加一个包含 `declare module &#39;nprogress&#39;
+yarn add @types/nprogress --dev
+</code></pre>
+<p>新增 service 文件夹，service 下新增 http.ts 文件以及 moudles 文件夹(存放各模块接口)和interface(公共ts)文件夹:</p>
+<p>http.ts : 用于axios封装**</p>
+<pre><code class="js">//http.ts
+import axios, &#123; AxiosRequestConfig &#125; from &#39;axios&#39;
+import NProgress from &#39;nprogress&#39;
+
+// 设置请求头和请求路径
+axios.defaults.baseURL = &#39;/api&#39;
+axios.defaults.timeout = 10000
+axios.defaults.headers.post[&#39;Content-Type&#39;] = &#39;application/json;charset=UTF-8&#39;
+axios.interceptors.request.use(
+  (config): AxiosRequestConfig&lt;any&gt; =&gt; &#123;
+    const token = window.sessionStorage.getItem(&#39;token&#39;)
+    if (token) &#123;
+      //@ts-ignore
+      config.headers.token = token
+    &#125;
+    return config
+  &#125;,
+  (error) =&gt; &#123;
+    return error
+  &#125;
+)
+// 响应拦截
+axios.interceptors.response.use((res) =&gt; &#123;
+  if (res.data.code === 111) &#123;
+    sessionStorage.setItem(&#39;token&#39;, &#39;&#39;)
+    // token过期操作
+  &#125;
+  return res
+&#125;)
+
+interface ResType&lt;T&gt; &#123;
+  code: number
+  data?: T
+  msg: string
+  err?: string
+&#125;
+interface Http &#123;
+  get&lt;T&gt;(url: string, params?: unknown): Promise&lt;ResType&lt;T&gt;&gt;
+  post&lt;T&gt;(url: string, params?: unknown): Promise&lt;ResType&lt;T&gt;&gt;
+  upload&lt;T&gt;(url: string, params: unknown): Promise&lt;ResType&lt;T&gt;&gt;
+  download(url: string): void
+&#125;
+
+const http: Http = &#123;
+  get(url, params) &#123;
+    return new Promise((resolve, reject) =&gt; &#123;
+      NProgress.start()
+      axios
+        .get(url, &#123; params &#125;)
+        .then((res) =&gt; &#123;
+          NProgress.done()
+          resolve(res.data)
+        &#125;)
+        .catch((err) =&gt; &#123;
+          NProgress.done()
+          reject(err.data)
+        &#125;)
+    &#125;)
+  &#125;,
+  post(url, params) &#123;
+    return new Promise((resolve, reject) =&gt; &#123;
+      NProgress.start()
+      axios
+        .post(url, JSON.stringify(params))
+        .then((res) =&gt; &#123;
+          NProgress.done()
+          resolve(res.data)
+        &#125;)
+        .catch((err) =&gt; &#123;
+          NProgress.done()
+          reject(err.data)
+        &#125;)
+    &#125;)
+  &#125;,
+  upload(url, file) &#123;
+    return new Promise((resolve, reject) =&gt; &#123;
+      NProgress.start()
+      axios
+        .post(url, file, &#123;
+          headers: &#123; &#39;Content-Type&#39;: &#39;multipart/form-data&#39; &#125;,
+        &#125;)
+        .then((res) =&gt; &#123;
+          NProgress.done()
+          resolve(res.data)
+        &#125;)
+        .catch((err) =&gt; &#123;
+          NProgress.done()
+          reject(err.data)
+        &#125;)
+    &#125;)
+  &#125;,
+  download(url) &#123;
+    const iframe = document.createElement(&#39;iframe&#39;)
+    iframe.style.display = &#39;none&#39;
+    iframe.src = url
+    iframe.onload = function () &#123;
+      document.body.removeChild(iframe)
+    &#125;
+    document.body.appendChild(iframe)
+  &#125;,
+&#125;
+export default http
+</code></pre>
+<p>例如：moudles 下新增login文件夹，用于存放登录模块的请求接口,login 文件夹下分别新增 login.ts types.ts :</p>
+<pre><code class="js">import http from &#39;@/service/http&#39;
+import * as T from &#39;./types&#39;
+
+const loginApi: T.ILoginApi = &#123;
+    login(params)&#123;
+        return http.post(&#39;/login&#39;, params)
+    &#125;
+
+&#125;
+export default loginApi
+</code></pre>
+<p>types.ts:</p>
+<pre><code class="js">export interface ILoginParams &#123;
+    userName: string
+    passWord: string | number
+&#125;
+export interface ILoginApi &#123;
+    login: (params: ILoginParams)=&gt; Promise&lt;any&gt;
+&#125;
+</code></pre>
+<h1 id="八、状态管理-pinia"><a href="#八、状态管理-pinia" class="headerlink" title="八、状态管理 pinia"></a>八、状态管理 pinia</h1><pre><code># 安装
+yarn add pinia@next
+</code></pre>
+<p>在 <code>src</code> 文件夹下新增 <code>store</code> 文件夹,接在在 store 中新增 main.ts</p>
+<p>main.ts 中增加</p>
+<pre><code class="js"># 引入
+import &#123; createPinia &#125; from &quot;pinia&quot;
+# 创建根存储库并将其传递给应用程序
+app.use(createPinia())
+</code></pre>
+<h1 id="九、添加element-plus"><a href="#九、添加element-plus" class="headerlink" title="九、添加element-plus"></a>九、添加element-plus</h1><pre><code>#安装 element-plus 
+yarn add element-plus
+</code></pre>
+<h2 id="1-element-plus按需引入"><a href="#1-element-plus按需引入" class="headerlink" title="1.element-plus按需引入"></a>1.element-plus按需引入</h2><p>需要用到两个插件unplugin-vue-components、unplugin-auto-import这两个插件。 </p>
+<pre><code>npm i unplugin-vue-components unplugin-auto-import -D
+</code></pre>
+<p>另外这里要注意的是，由于使用了 unplugin-vue-components unplugin-auto-import 这两个插件，按需加载其实是不需要 import 组件，但如果使用Api创建组件，例如elmesage,elnotification这些，可以看到不 import 的话会提示错误，如果 import 又会导致样式的丢失,需要下载一个插件</p>
+<pre><code>yarn add unplugin-element-plus -D
+#或者 
+npm i unplugin-element-plus -D 
+</code></pre>
+<p>配置vite.config.js</p>
+<pre><code class="js">import &#123; defineConfig &#125; from &quot;vite&quot;;
+import vue from &quot;@vitejs/plugin-vue&quot;;
+import path from &quot;path&quot;;
+import AutoImport from &#39;unplugin-auto-import/vite&#39;
+import Components from &#39;unplugin-vue-components/vite&#39;
+import &#123; ElementPlusResolver &#125; from &#39;unplugin-vue-components/resolvers&#39;
+import ElementPlus from &#39;unplugin-element-plus/vite&#39;
+
+const resolve = (dir: string) =&gt; path.join(__dirname, dir);
+
+export default defineConfig(&#123;
+  plugins: [
+    vue(),
+    AutoImport(&#123;
+      resolvers: [ElementPlusResolver()],
+    &#125;),
+    Components(&#123;
+      resolvers: [ElementPlusResolver()],
+    &#125;),
+    ElementPlus()
+  ],
+  //配置别名
+  resolve: &#123;
+    alias: &#123;
+      &quot;@&quot;: resolve(&quot;src&quot;),
+      comps: resolve(&quot;src/components&quot;),
+      service: resolve(&quot;src/service&quot;),
+      views: resolve(&quot;src/views&quot;),
+      route: resolve(&quot;src/route&quot;),
+    &#125;,
+  &#125;,
+ // css:&#123;
+    //preprocessorOptions:&#123;
+      //scss:&#123;
+      //  additionalData:&#39;@import &quot;@/assets/style/main.scss&quot;;&#39;
+     // &#125;
+    //&#125;
+ // &#125;,
+  //配置跨域代理
+  server: &#123;
+    // 配置前端服务地址和端口
+    //服务器主机名
+    host: &quot;127.0.0.1&quot;,
+    //端口号
+    port: 3088,
+    //设为 true 时若端口已被占用则会直接退出，而不是尝试下一个可用端口
+    strictPort: false,
+    //服务器启动时自动在浏览器中打开应用程序,当此值为字符串时，会被用作 URL 的路径名
+    open: true,
+    //自定义代理规则
+    proxy: &#123;
+      &quot;/api&quot;: &#123;
+        target: &quot;http://localhost:3000&quot;, //要代理的本地api地址，也可以换成线上测试地址
+        changeOrigin: true, //跨域
+        rewrite: (path) =&gt; path.replace(/^\/api/, &quot;&quot;),
+      &#125;,
+    &#125;,
+  &#125;,
+&#125;);
+</code></pre>
+<h2 id="2-添加element-plus图标"><a href="#2-添加element-plus图标" class="headerlink" title="2.添加element-plus图标"></a>2.添加element-plus图标</h2><pre><code># NPM
+$ npm install @element-plus/icons-vue
+# Yarn
+$ yarn add @element-plus/icons-vue
+</code></pre>
+<p>然后在main.ts中全局注册并使用</p>
+<pre><code class="js">import * as ElementPlusIconsVue from &#39;@element-plus/icons-vue&#39;
+Object.keys(ElementPlusIconsVue).forEach(key =&gt; &#123;
+    app.component(key, ElementPlusIconsVue[key as keyof typeof ElementPlusIconsVue]);
+&#125;);
+</code></pre>
+<h1 id="十、svg图标插件使用"><a href="#十、svg图标插件使用" class="headerlink" title="十、svg图标插件使用"></a>十、svg图标插件使用</h1><h2 id="1-安装svg图标插件"><a href="#1-安装svg图标插件" class="headerlink" title="1.安装svg图标插件"></a>1.安装svg图标插件</h2><pre><code>#安装插件vue-svg-icon
+npm install vue-svg-icon --save-dev
+</code></pre>
+<h2 id="2-注册全局组件svgIcon"><a href="#2-注册全局组件svgIcon" class="headerlink" title="2. 注册全局组件svgIcon"></a>2. 注册全局组件svgIcon</h2><p>在main.ts中全局注册并使用</p>
+<pre><code class="js">import &#123; createApp &#125; from &#39;vue&#39;
+import App from &#39;./App.vue&#39;
+import router from &#39;./router/index&#39;
+import &#123; createPinia &#125; from &quot;pinia&quot;
+import SvgIcon from &#39;./components/SvgIcon/index.vue&#39;
+import * as ElementPlusIconsVue from &#39;@element-plus/icons-vue&#39;
+import &quot;element-plus/dist/index.css&quot;
+//样式
+import &#39;./styles/index.scss&#39;
+
+const app = createApp(App)
+// 注册element Icons组件
+Object.keys(ElementPlusIconsVue).forEach(key =&gt; &#123;
+    app.component(key, ElementPlusIconsVue[key as keyof typeof ElementPlusIconsVue]);
+&#125;);
+app.use(router).use(createPinia()).component(&#39;svg-icon&#39;, SvgIcon).mount(&#39;#app&#39;)
+</code></pre>
+<h2 id="3-下载存放svg图标"><a href="#3-下载存放svg图标" class="headerlink" title="3.下载存放svg图标"></a>3.下载存放svg图标</h2><p>在src下新建assets=&gt;icons=&gt;svg文件夹，用来存放svg图标，所有下载的SVG图标放入其中</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20221008180639420.png" alt="image-20221008180639420" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h2 id="4-使用svg图标"><a href="#4-使用svg图标" class="headerlink" title="4. 使用svg图标"></a>4. 使用svg图标</h2><p>以bug.svg图标为例，修改scale的值调整图标的大小。</p>
+<pre><code>&lt;svgIcon name=&quot;del&quot; :scale=&quot;1&quot; /&gt;
+</code></pre>
+<h1 id="十一、untils文件夹"><a href="#十一、untils文件夹" class="headerlink" title="十一、untils文件夹"></a>十一、untils文件夹</h1><p>在根目录下新建一个untils文件夹，这个文件夹下的内容主要是导出常用的一些公共方法等等:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20221008171843967.png" alt="image-20221008171843967" loading="lazy" decoding="async" fetchpriority="low"></p>
+<p>untils=&gt;util.ts</p>
+<pre><code class="js">//常用的工具方法
+import &#123; isArray &#125; from &quot;@/utils/is&quot;;
+
+/**
+ * @description 获取localStorage
+ * @param &#123;String&#125; key Storage名称
+ * @return string
+ */
+ export function localGet(key: string) &#123;
+    const value = window.localStorage.getItem(key);
+    try &#123;
+        return JSON.parse(window.localStorage.getItem(key) as string);
+    &#125; catch (error) &#123;
+        return value;
+    &#125;
+&#125;
+
+/**
+ * @description 存储localStorage
+ * @param &#123;String&#125; key Storage名称
+ * @param &#123;Any&#125; value Storage值
+ * @return void
+ */
+export function localSet(key: string, value: any) &#123;
+    window.localStorage.setItem(key, JSON.stringify(value));
+&#125;
+
+/**
+ * @description 清除localStorage
+ * @param &#123;String&#125; key Storage名称
+ * @return void
+ */
+export function localRemove(key: string) &#123;
+    window.localStorage.removeItem(key);
+&#125;
+
+/**
+ * @description 清除所有localStorage
+ * @return void
+ */
+export function localClear() &#123;
+    window.localStorage.clear();
+&#125;
+
+/**
+ * @description 对象数组深克隆
+ * @param &#123;Object&#125; obj 源对象
+ * @return object
+ */
+export function deepCopy&lt;T&gt;(obj: any): T &#123;
+    let newObj: any;
+    try &#123;
+        newObj = obj.push ? [] : &#123;&#125;;
+    &#125; catch (error) &#123;
+        newObj = &#123;&#125;;
+    &#125;
+    for (let attr in obj) &#123;
+        if (typeof obj[attr] === &quot;object&quot;) &#123;
+            newObj[attr] = deepCopy(obj[attr]);
+        &#125; else &#123;
+            newObj[attr] = obj[attr];
+        &#125;
+    &#125;
+    return newObj;
+&#125;
+
+/**
+ * @description 判断数据类型
+ * @param &#123;Any&#125; val 需要判断类型的数据
+ * @return string
+ */
+export function isType(val: any) &#123;
+    if (val === null) return &quot;null&quot;;
+    if (typeof val !== &quot;object&quot;) return typeof val;
+    else return Object.prototype.toString.call(val).slice(8, -1).toLocaleLowerCase();
+&#125;
+
+/**
+ * @description 生成随机数
+ * @param &#123;Number&#125; min 最小值
+ * @param &#123;Number&#125; max 最大值
+ * @return number
+ */
+export function randomNum(min: number, max: number): number &#123;
+    let num = Math.floor(Math.random() * (min - max) + max);
+    return num;
+&#125;
+/**
+ * @description 递归查询当前路由所对应的路由
+ * @param &#123;Array&#125; menuList 菜单列表
+ * @param &#123;String&#125; path 当前地址
+ * @return array
+ */
+export function getTabPane&lt;T, U&gt;(menuList: any[], path: U): T &#123;
+    let result: any;
+    for (let item of menuList || []) &#123;
+        if (item.path === path) result = item;
+        const res = getTabPane(item.children, path);
+        if (res) result = res;
+    &#125;
+    return result;
+&#125;
+
+/**
+ * @description 使用递归处理路由菜单，生成一维数组
+ * @param &#123;Array&#125; menuList 所有菜单列表
+ * @param &#123;Array&#125; newArr 菜单的一维数组
+ * @return array
+ */
+export function handleRouter(routerList: Menu.MenuOptions[], newArr: string[] = []) &#123;
+    routerList.forEach((item: Menu.MenuOptions) =&gt; &#123;
+        typeof item === &quot;object&quot; &amp;&amp; item.path &amp;&amp; newArr.push(item.path);
+        item.children &amp;&amp; item.children.length &amp;&amp; handleRouter(item.children, newArr);
+    &#125;);
+    return newArr;
+&#125;
+
+/**
+ * @description 扁平化数组对象
+ * @param &#123;Array&#125; arr 数组对象
+ * @return array
+ */
+export function getFlatArr(arr: any) &#123;
+    return arr.reduce((pre: any, current: any) =&gt; &#123;
+        let flatArr = [...pre, current];
+        if (current.children) flatArr = [...flatArr, ...getFlatArr(current.children)];
+        return flatArr;
+    &#125;, []);
+&#125;
+
+/**
+ * @description 格式化表格单元格默认值
+ * @param &#123;Number&#125; row 行
+ * @param &#123;Number&#125; col 列
+ * @param &#123;String&#125; callValue 当前单元格值
+ * @return string
+ * */
+export function defaultFormat(row: number, col: number, callValue: any) &#123;
+    // 如果当前值为数组,使用 / 拼接（根据需求自定义）
+    if (isArray(callValue)) return callValue.length ? callValue.join(&quot; / &quot;) : &quot;--&quot;;
+    return callValue ?? &quot;--&quot;;
+&#125;
+
+/**
+ * @description 处理无数据情况
+ * @param &#123;String&#125; callValue 需要处理的值
+ * @return string
+ * */
+export function formatValue(callValue: any) &#123;
+    // 如果当前值为数组,使用 / 拼接（根据需求自定义）
+    if (isArray(callValue)) return callValue.length ? callValue.join(&quot; / &quot;) : &quot;--&quot;;
+    return callValue ?? &quot;--&quot;;
+&#125;
+
+/**
+ * @description 根据枚举列表查询当需要的数据（如果指定了 label 和 value 的 key值，会自动识别格式化）
+ * @param &#123;String&#125; callValue 当前单元格值
+ * @param &#123;Array&#125; enumData 枚举列表
+ * @param &#123;String&#125; type 过滤类型（目前只有 tag）
+ * @return string
+ * */
+export function filterEnum(callValue: any, enumData: any, searchProps?: &#123; [key: string]: any &#125;, type?: string): string &#123;
+    const value = searchProps?.value ?? &quot;value&quot;;
+    const label = searchProps?.label ?? &quot;label&quot;;
+    let filterData: any = &#123;&#125;;
+    if (Array.isArray(enumData)) filterData = enumData.find((item: any) =&gt; item[value] === callValue);
+    if (type == &quot;tag&quot;) return filterData?.tagType ? filterData.tagType : &quot;&quot;;
+    return filterData ? filterData[label] : &quot;--&quot;;
+&#125;
+</code></pre>
+<p>is文件夹下的index.ts  常用的判断方式，is=&gt;index.ts</p>
+<pre><code class="js">const toString = Object.prototype.toString;
+
+/**
+ * @description: 判断值是否未某个类型
+ */
+export function is(val: unknown, type: string) &#123;
+    return toString.call(val) === `[object $&#123;type&#125;]`;
+&#125;
+
+/**
+ * @description:  是否为函数
+ */
+export function isFunction&lt;T = Function&gt;(val: unknown): val is T &#123;
+    return is(val, &quot;Function&quot;);
+&#125;
+
+/**
+ * @description: 是否已定义
+ */
+export const isDef = &lt;T = unknown&gt;(val?: T): val is T =&gt; &#123;
+    return typeof val !== &quot;undefined&quot;;
+&#125;;
+
+export const isUnDef = &lt;T = unknown&gt;(val?: T): val is T =&gt; &#123;
+    return !isDef(val);
+&#125;;
+/**
+ * @description: 是否为对象
+ */
+export const isObject = (val: any): val is Record&lt;any, any&gt; =&gt; &#123;
+    return val !== null &amp;&amp; is(val, &quot;Object&quot;);
+&#125;;
+
+/**
+ * @description:  是否为时间
+ */
+export function isDate(val: unknown): val is Date &#123;
+    return is(val, &quot;Date&quot;);
+&#125;
+
+/**
+ * @description:  是否为数值
+ */
+export function isNumber(val: unknown): val is number &#123;
+    return is(val, &quot;Number&quot;);
+&#125;
+
+/**
+ * @description:  是否为AsyncFunction
+ */
+export function isAsyncFunction&lt;T = any&gt;(val: unknown): val is Promise&lt;T&gt; &#123;
+    return is(val, &quot;AsyncFunction&quot;);
+&#125;
+
+/**
+ * @description:  是否为promise
+ */
+export function isPromise&lt;T = any&gt;(val: unknown): val is Promise&lt;T&gt; &#123;
+    return is(val, &quot;Promise&quot;) &amp;&amp; isObject(val) &amp;&amp; isFunction(val.then) &amp;&amp; isFunction(val.catch);
+&#125;
+
+/**
+ * @description:  是否为字符串
+ */
+export function isString(val: unknown): val is string &#123;
+    return is(val, &quot;String&quot;);
+&#125;
+
+/**
+ * @description:  是否为boolean类型
+ */
+export function isBoolean(val: unknown): val is boolean &#123;
+    return is(val, &quot;Boolean&quot;);
+&#125;
+
+/**
+ * @description:  是否为数组
+ */
+export function isArray(val: any): val is Array&lt;any&gt; &#123;
+    return val &amp;&amp; Array.isArray(val);
+&#125;
+
+/**
+ * @description: 是否客户端
+ */
+export const isClient = () =&gt; &#123;
+    return typeof window !== &quot;undefined&quot;;
+&#125;;
+
+/**
+ * @description: 是否为浏览器
+ */
+export const isWindow = (val: any): val is Window =&gt; &#123;
+    return typeof window !== &quot;undefined&quot; &amp;&amp; is(val, &quot;Window&quot;);
+&#125;;
+
+export const isElement = (val: unknown): val is Element =&gt; &#123;
+    return isObject(val) &amp;&amp; !!val.tagName;
+&#125;;
+
+export const isServer = typeof window === &quot;undefined&quot;;
+
+// 是否为图片节点
+export function isImageDom(o: Element) &#123;
+    return o &amp;&amp; [&quot;IMAGE&quot;, &quot;IMG&quot;].includes(o.tagName);
+&#125;
+
+export function isNull(val: unknown): val is null &#123;
+    return val === null;
+&#125;
+
+export function isNullAndUnDef(val: unknown): val is null | undefined &#123;
+    return isUnDef(val) &amp;&amp; isNull(val);
+&#125;
+
+export function isNullOrUnDef(val: unknown): val is null | undefined &#123;
+    return isUnDef(val) || isNull(val);
+&#125;
+</code></pre>
+<h1 id="十二、typings-gt-global-d-ts放全局变量-命名空间"><a href="#十二、typings-gt-global-d-ts放全局变量-命名空间" class="headerlink" title="十二、typings-&gt;global.d.ts放全局变量,命名空间"></a>十二、typings-&gt;global.d.ts放全局变量,命名空间</h1><pre><code>// * Menu
+declare namespace Menu &#123;
+    interface MenuOptions &#123;
+        path: string;
+        title: string;
+        icon?: string;
+        isLink?: string;
+        close?: boolean;
+        children?: MenuOptions[];
+    &#125;
+&#125;
+
+declare type TabsOptions = Menu.MenuOptions &amp; &#123;&#125;;
+
+// * Vite
+declare type Recordable&lt;T = any&gt; = Record&lt;string, T&gt;;
+
+declare interface ViteEnv &#123;
+    VITE_API_URL: string;
+    VITE_PORT: number;
+    VITE_OPEN: boolean;
+    VITE_GLOB_APP_TITLE: string;
+    VITE_DROP_CONSOLE: boolean;
+    VITE_PROXY_URL: string;
+    VITE_BUILD_GZIP: boolean;
+    VITE_REPORT: boolean;
+&#125;
+</code></pre>
+<h1 id="十三、vue3-0使用tsx语法"><a href="#十三、vue3-0使用tsx语法" class="headerlink" title="十三、vue3.0使用tsx语法"></a>十三、vue3.0使用tsx语法</h1><p>1.下载</p>
+<pre><code>yarn add @vitejs/plugin-vue-jsx -D
+</code></pre>
+<p>2.引入</p>
+<p>在vite.config.ts中</p>
+<pre><code>import &#123; defineConfig &#125; from &#39;vite&#39;
+import vue from &#39;@vitejs/plugin-vue&#39;
+import vueJsx from &#39;@vitejs/plugin-vue-jsx&#39;;
+
+// https://vitejs.dev/config/
+export default defineConfig(&#123;
+  plugins: [vue(),vueJsx()]
+&#125;)
+</code></pre>
+<p>3.tsconfig.json 配置文件</p>
+<pre><code>    &quot;jsx&quot;: &quot;preserve&quot;,
+    &quot;jsxFactory&quot;: &quot;h&quot;,
+    &quot;jsxFragmentFactory&quot;: &quot;Fragment&quot;,
+</code></pre>
+<p><font color='#478fd2'>参考文章：</font></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7036745610954801166#heading-21">Vite2 + Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/user/3456520289517608/posts">Vue3 + Ts + ElementPlus + Vite2 从零搭建后台管理系统</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/someGenki/vue-lite-admin">禾几元老哥的github源码</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/vite/" style="color: #ff7d73">vite</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/vue3/" style="color: #03a9f4">vue3</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/pinia/" style="color: #ffa2c4">pinia</a>
+        </span>
+        
+    </div>
+    <a href="/2022/10/08/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vite%20%E6%90%AD%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/09/30/git%E5%9F%BA%E7%A1%80/">
+        <h2 class="post-title">git基础</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/git/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                git
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/9/30
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<h1 id="一、git基础"><a href="#一、git基础" class="headerlink" title="一、git基础"></a>一、git基础</h1><h2 id="重新下载git后"><a href="#重新下载git后" class="headerlink" title="重新下载git后"></a>重新下载git后</h2><p><strong>1.先配钥匙（钥匙的作用是把你电脑上面的git和github或gitab连接）</strong></p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:your_email@youremail.com">your_email@youremail.com</a>“ //注意啊孩子，双引号里面是你的邮箱(如果在公司你应该有自己的企业邮箱)。填你常用的就行。还有enter代表执行。</p>
+<p>添加公钥到 Github(gitee等) 中</p>
+<p>登录 github 账号，选中并打开 setting，选择 SSH and GPG keys，选择 New SSH key，在 Title 中填入题目，在 Key 中填入id_rsa.pub 文件中的公钥。</p>
+<p>可用如下命令验证上述配置是否成功：</p>
+<pre><code>ssh -T [git@github.com](mailto:git@github.com) 
+</code></pre>
+<p><strong>2.配置user.name   user.email</strong></p>
+<pre><code># 配置用户名 
+git config --global user.name &quot;xxx&quot;                       
+# 配置邮件
+git config --global user.email &quot;[xxx@xxx.com](mailto:xxx@xxx.com)&quot;              
+</code></pre>
+<p><strong>3.建本地仓库</strong></p>
+<p>新建一个文件夹，用vscode打开该文件夹，git init，该命令执行完后会在当前目录生成一个 .git 目录</p>
+<p><strong>4.添加远程地址（将本地仓库与远程仓库关联起来）</strong></p>
+<pre><code>git remote add origin [git@github.com](mailto:git@github.com)/你的github用户名/仓库名.git
+</code></pre>
+<p><strong>5.新建一个txt文本，里面写点东西。我的命名为read</strong></p>
+<p><strong>6.add和commit</strong></p>
+<pre><code> git add read.txt $ git commit -m &quot;这是你commit的原因，写了方便你我他&quot;
+</code></pre>
+<p><strong>7.push推送到你的github</strong></p>
+<pre><code>git push -u origin master
+</code></pre>
+<p><strong>另外注意事项：</strong></p>
+<p> 生成秘钥</p>
+<p>  在windows下查看[c盘-&gt;用户-&gt;用户名-&gt;.ssh]下是否有id_rsa、id_rsa.pub文件</p>
+<p>，如果没有需要手动生成</p>
+<p>  打开git bash，在控制台中输入以下命令： $ ssh-keygen -t rsa -C “自己邮箱”。</p>
+<hr>
+<h2 id="创建分支流程"><a href="#创建分支流程" class="headerlink" title="创建分支流程"></a>创建分支流程</h2><p><strong>1.先切换到主分支，然后创建本地新分支</strong></p>
+<pre><code>git branch  &lt;BranchName&gt;（master）
+</code></pre>
+<p><strong>2.显示所有本地分支（创建完看看本地有没有该分支）</strong></p>
+<pre><code>git branch
+</code></pre>
+<p><strong>3.切换分支(既然都创建了，肯定要用这个分支，切换到该分支)</strong></p>
+<pre><code>git checkout &lt;BranchName&gt;
+</code></pre>
+<p><strong>4.建立远程分支</strong></p>
+<pre><code>git push --set-upstream origin + 刚刚创建的分支名 
+</code></pre>
+<h2 id="删除分支流程"><a href="#删除分支流程" class="headerlink" title="删除分支流程"></a>删除分支流程</h2><p><strong>1.切换分支(先切换到其他分支上)</strong></p>
+<pre><code>git checkout  &lt;BranchName2&gt;
+</code></pre>
+<p><strong>2.删除本地分支( 需要切换到别的分支上去删除)  命令行：</strong> </p>
+<pre><code>git branch -d  &lt;BranchName&gt;
+</code></pre>
+<p><strong>3.删除远程分支（没建立远程分支就不要没必要） 命令行</strong>：</p>
+<pre><code>git push origin --delete  &lt;BranchName&gt;
+</code></pre>
+<h2 id="Git-把master的内容更新到自己分支上"><a href="#Git-把master的内容更新到自己分支上" class="headerlink" title="Git 把master的内容更新到自己分支上"></a>Git 把master的内容更新到自己分支上</h2><p><strong>1.如果分支(将此分支暂命名为feature)有修改，则先提交修改的内容，如果没有，直接跳到下一步</strong></p>
+<pre><code>git commit -m “这是你commit的原因，写了方便你我他”
+</code></pre>
+<p><strong>2.切换到master分支下</strong></p>
+<pre><code>git checkout master
+</code></pre>
+<p><strong>3.将远程的master代码pull拉取到本地</strong></p>
+<pre><code>git pull
+</code></pre>
+<p><strong>4.切换到自己分支下</strong></p>
+<pre><code>git checkout  &lt;BranchName&gt;
+</code></pre>
+<p><strong>5.合并master到自己分支</strong></p>
+<pre><code>git merge master
+</code></pre>
+<p>如果在合并的过程中，例如提示Test.java文件出现冲突了，手动修改一下这个文件，修改成自己想要内容；如果没有出现冲突，vs code上下载git history插件 ，可以对比冲突，保留自己想要的代码，没有就直接跳到7步<br><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20221018105811855.png" alt="冲突解决" loading="lazy" decoding="async" fetchpriority="low"><br>上方的Accept Current Change等四种选择按钮，根据情况选择保留Current Change或者Incoming Change;颜色提示很明显，&lt;&lt;&lt;&lt;&lt;&lt; HEAD以下绿色部分是current change,同理蓝色部分是incoming.<br>both是全部保留</p>
+<p><strong>6.添加修改的文件，将新添加的文件提交上去</strong></p>
+<pre><code>git add Test.java
+
+git commit -m “这是你commit的原因，写了方便你我他”
+</code></pre>
+<p><strong>7.将本地分支的代码push到远程仓库对应的分支上</strong></p>
+<pre><code>git push origin  
+</code></pre>
+<h1 id="测试通过后可以上线了将自己分支代码合并到master"><a href="#测试通过后可以上线了将自己分支代码合并到master" class="headerlink" title="测试通过后可以上线了将自己分支代码合并到master"></a>测试通过后可以上线了将自己分支代码合并到master</h1><p>1.需要先在，Git 把master的内容更新到自己分支上（在上面）</p>
+<p>2.切换到master主分支 git checkout master</p>
+<p>3.git pull一下</p>
+<p>4.合并到master </p>
+<pre><code>git merge （自己分支名字）
+</code></pre>
+<p>5.在vscode 源代码管理工具或者sourecetree上对比一下自己提交的代码</p>
+<p>5.git push 上传推送代码</p>
+<h2 id="git-stash的使用"><a href="#git-stash的使用" class="headerlink" title="git stash的使用"></a>git stash的使用</h2><p>应用场景：某一天你正在 feature 分支开发新需求，突然产品经理跑过来说线上有bug，必须马上修复。而此时你的功能开发到一半，于是你急忙想切到 master 分支，然后你就会看到以下报错：</p>
+<p>因为当前有文件更改了，需要提交commit保持工作区干净才能切分支</p>
+<p>使用git stash代码就被存起来了</p>
+<p>当你修复完线上问题，切回 feature 分支，想恢复代码也只需要：git stash apply</p>
+<pre><code>相关的命令
+# 保存当前未commit的代码
+git stash
+
+# 保存当前未commit的代码并添加备注
+git stash save &quot;备注的内容&quot;
+
+# 列出stash的所有记录
+git stash list
+
+# 删除stash的所有记录
+git stash clear
+
+# 应用最近一次的stash
+git stash apply
+
+# 应用最近一次的stash，随后删除该记录
+git stash pop
+
+# 删除最近的一次stash
+git stash drop
+</code></pre>
+<h2 id="git-reset-–soft的使用"><a href="#git-reset-–soft的使用" class="headerlink" title="git reset –soft的使用"></a>git reset –soft的使用</h2><p>应用场景1：有时候手滑不小心把不该提交的内容 commit 了，这时想改回来，只能再 commit 一次，又多一条“黑历史”。</p>
+<pre><code># 恢复最近一次 commit
+git reset --soft HEAD^
+</code></pre>
+<p>reset –soft 相当于后悔药，给你重新改过的机会。对于上面的场景，就可以再次修改重新提交，保持干净的 commit 记录</p>
+<h1 id="二、电脑同时配置github与公司内部使用的gitlab"><a href="#二、电脑同时配置github与公司内部使用的gitlab" class="headerlink" title="二、电脑同时配置github与公司内部使用的gitlab"></a>二、电脑同时配置github与公司内部使用的gitlab</h1><p>下载git</p>
+<p>生成对应的gitlab和github的公秘钥 ssh-keygen -t rsa -C “你的gitlab邮箱” -f ~/.ssh/id_rsa_gitlab ssh-keygen -t rsa -C “注册 github 账户的邮箱”</p>
+<p>这样你会在.ssh文件夹(.ssh在哪具体百度去)，找到四个文件</p>
+<p>这四个文件分别对应gitlab和github的公私钥，分别将gitlab和github的公钥配置到github和你公司的gitlab的ssh上</p>
+<p>在.ssh目录下创建一个config文件，写入以下内容</p>
+<pre><code>Host github.com
+HostName github.com
+User zhangyao
+IdentityFile ~/.ssh/github_rsa 
+
+Host hcgit.hengchang6.com
+HostName gitlab.com
+User zhangyao
+IdentityFile ~/.ssh/id_rsa
+</code></pre>
+<p>测试连接是否成功</p>
+<pre><code>ssh -T git@gitlab
+ssh -T git@github.com
+# Hi XXX! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+# 出现上边这句，表示链接成功
+</code></pre>
+<p><font color='#478fd2'>参考文章：</font><a target="_blank" rel="noopener" href="https://blog.csdn.net/jueji1998/article/details/103815585">电脑同时配置github与公司内部使用的gitlab</a></p>
+<h1 id="本地已有项目如何上传到github上"><a href="#本地已有项目如何上传到github上" class="headerlink" title="本地已有项目如何上传到github上"></a>本地已有项目如何上传到github上</h1><p>不和你多bb了,自己看：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44370837/article/details/121565864">本地已有项目如何上传到github上_前端学狗的博客-CSDN博客</a></p>
+<h1 id="git-冲突相关"><a href="#git-冲突相关" class="headerlink" title="git 冲突相关"></a>git 冲突相关</h1><p><strong>#预防发生冲突的方法：在每次push前git pull一下，保证本地代码都是最新的。</strong></p>
+<p><strong>#冲突解决方法：</strong></p>
+<p>第一种冲突：在Git push的时候提示冲突了。</p>
+<p>这种解决方法可以使用    git stash</p>
+<p>保存本地代码，然后拉取最新的远程分支代码</p>
+<pre><code>git fetch --all   //只是下载远程内容，不做任何合并  
+git reset --hard origin/master    //把HEAD指向刚下载的最新版本
+再使用git stash apply应用最近存储，重新push即可。
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/git/" style="color: #00a596">git</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/" style="color: #00bcd4">前端随笔</a>
+        </span>
+        
+    </div>
+    <a href="/2022/09/30/git%E5%9F%BA%E7%A1%80/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/">
+        <h2 class="post-title">前端路由随笔</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/9/29
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="一、什么是路由？"><a href="#一、什么是路由？" class="headerlink" title="一、什么是路由？"></a>一、什么是路由？</h1><p>路由的概念起源于服务端，在以前前后端不分离的时候，由后端来控制路由，当接收到客户端发来的   <code>HTTP</code> 请求，就会根据所请求的相应 <code>URL</code>，来找到相应的映射函数，然后执行该函数，并将函数的返回值发送给客户端。对于最简单的静态资源服务器，可以认为，所有 <code>URL</code> 的映射函数就是一个文件读取操作。对于动态资源，映射函数可能是一个数据库读取操作，也可能是进行一些数据的处理等等。然后根据这些读取的数据，在服务器端就使用相应的模板来对页面进行渲染后，再返回渲染完毕的页面。它的好处与缺点非常明显，如下：</p>
+<ul>
+<li><p>好处：安全性好，<code>SEO</code> 好；</p>
+</li>
+<li><p>缺点：加大服务器的压力，不利于用户体验，代码冗合不好维护；</p>
+</li>
+</ul>
+<p>也正是由于后端路由还存在着自己的不足，前端路由才有了自己的发展空间。对于前端路由来说，路由的映射函数通常是进行一些 <code>DOM</code> 的显示和隐藏操作。这样，当访问不同的路径的时候，会显示不同的页面组件。前端路由主要有以下两种实现方案：</p>
+<ul>
+<li><code>Hash</code></li>
+<li><code>History</code><h1 id="二、前端路由Hash模式"><a href="#二、前端路由Hash模式" class="headerlink" title="二、前端路由Hash模式"></a>二、前端路由Hash模式</h1></li>
+</ul>
+<p>一个URL是由很多部分组成，包括协议、域名、路径、query、hash等，早期的前端路由的实现就是基于location.hash来实现的。其实现原理也很简单，location.hash的值就是URL中#后面的内容。例如：<a target="_blank" rel="noopener" href="https://www.wdnmd.com/#666,%E5%AE%83%E7%9A%84location.hash=&#39;#666&#39;">https://www.WDNMD.com#666,它的location.hash=&#39;#666&#39;</a></p>
+<h2 id="Hash模式的特性："><a href="#Hash模式的特性：" class="headerlink" title="Hash模式的特性："></a>Hash模式的特性：</h2><ol>
+<li><p>URL中hash值只是客户端的一种状态，也就是说当向服务器端发出请求时，hash部分不会被发送。</p>
+</li>
+<li><p>hash值的改变，都会在浏览器的访问历史中增加一个记录。因此我们能通过浏览器的回退、前进按钮控制hash的切换。</p>
+</li>
+<li><p>我们可以使用hashchange事件来监听hash的变化。(a标签和对loaction.hash进行赋值等等)</p>
+<p>通过上面的了解，我们大概知道这些</p>
+<ul>
+<li><p>hash模式所有的工作都是在前端完成的，不需要后端服务的配合</p>
+</li>
+<li><p>hash模式的实现方式就是通过监听URL中hash部分的变化，从而做出对应的渲染逻辑</p>
+</li>
+<li><p>hash模式下，URL中会带有#，看起来不太美观</p>
+<p>因此Hash模式还是有些小小的不足，History API也就出现了</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="三、前端路由History-API模式"><a href="#三、前端路由History-API模式" class="headerlink" title="三、前端路由History API模式"></a>三、前端路由History API模式</h1><p>history路由模式的实现，是要归功于HTML5提供的一个history全局对象，可以将它理解为其中包含了关于我们访问网页（历史会话）的一些信息。window.history 属性指向 History 对象，它表示当前窗口的浏览历史。当发生改变时，只会改变页面的路径，不会刷新页面。 History 对象保存了当前窗口访问过的所有页面网址。通过 history.length 可以得出当前窗口一共访问过几个网址。 由于安全原因，浏览器不允许脚本读取这些地址，但是允许在地址之间导航。 浏览器工具栏的“前进”和“后退”按钮，其实就是对 History 对象进行操作。</p>
+<p>同时它还暴露了一些有用的方法，比如：</p>
+<ul>
+<li>window.history.go 可以跳转到浏览器会话历史中的指定的某一个记录页</li>
+<li>window.history.forward 指向浏览器会话历史中的下一页，跟浏览器的前进按钮相同</li>
+<li>window.history.back 返回浏览器会话历史中的上一页，跟浏览器的回退按钮功能相同</li>
+<li>window.history.pushState 可以将给定的数据压入到浏览器会话历史栈中</li>
+<li>window.history.replaceState 将当前的会话页面的url替换成指定的数据</li>
+</ul>
+<p>而history路由的实现，主要就是依靠于pushState与replaceState实现的</p>
+<p><font color='#478fd2'>参考文章：</font></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903906024095751">什么是路由？</a></p>
+<p><a target="_blank" rel="noopener" href="https://icode.best/i/13730847328933">vue路由模式及 history 模式下服务端配置</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E8%B7%AF%E7%94%B1/" style="color: #ffa2c4">路由</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%9A%8F%E7%AC%94/" style="color: #ff7d73">随笔</a>
+        </span>
+        
+    </div>
+    <a href="/2022/09/29/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E7%8E%B0/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/">
+        <h2 class="post-title">从零开始搭建博客(四)——关于我页面搭建</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                博客搭建
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/9/28
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<h1 id="关于我页面搭建"><a href="#关于我页面搭建" class="headerlink" title="关于我页面搭建"></a>关于我页面搭建</h1><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>都是开始整关于自己页面了，肯定需要把与自己相关的展示出来，例如你的github，gitee，掘金，csdn等等。当然，这里建议把Hexo和你使用的相关主题的链接也展示一下，毕竟，使用了别人开源的东西，多少要表示一下，哈哈。下面我的具体操作：</p>
+<blockquote>
+<p>在根目录下的source新建about文件夹，about=&gt;index.md,写入如下图的内容，其中type: ‘friends’ 和layout: ‘friends’是ayer主题原作者封装好的友情链接布局及操作，当然在此之前需要在themes=&gt;ayer=&gt;_config.yml的侧边栏菜单配置menu下配置   关于我: /about</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/DarknessZY/myblog@master/img/image-20220928181752870.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<p>链接相关配置也是在themes=&gt;ayer=&gt;_config.yml下配置，找到friends_link，图片地址和github链接填自己的</p>
+<pre><code># 友情链接
+friends_link:
+  DarknessZY:
+    url: https://github.com/DarknessZY
+    img: /images/github.png
+  耀耀切克闹灬:
+    url: https://juejin.cn/user/1781681116679854/columns
+    img: /images/juejin.png
+  Hexo官网:
+    url: https://hexo.io
+    img: /images/hexo.png
+  Ayer主题: #网站名称
+    #网站地址
+    url: https://github.com/Shen-Yu/hexo-theme-ayer
+    #网站图片(可忽略不写)
+    img: /images/ayer.png
+</code></pre>
+<p>然后执行hexo命令，页面上就显示出来了：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0677d7cf6a9e471986f05d8becb63497~tplv-k3u1fbpfcp-watermark.image" alt="1673512329931.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>这块不能想之前那样直接写markdown就行了，需要自己写页面了，例如我的就是：找到ayer主题下的原作者写的友情链接的封装，themes=&gt;ayer=&gt;layout=&gt;_partial=&gt;friends.ejs,当然我的页面随便画画的，自己看着舒服就行了，最下面两个img标签，放的是收款码，有钱的捧个钱场，具体代码和效果如下：</p>
+<pre><code>&lt;section class=&quot;outer&quot;&gt;
+    &lt;% if(theme.friends_link &amp;&amp; theme.friends_link.length != 0)&#123; %&gt;
+    &lt;h1 class=&quot;page-type-title&quot;&gt;关于俺！&lt;/h1&gt;
+     &lt;!-- 打赏 --&gt;
+    &lt;div&gt;
+        &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt;秋梨膏!请我杯喝茶怎么样!&lt;/p&gt; 
+    &lt;/div&gt;
+    &lt;div id=&quot;reword-out&quot;&gt;
+        &lt;div id=&quot;reward-btn&quot;&gt;
+          &lt;%= __(&#39;post.reward&#39;) %&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 介绍 --&gt;
+    &lt;div&gt;
+        &lt;div&gt;
+            &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt; 一位正在北漂的菜鸡程序员&lt;/p&gt; 
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;div&gt;
+                &lt;span style=&quot;color: red;&quot;&gt; 姓名：张耀 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;
+            &lt;/div&gt; 
+            &lt;hr/&gt;
+            &lt;div&gt;
+                &lt;span style=&quot;color: blue;&quot;&gt; QQ：2498652509&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;有志同道合的小伙伴们可以加我qq，验证消息填&#39;博客&#39;+&#39;你的姓名&#39;，我就会通过！
+            &lt;/div&gt;
+            &lt;hr/&gt;
+            &lt;div&gt;
+                &lt;span style=&quot;color:greenyellow;&quot;&gt;现居地：北京朝阳&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;  
+            &lt;/div&gt;
+            &lt;hr/&gt;
+            &lt;div&gt;
+                &lt;span style=&quot;color:orange;&quot;&gt;家乡：湖北汉川&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;小县城一个，装满了故事，我有故事，你有酒吗？
+            &lt;/div&gt;
+            &lt;hr/&gt;
+        &lt;/div&gt;  
+    &lt;/div&gt;
+    &lt;!-- 链接 --&gt;
+    &lt;div&gt;
+        &lt;p style=&quot;font-size: 25px;font-weight: bolder;color: #dee1e6;&quot;&gt; 点击进去看看吧!&lt;/p&gt; 
+    &lt;/div&gt;
+    &lt;ul id=&quot;friends_link&quot;&gt;
+        &lt;% for (var i in theme.friends_link)&#123; %&gt;
+        &lt;li class=&quot;friends_li&quot;&gt;
+            &lt;a href=&quot;&lt;%- url_for(theme.friends_link[i].url) %&gt;&quot; target=&quot;_blank&quot; class=&quot;search-title&quot;
+                &lt;% if (theme.friends_link[i].description)&#123; %&gt;title=&quot;&lt;%= theme.friends_link[i].description %&gt;&quot; &lt;% &#125; %&gt;&gt;
+                &lt;% if (theme.friends_link[i].img)&#123; %&gt;
+                &lt;img src=&quot;&lt;%- url_for(theme.friends_link[i].img) %&gt;&quot;&gt;
+                &lt;% &#125; else &#123; %&gt;
+                &lt;i class=&quot;ri-user-fill&quot;&gt;&lt;/i&gt;
+                &lt;% &#125; %&gt;
+                &lt;%= i %&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;% &#125; %&gt;
+    &lt;/ul&gt;
+    &lt;%&#125;%&gt;
+&lt;/section&gt;
+</code></pre>
+<p> 具体页面如下：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/105de2b32abf4e6cb882ace37923faa7~tplv-k3u1fbpfcp-watermark.image" alt="1673512358047.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="color: #03a9f4">博客搭建</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/hexo%E6%A1%86%E6%9E%B6/" style="color: #ffa2c4">hexo框架</a>
+        </span>
+        
+    </div>
+    <a href="/2022/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E5%9B%9B)%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%90%AD%E5%BB%BA/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/09/26/border%E5%85%BC%E5%AE%B9/">
+        <h2 class="post-title">前端兼容性问题</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端兼容性问题
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/9/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="一、CSS样式兼容"><a href="#一、CSS样式兼容" class="headerlink" title="一、CSS样式兼容"></a>一、CSS样式兼容</h1><h2 id="1-border移动端兼容"><a href="#1-border移动端兼容" class="headerlink" title="1.border移动端兼容"></a>1.border移动端兼容</h2><p>box-shadow， border等不明原因被遮挡的问题；小于1px的边框在部分机型显示不全 或 完全渲染不出来的问题，这个是在工作中UI走查，查出来的，刚开始我还不知道为什么，还是经验太浅了，哈哈！</p>
+<h3 id="方案一-transform-rotateZ-360deg"><a href="#方案一-transform-rotateZ-360deg" class="headerlink" title="方案一 transform rotateZ(360deg)"></a>方案一 transform rotateZ(360deg)</h3><p>此方法也能解决 box-shadow， border等不明原因被遮挡的问题</p>
+<pre><code>border: 0.5px solid #000;
+border-radius: 0.5px;
+
+// 解决ios边框显示一半的问题
+transform: rotateZ(360deg);
+</code></pre>
+<h3 id="方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）"><a href="#方案二-和UI沟通，尽量避免使用0-5px的边，线（推荐）" class="headerlink" title="方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）"></a>方案二 和UI沟通，尽量避免使用0.5px的边，线（推荐）</h3><p>0.5px的边线在移动端渲染还有一些未知的问题，建议尽量不要使用0.5px的边线</p>
+<pre><code>// iphone XS 把0.5px的dashed 虚线  渲染成了 border-bottom 0.5px dotted #C4C4C9
+border-bottom: 0.5px dashed #C4C4C9;
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%85%BC%E5%AE%B9/" style="color: #ffa2c4">前端兼容</a>
+        </span>
+        
+    </div>
+    <a href="/2022/09/26/border%E5%85%BC%E5%AE%B9/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/page/7/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">8</span>
+    
+    <a class="page-num" href="/page/9">
+        9
+    </a>
+    
+    
+    
+    
+    <a class="page-num" href="/page/9/">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/mytouxiang.gif" alt="avatar" />
+        </div>
+        <div class="name">耀耀切克闹</div>
+        <div class="description">
+            <p>欢迎来到耀耀切克闹的博客</p>
+<p>不是因为是主角才成功，而是成功了才成为主角</p>
+<p>想要的都拥有，得不到的都释怀</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/DarknessZY">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://juejin.cn/user/1781681116679854/columns">
+                    <i
+                        class="fa-brands fa-b fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://hexo.io">Hexo官网</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX主题</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 耀耀切克闹
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;耀耀切克闹
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/lib/stars.js"></script>
+    <script src="/js/lib/theme.js"></script>
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

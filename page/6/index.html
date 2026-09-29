@@ -1,1 +1,1944 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>耀耀切克闹</title><meta name="generator" content="hexo-theme-ayer"><link rel="shortcut icon" href="/mytouxiang.gif"><link rel="stylesheet" href="/dist/main.css"><link rel="stylesheet" href="/css/fonts/remixicon.css"><link rel="stylesheet" href="/css/custom.css"><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script><style>.swal2-styled.swal2-confirm{font-size:1.6rem}</style><link rel="alternate" href="/atom.xml" title="耀耀切克闹" type="application/atom+xml"></head><body><div id="app"><link rel="stylesheet" type="text/css" href="/css/loading.css"><div id="loader-box"><div class="loader-wrapper"><div class="loader"></div><div class="loader-text"><div>L</div><div>O</div><div>A</div><div>D</div><div>I</div><div>N</div><div>G</div><div></div><div></div><div></div></div></div><script>!function(){function e(){o||(o=!0,document.body.style.overflow="auto",t&&t.parentNode&&t.parentNode.removeChild(t))}var t=document.getElementById("loader-box"),o=!1;"complete"===document.readyState?e():(window.addEventListener("load",e),window.addEventListener("DOMContentLoaded",function(){setTimeout(e,2e3)}),setTimeout(e,1e4))}()</script></div><main class="content on"><section class="cover"><div class="cover-frame"><div class="bg-box"><img src="/images/bg.png" alt="image frame"></div><div class="cover-inner text-center text-white"><h1><a href="/">耀耀切克闹</a></h1><div id="subtitle-box"><span id="subtitle"></span></div><div></div></div></div><div class="cover-learn-more"><a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a></div></section><script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script><script>try{var typed=new Typed("#subtitle",{strings:["欢迎来到耀耀切克闹的博客","不是因为是主角才成功，而是成功了才成为主角","想要的都拥有，得不到的都释怀"],startDelay:0,typeSpeed:200,loop:!0,backSpeed:100,showCursor:!0})}catch(e){console.log(e)}</script><div id="main"><section class="outer"><article class="articles"><article id="post-博客搭建/git裸仓库并利用post-receive自动化部署hexo博客" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/06/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/git%E8%A3%B8%E4%BB%93%E5%BA%93%E5%B9%B6%E5%88%A9%E7%94%A8post-receive%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/">git裸仓库并利用post-receive自动化部署hexo博客</a></h2></header><div class="article-meta"><a href="/2023/06/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/git%E8%A3%B8%E4%BB%93%E5%BA%93%E5%B9%B6%E5%88%A9%E7%94%A8post-receive%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/" class="article-date"><time datetime="2023-06-01T01:12:00.000Z" itemprop="datePublished">2023-06-01</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" rel="tag">git自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li></ul></footer></div></article><article id="post-前端学习/Husky+eslint+ prettier规范代码" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/05/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/Husky+eslint+%20prettier%E8%A7%84%E8%8C%83%E4%BB%A3%E7%A0%81/">Husky+eslint+ prettier规范代码</a></h2></header><div class="article-meta"><a href="/2023/05/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/Husky+eslint+%20prettier%E8%A7%84%E8%8C%83%E4%BB%A3%E7%A0%81/" class="article-date"><time datetime="2023-05-25T10:12:00.000Z" itemprop="datePublished">2023-05-25</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Husky/" rel="tag">Husky</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul></footer></div></article><article id="post-前端学习/ECMAScript 6 异步编程" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/05/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/ECMAScript%206%20%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">ECMAScript 6 异步编程</a></h2></header><div class="article-meta"><a href="/2023/05/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/ECMAScript%206%20%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" class="article-date"><time datetime="2023-05-11T02:45:00.000Z" itemprop="datePublished">2023-05-11</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul></footer></div></article><article id="post-项目搭建/常用数据处理方法（例如对象清空，浮点数计算等）" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/04/20/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%EF%BC%88%E4%BE%8B%E5%A6%82%E5%AF%B9%E8%B1%A1%E6%B8%85%E7%A9%BA%EF%BC%8C%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97%E7%AD%89%EF%BC%89/">常用数据处理方法（例如对象清空，浮点数计算等）</a></h2></header><div class="article-meta"><a href="/2023/04/20/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%EF%BC%88%E4%BE%8B%E5%A6%82%E5%AF%B9%E8%B1%A1%E6%B8%85%E7%A9%BA%EF%BC%8C%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97%E7%AD%89%EF%BC%89/" class="article-date"><time datetime="2023-04-20T06:12:00.000Z" itemprop="datePublished">2023-04-20</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" rel="tag">js常用方法</a></li></ul></footer></div></article><article id="post-项目搭建/vue3常用指令封装使用" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/04/12/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vue3%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%B0%81%E8%A3%85%E4%BD%BF%E7%94%A8/">vue3常用指令封装使用</a></h2></header><div class="article-meta"><a href="/2023/04/12/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vue3%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%B0%81%E8%A3%85%E4%BD%BF%E7%94%A8/" class="article-date"><time datetime="2023-04-12T05:52:00.000Z" itemprop="datePublished">2023-04-12</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">项目搭建</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vite/" rel="tag">vite</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue3/" rel="tag">vue3</a></li></ul></footer></div></article><article id="post-前端学习/NestJS搭建项目（跟着掘金大佬的文章学习，自己试着整了个登录注册接口）" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/">NestJS搭建项目（跟着掘金大佬的文章学习，自己试着整了个登录注册接口）</a></h2></header><div class="article-meta"><a href="/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/" class="article-date"><time datetime="2023-03-15T05:30:00.000Z" itemprop="datePublished">2023-03-15</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">项目搭建</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nest/" rel="tag">Nest</a></li></ul></footer></div></article><article id="post-前端学习/在开发h5移动端项目（v3+vant3+pinia+vite）时遇到的问题总结(二)" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/03/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%9C%A8%E5%BC%80%E5%8F%91h5%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88v3+vant3+pinia+vite%EF%BC%89%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93(%E4%BA%8C)/">在开发h5移动端项目（v3+vant3+pinia+vite）时遇到的问题总结(二)</a></h2></header><div class="article-meta"><a href="/2023/03/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%9C%A8%E5%BC%80%E5%8F%91h5%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88v3+vant3+pinia+vite%EF%BC%89%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93(%E4%BA%8C)/" class="article-date"><time datetime="2023-03-01T10:12:00.000Z" itemprop="datePublished">2023-03-01</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/H5%E9%A1%B9%E7%9B%AE/" rel="tag">H5项目</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul></footer></div></article><article id="post-前端学习/常用的css函数式伪类" class="article article-type-post" itemscope="" itemprop="blogPost" data-scroll-reveal=""><div class="article-inner"><header class="article-header"><h2 itemprop="name"><a class="article-title" href="/2023/02/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%87%BD%E6%95%B0%E5%BC%8F%E4%BC%AA%E7%B1%BB/">常用的css函数式伪类</a></h2></header><div class="article-meta"><a href="/2023/02/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%87%BD%E6%95%B0%E5%BC%8F%E4%BC%AA%E7%B1%BB/" class="article-date"><time datetime="2023-02-17T08:36:00.000Z" itemprop="datePublished">2023-02-17</time></a><div class="article-category"><a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">前端随笔</a></div></div><footer class="article-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%AA%E7%B1%BB/" rel="tag">伪类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul></footer></div></article></article><nav class="page-nav"><a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">…</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/">下一页</a></nav></section></div><footer class="footer"><div class="outer"><ul><li>Copyrights © 2022-2026 <i class="ri-heart-fill heart_icon"></i> 耀耀切克闹</li></ul><ul><li></li></ul><ul></ul><ul></ul><ul></ul><ul><li></li></ul></div></footer></main><div class="float_btns"><div class="totop" id="totop"><i class="ri-arrow-up-line"></i></div><div class="todark" id="todark"><i class="ri-moon-line"></i></div></div><aside class="sidebar on"><button class="navbar-toggle"></button><nav class="navbar"><div class="logo"><a href="/"><img src="/mytouxiang.gif" alt="耀耀切克闹"></a></div><ul class="nav nav-main"><li class="nav-item"><a class="nav-item-link" href="/">主页</a></li><li class="nav-item"><a class="nav-item-link" href="/archives">归档</a></li><li class="nav-item"><a class="nav-item-link" href="/categories">分类</a></li><li class="nav-item"><a class="nav-item-link" href="/tags">标签</a></li><li class="nav-item"><a class="nav-item-link" href="/about">关于我</a></li></ul></nav><nav class="navbar navbar-bottom"><ul class="nav"><li class="nav-item"><a class="nav-item-link nav-item-search" title="搜索"><i class="ri-search-line"></i> </a><a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed"><i class="ri-rss-line"></i></a></li></ul></nav><div class="search-form-wrap"><div class="local-search local-search-plugin"><input type="search" id="local-search-input" class="local-search-input" placeholder="Search..."><div id="local-search-result" class="local-search-result"></div></div></div></aside><div id="mask"></div><div id="reward"><span class="close"><i class="ri-close-line"></i></span><p class="reward-p">我是穷比，在线乞讨！</p><div class="reward-box"><div class="reward-item"><img class="reward-img" src="/images/alipay.png"> <span class="reward-type">支付宝</span></div><div class="reward-item"><img class="reward-img" src="/images/wechat.png"> <span class="reward-type">微信</span></div></div></div><script src="/js/jquery-3.6.0.min.js"></script><script src="/js/lazyload.min.js"></script><script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script><link rel="stylesheet" href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"><script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script><script src="/dist/main.js"></script><div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div><link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css"><script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script><script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script><script>function viewer_init(){let i=document.querySelectorAll(".pswp")[0],r=document.querySelectorAll(".article-entry img:not(.reward-img)");r.forEach((t,e)=>{t.onclick=()=>{if(!document.querySelector(".left-col.show")){let o=[];r.forEach((t,e)=>{t.getAttribute("data-idx",e);var e=t.getAttribute("data-target")||t.getAttribute("src"),i=t.getAttribute("alt"),r=new Image;r.src=e,o.push({src:e,w:r.width||t.width,h:r.height||t.height,title:i})}),new PhotoSwipe(i,PhotoSwipeUI_Default,o,{index:parseInt(e)}).init()}}})}viewer_init()</script><link rel="stylesheet" href="/css/clipboard.css"><script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script><script>function wait(e,i){window.setTimeout(e,i)}!function(){var e;e="",e+='<button class="btn-copy" data-clipboard-snippet=""><i class="ri-file-copy-2-line"></i><span>COPY</span></button>',$(".highlight .code pre").before(e),$(".article pre code").before(e),(e=new ClipboardJS(".btn-copy",{target:function(e){return e.nextElementSibling}})).on("success",function(e){e=$(e.trigger);e.addClass("copied");let i=$(e.find("i")),n=(i.removeClass("ri-file-copy-2-line"),i.addClass("ri-checkbox-circle-line"),$(e.find("span")));n[0].innerText="COPIED",wait(function(){i.removeClass("ri-checkbox-circle-line"),i.addClass("ri-file-copy-2-line"),n[0].innerText="COPY"},2e3)}),e.on("error",function(e){e.clearSelection();e=$(e.trigger);e.addClass("copy-failed");let i=$(e.find("i")),n=(i.removeClass("ri-file-copy-2-line"),i.addClass("ri-time-line"),$(e.find("span")));n[0].innerText="COPY FAILED",wait(function(){i.removeClass("ri-time-line"),i.addClass("ri-file-copy-2-line"),n[0].innerText="COPY"},2e3)})}((window,document))</script><script src="/js/snow2.js"></script><script>window.mermaid&&mermaid.initialize({theme:"forest"}),document.addEventListener("DOMContentLoaded",function(){for(var e=document.getElementsByTagName("img"),r=0;r<e.length;r++)e[r].referrerPolicy="no-referrer"})</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({log:!1,pluginJsPath:"lib/",pluginModelPath:"assets/",pluginRootPath:"live2dw/",tagMode:!1})</script><script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>耀耀切克闹</title>
+    <meta name="author" content="耀耀切克闹" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/mytouxiang.gif" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<link rel="preload" as="image" href="/images/loading.gif" fetchpriority="high" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;700&family=Lexend:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" id="dark-style" href="/css/dark.css" />
+<style>
+    /* 切换按钮图标随主题显隐，不依赖 dark.css（浅色被禁用时也生效） */
+    [data-theme-toggle] .icon-light { display: none; }
+    html[data-theme="light"] [data-theme-toggle] .icon-dark { display: none; }
+    html[data-theme="light"] [data-theme-toggle] .icon-light { display: inline-block; }
+</style>
+<script>
+    // 首屏防闪：在样式生效后立即应用已保存的主题
+    (function () {
+        var t = "dark";
+        try {
+            t = localStorage.getItem("theme") || "dark";
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", t);
+        var l = document.getElementById("dark-style");
+        if (l && t === "light") l.disabled = true;
+    })();
+</script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="耀耀切克闹" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>耀耀切克闹</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="javascript:;" class="theme-toggle" data-theme-toggle title="切换明暗主题">
+            <i class="fa-solid fa-moon fa-fw icon-dark"></i>
+            <i class="fa-solid fa-sun fa-fw icon-light"></i>
+        </a>
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;耀耀切克闹</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="javascript:;" class="theme-toggle" data-theme-toggle title="切换明暗主题">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-moon fa-fw icon-dark"></i>
+                            <i class="fa-solid fa-sun fa-fw icon-light"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Theme</div>
+                    </div>
+                </a>
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/bg.png"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>耀耀切克闹</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2023/05/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/Husky+eslint+%20prettier%E8%A7%84%E8%8C%83%E4%BB%A3%E7%A0%81/">
+        <h2 class="post-title">Husky+eslint+ prettier规范代码</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/25
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+
+<h2 id="1-Git-Hooks"><a href="#1-Git-Hooks" class="headerlink" title="1.Git Hooks"></a>1.Git Hooks</h2><p>   <strong>什么是Git Hooks</strong></p>
+<p>   Git Hooks 在Git执行特定事件（如commit、push、receive等）后触发运行脚本,类似于vue的生命周期钩子，git在某些特定事件发生前或后也会有某些执行特定功能的钩子。<code>githooks 保存在 .git 文件夹中</code></p>
+<p>   对于<code>规范代码提交</code>我们主要用到的Git Hooks里的这两个钩子，也就是是在git commit执行前对git commit的提交信息做出规范。</p>
+<ul>
+<li>pre-commit 预提交钩子  触发时机：<code>git commit执行前，可以进行遍历、检测亦或是其他操作暂存区代码</code>  因此我们可以利用该钩子配合<a target="_blank" rel="noopener" href="https://github.com/okonet/lint-staged">lint-staged</a>完成对代码风格的规范</li>
+<li>commit-msg 预提交时提交消息的钩子  触发时机：<code>同样是git commit执行前，可检查提交消息</code>  因此我们可以在这个钩子执行时配合<a target="_blank" rel="noopener" href="https://commitlint.js.org/#/">commitlint</a>完成规范代码提交消息</li>
+</ul>
+<h2 id="2-Husky"><a href="#2-Husky" class="headerlink" title="2.Husky"></a>2.Husky</h2><p><strong>什么是Husky</strong></p>
+<p>就是让原生 git 钩子变得简单好操作的依赖包而已，您可以使用它来<strong>检查提交消息</strong>，<strong>运行测试</strong>，<strong>lint代码</strong>等…当您提交或推送时。<strong>Husky</strong>支持<a target="_blank" rel="noopener" href="https://git-scm.com/docs/githooks">所有 Git 钩子</a>。</p>
+<p><strong>Husky的使用</strong></p>
+<ul>
+<li><p>  首先执行安装命令 <code>npm install husky --save-dev</code></p>
+</li>
+<li><p>  然后再在项目根目录下package.json 文件的scripts配置项 添加一行代码</p>
+</li>
+</ul>
+<pre><code class="js">&quot;scripts&quot;: &#123;
+    &quot;prepare&quot;: &quot;husky install&quot;
+&#125;
+</code></pre>
+<h2 id="3-eslint-prettier"><a href="#3-eslint-prettier" class="headerlink" title="3.eslint+prettier"></a>3.eslint+prettier</h2><p><strong>eslint</strong></p>
+<ul>
+<li>执行命令 <code>yarn add eslint -D</code></li>
+<li>如果希望ESLint支持TypeScript 执行命令<code>yarn add typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin --dev</code></li>
+</ul>
+<p><strong>prettier</strong></p>
+<ul>
+<li>执行命令 <code>yarn add prettier -D</code></li>
+</ul>
+<p><strong>结合ESLint与prettier</strong></p>
+<p>单独使用ESLint需要在其配置文件中额外配置很多规则，而这些规则又大多为prettier的默认规则或者我们已经在prettier配了一份，这样难免出冲突，但插件的作者已经想到了这一点，出了一个名为<code>eslint-plugin-prettier</code>的插件。</p>
+<ul>
+<li>执行命令 <code>yarn add eslint-plugin-prettier -D</code></li>
+<li>ESLint与prettier相关文件配置看个人习惯和公司项目需求配就行了<h2 id="4-lint-staged"><a href="#4-lint-staged" class="headerlink" title="4.lint-staged"></a>4.lint-staged</h2></li>
+</ul>
+<p><strong>什么是lint-staged</strong></p>
+<p>int-staged 是一个在git暂存区上运行linters的工具</p>
+<p><strong>lint-staged的使用</strong></p>
+<ul>
+<li> 执行安装命令 <code>npm install lint-staged --save-dev</code> </li>
+<li> 然后再在项目根目录下package.json 文件的添加上相关配置并配合eslint+prettier+pre-commit可以对暂存区代码进行检测和操作</li>
+</ul>
+<pre><code class="js"> &quot;lint-staged&quot;: &#123;
+    &quot;src/**/*.&#123;js,jsx,ts,tsx,json&#125;&quot;: [
+      &quot;prettier --write&quot;,
+      &quot;eslint --fix&quot;
+    ],
+    &quot;*.vue&quot;: [
+      &quot;eslint --fix&quot;,
+      &quot;prettier --write&quot;
+    ],
+    &quot;*.&#123;scss,less,styl,html&#125;&quot;: [
+      &quot;prettier --write&quot;
+    ]
+  &#125;
+</code></pre>
+<h2 id="5-commitlint"><a href="#5-commitlint" class="headerlink" title="5.commitlint"></a>5.commitlint</h2><p><strong>什么是commitlint</strong></p>
+<p>就是对你 git commit提交的消息做一个校验的插件，主要还是配合Git Hooks的钩commit-msg一起使用的。</p>
+<p><strong>commitlint的使用</strong></p>
+<ul>
+<li>执行命令安装相关依赖 <code>yarn add @commitlint/cli @commitlint/config-conventional -D</code></li>
+<li>在根目录下新建commitlint.config.js 用来配置commitlint</li>
+</ul>
+<pre><code class="js">module.exports = &#123;
+  extends: [
+    &quot;@commitlint/config-conventional&quot;
+  ],
+  // 以下时我们自定义的规则
+  rules: &#123;
+    &#39;type-enum&#39;: [
+      2,
+      &#39;always&#39;,
+      [
+        &#39;bug&#39;, // 此项特别针对bug号，用于向测试反馈bug列表的bug修改情况
+        &#39;feat&#39;, // 新功能（feature）
+        &#39;fix&#39;, // 修补bug
+        &#39;docs&#39;, // 文档（documentation）
+        &#39;style&#39;, // 格式（不影响代码运行的变动）
+        &#39;refactor&#39;, // 重构（即不是新增功能，也不是修改bug的代码变动）
+        &#39;test&#39;, // 增加测试
+        &#39;chore&#39;, // 构建过程或辅助工具的变动
+        &#39;revert&#39;, // feat(pencil): add ‘graphiteWidth’ option (撤销之前的commit)
+        &#39;merge&#39; // 合并分支， 例如： merge（前端页面）： feature-xxxx修改线程地址
+      ]
+    ]
+  &#125;
+&#125;;
+</code></pre>
+<p><strong>注意</strong></p>
+<p>如果是用命令建的commitlint.config.js文件，<code>echo &quot;module.exports = &#123;extends: [&#39;@commitlint/config-conventional&#39;]&#125;&quot; &gt; commitlint.config.js</code>,在vs code中看看它的格式是否正确,如果不是UTF-8需要</p>
+<p>改一下格式，我就是因为这个原因卡了半天<br><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/14869db5337a4f329f83244c4c8ac708~tplv-k3u1fbpfcp-watermark.image" alt="1684205419515.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>前面把需要的依赖包和配置文件整好了（package.json里的不要忘了整），接下来就是利用脚本实现</p>
+<p><strong>注意</strong></p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5ab36c23a214a5cacb1d486a046ea43~tplv-k3u1fbpfcp-watermark.image" alt="企业微信截图_16841411722462.png" loading="lazy" decoding="async" fetchpriority="low"><br>所以下面是放在.husk文件夹下利用脚本实现：</p>
+<ul>
+<li> 因为之前一安装好husky并在package.json配置了，直接执行<code>yarn husky add .husky/pre-commit &#39;npx --no-install lint-staged &quot;$1&quot;&#39;</code>之后，会看到在根目录的<code>.husky</code>文件夹下多了一个 <code>pre-commit</code> 文件，其内容如下：</li>
+</ul>
+<pre><code class="js">#!/usr/bin/env sh
+. &quot;$(dirname -- &quot;$0&quot;)/_/husky.sh&quot;
+npx --no-install lint-staged &quot;$1&quot;
+</code></pre>
+<p>可以看到之前安装并配置的lint-staged在这个钩子中就开始发挥作用了，在提交前利用lint-staged把不规范大代码格式化</p>
+<ul>
+<li>执行<code>yarn husky add .husky/commit-msg &#39;npx --no-install commitlint --edit &quot;$1&quot;&#39;</code>之后，会看到在根目录的<code>.husky</code>文件夹下多了一个 <code>commit-msg</code> 文件，其内容如下：</li>
+</ul>
+<pre><code class="js">#!/usr/bin/env sh
+. &quot;$(dirname -- &quot;$0&quot;)/_/husky.sh&quot;
+npx --no-install commitlint --edit &quot;$1&quot;
+</code></pre>
+<p>可以看到之前安装并配置的commitlint在这个钩子中就开始发挥作用了，开始检测你的提交消息了</p>
+<h2 id="测试效果"><a href="#测试效果" class="headerlink" title="测试效果"></a>测试效果</h2><p>不规范提交</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6af8c321a8a64b61adab28439b65eed4~tplv-k3u1fbpfcp-watermark.image" alt="1684206668224.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/git/" style="color: #00a596">git</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Husky/" style="color: #00bcd4">Husky</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/Husky+eslint+%20prettier%E8%A7%84%E8%8C%83%E4%BB%A3%E7%A0%81/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/ECMAScript%206%20%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">
+        <h2 class="post-title">ECMAScript 6 异步编程</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p> 观<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/">阮一峰</a>大佬的《深入掌握 ECMAScript 6 异步编程》 ，记录的笔记,其实也看了很多其他人写的文章，但主要的笔记记录，还得是他。</p>
+</blockquote>
+<h2 id="异步编程的方式"><a href="#异步编程的方式" class="headerlink" title="异步编程的方式"></a>异步编程的方式</h2><ul>
+<li>回调函数 <strong>就是把任务的第二段单独写在一个函数里面，等到重新执行这个任务的时候，就直接调用这个函数。</strong></li>
+<li>事件监听<strong>任务的执行不取决于代码的顺序，而取决于某个事件是否发生</strong></li>
+<li>发布/订阅 <strong>存在一个”信号中心”，某个任务执行完成，就向信号中心”发布”（publish）一个信号，其他任务可以向信号中心”订阅”（subscribe）这个信号，从而知道什么时候自己可以开始执行。这就叫做<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Publish-subscribe_pattern">“发布/订阅模式”</a></strong></li>
+<li>Promises对象<strong>每一个异步任务返回一个Promise对象，该对象有一个then方法，允许指定回调函数，本质上还是利用回调函数</strong></li>
+<li>生成器函数 Generator/ yield <strong>yield表达式可以暂停函数执行，next方法用于恢复函数执行，这使得Generator函数非常适合将异步任务同步化</strong></li>
+<li>async/await 函数  <strong>async 函数是通过<code>generator 和 promise 实现的一个自动执行的语法糖</code>，当函数内部执行到一个await 语句的时候，如果语句返回一个 promise 对象，那么函数将会等待 promise 对象的状态变为 resolve 后再继续向下执行。因此可以将异步逻辑，转化为同步的顺序来书写。</strong><h2 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h2><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Coroutine">“协程”</a>（coroutine），意思是多个线程互相协作，完成异步任务。生成器函数 Generator/ yield 函数是协程在 ES6 的实现，最大特点就是可以交出函数的执行权（即暂停执行）。</li>
+</ul>
+<p>举例来说，读取文件的协程写法如下：</p>
+<pre><code>function *asnycJob() &#123;
+  // ...其他代码
+ var f = yield readFile(fileA);
+  // ...其他代码
+&#125;
+</code></pre>
+<p>上面代码的函数 asyncJob 是一个协程，它的奥妙就在其中的 yield 命令。它表示执行到此处，执行权将交给其他协程。也就是说，yield命令是异步两个阶段的分界线。</p>
+<p>协程遇到 yield 命令就暂停，等到执行权返回，再从暂停的地方继续往后执行。它的最大优点，就是代码的写法非常像同步操作，如果去除yield命令，简直一模一样。</p>
+<p>异步的关键就是把会阻塞线程函数的执行权交出去，让这个函数等待恢复执行，等待的时间内请求（或者其他异步任务）也该执行完了，这时候再来继续执行这个函数。通过上面对协程的运行方式的讲解我们很容易就能想到用协程来解决这个问题，利用<code>yield</code>挂起这个阻塞线程函数，然后继续执行后面的语句，等这个函数不再阻塞了，再回到这个函数继续执行。那么问题来了，应该什么时候继续执行这个挂起的函数呢？（配合promise，根据promise返回的异步任务状态），所以诞生了async/await 函数，也是目前在工作和项目中使用最多的方式，具体实现后面会说明。</p>
+<h2 id="Generator-函数的含义与用法"><a href="#Generator-函数的含义与用法" class="headerlink" title="Generator 函数的含义与用法"></a>Generator 函数的含义与用法</h2><p><strong>什么是 Generator 函数</strong></p>
+<p>在Javascript中，一个函数一旦开始执行，就会运行到最后或遇到return时结束，运行期间不会有其它代码能够打断它，也不能从外部再传入值到函数体内而Generator函数（生成器）的出现使得打破函数的完整运行成为了可能，其语法行为与传统函数完全不同Generator函数是ES6提供的一种异步编程解决方案，形式上也是一个普通函数，但有几个显著的特征：</p>
+<ul>
+<li> function关键字与函数名之间有一个星号 “*” （推荐紧挨着function关键字）</li>
+<li> 函数体内使用 yield 表达式，定义不同的内部状态 （可以有多个yield）</li>
+<li> 直接调用 Generator函数并不会执行，也不会返回运行结果，而是返回一个遍历器对象（Iterator Object）</li>
+<li> 依次调用遍历器对象的next方法，遍历 Generator函数内部的每一个状态</li>
+</ul>
+<p><strong>执行机制</strong></p>
+<p>调用 Generator 函数和调用普通函数一样，在函数名后面加上()即可，但是 Generator 函数不会像普通函数一样立即执行，而是返回一个指向内部状态对象的指针<a target="_blank" rel="noopener" href="https://juejin.cn/post/7038951223264804900">迭代器Iterator</a>)，所以要调用遍历器对象Iterator 的 next 方法，指针就会从函数头部或者上一次停下来的地方开始执行</p>
+<pre><code class="js">function* func()&#123; 
+    console.log(&quot;one&quot;); 
+    yield &#39;1&#39;; 
+    console.log(&quot;two&quot;);
+    yield &#39;2&#39;; 
+    console.log(&quot;three&quot;);
+    return &#39;3&#39;; 
+&#125;
+</code></pre>
+<pre><code class="js">f.next(); // one // &#123;value: &quot;1&quot;, done: false&#125; 
+f.next(); // two // &#123;value: &quot;2&quot;, done: false&#125; 
+f.next(); // three // &#123;value: &quot;3&quot;, done: true&#125; 
+f.next(); // &#123;value: undefined, done: true&#125;
+</code></pre>
+<blockquote>
+<p>第一次调用 next 方法时，从 Generator 函数的头部开始执行，先是打印了 one ,执行到 yield 就停下来，并将yield 后边表达式的值 ‘1’，作为返回对象的 value 属性值，此时函数还没有执行完， 返回对象的 done 属性值是 false。</p>
+<p>第二次调用 next 方法时，同上步 。</p>
+<p>第三次调用 next 方法时，先是打印了 three ，然后执行了函数的返回操作，并将 return 后面的表达式的值，作为返回对象的 value 属性值，此时函数已经结束，多以 done 属性值为true 。</p>
+<p>第四次调用 next 方法时， 此时函数已经执行完了，所以返回 value 属性值是 undefined ，done 属性值是 true 。如果执行第三步时，没有 return 语句的话，就直接返回 {value: undefined, done: true}。</p>
+</blockquote>
+<p>由此可以看出 <strong>yield表达式可以暂停函数执行，next方法用于恢复函数执行，这使得Generator函数非常适合将异步任务同步化</strong></p>
+<h2 id="async-await-函数的含义与用法"><a href="#async-await-函数的含义与用法" class="headerlink" title="async/await 函数的含义与用法"></a>async/await 函数的含义与用法</h2><p>async/await的本质其实就是Generator和Promise的语法糖</p>
+<p><strong>async/await的使用</strong></p>
+<pre><code class="js">function requestData(url) &#123;
+  return new Promise((resolve, reject) =&gt; &#123;
+    setTimeout(() =&gt; &#123;
+      resolve(url)
+    &#125;, 1000)
+  &#125;)
+&#125;
+
+async function foo() &#123;
+  const res1 = await requestData(&#39;aaa&#39;)
+  const res2 = await requestData(res1 + &#39;bbb&#39;)
+  const res3 = await requestData(res2 + &#39;ccc&#39;)
+  console.log(res3)
+&#125;
+
+foo()
+//3秒钟后打印aaabbbccc
+</code></pre>
+<p><strong>上面代码用 Generator 函数实现</strong></p>
+<pre><code class="js">function requestData(url) &#123;
+  return new Promise((resolve, reject) =&gt; &#123;
+    setTimeout(() =&gt; &#123;
+      resolve(url)
+    &#125;, 1000)
+  &#125;)
+&#125;
+function* generatorFoo() &#123;
+    const res1 = yield requestData(&#39;aaa&#39;)
+  const res2 = yield requestData(res1 + &#39;bbb&#39;)
+  const res3 = yield requestData(res2 + &#39;ccc&#39;)
+  console.log(res3)
+&#125;
+const generate = generatorFoo()
+generate.next().value.then(res1 =&gt; &#123;
+  generate.next(res1).value.then(res2 =&gt; &#123;
+    generate.next(res2).value.then(res3 =&gt; &#123;
+      generate.next(res3)
+    &#125;)
+  &#125;)
+&#125;)
+</code></pre>
+<p>因此如果我们把<strong>Generator 函数</strong>封装一下递归调用实现Generator 的自动迭代，是不是可以实现<strong>async/await</strong>的效果，所以说<strong>async/await的本质其实就是Generator和Promise的语法糖</strong></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/es6-generator.html">ES6 Generator 函数 | 菜鸟教程 (runoob.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7038968296518975525">async/await的本质分析 - 掘金 (juejin.cn)</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%9A%8F%E7%AC%94/" style="color: #00bcd4">随笔</a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/ECMAScript%206%20%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/04/20/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%EF%BC%88%E4%BE%8B%E5%A6%82%E5%AF%B9%E8%B1%A1%E6%B8%85%E7%A9%BA%EF%BC%8C%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97%E7%AD%89%EF%BC%89/">
+        <h2 class="post-title">常用数据处理方法（例如对象清空，浮点数计算等）</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/4/20
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="一、对象清空-resetData"><a href="#一、对象清空-resetData" class="headerlink" title="一、对象清空 resetData"></a>一、对象清空 resetData</h1><pre><code class="js">/**
+ * @description 对象清空
+ * @param &#123;object&#125; valueObj  传入的要清空的对象
+ * @return Object
+ */
+export const resetData = (valueObj: any) =&gt; &#123;
+    if (Object.prototype.toString.call(valueObj) === &#39;[object Object]&#39;) &#123;
+        const keys = Object.keys(valueObj)
+        const obj: &#123; [name: string]: string | Array&lt;any&gt; | boolean | number &#125; = &#123;&#125;
+        keys.forEach(item =&gt; &#123;
+            obj[item] =
+                Object.prototype.toString.call(valueObj[item]) === &#39;[object Array]&#39;
+                    ? []
+                    : typeof valueObj[item] === &#39;number&#39;
+                    ? 0
+                    : typeof valueObj[item] === &#39;boolean&#39;
+                    ? false
+                    : &#39;&#39;
+        &#125;)
+        Object.assign(valueObj, obj)
+    &#125; else &#123;
+        const keys = Object.keys(valueObj[0])
+        const obj: &#123; [name: string]: string | Array&lt;any&gt; | boolean | number &#125; = &#123;&#125;
+        keys.forEach(item =&gt; &#123;
+            obj[item] =
+                Object.prototype.toString.call(valueObj[item]) === &#39;[object Array]&#39;
+                    ? []
+                    : typeof valueObj[item] === &#39;number&#39;
+                    ? 0
+                    : typeof valueObj[item] === &#39;boolean&#39;
+                    ? false
+                    : &#39;&#39;
+        &#125;)
+        Object.assign(valueObj[0], obj)
+    &#125;
+&#125;
+</code></pre>
+<h1 id="二、js浮点数乘法处理"><a href="#二、js浮点数乘法处理" class="headerlink" title="二、js浮点数乘法处理"></a>二、js浮点数乘法处理</h1><pre><code class="js">/**
+ *  js浮点数乘法处理
+ * @param &#123;&#125; arg1
+ * @param &#123;*&#125; arg2
+ */
+export const accMul = (arg1: number, arg2?: number) =&gt; &#123;
+    return arg2 ? Number(Number(arg1 * 100).toFixed(arg2)) : Number(Number(arg1 * 100).toFixed(2))
+&#125;
+</code></pre>
+<h1 id="三、js浮点数除法处理"><a href="#三、js浮点数除法处理" class="headerlink" title="三、js浮点数除法处理"></a>三、js浮点数除法处理</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><pre><code class="js">/**
+ * js 浮点数除法处理
+ * @param &#123;*&#125; arg1
+ * @param &#123;*&#125; arg2
+ */
+export const accDiv = (arg1: number, arg2?: number) =&gt; &#123;
+    return arg2 ? Number(Number(arg1 / 100).toFixed(arg2)) : Number(Number(arg1 / 100).toFixed(2))
+&#125;
+</code></pre>
+<h1 id="四、数字转金额格式"><a href="#四、数字转金额格式" class="headerlink" title="四、数字转金额格式"></a>四、数字转金额格式</h1><pre><code class="js">/**
+ * 数字转金额格式
+ * @param num 要格式化的数字
+ * @param decimals 保留位数
+ */
+export const numberToMoney = (num: number | BigNumber, decimals = 2, thousandsSep = &#39;,&#39;): string =&gt; &#123;
+    if (isNaN(num as any)) &#123;
+        return &#39;&#39;
+    &#125;
+    const prec = !isFinite(+decimals) ? 0 : Math.abs(decimals) // 保留的位数一定是有限位数的正整数
+    const sep = typeof thousandsSep === &#39;undefined&#39; ? &#39;,&#39; : thousandsSep
+    const s = new BigNumber(num).toString().replace(/,/g, &#39;&#39;) // 字符串，将，变成&#39;&#39;;
+    const p = new BigNumber(s) // 解析一个字符串，并返回一个浮点数
+    const n = p.isNaN() ? 1 : p
+    const formatNum = n
+        .toFixed(prec)
+        .toString()
+        .replace(/(\d)(?=(\d&#123;3&#125;)+\.)/g, function ($0, $1) &#123;
+            return $1 + sep
+        &#125;)
+    return num ? formatNum : &#39;&#39;
+&#125;
+</code></pre>
+<h1 id="五、时间戳转日期格式"><a href="#五、时间戳转日期格式" class="headerlink" title="五、时间戳转日期格式"></a>五、时间戳转日期格式</h1><pre><code class="js">type dateFormats = &#39;y-M-d&#39; | &#39;y-M-d H:m:s&#39; | &#39;y年M月d日&#39; | &#39;y年M月d日 H时i分&#39;
+
+/**
+ * 时间戳转日期格式
+ * @param timestape
+ * @param time
+ * @returns
+ */
+export const dateFormat = (timestape: number, formats: dateFormats = &#39;y-M-d H:m:s&#39;): string =&gt; &#123;
+    if (!timestape) &#123;
+        return &#39;&#39;
+    &#125;
+    // 补零
+    const zero = (val: number): string | number =&gt; &#123;
+        return val &lt; 10 ? `0$&#123;val&#125;` : val
+    &#125;
+    const myDate = new Date(timestape)
+    const year = myDate.getFullYear()
+    const month = zero(myDate.getMonth() + 1)
+    const day = zero(myDate.getDate())
+    const hour = zero(myDate.getHours())
+    const minute = zero(myDate.getMinutes())
+    const second = zero(myDate.getSeconds())
+    // 替换 formats 中的内容
+    const replaceDate = (match: string): string =&gt; &#123;
+        return (
+            &#123;
+                y: year,
+                M: month,
+                d: day,
+                H: hour,
+                m: minute,
+                s: second
+            &#125; as any
+        )[match]
+    &#125;
+    return formats.replace(/Y|M|d|H|m|s/gi, replaceDate)
+&#125;
+</code></pre>
+<h1 id="六、数组去重"><a href="#六、数组去重" class="headerlink" title="六、数组去重"></a>六、数组去重</h1><pre><code class="js">const uniqueArr = (arr) =&gt; [...new Set(arr)];
+
+console.log(uniqueArr([&quot;1&quot;,&quot;2&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;]));
+// [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]
+</code></pre>
+<h1 id="七、获取当前h5页面的url参数"><a href="#七、获取当前h5页面的url参数" class="headerlink" title="七、获取当前h5页面的url参数"></a>七、获取当前h5页面的url参数</h1><p>一般是h5嵌套到其他如（app，小程序等），双方之前的交互时用到的，在main.ts中直接使用</p>
+<pre><code class="js">/**
+ * 获取 url 中的参数
+ * @param &#123; String &#125; url 获取参数 url
+ * @returns &#123; Object &#125; 返回 url 参数
+ */
+export const getQueryString = (url = &#39;&#39;) =&gt; &#123;
+  const baseUrl = url || window.location.href;
+  const _pa = baseUrl.substring(baseUrl.indexOf(&#39;?&#39;) + 1);
+  const _arrS = _pa.split(&#39;&amp;&#39;);
+  const _rs: any = &#123;&#125;;
+  for (let i = 0; i &lt; _arrS.length; i++) &#123;
+    const pos = _arrS[i].indexOf(&#39;=&#39;);
+    if (pos === -1) &#123;
+      continue;
+    &#125;
+    const key = _arrS[i].substring(0, pos);
+    const value = decodeURIComponent(_arrS[i].substring(pos + 1));
+    _rs[key] = value;
+  &#125;
+  return _rs;
+&#125;;
+
+//例如 当前页面为https://www.google.com.hk/search?number=666&amp;string=money
+//import &#123; getQueryString &#125; from &#39;这个方法存放的地方&#39;;
+
+const &#123;number,string&#125;: any = getQueryString();
+console.log(number,string);//666 money
+</code></pre>
+<h1 id="七、从url获取参数并转为对象"><a href="#七、从url获取参数并转为对象" class="headerlink" title="七、从url获取参数并转为对象"></a>七、从url获取参数并转为对象</h1><p>和上面不同的时需传入一个url</p>
+<pre><code class="js">const getParameters = URL =&gt; JSON.parse(`&#123;&quot;$&#123;decodeURI(URL.split(&quot;?&quot;)[1]).replace(/&quot;/g, 
+&#39;\\&quot;&#39;).replace(/&amp;/g, &#39;&quot;,&quot;&#39;).replace(/=/g, &#39;&quot;:&quot;&#39;)&#125;&quot;&#125;`)
+
+getParameters(&quot;https://www.google.com.hk/search?number=666&amp;string=money&quot;);
+// &#123;number: &#39;666&#39;, string: &#39;money&#39;&#125;
+</code></pre>
+<h1 id="八、检查对象是否为空"><a href="#八、检查对象是否为空" class="headerlink" title="八、检查对象是否为空"></a>八、检查对象是否为空</h1><p>检查对象是否为空，实际上并不那么简单，即使对象为空，每次检查对象是否等于 <code>&#123;&#125;</code> 也会返回 <code>false</code></p>
+<pre><code class="js">const isEmpty = obj =&gt; Reflect.ownKeys(obj).length === 0 &amp;&amp; obj.constructor === Object;
+isEmpty(&#123;&#125;) // true 
+isEmpty(&#123;a:&quot;not empty&quot;&#125;) //false
+</code></pre>
+<h1 id="九、文字复制到剪贴板"><a href="#九、文字复制到剪贴板" class="headerlink" title="九、文字复制到剪贴板"></a>九、文字复制到剪贴板</h1><p><code>Clipboard API</code> 它的所有操作都是异步的，返回 <code>Promise</code> 对象，不会造成页面卡顿。而且，它可以将任意内容（比如图片）放入剪贴板。</p>
+<pre><code class="js">const copyText = async (text) =&gt; await navigator.clipboard.writeText(text)
+copyText(&#39;单行代码 前端世界&#39;)
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" style="color: #ffa2c4">js常用方法</a>
+        </span>
+        
+    </div>
+    <a href="/2023/04/20/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%EF%BC%88%E4%BE%8B%E5%A6%82%E5%AF%B9%E8%B1%A1%E6%B8%85%E7%A9%BA%EF%BC%8C%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97%E7%AD%89%EF%BC%89/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/04/12/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vue3%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%B0%81%E8%A3%85%E4%BD%BF%E7%94%A8/">
+        <h2 class="post-title">vue3常用指令封装使用</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                项目搭建
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/4/12
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>因为需求可能需要频繁发送验证码，文本复制等等的，将这些封装成指令使用是最方便的，自己记个笔记，方便以后要用或者新项目搭建时的时候，c+v大法（手动狗头）</p>
+</blockquote>
+<h2 id="节流指令-v-throttle"><a href="#节流指令-v-throttle" class="headerlink" title="节流指令 v-throttle"></a>节流指令 v-throttle</h2><pre><code class="js">/*
+  需求：防止按钮在短时间内被多次点击，使用节流函数限制规定时间内只能点击一次。
+
+  思路：
+    1、第一次点击，立即调用方法并禁用按钮，等延迟结束再次激活按钮
+    2、将需要触发的方法绑定在指令上
+  
+  使用：给 Dom 加上 v-throttle 及回调函数即可
+  &lt;button v-throttle=&quot;debounceClick&quot;&gt;节流提交&lt;/button&gt;
+  因为用了el.disabled也就是dom元素的disabled的属性，没disabled属性得使用，是不生效得
+*/
+import type &#123; Directive, DirectiveBinding &#125; from &quot;vue&quot;;
+interface ElType extends HTMLElement &#123;
+    __handleClick__: () =&gt; any;
+    disabled: boolean;
+&#125;
+const throttle: Directive = &#123;
+    mounted(el: ElType, binding: DirectiveBinding) &#123;
+        if (typeof binding.value !== &quot;function&quot;) &#123;
+            throw &quot;callback must be a function&quot;;
+        &#125;
+        let timer: NodeJS.Timeout | null = null;
+        el.__handleClick__ = function () &#123;
+            if (timer) &#123;
+                clearTimeout(timer);
+            &#125;
+            if (!el.disabled) &#123;
+                el.disabled = true;
+                binding.value();
+                timer = setTimeout(() =&gt; &#123;
+                    el.disabled = false;
+                &#125;, 1000);
+            &#125;
+        &#125;;
+        el.addEventListener(&quot;click&quot;, el.__handleClick__);
+    &#125;,
+    beforeUnmount(el: ElType) &#123;
+        el.removeEventListener(&quot;click&quot;, el.__handleClick__);
+    &#125;
+&#125;;
+
+export default throttle;
+</code></pre>
+<h2 id="防抖指令-v-debounce"><a href="#防抖指令-v-debounce" class="headerlink" title="防抖指令 v-debounce"></a>防抖指令 v-debounce</h2><pre><code class="js">/**
+ * v-debounce
+ * 按钮防抖指令，可自行扩展至input
+ * 接收参数：function类型
+ */
+import type &#123; Directive, DirectiveBinding &#125; from &quot;vue&quot;;
+interface ElType extends HTMLElement &#123;
+    __handleClick__: () =&gt; any;
+&#125;
+const debounce: Directive = &#123;
+    mounted(el: ElType, binding: DirectiveBinding) &#123;
+        if (typeof binding.value !== &quot;function&quot;) &#123;
+            throw &quot;callback must be a function&quot;;
+        &#125;
+        let timer: NodeJS.Timeout | null = null;
+        el.__handleClick__ = function () &#123;
+            if (timer) &#123;
+                clearInterval(timer);
+            &#125;
+            timer = setTimeout(() =&gt; &#123;
+                binding.value();
+            &#125;, 500);
+        &#125;;
+        el.addEventListener(&quot;click&quot;, el.__handleClick__);
+    &#125;,
+    beforeUnmount(el: ElType) &#123;
+        el.removeEventListener(&quot;click&quot;, el.__handleClick__);
+    &#125;
+&#125;;
+
+export default debounce;
+</code></pre>
+<h2 id="长按指令-v-longpress"><a href="#长按指令-v-longpress" class="headerlink" title="长按指令 v-longpress"></a>长按指令 v-longpress</h2><pre><code class="js">/**
+ * v-longpress
+ * 长按指令，长按时触发事件
+ */
+import type &#123; Directive, DirectiveBinding &#125; from &quot;vue&quot;;
+
+const directive: Directive = &#123;
+    mounted(el: HTMLElement, binding: DirectiveBinding) &#123;
+        if (typeof binding.value !== &quot;function&quot;) &#123;
+            throw &quot;callback must be a function&quot;;
+        &#125;
+        // 定义变量
+        let pressTimer: any = null;
+        // 创建计时器（ 2秒后执行函数 ）
+        const start = (e: any) =&gt; &#123;
+            if (e.button) &#123;
+                if (e.type === &quot;click&quot; &amp;&amp; e.button !== 0) &#123;
+                    return;
+                &#125;
+            &#125;
+            if (pressTimer === null) &#123;
+                pressTimer = setTimeout(() =&gt; &#123;
+                    handler(e);
+                &#125;, 1000);
+            &#125;
+        &#125;;
+        // 取消计时器
+        const cancel = () =&gt; &#123;
+            if (pressTimer !== null) &#123;
+                clearTimeout(pressTimer);
+                pressTimer = null;
+            &#125;
+        &#125;;
+        // 运行函数
+        const handler = (e: MouseEvent | TouchEvent) =&gt; &#123;
+            binding.value(e);
+        &#125;;
+        // 添加事件监听器
+        el.addEventListener(&quot;mousedown&quot;, start);
+        el.addEventListener(&quot;touchstart&quot;, start);
+        // 取消计时器
+        el.addEventListener(&quot;click&quot;, cancel);
+        el.addEventListener(&quot;mouseout&quot;, cancel);
+        el.addEventListener(&quot;touchend&quot;, cancel);
+        el.addEventListener(&quot;touchcancel&quot;, cancel);
+    &#125;
+&#125;;
+
+export default directive;
+</code></pre>
+<h2 id="拖拽指令-v-draggable"><a href="#拖拽指令-v-draggable" class="headerlink" title="拖拽指令 v-draggable"></a>拖拽指令 v-draggable</h2><pre><code class="js">/*
+    需求：实现一个拖拽指令，可在父元素区域任意拖拽元素。
+
+    思路：
+        1、设置需要拖拽的元素为absolute，其父元素为relative。
+        2、鼠标按下(onmousedown)时记录目标元素当前的 left 和 top 值。
+        3、鼠标移动(onmousemove)时计算每次移动的横向距离和纵向距离的变化值，并改变元素的 left 和 top 值
+        4、鼠标松开(onmouseup)时完成一次拖拽
+
+    使用：在 Dom 上加上 v-draggable 即可
+    &lt;div class=&quot;dialog-model&quot; v-draggable&gt;&lt;/div&gt;
+*/
+import type &#123; Directive &#125; from &quot;vue&quot;;
+interface ElType extends HTMLElement &#123;
+    parentNode: any;
+&#125;
+const draggable: Directive = &#123;
+    mounted: function (el: ElType) &#123;
+        el.style.cursor = &quot;move&quot;;
+        el.style.position = &quot;absolute&quot;;
+        el.onmousedown = function (e) &#123;
+            let disX = e.pageX - el.offsetLeft;
+            let disY = e.pageY - el.offsetTop;
+            document.onmousemove = function (e) &#123;
+                let x = e.pageX - disX;
+                let y = e.pageY - disY;
+                let maxX = el.parentNode.offsetWidth - el.offsetWidth;
+                let maxY = el.parentNode.offsetHeight - el.offsetHeight;
+                if (x &lt; 0) &#123;
+                    x = 0;
+                &#125; else if (x &gt; maxX) &#123;
+                    x = maxX;
+                &#125;
+
+                if (y &lt; 0) &#123;
+                    y = 0;
+                &#125; else if (y &gt; maxY) &#123;
+                    y = maxY;
+                &#125;
+                el.style.left = x + &quot;px&quot;;
+                el.style.top = y + &quot;px&quot;;
+            &#125;;
+            document.onmouseup = function () &#123;
+                document.onmousemove = document.onmouseup = null;
+            &#125;;
+        &#125;;
+    &#125;
+&#125;;
+export default draggable;
+</code></pre>
+<h2 id="复制指令-v-copy"><a href="#复制指令-v-copy" class="headerlink" title="复制指令 v-copy"></a>复制指令 v-copy</h2><pre><code class="js">/**
+ * v-copy
+ * 复制某个值至剪贴板
+ * 接收参数：string类型/Ref&lt;string&gt;类型/Reactive&lt;string&gt;类型
+ */
+import type &#123; Directive, DirectiveBinding &#125; from &quot;vue&quot;;
+import  &#123; Toast &#125;  from &#39;vant&#39;;
+interface ElType extends HTMLElement &#123;
+    copyData: string | number;
+    __handleClick__: any;
+&#125;
+const copy: Directive = &#123;
+    mounted(el: ElType, binding: DirectiveBinding) &#123;
+        el.copyData = binding.value;
+        el.addEventListener(&quot;click&quot;, handleClick);
+    &#125;,
+    updated(el: ElType, binding: DirectiveBinding) &#123;
+        el.copyData = binding.value;
+    &#125;,
+    beforeUnmount(el: ElType) &#123;
+        el.removeEventListener(&quot;click&quot;, el.__handleClick__);
+    &#125;
+&#125;;
+
+function handleClick(this: any) &#123;
+    const input = document.createElement(&quot;input&quot;);
+    input.value = this.copyData.toLocaleString();
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand(&quot;Copy&quot;);
+    document.body.removeChild(input);
+    Toast(&#123;
+        type: &#39;success&#39;,
+        message: &#39;复制成功&#39;,
+      &#125;)
+    
+&#125;
+
+export default copy;
+</code></pre>
+<h2 id="全局注册所有自定义指令"><a href="#全局注册所有自定义指令" class="headerlink" title="全局注册所有自定义指令"></a>全局注册所有自定义指令</h2><p>directivesIndex.ts：</p>
+<pre><code class="js">import &#123; App &#125; from &quot;vue&quot;;
+import copy from &quot;./modules/copy&quot;;
+import draggable from &quot;./modules/draggable&quot;;
+import debounce from &quot;./modules/debounce&quot;;
+import throttle from &quot;./modules/throttle&quot;;
+import longpress from &quot;./modules/longpress&quot;;
+
+const directivesList: any = &#123;
+    copy,
+    draggable,
+    debounce,
+    throttle,
+    longpress
+&#125;;
+
+const directives = &#123;
+    install: function (app: App&lt;Element&gt;) &#123;
+        Object.keys(directivesList).forEach(key =&gt; &#123;
+            // 注册所有自定义指令
+            app.directive(key, directivesList[key]);
+        &#125;);
+    &#125;
+&#125;;
+
+export default directives;
+</code></pre>
+<h2 id="在mian-ts引入并使用"><a href="#在mian-ts引入并使用" class="headerlink" title="在mian.ts引入并使用"></a>在mian.ts引入并使用</h2><pre><code class="js">//引入
+import directivesIndex from &#39;directivesIndex.ts的路径&#39;
+
+//使用
+app.use(router).use(piniaStore).use(directivesIndex).mount(&#39;#app&#39;)
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/vite/" style="color: #ff7d73">vite</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/vue3/" style="color: #ffa2c4">vue3</a>
+        </span>
+        
+    </div>
+    <a href="/2023/04/12/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/vue3%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%B0%81%E8%A3%85%E4%BD%BF%E7%94%A8/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/">
+        <h2 class="post-title">NestJS搭建项目（跟着掘金大佬的文章学习，自己试着整了个登录注册接口）</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                项目搭建
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/15
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>学习NestJS，主要看了<br><a target="_blank" rel="noopener" href="https://juejin.cn/post/7032079740982788132#heading-22">学完这篇 Nest.js 实战，还没入门的来锤我！(长文预警) - 掘金 (juejin.cn)</a>，也是跟着整时做一个笔记，大佬讲已经很清晰了，不出意外真入门了，然后试着写了登录注册的接口，成功的那一刻还是挺开心的！！！</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>我是按照官网的Nest CLI创建的项目，也是官网推荐初学者使用的方式:</p>
+<p>若要使用 Nest CLI 构建项目，请运行以下命令。这将创建一个新的项目目录，并使用核心的 Nest 文件和支撑模块填充该目录，从而为项目创建一个传统的基本结构。</p>
+<pre><code class="js">$ npm i -g @nestjs/cli
+$ nest new project-name
+</code></pre>
+<p>运行完命令后：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c74eaaa078c4538849c0f7ad31fd6f0~tplv-k3u1fbpfcp-watermark.image" alt="1678264171764.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<p>这里简单说明一下这些核心文件：</p>
+<pre><code>src
+├── app.controller.spec.ts
+├── app.controller.ts
+├── app.module.ts
+├── app.service.ts
+├── main.ts
+
+
+| ------------------------ | ------------------------------------------------- |
+| `app.controller.ts`      | 单个路由的基本控制器(Controller)                            |
+| `app.controller.spec.ts` | 针对控制器的单元测试                                        |
+| `app.module.ts`          | 应用程序的根模块(Module)                                  |
+| `app.service.ts`         | 具有单一方法的基本服务(Service)                              |
+| `main.ts`                | 应用程序的入口文件，它使用核心函数 `NestFactory` 来创建 Nest 应用程序的实例。 |
+</code></pre>
+<p>具体可以去看这位大佬写的文章，非常好！我后面也是跟着这篇文章学习的</p>
+<p>怎么连接数据库，接口规范统一，swagger等我都是按下面链接的大佬的文章学习的，然后也算是入了门，才开始试试登录注册的。</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7032079740982788132#heading-22">学完这篇 Nest.js 实战，还没入门的来锤我！(长文预警) - 掘金 (juejin.cn)</a></p>
+<h2 id="登录注册"><a href="#登录注册" class="headerlink" title="登录注册"></a>登录注册</h2><h3 id="全局路由前缀"><a href="#全局路由前缀" class="headerlink" title="全局路由前缀"></a>全局路由前缀</h3><p>上面链接的大佬有提过，在main.ts</p>
+<pre><code class="js">async function bootstrap() &#123;
+  const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix(&#39;api&#39;); // 设置全局路由前缀
+  await app.listen(8080);
+&#125;
+bootstrap();
+</code></pre>
+<p>此时之前的路由，都要变更为：<a target="_blank" rel="noopener" href="http://localhost/api/xxxx">http://localhost/api/xxxx</a></p>
+<h3 id="创建-USER-模块"><a href="#创建-USER-模块" class="headerlink" title="创建 USER 模块"></a>创建 USER 模块</h3><pre><code class="js">nest g mo modules/user //创建moudle
+nest g co modules/user //创建控制器
+nest g s modules/user //创建服务
+</code></pre>
+<p><strong>注意创建顺序</strong>： 先创建<code>Module</code>, 再创建<code>Controller</code>和<code>Service</code>, 这样创建出来的文件在<code>Module</code>中自动注册，反之，后创建Module, <code>Controller</code>和<code>Service</code>,会被注册到外层的<code>app.module.ts</code></p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7277a852f1447debd184e9127a8bcea~tplv-k3u1fbpfcp-watermark.image" alt="1678265171776.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h3 id="user表实体"><a href="#user表实体" class="headerlink" title="user表实体"></a>user表实体</h3><p>新建 user.entity.ts 实体，到时候可以通过<code>TypeORM</code>将实体映射到数据库表</p>
+<pre><code class="js">// 用户实体类
+import &#123; Column, Entity, PrimaryGeneratedColumn &#125; from &#39;typeorm&#39;;
+import &#123; Exclude &#125; from &#39;class-transformer&#39;;
+
+@Entity(&#39;User&#39;)
+export class UserEntity &#123;
+  // 用户id
+  @PrimaryGeneratedColumn()
+  id: number; // 标记为主列，值自动生成
+
+  // 昵称
+  @Column(&#123;default:&#39;&#39;&#125;)
+  nickname: string;
+
+  //头像
+  @Column(&#123;default:&#39;https://i.postimg.cc/wjcFjQMD/b.png&#39;&#125;)
+  avatar: string;
+  
+  // 手机号
+  @Column(&#39;text&#39;)
+  mobile: string;
+
+  // 创建时间
+  @Column(&#123; type: &#39;timestamp&#39;, default: () =&gt; &#39;CURRENT_TIMESTAMP&#39; &#125;)
+  create_time: Date;
+
+  // 更新时间
+  @Column(&#123; type: &#39;timestamp&#39;, default: () =&gt; &#39;CURRENT_TIMESTAMP&#39; &#125;)
+  update_time: Date;
+
+  // 加密后的密码
+  @Column(&#39;text&#39;, &#123; select: false &#125;)
+  password: string;
+
+  // 加密盐
+  @Column(&#39;text&#39;, &#123; select: false &#125;)
+  salt: string;
+&#125;
+</code></pre>
+<h3 id="user-dto"><a href="#user-dto" class="headerlink" title="user.dto"></a>user.dto</h3><p><code>Nest.js</code>自带了三个开箱即用的管道：<code>ValidationPipe</code>、<code>ParseIntPipe</code>和<code>ParseUUIDPipe</code>, 其中<code>ValidationPipe</code> 配合<code>class-validator</code>就可以完美的实现我们想要的效果（对参数类型进行验证，验证失败抛出异常）。</p>
+<p>新建user.dto.ts用于校验，完善错误提示信息</p>
+<pre><code class="js">import &#123; ApiProperty &#125; from &#39;@nestjs/swagger&#39;;
+import &#123; IsNotEmpty &#125; from &#39;class-validator&#39;;
+
+export class RegisterDTO &#123;
+  @ApiProperty(&#123; description: &#39;昵称&#39; &#125;)
+  readonly nickname: string;
+
+  @ApiProperty(&#123; description: &#39;头像&#39; &#125;)
+  readonly avatar: string;
+
+  @ApiProperty(&#123; description: &#39;手机号&#39; &#125;)
+  readonly mobile: string;
+
+  @IsNotEmpty(&#123; message: &#39;密码没填&#39; &#125;)
+  @ApiProperty(&#123; description: &#39;密码&#39; &#125;)
+  readonly password: string;
+&#125;
+
+export class LoginInfoDTO &#123;
+  @IsNotEmpty(&#123; message: &#39;手机号没填&#39; &#125;)
+  @ApiProperty(&#123; description: &#39;手机号&#39; &#125;)
+  readonly mobile: string;
+
+  @IsNotEmpty(&#123; message: &#39;密码没填&#39; &#125;)
+  @ApiProperty(&#123; description: &#39;密码&#39; &#125;)
+  readonly password: string;
+&#125;
+</code></pre>
+<h3 id="user控制层"><a href="#user控制层" class="headerlink" title="user控制层"></a>user控制层</h3><p>在user.controller.ts 控制层定义接口</p>
+<pre><code class="js">import &#123; Body, Controller, Post &#125; from &#39;@nestjs/common&#39;;
+import &#123; ApiOperation &#125; from &#39;@nestjs/swagger&#39;;
+import &#123; UserService &#125; from &#39;./user.service&#39;;
+
+@Controller(&#39;user&#39;)
+export class UserController &#123;
+  constructor(private readonly userService:UserService) &#123;
+
+  &#125;
+  //注册
+  @ApiOperation(&#123; summary: &#39;注册用户&#39; &#125;)
+  @Post(&#39;register&#39;)
+  async register(@Body() createUser:any) &#123;
+     return await this.userService.register(createUser);
+   &#125;
+
+  //登录
+  @ApiOperation(&#123; summary: &#39;登录&#39; &#125;)
+  @Post(&#39;login&#39;)
+  async login(@Body() loginInfo:any) &#123;
+    return await this.userService.login(loginInfo);
+  &#125;  
+&#125;
+</code></pre>
+<h3 id="user业务层"><a href="#user业务层" class="headerlink" title="user业务层"></a>user业务层</h3><p>在user.service.ts写登录注册相关的业务逻辑</p>
+<pre><code class="js">import &#123; BadRequestException, HttpException, Injectable &#125; from &#39;@nestjs/common&#39;;
+import &#123; InjectRepository &#125; from &#39;@nestjs/typeorm&#39;;
+import &#123; Repository &#125; from &#39;typeorm&#39;;
+import &#123; encryptPassword, makeSalt &#125; from &#39;utils/cryptogram&#39;;
+import &#123; RegisterDTO , LoginInfoDTO&#125; from &#39;./user.dto&#39;;
+import &#123; UserEntity&#125; from &#39;./user.entity&#39;
+import &#123; JwtService &#125; from &#39;@nestjs/jwt&#39;;
+
+@Injectable()
+export class UserService &#123;
+  constructor(
+    @InjectRepository(UserEntity)
+    private readonly userRepository: Repository&lt;UserEntity&gt;,
+    private readonly jwtService: JwtService
+  ) &#123;&#125;
+    /**
+   * 注册
+   * @param  mobile 手机号 
+   * @param  password 密码 
+   */
+    async register(createUser:RegisterDTO):Promise&lt;any&gt;&#123;
+      const &#123;mobile,password&#125; = createUser;
+      if (!mobile) &#123;
+        throw new HttpException(&#39;入参缺少mobile&#39;, 401);
+      &#125;
+      const existUser = await this.userRepository.findOne(&#123;where: &#123;mobile&#125;&#125;);
+      if (existUser) &#123;
+        throw new HttpException(&#39;该用户已注册&#39;, 401);
+      &#125;
+      const newUser = await this.userRepository.create(createUser)
+      const salt = makeSalt(); // 制作密码盐
+      const hashPassword = encryptPassword(password, salt);  // 加密密码
+      newUser.password = hashPassword
+      newUser.salt = salt
+      // this.userRepository.create(createUser)相当于new User(createUser)只是创建了一个新的用户对象
+      // save方法才是执行插入数据
+      return await this.userRepository.save(newUser);
+    &#125;
+
+    /**
+   * 登录检验
+   * @param  mobile 手机号 
+   * @param  password 密码 
+   */
+    async checkLoginForm(loginInfo:LoginInfoDTO):Promise&lt;any&gt; &#123;
+      const &#123;mobile,password&#125; = loginInfo;
+      const user = await this.userRepository
+        .createQueryBuilder(&#39;user&#39;)
+        .addSelect(&#39;user.salt&#39;)
+        .addSelect(&#39;user.password&#39;)
+        .where(&#39;user.mobile = :mobile&#39;, &#123; mobile &#125;)
+        .getOne()
+      if (!user) &#123;
+        throw new BadRequestException(&#39;用户名不正确！&#39;);
+      &#125;
+      const currentHashPassword = encryptPassword(password, user.salt)
+      if (currentHashPassword !== user.password) &#123;
+        throw new BadRequestException(&#39;密码错误&#39;)
+      &#125;
+      return user
+    &#125;
+
+   /**
+   * 生成token
+   * @param  UserEntity 用户实体类
+   */
+  async certificate(user:UserEntity)&#123;
+    const payload = &#123; 
+      id: user.id,
+      mobile: user.mobile,
+    &#125;;
+    const token = this.jwtService.sign(payload);
+    return token
+  &#125;
+
+   /**
+   * 登录
+   */
+  async login(loginInfo:LoginInfoDTO):Promise&lt;any&gt; &#123;
+    const user = await this.checkLoginForm(loginInfo)
+    const token = await this.certificate(user)
+    return &#123;
+        token
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<blockquote>
+<p>其中需要注意jwt和user.entity的实体需要在user.module.ts中引入，然后把user.module暴露出去给app.module暴露出去给app导入，这样就建立了模块之间的关系，毕竟主模块是app.moudle</p>
+</blockquote>
+<pre><code class="js">import &#123; Module &#125; from &#39;@nestjs/common&#39;;
+import &#123; UserController &#125; from &#39;./user.controller&#39;;
+import &#123; UserService &#125; from &#39;./user.service&#39;;
+import &#123; TypeOrmModule &#125; from &#39;@nestjs/typeorm&#39;;
+import &#123; UserEntity &#125; from &#39;./user.entity&#39;;
+import &#123; JwtModule &#125; from &#39;@nestjs/jwt&#39;;
+
+@Module(&#123;
+  imports: [
+    TypeOrmModule.forFeature([UserEntity]),
+    JwtModule.register(&#123;
+      secret: &#39;dasdjanksjdasd&#39;, // 密钥
+      signOptions: &#123; expiresIn: &#39;8h&#39; &#125;, // token 过期时效
+    &#125;),
+  ],
+ 
+  controllers: [UserController],
+  providers: [UserService],
+&#125;)
+export class UserModule &#123;&#125;
+</code></pre>
+<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><h3 id="注册成功"><a href="#注册成功" class="headerlink" title="注册成功"></a>注册成功</h3><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5ebcb18765764990937b444485bd0064~tplv-k3u1fbpfcp-watermark.image" alt="1678415253600.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<h3 id="登录成功，返回token"><a href="#登录成功，返回token" class="headerlink" title="登录成功，返回token"></a>登录成功，返回token</h3><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f0c784a068a24e9e88e6d4f579306ddd~tplv-k3u1fbpfcp-watermark.image" alt="1678415198199.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Nest/" style="color: #ff7d73">Nest</a>
+        </span>
+        
+    </div>
+    <a href="/2023/03/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/NestJS%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88%E8%B7%9F%E7%9D%80%E6%8E%98%E9%87%91%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%96%87%E7%AB%A0%E5%AD%A6%E4%B9%A0%EF%BC%8C%E8%87%AA%E5%B7%B1%E8%AF%95%E7%9D%80%E6%95%B4%E4%BA%86%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%EF%BC%89/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%9C%A8%E5%BC%80%E5%8F%91h5%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88v3+vant3+pinia+vite%EF%BC%89%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93(%E4%BA%8C)/">
+        <h2 class="post-title">在开发h5移动端项目（v3+vant3+pinia+vite）时遇到的问题总结(二)</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/1
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <!-- <meta name="referrer" content="no-referrer" /> -->
+
+<h2 id="一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。"><a href="#一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。" class="headerlink" title="一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。"></a>一、h5页面嵌套在小程序中时，系统设置了深色模式，会出现背景色冲突、深色文字显示异常，深色图标显示异常等一些显示上的问题。</h2><p>因为我司的项目，当时立项时并没有考虑适配深色模式，所以导致了这种情况<br>解决方式：</p>
+<blockquote>
+<p>在相应的受深色模式影响的页面最外层div加上css  background设置为白色（因为我司项目，背景基本是白色所以这样改能行，但应该是不是通用的），当时是快上线了，发现这个问题，急着上就没去整适配，只能用这种办法。</p>
+</blockquote>
+<p>具体的适配可以看看：<br><a target="_blank" rel="noopener" href="https://juejin.cn/search?query=h5%E9%80%82%E9%85%8D%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F&type=0">h5适配深色模式 - 搜索 - 掘金 (juejin.cn)</a></p>
+<h2 id="二、前端文本复制功能的实现"><a href="#二、前端文本复制功能的实现" class="headerlink" title="二、前端文本复制功能的实现"></a>二、前端文本复制功能的实现</h2><p>安装 <code>vue-clipboard3</code></p>
+<pre><code class="js">$ npm install --save vue-clipboard3
+</code></pre>
+<p>使用 <code>vue-clipboard3</code></p>
+<pre><code class="js">&lt;button @click=&quot;copy(复制的内容)&quot;&gt;复制的内容&lt;/button&gt;
+
+
+// 导入插件
+import useClipboard from &#39;vue-clipboard3&#39;
+
+const &#123; toClipboard &#125; = useClipboard() 
+const copy = async (msg) =&gt; &#123; 
+    try &#123; 
+    // 复制 await toClipboard(msg) 
+    // 复制成功 
+    &#125; 
+    catch (e) &#123;
+    // 复制失败 
+    &#125; 
+&#125;   
+</code></pre>
+<h2 id="三、v3-vant3的图片上传"><a href="#三、v3-vant3的图片上传" class="headerlink" title="三、v3+vant3的图片上传"></a>三、v3+vant3的图片上传</h2><pre><code class="js">   &lt;van-uploader
+          :after-read=&quot;afterRead&quot;
+          :before-read=&quot;beforeRead&quot;
+          :before-delete=&quot;beforeDelete&quot;
+          v-model=&quot;cardForm.imgList&quot;
+          :max-count=&quot;3&quot;
+          preview-size=&quot;2.4rem&quot;
+          upload-text=&quot;最多3张&quot;
+        &gt;
+            &lt;template #preview-delete&gt;
+                &lt;img :src=&quot;getAssetsFile(&#39;iconDelete.png&#39;)&quot; 
+                :style=&quot;&#123; width: $px2rem(&#39;18px&#39;), height: $px2rem(&#39;18px&#39;)&#125;&quot;&gt;
+            &lt;/template&gt;
+        &lt;/van-uploader&gt; 
+</code></pre>
+<p>js部分</p>
+<pre><code class="js">//图片上传前做判校验
+  const beforeRead = (file: any) =&gt; &#123;
+    const type = [&#39;image/jpeg&#39; ,&#39;image/png&#39;,&#39;image/jpg&#39;]
+    const isImage = type.includes(file.type)
+    const isLt5M = file.size / 1024 /1024 &lt; 5
+    if(!isImage) &#123;
+      Toast(&#39;请上传 jpg,png,jpeg 格式图片!&#39;);
+    &#125; 
+    if(!isLt5M) &#123;
+      Toast(&#39;图片大小不能超过 5MB!&#39;);
+    &#125;
+    return isImage&amp;&amp;isLt5M
+  &#125;;
+  //图片删除前
+  const beforeDelete = (file:any,i:any) =&gt; &#123;
+    PicListParams.value.splice(i.index,1)
+    return true;
+  &#125;;
+  //图片上传服务器
+  const afterRead = async(file: any) =&gt; &#123;
+    console.log(file);
+    file.status = &#39;uploading&#39;;
+    file.message = &#39;上传中...&#39;;
+    const formData = new FormData();
+    formData.append(&#39;file&#39;, file.file);
+    //调用图片上传的接口
+    //成功 file.status = &#39;none&#39;;并把返回的图片push
+    //失败 file.status = &#39;fail&#39;
+  &#125;;
+</code></pre>
+<h2 id="四、vant3表单使用textarea-autosize完成表单高度的自适应时，出现滚动条"><a href="#四、vant3表单使用textarea-autosize完成表单高度的自适应时，出现滚动条" class="headerlink" title="四、vant3表单使用textarea+autosize完成表单高度的自适应时，出现滚动条"></a>四、vant3表单使用textarea+autosize完成表单高度的自适应时，出现滚动条</h2><p>解决方式：给vant3的表单的van-field__control加上 overflow-y: hidden</p>
+<pre><code class="js">      ::v-deep(.van-field__control) &#123;
+        overflow-y: hidden;
+      &#125;
+</code></pre>
+<h2 id="五、localstorage只能存字符串，存对象时需要转化成json格式，用时记得转化回来"><a href="#五、localstorage只能存字符串，存对象时需要转化成json格式，用时记得转化回来" class="headerlink" title="五、localstorage只能存字符串，存对象时需要转化成json格式，用时记得转化回来"></a>五、localstorage只能存字符串，存对象时需要转化成json格式，用时记得转化回来</h2><blockquote>
+<p>这个其实自己一直知道这个知识点，平时也嘎嘎在用，但是开发着开发着突然不知怎么脑袋抽筋了，忘转化了，导致localstorage.getItem获取的值一直没取到，第一时间还没考虑到是localstorage的原因，浪费了一些时间找问题所在，本来不想把这个当笔记记录的，但是为了让自己涨涨记性还是记下来。</p>
+</blockquote>
+<pre><code class="js">const object = reactive(&#123;
+    name:&#39;涨涨&#39;,
+    age:18,
+&#125;)
+//用localstorage存值时
+locastorage.setItem(&#39;object&#39;, JSON.stringify(object))
+
+////用localstorage取值时
+const JosnObject1 = locastorage.getItem(&#39;object&#39;)
+const Object1 = Json.parse(JosnObject1)
+</code></pre>
+<h2 id="六、小程序返回使用H5页面返回-放弃小程序自带返回按钮"><a href="#六、小程序返回使用H5页面返回-放弃小程序自带返回按钮" class="headerlink" title="六、小程序返回使用H5页面返回,放弃小程序自带返回按钮"></a>六、小程序返回使用H5页面返回,放弃小程序自带返回按钮</h2><p>最开始准备在小程序上使用自定义导航栏，但是自定义导航栏并不生效，取官网才发现：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10323754a9114124b25c6d7cc84749e2~tplv-k3u1fbpfcp-watermark.image" alt="企业微信截图_16762707878468.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+<blockquote>
+<p>既然设置不了自定义导航栏，而webview组件又自带导航，我又要放弃小程序自带返回按钮，于是另辟蹊径，webview组件自带导航栏背景颜色是白色，那我把返回按钮和文字都设置为白色，这样就看不到了，用户要点应该也不会取点一个看不到的返回按钮</p>
+</blockquote>
+<p>在小程序的page.json，对应的weiview的页面设置：</p>
+<pre><code class="js">  &#123;
+          &quot;path&quot;: &quot;webview/index&quot;,
+          &quot;style&quot;: &#123;
+            &quot;navigationBarTextStyle&quot;: &quot;white&quot;
+          &#125;
+        &#125;
+</code></pre>
+<h2 id="七、小程序嵌套h5项目时（使用的webview），从h5返回解决方式"><a href="#七、小程序嵌套h5项目时（使用的webview），从h5返回解决方式" class="headerlink" title="七、小程序嵌套h5项目时（使用的webview），从h5返回解决方式"></a>七、小程序嵌套h5项目时（使用的webview），从h5返回解决方式</h2><blockquote>
+<p> 最开始把这个逻辑分析下，不就是h5跳小程序吗？调接口跳转就行了，但去官网看了看因为使用的webview嵌套在小程序中，返回小程序提供了专门的API，调接口跳小程序真的是脱裤子放屁，多此一举（手动狗头）</p>
+</blockquote>
+<p>解决方式：<br>在项目的index.html中引入微信官方提供的js-jdk，，就可以在页面中使用和 <strong>微信相关的 API</strong></p>
+<pre><code class="js"> &lt;script type=&quot;text/javascript&quot; src=&quot;https://res.wx.qq.com/open/js/jweixin-1.3.2.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>使用：</p>
+<pre><code class="js">  wx.miniProgram.navigateBack() 
+</code></pre>
+<h2 id="八、在微信小程序中使用webview嵌套h5，跳转三方后，从三方返回到自己的h5页面时原本存在locastorage和sessionstorage里的数据全没了"><a href="#八、在微信小程序中使用webview嵌套h5，跳转三方后，从三方返回到自己的h5页面时原本存在locastorage和sessionstorage里的数据全没了" class="headerlink" title="八、在微信小程序中使用webview嵌套h5，跳转三方后，从三方返回到自己的h5页面时原本存在locastorage和sessionstorage里的数据全没了"></a>八、在微信小程序中使用webview嵌套h5，跳转三方后，从三方返回到自己的h5页面时原本存在locastorage和sessionstorage里的数据全没了</h2><p>原因分析：</p>
+<h3 id="微信小程序中的-WebView"><a href="#微信小程序中的-WebView" class="headerlink" title="微信小程序中的 WebView"></a>微信小程序中的 WebView</h3><p>小程序的主要开发语言是 <strong><code>JavaScript</code></strong> ，其中 <strong>逻辑层</strong> 和 <strong>渲染层</strong> 是分开的，分别运行在不同的线程中，而其中的渲染层就是运行在 <strong><code>WebView</code></strong> 上：</p>
+<table>
+<thead>
+<tr>
+<th>运行环境</th>
+<th>逻辑层</th>
+<th>渲染层</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iOS</td>
+<td>JavaScriptCore</td>
+<td>WKWebView</td>
+</tr>
+<tr>
+<td>安卓</td>
+<td>V8</td>
+<td>chromium 定制内核</td>
+</tr>
+<tr>
+<td>小程序开发者工具</td>
+<td>NWJS</td>
+<td>Chrome WebView</td>
+</tr>
+</tbody></table>
+<ul>
+<li>  在真机中，需要实现同一域名下不同子路径的应用实现数据交互（纯前端操作，不涉及接口），由于同域名且是基于同一个页面进行跳转的（当然只是看起来是），而且这个数据是 <strong>临时数据</strong>，因此觉得使用 <strong><code>sessionStorage</code></strong> 实现数据交互是很合适的</li>
+<li>  实际上从 <strong>A 应用</strong> 跳转到 <strong>B 应用</strong> 中却无法获取对应的数据，而这是因为 <strong>sessionStorage</strong> 是基于当前窗口的会话级的数据存储，<strong>移动端浏览器</strong> 或 <strong>微信内置浏览器</strong> 中在跳转新页面时，可能打开的是一个新的 <strong>WebView</strong>，这就相当于我们在浏览器中的一个新窗口中进行存储，因此是没办法读取在之前的窗口中存储的数据</li>
+</ul>
+<p>解决方式：<br>存了的东西没了，就想办法从三方回来时再存一遍呗。</p>
+<h2 id="九、vite获取环境变量遇到的坑"><a href="#九、vite获取环境变量遇到的坑" class="headerlink" title="九、vite获取环境变量遇到的坑"></a>九、vite获取环境变量遇到的坑</h2><blockquote>
+<p>在根目录下的.env.prod文件中定义了需要的各种变量，其中定义了NODE_ENV和VITE_APP_ENV用来获取环境变量,发现import.meta.env.NODE_ENV为undefined，于是去官网看了看，只有VITE_前缀的变量才获取的到</p>
+</blockquote>
+<pre><code class="ts">NODE_ENV = &#39;production&#39;
+VITE_APP_ENV= &#39;production&#39;
+</code></pre>
+<pre><code class="js">conlose.log(&#39;import.meta.env.VITE_APP_ENV&#39;,import.meta.env.VITE_APP_ENV)  // &#39;production&#39;
+conlose.log(&#39;import.meta.env.NODE_ENV &#39;,import.meta.env.NODE_ENV ) //undefined
+</code></pre>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6257bd202c914c5198711539059f064a~tplv-k3u1fbpfcp-watermark.image" alt="d2a09598800238e6e9cbedfe0e79596.png" loading="lazy" decoding="async" fetchpriority="low"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%9A%8F%E7%AC%94/" style="color: #00a596">随笔</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/H5%E9%A1%B9%E7%9B%AE/" style="color: #ff7d73">H5项目</a>
+        </span>
+        
+    </div>
+    <a href="/2023/03/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%9C%A8%E5%BC%80%E5%8F%91h5%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88v3+vant3+pinia+vite%EF%BC%89%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93(%E4%BA%8C)/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/02/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%87%BD%E6%95%B0%E5%BC%8F%E4%BC%AA%E7%B1%BB/">
+        <h2 class="post-title">常用的css函数式伪类</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/2/17
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p> 能用css一步解决的，尽量少用js，一些合适的 CSS 甚至能让我们少写很多 JS，之前在工作中遇到了一个问题，本来准备用js实现的，在百度娘的科普下，使用某个CSS 函数式伪类就能实现，发现比自己预想的使用js方便多了，于是我就来多多了解了解一些常用的CSS 函数式伪类，此文做个笔记！（如有雷同，纯属抄袭，手动狗头）</p>
+</blockquote>
+<h2 id="一、逻辑组合-伪类"><a href="#一、逻辑组合-伪类" class="headerlink" title="一、逻辑组合 伪类"></a>一、逻辑组合 伪类</h2><h3 id="1-：not"><a href="#1-：not" class="headerlink" title="1. ：not"></a>1. ：not</h3><blockquote>
+<p><code>:not</code> 匹配不符合一组选择器的元素。</p>
+</blockquote>
+<p>例如一个场景，每个列表项需要添加下边框线，一般最后一项是不需要的。通常我们会为每一项都设置下边框线，再单独设置最后一项的 <code>border-bottom</code> 为 0。使用 <code>:not</code> 也可以实现。</p>
+<pre><code class="css">.item&#123;
+  width: 200px;
+  height: 100px;
+  padding-bottom: 10px;
+&#125;
+.item:not(:last-child) &#123;
+  border-bottom: 1px solid #ccc;
+&#125;
+</code></pre>
+<h3 id="2-has"><a href="#2-has" class="headerlink" title="2. :has"></a>2. :has</h3><blockquote>
+<p><code>:has</code> 表示满足一定条件后，就会匹配该元素。这个据说是几十年来最激动人心的CSS发展<code>开发人员终于有了一种针对父元素的方法</code>。</p>
+</blockquote>
+<p>例如一个场景，在必填项的前面加上红色的星号</p>
+<pre><code class="css">label:has(+input:required)::before&#123;
+  content: &#39;*&#39;;
+  color: red;
+&#125;
+</code></pre>
+<p>例如:父元素里有某个子元素时改变父元素的高</p>
+<pre><code class="js">.father :has(.son) &#123;
+  height: 300px
+&#125;
+</code></pre>
+<h3 id="3-is"><a href="#3-is" class="headerlink" title="3. :is"></a>3. :is</h3><blockquote>
+<p>可以匹配一组选择器中的任意一个或多个，并把最终的选择器视为匹配到的那一个。<code>:is()</code>伪类函数<strong>大幅度缩减了选择器列表的字符数，简化了选择器列表的复杂度，降低了书写选择器列表出错的概率</strong>，注意<code>:is()</code> 不能与<code>::before</code> 和<code>::after</code> 伪元素相匹配</p>
+</blockquote>
+<pre><code class="css">.test&gt;img,.test1&gt;img,.test2&gt;img,.test3&gt;img&#123;&#125;
+</code></pre>
+<p>上面的可简化为：</p>
+<pre><code class="js"> :is(.test,.test1,.tes2,.test3)&gt;img&#123;&#125;
+</code></pre>
+<h3 id="4-empty"><a href="#4-empty" class="headerlink" title="4. :empty"></a>4. :empty</h3><blockquote>
+<p><code>:empty</code> 匹配没有子元素的元素。有时候列表的外层会包一层盒子，设置 padding 边距。当列表无数据返回时，外层盒子的 padding 会占用空间，使用 <code>:empty</code> 匹配无子元素时隐藏盒子，解决占用位置的问题。</p>
+</blockquote>
+<pre><code class="css">.wrapper&#123;
+  padding: 10px;
+&#125;
+.wrapper:emtry&#123;
+  display: none;
+&#125;
+</code></pre>
+<h2 id="二、用户行为-伪类"><a href="#二、用户行为-伪类" class="headerlink" title="二、用户行为 伪类"></a>二、用户行为 伪类</h2><h3 id="1-hover"><a href="#1-hover" class="headerlink" title="1. :hover"></a>1. :hover</h3><blockquote>
+<p><code>selector:hover</code> 表示匹配鼠标经过的selector选择器元素。**:hover不是特备适用于移动端，虽然也能触发，但消失并不敏捷，体验反而奇怪。**</p>
+</blockquote>
+<p>例如：鼠标经过元素时的样式变化，Tips提示，下拉列表和过渡动画等</p>
+<h3 id="2-active"><a href="#2-active" class="headerlink" title="2. :active"></a>2. :active</h3><blockquote>
+<p><code>selector:active</code> 表示匹配激活状态的selector选择器元素（通过鼠标主键点击或触屏触摸的过程中触发样式，结束后还原样式），支持任意html元素</p>
+</blockquote>
+<h3 id="3-focus"><a href="#3-focus" class="headerlink" title="3. :focus"></a>3. :focus</h3><blockquote>
+<p><code>selector:focus</code> 表示匹配聚焦状态的selector选择器元素。</p>
+</blockquote>
+<p>例如：表单聚焦改变样式</p>
+<h3 id="4-focus-within"><a href="#4-focus-within" class="headerlink" title="4. :focus-within"></a>4. :focus-within</h3><blockquote>
+<p><code>selector:focus-within</code> 表示当前selector选择器元素或者其子元素聚焦时都会匹配（而focus只会匹配对应元素本身）</p>
+</blockquote>
+<p>例如：form表单中任一表单元素聚集时让所有表单元素前面文字高亮</p>
+<pre><code class="css">form:focus-within label&#123; color:darkblue; text-shadow: 0 0 1px; &#125;
+</code></pre>
+<h2 id="三、树结构伪类-伪类"><a href="#三、树结构伪类-伪类" class="headerlink" title="三、树结构伪类 伪类"></a>三、树结构伪类 伪类</h2><h3 id="1-root"><a href="#1-root" class="headerlink" title="1. :root"></a>1. :root</h3><blockquote>
+<p>该伪类匹配的就是html根元素标签。由于现如今浏览器对CSS变量的支持，对于类似整站颜色，布局尺寸这样的变量，业界约定俗成<code>变量由:root伪类负责，而html选择器负责样式</code>。</p>
+</blockquote>
+<h3 id="2-first-child和-last-child"><a href="#2-first-child和-last-child" class="headerlink" title="2.:first-child和:last-child"></a>2.:first-child和:last-child</h3><blockquote>
+<p><code>selector:first-child</code> 表示匹配作为其父元素的第一个子元素的selector元素</p>
+</blockquote>
+<blockquote>
+<p><code>selector:last-child</code> 表示匹配作为其父元素的最后一个子元素的selector元素</p>
+</blockquote>
+<p>对列表元素的第一个/最后一个子元素的通用样式的重置。例如：最后一个子元素和第一个元素不要底部边框。</p>
+<pre><code class="js">li:first-child&#123; border-bottom:none &#125;
+li:last-child&#123; border-bottom:none &#125;
+</code></pre>
+<h3 id="3-nth-child-和nth-last-child"><a href="#3-nth-child-和nth-last-child" class="headerlink" title="3. :nth-child()和nth-last-child()"></a>3. :nth-child()和nth-last-child()</h3><blockquote>
+<p><code>selector:nth-child(n)</code> 表示匹配第n个子元素的selector元素</p>
+</blockquote>
+<blockquote>
+<p><code>selector:nth-last-child(n)</code> 表示匹配从后往前数的第n个子元素的selector元素</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><p>  <code>selector:nth-child(odd或even)</code>表示匹配作为其父元素的第奇数/偶数个子元素的selector元素</p>
+</li>
+<li><p><code>selector:nth-child(An+B)</code>表示匹配符合对应规则的子元素。</p>
+<p>  其中A，B，n均为不为负的整数，但A前面可以添加负号。</p>
+</li>
+</ul>
+</blockquote>
+<p>示例：</p>
+<pre><code> nth-child(5n)匹配第5，10，15...个子元素
+ 
+ nth-child(3n+4)匹配第4，7，10...个子元素
+ 
+ nth-child(-n+3)匹配前3个子元素
+ 
+ nth-last-child(-n+3)匹配最后3个子元素
+</code></pre>
+<h3 id="4-first-of-type和-last-of-type"><a href="#4-first-of-type和-last-of-type" class="headerlink" title="4. :first-of-type和:last-of-type"></a>4. :first-of-type和:last-of-type</h3><blockquote>
+<p><code>selector:first-of-type</code> 表示匹配与selector元素标签类型一致的第一个子元素</p>
+</blockquote>
+<blockquote>
+<p><code>selector:last-of-type</code> 表示匹配与selector元素标签类型一致的最后一个子元素</p>
+</blockquote>
+<h3 id="5-nth-of-type-和nth-last-of-type"><a href="#5-nth-of-type-和nth-last-of-type" class="headerlink" title="5. :nth-of-type()和nth-last-of-type()"></a>5. :nth-of-type()和nth-last-of-type()</h3><blockquote>
+<p><code>selector:nth-of-type(n)</code> 表示匹配与selector元素标签类型一致的子元素集合里第n个子元素</p>
+</blockquote>
+<blockquote>
+<p><code>selector:nth-last-of-type(n)</code> 表示与selector元素标签类型一致的子元素集合里的从后往前数的第n个子元素</p>
+</blockquote>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6943213394694504461#heading-25">CSS常用伪类选择器详解 - 掘金 (juejin.cn)</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E9%9A%8F%E7%AC%94/" style="color: #ffa2c4">随笔</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E4%BC%AA%E7%B1%BB/" style="color: #00bcd4">伪类</a>
+        </span>
+        
+    </div>
+    <a href="/2023/02/17/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%87%BD%E6%95%B0%E5%BC%8F%E4%BC%AA%E7%B1%BB/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/02/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%E4%B8%80%E4%B8%8B/">
+        <h2 class="post-title">js常用方法</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端随笔
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/2/10
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="一、对象和字符串常用的方法"><a href="#一、对象和字符串常用的方法" class="headerlink" title="一、对象和字符串常用的方法"></a>一、对象和字符串常用的方法</h2><h3 id="字符串常用的方法"><a href="#字符串常用的方法" class="headerlink" title="字符串常用的方法"></a>字符串常用的方法</h3><p>1.indexOf()： 检索字符串，返回的是字符在字符串的下标</p>
+<p>2.concat()：连接字符串</p>
+<p>3.match()：在字符串内检索指定的值或找到一个或多个正则表达式的匹配，返回的是值而不是值的位置。</p>
+<p>4.replace()：替换匹配的字符串</p>
+<p>5.search()：检索与字符串匹配的子串，返回的是第一个字符所在的位置</p>
+<p>6.split()：把字符分割成数组</p>
+<p>7.substr()：从起始索引号提取字符串中指定书目的字符</p>
+<h3 id="对象常用的方法"><a href="#对象常用的方法" class="headerlink" title="对象常用的方法"></a>对象常用的方法</h3><p>1.Object.assign()</p>
+<p>Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象分配到目标对象。它将返回目标对象。常用来合并对象。</p>
+<p>assign其实是浅拷贝而不是深拷贝，如果目标对象中的属性具有相同的键，则属性将被源对象中的属性覆盖。</p>
+<pre><code>const obj1 = &#123; a: 1, b: 2 &#125;
+const obj2 = &#123; b: 4, c: 5 &#125;
+const obj3 = Object.assign(obj1, obj2)
+const obj4 = Object.assign(&#123;&#125;, obj1) // 克隆了obj1对象
+</code></pre>
+<p>2.Object.keys() 对象的下标</p>
+<p>3.Object.values() 对象的值</p>
+<p>3.is方法和（===）功能基本类似，用于判断两个值是否绝对相等。</p>
+<pre><code>Object.is(1,1);//true
+Object.is(1,true);//false
+Object.is([],[]);//false
+Object.is(+0,-0);//false
+Object.is(NaN,NaN);//true
+</code></pre>
+<h2 id="二、javascript高阶函数"><a href="#二、javascript高阶函数" class="headerlink" title="二、javascript高阶函数"></a>二、javascript高阶函数</h2><h3 id="1-map"><a href="#1-map" class="headerlink" title="1.map()"></a>1.map()</h3><p>定义：map()方法定义在JavaScript的Array中，它返回一个新的数组，数组中的元素为原始数组调用函数处理后的值。</p>
+<p>注意：map()不会对空数组进行检测，map()不会改变原始数组</p>
+<p>语法：array.map(function(currentValue, index, arr), thisIndex)</p>
+<p>参数说明：</p>
+<p>currentValue：必须。当前元素的的值。 index：可选。当前元素的索引。 arr：可选。当前元素属于的数组对象。</p>
+<p>thisIndex：可选。对象作为该执行回调时使用，传递给函数，用作”this”的值。</p>
+<h3 id="2-reduce"><a href="#2-reduce" class="headerlink" title="2.reduce"></a>2.reduce</h3><p>定义：reduce() 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值</p>
+<p>注意: reduce() 对于空数组是不会执行回调函数的和map一样。</p>
+<p>语法：array.reduce(function(total, currentValue, currentIndex, arr), initialValue)</p>
+<p>参数说明：</p>
+<p>total 必需。初始值, 或者计算结束后的返回值。 currentValue 必需。当前元素 currentIndex 可选。当前元素的索引 arr 可选。当前元素所属的数组对象。</p>
+<pre><code>totalAge = users.reduce((total, user) =&gt; user.age + total, 0);
+console.log(totalAge);
+</code></pre>
+<h3 id="3-filter"><a href="#3-filter" class="headerlink" title="3.filter"></a>3.filter</h3><p>定义：filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。</p>
+<p>注意： filter() 不会对空数组进行检测。</p>
+<p>注意： filter() 不会改变原始数组。</p>
+<p>语法 array.filter(function(currentValue,index,arr), thisValue)</p>
+<p>参数说明：</p>
+<p>currentValue 必须。当前元素的值 index 可选。当前元素的索引值 arr 可选。当前元素属于的数组对象</p>
+<pre><code>startsWithB = (string) =&gt; string.toLowerCase().startsWith(&#39;b&#39;);
+namesStartingWithB = users.filter((user) =&gt; startsWithB(user.name));
+console.log(namesStartingWithB);
+// [&#123; &quot;name&quot;: &quot;Bill&quot;, &quot;age&quot;: 20 &#125;]
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9A%8F%E7%AC%94/" style="color: #ffa2c4">前端随笔</a>
+        </span>
+        
+    </div>
+    <a href="/2023/02/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0%E4%B8%80%E4%B8%8B/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/page/5/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">6</span>
+    
+    <a class="page-num" href="/page/7">
+        7
+    </a>
+    
+    
+    <a class="page-num" href="/page/8">
+        8
+    </a>
+    
+    
+    <span class="page-omit">...</span>
+    <a class="page-num" href="/page/9">9</a>
+    
+    
+    <a class="page-num" href="/page/7/">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/mytouxiang.gif" alt="avatar" />
+        </div>
+        <div class="name">耀耀切克闹</div>
+        <div class="description">
+            <p>欢迎来到耀耀切克闹的博客</p>
+<p>不是因为是主角才成功，而是成功了才成为主角</p>
+<p>想要的都拥有，得不到的都释怀</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/DarknessZY">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://juejin.cn/user/1781681116679854/columns">
+                    <i
+                        class="fa-brands fa-b fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://hexo.io">Hexo官网</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX主题</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 耀耀切克闹
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;耀耀切克闹
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/lib/stars.js"></script>
+    <script src="/js/lib/theme.js"></script>
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
